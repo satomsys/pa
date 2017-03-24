@@ -1,0 +1,178 @@
+@charset "UTF-8";
+//////////////////////////////////////////
+
+//module
+
+//include by style.scss
+
+//////////////////////////////////////////
+
+
+%kurobeta{
+	color: #fff;
+	background-color: #000;
+	
+	a{		
+		color: inherit;
+	}
+}
+
+
+////////////////////
+
+// header
+
+////////////////////
+
+/////// ヘッダー ラッパー
+.header
+{
+
+	////ヘッダ上
+	.header_top{
+		padding-top: 15px;
+		padding-bottom: 15px;	
+		overflow: hidden;
+	}
+
+	//////// media queries 
+	@include breakpoint( sp ){
+		z-index: 3;
+		
+		.header_top{
+			padding-top: 0;
+			padding-bottom: 0;		
+			background-color: #fff;
+		}
+
+	} //max 580	
+}
+
+
+//// LEFT ( logo
+.header_l
+{
+	float: left;	
+
+
+	//////// media queries 
+	@include breakpoint( sp ){
+		height: 45px;
+		padding-top: 7px;
+		padding-right: 70px;
+		padding-bottom: 7px;
+		float: none;
+		box-sizing: border-box;
+		background-color: #fff;
+		
+	} //max 580		
+}
+
+///// RIGHT
+.header_r{
+	float: right;
+}
+
+
+
+////////////////////
+
+// footer
+
+////////////////////
+
+.footer
+{
+	padding-top: 1em;
+	padding-bottom: 1em;
+	@extend %kurobeta;
+	
+	////フッター上部
+	.footer_top
+	{
+		margin-bottom: 1em;
+		text-align: center;
+		font-size: $small;
+		
+		li{
+			margin-left: 1em;
+			padding-left: 1em;
+			display: inline-block;
+			vertical-align: middle;
+			border-left: solid 1px #fff;
+		}
+		li:first-child{
+			margin-left: 0;
+			padding-left: 0;
+			border-left: none;
+		}
+	}
+	
+	//copyright
+	.copyright{
+		text-align: center;
+	}
+
+
+	//////// media queries 
+	@include breakpoint( sp ){
+
+		.footer_top
+		{
+			li{
+				margin-left: 0;
+				padding-top: 0.5em;
+				padding-bottom: 0.5em;
+				padding-left: 0;
+				display: block;
+				border-left: 0;
+				border-bottom: solid 1px #333;
+			}
+		}
+
+	} //max 580
+}
+
+
+
+////////////////////
+
+// navigation
+
+////////////////////
+
+
+
+
+////////////////////
+
+// menu open ( overlay )
+
+////////////////////
+
+
+
+////////////////////
+
+// back to top
+
+////////////////////
+
+.backToTop{
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+	display: none;
+	bottom: 0;
+	right: 10px;
+	position: fixed;
+	z-index: 99;
+	cursor: pointer;
+	// opacity: 0;
+	
+	transition: transform 0.5s;
+	
+	&.moving{
+		@include rotate3d( 50, 1000, 500, 360deg, 500 );
+	}
+}

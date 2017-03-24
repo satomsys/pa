@@ -1,0 +1,438 @@
+@charset 'UTF-8';
+@import 'https://fonts.googleapis.com/earlyaccess/notosansjapanese.css';
+::-moz-selection
+{
+    background-color: rgba(0, 105, 255, .3);
+}
+::selection
+{
+    background-color: rgba(0, 105, 255, .3);
+}
+
+html,
+body
+{
+    font-family: 'Noto Sans Japanese', Verdana, '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+    font-size: 14px;
+    line-height: 1.75;
+
+    position: relative;
+
+    color: #3a3a3a;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+}
+
+body
+{
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    font-size: inherit; 
+    font-weight: inherit;
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul
+{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    list-style-position: inside;
+}
+
+dl
+{
+    padding-left: 0;
+}
+
+dd
+{
+    padding-left: 0;
+}
+
+figure
+{
+    margin: 0;
+}
+
+img,
+iframe,
+object
+{
+    line-height: 1;
+
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+textarea
+{
+    outline: none;
+}
+input:focus,
+input:active,
+textarea:focus,
+textarea:active
+{
+    border: none;
+}
+
+a
+{
+    -webkit-transition: all .5s ease 0s;
+            transition: all .5s ease 0s; 
+    text-decoration: none;
+
+    color: #12aaaf;
+    outline: none;
+}
+a,
+a img
+{
+    border: none;
+}
+a button
+{
+    padding: 0;
+
+    border: none; 
+    background: 0;
+}
+a:hover,
+a:active,
+a:focus
+{
+    color: #0b676a;
+}
+a img
+{
+    -webkit-transition: all .5s ease 0s;
+            transition: all .5s ease 0s;
+}
+a img:hover,
+a img:active,
+a img:focus
+{
+    opacity: .87; 
+
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=87);
+}
+
+.contain,
+.inner
+{
+    box-sizing: border-box; 
+    max-width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.wrap
+{
+    box-sizing: border-box; 
+    max-width: 1260px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+@media screen and (max-width: 1200px)
+{
+    .wrap
+    {
+        padding-right: 25px; 
+        padding-left: 25px;
+    }
+}
+@media screen and (max-width: 580px)
+{
+    .wrap
+    {
+        padding-right: 15px; 
+        padding-left: 15px;
+    }
+}
+
+.clearfix
+{
+    *zoom: 1;
+    *zoom: 1;
+}
+.clearfix:after
+{
+    display: table;
+    clear: both; 
+
+    content: '';
+}
+
+.spShow
+{
+    display: none;
+}
+
+@media screen and (max-width: 580px)
+{
+    .spHide
+    {
+        display: none !important;
+    }
+
+    .spShow
+    {
+        display: inherit;
+    }
+}
+.tabShow
+{
+    display: none !important;
+}
+
+@media screen and (max-width: 780px)
+{
+    .tabHide
+    {
+        display: none !important;
+    }
+
+    .tabShow
+    {
+        display: inherit !important;
+    }
+}
+.icon-twitter:before
+{
+    font-family: fontawesome;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: inline-block;
+
+    margin-right: 0;
+
+    content: '';
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    vertical-align: middle;
+    text-transform: none;
+
+    color: inherit;
+
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+html.ie8 .icon-twitter:before
+{
+    font-family: inherit; 
+
+    content: '>';
+}
+
+.icon-facebook:before
+{
+    font-family: fontawesome;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: inline-block;
+
+    margin-right: 0;
+
+    content: '';
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    vertical-align: middle;
+    text-transform: none;
+
+    color: inherit;
+
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+html.ie8 .icon-facebook:before
+{
+    font-family: inherit; 
+
+    content: '>';
+}
+
+.footer
+{
+    color: #fff;
+    background-color: #000;
+}
+.footer a
+{
+    color: inherit;
+}
+
+.header .header_top
+{
+    overflow: hidden; 
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+@media screen and (max-width: 580px)
+{
+    .header
+    {
+        z-index: 3;
+    }
+    .header .header_top
+    {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        background-color: #fff;
+    }
+}
+
+.header_l
+{
+    float: left;
+}
+@media screen and (max-width: 580px)
+{
+    .header_l
+    {
+        float: none;
+
+        box-sizing: border-box;
+        height: 45px;
+        padding-top: 7px;
+        padding-right: 70px;
+        padding-bottom: 7px;
+
+        background-color: #fff;
+    }
+}
+
+.header_r
+{
+    float: right;
+}
+
+.footer
+{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.footer .footer_top
+{
+    font-size: .75em; 
+
+    margin-bottom: 1em;
+
+    text-align: center;
+}
+.footer .footer_top li
+{
+    display: inline-block;
+
+    margin-left: 1em;
+    padding-left: 1em;
+
+    vertical-align: middle;
+
+    border-left: solid 1px #fff;
+}
+.footer .footer_top li:first-child
+{
+    margin-left: 0;
+    padding-left: 0;
+
+    border-left: none;
+}
+.footer .copyright
+{
+    text-align: center;
+}
+@media screen and (max-width: 580px)
+{
+    .footer .footer_top li
+    {
+        display: block;
+
+        margin-left: 0;
+        padding-top: .5em;
+        padding-bottom: .5em;
+        padding-left: 0;
+
+        border-bottom: solid 1px #333; 
+        border-left: 0;
+    }
+}
+
+.backToTop
+{
+    line-height: 1;
+
+    position: fixed;
+    z-index: 99;
+    right: 10px;
+    bottom: 0;
+
+    display: none;
+
+    margin: 0;
+    padding: 0;
+
+    cursor: pointer;
+    -webkit-transition: -webkit-transform .5s;
+            transition: -webkit-transform .5s;
+            transition:         transform .5s;
+            transition:         transform .5s, -webkit-transform .5s;
+}
+.backToTop.moving
+{
+    -webkit-transform: perspective(500) rotate3d(50, 1000, 500, 360deg);
+            transform: perspective(500) rotate3d(50, 1000, 500, 360deg);
+}
+
+@media screen and (max-width: 580px)
+{
+    body.headerFix
+    {
+        padding-top: 45px;
+    }
+    body.headerFix .header
+    {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+}

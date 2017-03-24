@@ -1,0 +1,673 @@
+@charset "UTF-8";
+@import "compass";
+@import "../common/scss/colors";
+@import "../common/scss/variables";
+@import "../common/scss/mixins";
+
+/******************************
+munsing style
+******************************/
+
+////////////////////////////////////////
+//variable
+////////////////////////////////////////
+
+
+$designWidth: 980;
+$translateVal : 10px;
+
+
+body{
+	width: 100%;
+	overflow-x: hidden;
+	background-color: $baseyellow;
+	
+}
+.openModal{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+////////////////////////////////////////
+//module
+////////////////////////////////////////
+
+//////// nav bar (bootstrap)
+
+// .navbar
+// {
+// 	a{
+// 		color: darken( $yellow, 10 )
+// 	}	
+//  &.tpo-navbar-collapse
+// }
+
+//////// goFade
+
+.gofade{
+	transition: transition( 1.4s );
+	transition-delay: 0.1s;
+	opacity: 0;
+	transform: translateY( $translateVal ); 
+	backface-visibility: hidden;	
+	
+	&.fadeIn{
+		opacity: 1;
+		transform: translateY( 0px ); 
+	}
+}
+.section__overlay{
+	&.gofade{
+		transform: none;
+		background-position: center 200%;
+		@include background-image(linear-gradient(to top, rgba( orange, 0.0 ), rgba( orange, 0.3 )));
+	}
+	&.fadeIn{
+		background-size: 200%!important;
+		background-position: center 00%!important;
+	}
+}
+
+
+
+//////// copy
+.copy{
+	&__index{
+		margin-bottom: 10px;
+		font-weight: bold;
+		font-size: 1.7em;
+	}
+}
+
+
+////////セクション
+.section
+{
+	position: relative;
+	// overflow-x: hidden;
+	
+	@include breakpoint( tab ){
+		padding-top: liquidSpace( 40, 640 )!important;
+		padding-bottom: liquidSpace( 40, 640 )!important;
+	}	
+
+	&__visual,
+	&__index,
+	&__text{
+		position: relative;
+		z-index: 1;
+	}
+
+
+	&__visual{
+		// height: 0;
+		// padding-top: percentage( 315 / 1280 );
+		position: relative;
+		text-align: center;
+		overflow: hidden;
+		img{
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+	}
+	&__index{
+		margin-bottom: -100px;
+		z-index: 2;
+		
+		@include breakpoint( tab ){
+			@include liquid( 210, 640 );	
+			margin-left: 0!important;		
+			margin-bottom: liquidSpace( -40, 640 )!important;
+		}		
+	}
+
+	&__content{
+		@include breakpoint( tab ){
+			width: auto;
+			padding-right: 0;
+			padding-left: 0;
+		}		
+	}
+
+	&__text{
+		padding: 20px;
+		color: #fff;
+		position: relative;
+		transform: translateY( 20px ); 
+		transition: transition( 0.8s );
+
+		
+		&__paragraph{
+			opacity: 0;
+			display: block;
+			transition: transition( 1s );
+			transform: translateY( $translateVal * -1 ); 
+			transition-delay: 0.5s;		
+		}
+
+		&.fadeIn{
+			.section__text__paragraph{
+				opacity: 1;
+				transform: translateY( 0px ); 						
+			}
+		}
+
+		@include breakpoint( tab ){
+			width: auto !important
+		}
+	}
+
+	@include breakpoint( tab, min ){
+		&:nth-child( odd ){
+			.section__text{
+				border-bottom-left-radius: 5px;
+			}
+		}	
+		&:nth-child( even ){
+			.section__text{
+				border-bottom-right-radius: 5px;
+			}
+		}
+	} 
+
+	.wrap{
+	}
+
+	&__overlay{
+		width: 100%;
+		display: block;
+		position: absolute;
+		background-color: rgba( orange, 0.3 );
+		
+		@include breakpoint( tab ){
+			display: none;
+		} 		
+	}
+}
+
+
+//////// アイテムを見る
+.viewitem
+{
+	width: 100%;
+	line-height: 1;
+	padding: 20px 10px 0 0;
+	margin-bottom: 0;
+	text-align: right;
+	box-sizing: border-box;
+	cursor: pointer;
+	
+	font-family: 'Montserrat';
+	
+
+	///////// fade in 設定
+	transition: transition( 1s );
+	transition-delay: 1s;
+	opacity: 0;
+	transform: translateY( $translateVal ); 
+	
+	.fadeIn &{
+		opacity: 1;
+		transform: translateY( 0 ); 		
+	}
+	
+	i,img{
+		display: inline-block;
+		vertical-align: middle;
+		transition: transition();
+	}
+	
+	i{
+		width: 20px;
+		height: 20px;
+		position: relative;
+		border: solid 2px ;
+		border-radius: 100%;
+		box-sizing: content-box;
+		background-color: transparent;
+		
+		&:before,
+		&:after{
+			content: " ";
+			margin: auto;
+			transition: transition();
+			background-color: #fff;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+		
+		&:before{
+			width: 2px;
+			height: 13px;
+		}
+
+		&:after{
+			height: 2px;
+			width: 13px;
+		}
+
+	}
+
+	&:hover
+	{
+		opacity: 0.4!important;
+		i{
+			transform: rotate(90deg);
+			
+			&:before{
+				width: 2px;
+				height: 20px;
+			}
+
+			&:after{
+				height: 2px;
+				width: 20px;
+			}
+
+		}		
+	}
+
+	@include breakpoint( tab ){
+		margin: 0;
+		padding-right: 0;
+		position: static;
+		bottom: 0;
+	}		
+}
+
+
+
+////////////////////////////////////////
+
+//style
+
+////////////////////////////////////////
+.mainVisual
+{
+	min-height: 770px;
+	padding-top: 80px;
+	padding-bottom: 50px;
+	background: $yellow url(../img/pc/bg-main.svg) center -350px repeat-x;
+	
+	&__copy{
+		text-align: center
+	}
+
+	&__copy__main{
+	}
+
+	&__copy__caption{
+	}
+
+	&__copy__logo{
+		margin-top: liquidSpace(-56, $designWidth);
+		margin-bottom: 40px;
+	}
+
+
+	.copy{
+		max-width: 770px;
+		margin-left: auto;
+		margin-right: auto;
+		
+		&__index{
+			margin-bottom: 30px;
+		}	
+	}
+
+	&__credit{
+		margin-top: 30px;
+		color: #96af96;
+		text-align: center;
+	}
+
+
+	@include breakpoint( tab ){
+		min-height: 0;
+		padding-top: 60px;
+		padding-bottom: percentage( 30 / 640 );
+		background-position: center -20vh;
+		
+		&__copy{
+			text-align: center;
+			padding-bottom: percentage( 30 / 640 );
+		}
+		
+		&__copy__head{
+			padding-bottom: percentage( 30 / 640 );
+		}
+
+		&__copy__logo{
+			@include liquid( 160, 640 );
+			margin-right: auto;
+			margin-bottom: 0;
+			margin-left: auto;
+		}
+
+		.copy{
+			padding-left: 1%;
+			padding-right: 1%;
+		}
+	}
+}
+
+
+/////////
+// style 1
+/////////
+.section--style1
+{
+	padding-top: 50px;
+    background: url(../img/pc/bg-triangle-l.svg) left -15%  top -50% no-repeat;
+    background-size: 30%;
+    
+	@include breakpoint( tab ){
+		background: none;		
+	}    
+    	
+	.section__index{
+		margin-bottom: -100px;
+		
+		@include breakpoint( tab ){
+			margin-left: 0;
+			margin-bottom: liquidSpace(-30, 640 );		
+			padding-left: liquidSpace(30, 640 );		
+		}		
+	}
+	.section__text{
+		@include liquid( 710, $designWidth );
+		margin-top: -30px;
+		background-color: rgba( #eab300,0.9);
+		
+		@include breakpoint( tab ){
+			margin-top: 0		
+		}
+	}
+}
+
+
+
+/////////
+// style 2
+/////////
+.section--style2
+{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	position: relative;
+	
+    background: url(../img/pc/bg-triangle-l.svg) -50% center no-repeat;
+    background-size: 50%;
+
+
+	.section__index{
+		text-align: right;
+		.section__text{			
+			@include breakpoint( tab ){
+				text-align: left;		
+			}
+		}		
+	}
+
+	.section__visual{
+		@include liquid( 780, $designWidth );
+		margin-left: auto;
+	
+		@include breakpoint( tab ){
+			width: auto;
+			top: 0;		
+		}		
+	}
+	.section__text{
+		@include liquid( 370, $designWidth ); 
+		margin-top: auto;
+		position: absolute;
+		top: 45%;
+		// left: liquidSpace( -50 , $designWidth);
+		background-color: rgba( #ff6592,0.8);
+		
+			@include breakpoint( tab ){
+				position: static;
+				top: 0;		
+			}
+		}		
+
+	.section__overlay{
+		height: 50%;
+		bottom: 0;
+	}
+}
+
+
+
+/////////
+// style 3
+/////////
+.section--style3
+{
+	padding-bottom: 100px;
+	position: relative;
+	
+    background: url(../img/pc/bg-triangle-l.svg) right -50% bottom no-repeat;
+    background-size: 50%;
+
+
+	.section__index{
+		padding-top: liquidSpace( 460, $designWidth );
+		margin-right: auto;
+		margin-left: auto;
+		position: absolute;
+		right: 0;
+		left: 0;
+
+		@include breakpoint( tab ){
+			position: static;
+			padding-top: 0;			
+		}		
+	}
+	.section__text{
+		@include liquid( 600, $designWidth );
+		margin-left: auto;
+		margin-right: liquidSpace( 60, $designWidth );
+		margin-top: -50px;
+		background-color: rgba( #ff6592,0.8);
+		
+		@include breakpoint( tab ){
+			margin-top: 0;
+			margin-right: 0;
+		}		
+
+	}
+
+	.section__overlay{
+		width: 80%;
+		height: 50%;
+		right: 0;
+		bottom: -100px;
+		@include background-image(linear-gradient(to top, rgba( orange, 0.0 ), rgba( orange, 0.1 )));
+		
+	}
+}
+
+
+
+/////////
+// style 4
+/////////
+.section--style4
+{
+	padding-top: 0;
+	padding-bottom: 50px;
+	position: relative;
+	
+    background: url(../img/pc/bg-triangle-l.svg) right -50% bottom no-repeat;
+    background-size: 50%;
+
+
+	.section__index{
+		margin-bottom: -70px;
+		text-align: right;
+		.section__text{			
+			@include breakpoint( tab ){
+				text-align: left;		
+			}
+		}		
+	}
+
+	.section__text{
+		margin-top: -30px;
+		@include liquid( 665, $designWidth ); 
+		background-color: rgba( #eab300,0.9);
+		
+		@include breakpoint( tab ){
+			margin-top: 0;
+		}			
+	}		
+
+	.section__overlay{
+		height: 50%;
+		bottom: 0;
+	}
+}
+
+
+
+/////////
+// style 5
+/////////
+.section--style5
+{
+	padding-top: 0;
+	position: relative;
+	
+    background: url(../img/pc/bg-triangle-l.svg) left -50% bottom -20% no-repeat;
+    background-size: 50%;
+
+
+	.section__index{
+		margin-bottom: -100px;
+		.section__text{			
+
+		}		
+	}
+
+	.section__text{
+		margin-top: -30px;
+		margin-right: 0;
+		margin-left: auto;
+		@include liquid( 665, $designWidth ); 
+		background-color: rgba( #eab300,0.9);
+		
+		@include breakpoint( tab ){
+			margin-top: 0;
+		}			
+	}		
+
+	.section__overlay{
+		width: 50%;
+		height: 50%;
+		left: 0;
+		bottom: -100px;
+		@include background-image(linear-gradient(to top, rgba( orange, 0.0 ), rgba( orange, 0.1 )));
+		
+	}
+}
+
+
+/////////
+// style 6
+/////////
+.section--style6
+{
+	padding-top: 0;
+	position: relative;
+	
+    background: url(../img/pc/bg-triangle-l.svg) -50% center no-repeat;
+    background-size: 50%;
+
+
+	.section__index{
+		margin-bottom: -70px;
+		.section__text{			
+		}		
+	}
+
+	.section__text{
+		margin-top: -30px;
+		@include liquid( 797, $designWidth ); 
+		background-color: rgba( #5cb0cd,0.9);
+		@include breakpoint( tab ){
+			margin-top: 0;
+		}			
+	}		
+
+	.section__overlay{
+		display: none
+	}
+}
+
+
+/////////
+// style 7
+/////////
+.section--style7
+{
+	padding-top: 60px;
+	padding-bottom: 100px;
+	position: relative;
+	
+    background: url(../img/pc/bg-triangle-l.svg) right 1% top 5% no-repeat;
+    background-size: 50%;
+
+
+	.section__index{
+		margin-bottom: -100px;
+		text-align: right;
+		.section__text{			
+			@include breakpoint( tab ){
+				text-align: left;		
+			}
+		}		
+	}
+
+	.section__text{
+		margin-top: -30px;
+		@include liquid( 665, $designWidth ); 
+		background-color: rgba( #00cdeb,0.9);
+		
+		.style7attention{
+			line-height: 1;
+			padding: 0;
+			margin: 0;
+			position: absolute;
+			bottom: 35px;
+			left: 20px;
+			font-size: 0.8em;
+		}
+		@include breakpoint( tab ){
+			margin-top: 0;
+			
+			.style7attention{
+				margin-top: 1em;
+				margin-bottom: 0;
+				text-align: right;
+				position: static
+			}			
+		}			
+	}		
+
+	.section__overlay{
+		height: 50%;
+		top: -30px;
+	}
+}
+
+
+@import 'modal';

@@ -1,0 +1,97 @@
+@charset "UTF-8";
+//////////////////////////////////////////
+
+//valiables
+
+//include by style.scss
+
+//////////////////////////////////////////
+
+
+//////////
+
+// value
+
+//////////
+
+$ratio: 1; //カンプが何倍サイズか。
+$perspective : 500px;
+$copymargin: 75px; //コピー1の下マージン
+$perspective : 500px;
+
+
+
+//////////
+
+// path
+
+//////////
+
+// $img : "../img";
+// $img_bg : "../img/bg";
+// $img_thumb : "../img/thumb";
+// $js : "../js/";
+// $fonts : "../fonts";
+// $icon : "#{$fonts}/icomoon/fonts";
+
+
+//////////////////////
+
+// layouts 
+
+/////////////////////
+
+//column
+$innerWidth: 980px;
+$outerWidth:1200px;
+
+//margin / padding
+$sSpace : 1rem;
+$mSpace : 2.5rem;
+$lSpace : 4rem;
+$xlSpace : 6rem;
+
+// Susy grid
+$gridNum: 12;
+$maxColumnNum: 6;
+
+
+
+//////////////////////
+
+// responsive 
+
+/////////////////////
+
+////////breakpoint
+// $bpSmp : 480px;
+$bpSmp : 580px;
+$bpTab : 780px;
+$bpPc : 1200px;
+
+
+/////
+// 高さを計算する（概算値
+// $height
+//
+@function heightCalc( $mediaType, $height, $rate: 1.78 ){
+	@if ($mediaType == pc ){
+		@return floor($height / $rate);	
+	} @else {
+		@return floor($height * $rate);	
+	}
+}
+
+$bpSmpMax-width : "max-width : #{$bpSmp}";
+$bpSmpMin-width : "min-width : #{$bpSmp}";
+$bpTabMax-width : "max-width : #{$bpTab}";
+$bpTabMin-width : "min-width : #{$bpTab}";
+$bpPcMax-width: "max-width : #{$bpPc}";
+$bpPcMin-width: "min-width : #{$bpPc}";
+
+$bpSmpMax-height : "max-height :" + heightCalc(sp, $bpSmp);
+$bpSmpMin-height : "min-height :" + heightCalc(sp, $bpSmp);
+$bpTabMax-height : "max-height :" + heightCalc(tabl, $bpTab);
+$bpTabMin-height : "min-height :" + heightCalc(tabl, $bpTab);
+$bpPcMax-height: "max-height :" + heightCalc( pc, $bpPc);
+$bpPcMin-height: "min-height :" + heightCalc( pc, $bpPc);
