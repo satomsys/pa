@@ -10,6 +10,19 @@
 
 //////////////////
 
+// color
+
+//////////////////
+
+%gradation{
+	@include background-image(linear-gradient(to right, $orange, #ffc61f));
+}
+
+
+
+
+//////////////////
+
 // block level
 
 //////////////////
@@ -22,7 +35,7 @@
 }
 
 .wrap{
-	max-width: $outerWidth + 60;
+	max-width: $outerWidth;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 30px;

@@ -20,22 +20,6 @@
 
 ////////////////////
 
-//////// 固定ナビ高さ分余白
 body.headerFix
 {
-
-	//media queries
-	@include breakpoint( sp ){
-		//ナビの高さ
-		padding-top: 45px;
-
-		.header{
-			position: fixed;
-			top: 0;
-			right: 0;
-			left: 0;
-		}	
-		
-	} //max 580
-
 }

@@ -1,5 +1,5 @@
 @charset 'UTF-8';
-@import 'https://fonts.googleapis.com/earlyaccess/notosansjapanese.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:300,400,700');
 ::-moz-selection
 {
     background-color: rgba(0, 105, 255, .3);
@@ -12,20 +12,27 @@
 html,
 body
 {
-    font-family: 'Noto Sans Japanese', Verdana, '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
-    font-size: 14px;
+    font-family: '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
     line-height: 1.75;
 
     position: relative;
 
-    color: #3a3a3a;
+    color: #000;
 
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
 }
 
+html
+{
+    font-size: 10px;
+}
+
 body
 {
+    font-size: 1.4em;
+    font-size: 1.4rem;
+
     margin-top: 0;
     margin-right: auto;
     margin-bottom: 0;
@@ -138,7 +145,7 @@ a img:focus
 .inner
 {
     box-sizing: border-box; 
-    max-width: 980px;
+    max-width: 940px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -146,7 +153,7 @@ a img:focus
 .wrap
 {
     box-sizing: border-box; 
-    max-width: 1260px;
+    max-width: 1300px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 30px;
@@ -288,22 +295,71 @@ html.ie8 .icon-facebook:before
     content: '>';
 }
 
-.footer
+.header_wrap,
+.header_buttons
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.header_wrap
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    border-bottom: solid 1px #d9d9d9;
+}
+.header_logo
+{
+    margin-right: auto;
+}
+.header_logo img
+{
+    display: inline-block;
+
+    vertical-align: middle;
+}
+.header_logo .recruiting
+{
+    margin-left: 30px;
+}
+.header_buttons li
+{
+    display: inline-block; 
+
+    width: 140px;
+    margin-right: 10px;
+}
+.header_buttons li:last-child
+{
+    margin-right: 0;
+}
+.header_buttons a
+{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    line-height: 1;
+
+    display: block;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    text-align: center;
+    letter-spacing: .1em;
+
     color: #fff;
-    background-color: #000;
-}
-.footer a
-{
-    color: inherit;
-}
-
-.header .header_top
-{
-    overflow: hidden; 
-
-    padding-top: 15px;
-    padding-bottom: 15px;
+    background: #ff6d1f;
 }
 @media screen and (max-width: 580px)
 {
@@ -320,65 +376,41 @@ html.ie8 .icon-facebook:before
     }
 }
 
-.header_l
+.footer
+{
+    text-align: center;
+}
+.footer_copyright
+{
+    display: table;
+    overflow: hidden; 
+
+    width: 1300px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    border-top: solid 12px #e7e7e7;
+}
+.footer_copyright_logo,
+.footer_copyright_copy
+{
+    line-height: 1;
+
+    display: table-cell;
+
+    vertical-align: middle;
+}
+.footer_copyright_logo
 {
     float: left;
 }
-@media screen and (max-width: 580px)
+.footer_copyright_copy
 {
-    .header_l
-    {
-        float: none;
+    font-size: 1rem;
 
-        box-sizing: border-box;
-        height: 45px;
-        padding-top: 7px;
-        padding-right: 70px;
-        padding-bottom: 7px;
-
-        background-color: #fff;
-    }
-}
-
-.header_r
-{
     float: right;
-}
-
-.footer
-{
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-.footer .footer_top
-{
-    font-size: .75em; 
-
-    margin-bottom: 1em;
-
-    text-align: center;
-}
-.footer .footer_top li
-{
-    display: inline-block;
-
-    margin-left: 1em;
-    padding-left: 1em;
-
-    vertical-align: middle;
-
-    border-left: solid 1px #fff;
-}
-.footer .footer_top li:first-child
-{
-    margin-left: 0;
-    padding-left: 0;
-
-    border-left: none;
-}
-.footer .copyright
-{
-    text-align: center;
 }
 @media screen and (max-width: 580px)
 {
@@ -420,19 +452,4 @@ html.ie8 .icon-facebook:before
 {
     -webkit-transform: perspective(500) rotate3d(50, 1000, 500, 360deg);
             transform: perspective(500) rotate3d(50, 1000, 500, 360deg);
-}
-
-@media screen and (max-width: 580px)
-{
-    body.headerFix
-    {
-        padding-top: 45px;
-    }
-    body.headerFix .header
-    {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-    }
 }

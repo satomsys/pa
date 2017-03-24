@@ -8,16 +8,6 @@
 //////////////////////////////////////////
 
 
-%kurobeta{
-	color: #fff;
-	background-color: #000;
-	
-	a{		
-		color: inherit;
-	}
-}
-
-
 ////////////////////
 
 // header
@@ -27,13 +17,62 @@
 /////// ヘッダー ラッパー
 .header
 {
-
-	////ヘッダ上
-	.header_top{
-		padding-top: 15px;
-		padding-bottom: 15px;	
-		overflow: hidden;
+	&_wrap,
+	&_buttons{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
 	}
+
+	&_wrap{
+		padding-top: 20px;
+		padding-bottom: 20px;
+		border-bottom: solid 1px $gray;
+		
+	}
+
+	&_logo{
+		margin-right: auto;
+		
+		img{
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.recruiting{
+			margin-left: 30px;
+		}
+	}
+
+	&_buttons
+	{
+		
+		li{
+			width: 140px;
+			margin-right: 10px;
+			display: inline-block;
+			// vertical-align: middle;
+			
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+		a{
+			line-height: 1;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			display: block;
+			text-align: center;
+			font-family: $roboto_cond;
+			font-weight: bold;
+			letter-spacing: 0.1em;
+			color: #fff;
+			background: $orange;
+		}	
+	}
+
+
 
 	//////// media queries 
 	@include breakpoint( sp ){
@@ -49,32 +88,6 @@
 }
 
 
-//// LEFT ( logo
-.header_l
-{
-	float: left;	
-
-
-	//////// media queries 
-	@include breakpoint( sp ){
-		height: 45px;
-		padding-top: 7px;
-		padding-right: 70px;
-		padding-bottom: 7px;
-		float: none;
-		box-sizing: border-box;
-		background-color: #fff;
-		
-	} //max 580		
-}
-
-///// RIGHT
-.header_r{
-	float: right;
-}
-
-
-
 ////////////////////
 
 // footer
@@ -83,34 +96,49 @@
 
 .footer
 {
-	padding-top: 1em;
-	padding-bottom: 1em;
-	@extend %kurobeta;
+
+	text-align: center;
 	
-	////フッター上部
-	.footer_top
-	{
-		margin-bottom: 1em;
-		text-align: center;
-		font-size: $small;
+	// @extend %gradation;
+	
+	// ////フッター上部
+	// &_top
+	// {
+	// 	padding-top: 10rem;
+	// 	padding-bottom: 10em;
+	// 	text-align: center;
 		
-		li{
-			margin-left: 1em;
-			padding-left: 1em;
-			display: inline-block;
-			vertical-align: middle;
-			border-left: solid 1px #fff;
-		}
-		li:first-child{
-			margin-left: 0;
-			padding-left: 0;
-			border-left: none;
-		}
-	}
+	// }
 	
 	//copyright
-	.copyright{
-		text-align: center;
+	&_copyright
+	{
+		width: $outerWidth;
+		margin-left: auto;
+		margin-right: auto;
+		display: table;
+		border-top: solid 12px #e7e7e7;
+		
+		padding: {
+			top:5rem;
+			bottom: 5rem;
+		}
+		overflow: hidden;
+		
+		&_logo,
+		&_copy{	
+			line-height: 1;			
+			display: table-cell;
+			vertical-align: middle;
+		}
+		
+		&_logo{
+			float: left;
+		}
+		&_copy{
+			font-size: 1rem;
+			float: right;
+		}
 	}
 
 

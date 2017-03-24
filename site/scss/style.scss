@@ -4,3 +4,15 @@
 @import "../common/scss/variables";
 @import "../common/scss/mixins";
 
+////////////////////////
+
+// modules
+
+////////////////////////
+
+.section{
+	&_index{
+		font-family:$roboto_cond;
+		text-align: center;
+	}
+}
