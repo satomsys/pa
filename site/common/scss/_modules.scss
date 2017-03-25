@@ -93,9 +93,9 @@
 .sitenav{
 	
 	.navList{
-		width: $innerWidth;
+		max-width: $innerWidth;
 		margin-right: auto;
-		margin-bottom: 10px;
+		margin-bottom: 25px;
 		margin-left: auto;
 		display: table;
 		// table-layout: fixed;
@@ -112,12 +112,12 @@
 				
 				a{
 					&:after{
-						width: 100%;
+						width: 90%;
 					}
 				}
 			}
 			a{
-				padding: 20px;
+				padding: 20px 20px 5px;
 				display: block;
 				position: relative;
 				color: inherit;
@@ -137,11 +137,14 @@
 					@extend %gradation;
 				}
 
+			}
+			&:not(.active) a{
+				
 				@include mouseOver{
 					color: $orange;
 					// letter-spacing: 0.6em;
 					&:after{
-						width: 100%;
+						width: 90%;
 					}
 				}
 			}
@@ -226,6 +229,23 @@
 	} //max 580
 }
 
+
+////////////////////
+
+// 下層
+
+////////////////////
+
+.pageIndex
+{
+	line-height: 1;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	text-align: center;
+	
+	@extend %gradation;
+		
+}
 
 
 ////////////////////

@@ -1,63 +1,575 @@
-/*
-Error: File to import not found or unreadable: ../common/scss/colors.
-       Load paths:
-         /Library/Ruby/Gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets
-         Compass::SpriteImporter
-        on line 3 of ../site/recruiting/scss/style.scss
-
-1: @charset "UTF-8";
-2: @import "compass";
-3: @import "../common/scss/colors";
-4: @import "../common/scss/variables";
-5: @import "../common/scss/mixins";
-6: 
-7: ////////////////////////
-8: 
-
-Backtrace:
-../site/recruiting/scss/style.scss:3
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:45:in `import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:20:in `render'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:281:in `render'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin.rb:82:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:23:in `load'
-/usr/local/bin/sass:23:in `<main>'
-*/
-body:before
+@charset 'UTF-8';
+.section-entry
 {
-    font-family: monospace;
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmNmQxZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmYzYxZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ff6d1f), color-stop(100%, #ffc61f));
+    background-image: -webkit-linear-gradient(left, #ff6d1f, #ffc61f);
+    background-image:         linear-gradient(to right, #ff6d1f, #ffc61f); 
+    background-size: 100%;
+}
 
-    content: 'Error: File to import not found or unreadable: ../common/scss/colors.\A        Load paths:\A          /Library/Ruby/Gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets\A          Compass::SpriteImporter\A         on line 3 of ../site/recruiting/scss/style.scss\A \A 1: @charset "UTF-8";\A 2: @import "compass";\A 3: @import "../common/scss/colors";\A 4: @import "../common/scss/variables";\A 5: @import "../common/scss/mixins";\A 6: \A 7: ////////////////////////\A 8: '; 
-    white-space: pre;
+.section
+{
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.section:nth-child(odd)
+{
+    background-color: #f3f3f3;
+}
+.section_index
+{
+    line-height: 1;
+
+    position: relative; 
+
+    margin-top: 40px;
+    margin-bottom: 65px;
+
+    text-align: center;
+    letter-spacing: .29em;
+}
+.section_index_main,
+.section_index_sub
+{
+    display: block;
+}
+.section_index_main
+{
+    font-size: 2em;
+}
+.section_index_main:after
+{
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100px;
+    height: 2px;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+
+    content: ' ';
+
+    background-color: #ff6d1f;
+}
+.section_index_sub
+{
+    font-size: 1.15em;
+    line-height: 2;
+}
+
+.careerSelectContent
+{
+    display: none;
+}
+.careerSelectContent_content
+{
+    -webkit-transition: all .3s ease-in-out 0s;
+            transition: all .3s ease-in-out 0s;
+    -webkit-transform: perspective(500px) translate3d(0, 0, 5px);
+            transform: perspective(500px) translate3d(0, 0, 5px); 
+    -webkit-transform-origin: 50%;
+            transform-origin: 50%;
+}
+.careerSelectContent.active
+{
+    display: block;
+}
+.careerSelectContent.active .careerSelectContent_content
+{
+    -webkit-transform: perspective(500px) translate3d(0, 0, 0);
+            transform: perspective(500px) translate3d(0, 0, 0);
+}
+
+/********************
+navigation
+********************/
+.section-nav
+{
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+
+    background-color: transparent !important;
+}
+.section-nav li
+{
+    list-style: none;
+}
+.section-nav a
+{
+    color: inherit;
+}
+
+.infoNav ul a,
+.careerSelectNav ul a
+{
+    font-size: 1.85em;
+
+    display: block;
+
+    -webkit-transition: all .3s ease 0s;
+            transition: all .3s ease 0s; 
+    letter-spacing: .5em;
+}
+
+.infoNav ul
+{
+    display: table;
+
+    width: 100%;
+    margin-bottom: 60px;
+
+    table-layout: fixed;
+}
+.infoNav ul li
+{
+    display: table-cell;
+
+    vertical-align: middle;
+}
+.infoNav ul li.active span
+{
+    border-bottom: solid 2px #ff6d1f;
+}
+.infoNav ul a
+{
+    -webkit-transition: all .3s ease 0s;
+            transition: all .3s ease 0s;
+}
+.infoNav ul a:hover .icon-arrow:before,
+.infoNav ul a:active .icon-arrow:before,
+.infoNav ul a:focus .icon-arrow:before
+{
+    width: 30px;
+}
+.infoNav ul span
+{
+    position: relative;
+
+    display: inline-block;
+
+    padding-right: 1em;
+    padding-left: 1em; 
+
+    vertical-align: middle;
+}
+.infoNav ul .icon
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0; 
+
+    height: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.infoNav ul li:first-child
+{
+    padding-right: 2em;
+
+    text-align: right;
+}
+.infoNav ul li:last-child
+{
+    padding-left: 2em;
+
+    text-align: left;
+}
+
+.careerSelectNav ul
+{
+    display: table;
+
+    width: calc( 100% + 5px );
+
+    table-layout: fixed;
+    border-spacing: 10px 0;
+}
+.careerSelectNav ul li
+{
+    display: table-cell;
+
+    -webkit-transition: all .3s ease 0s;
+            transition: all .3s ease 0s; 
+    text-align: center;
+    vertical-align: middle;
+
+    border: solid 1px #d9d9d9;
+}
+.careerSelectNav ul li a
+{
+    padding: .5em;
+}
+.careerSelectNav ul li:hover:not(.active) a,
+.careerSelectNav ul li:active:not(.active) a,
+.careerSelectNav ul li:focus:not(.active) a
+{
+    color: #fff; 
+    background-color: #ff6d1f;
+}
+.careerSelectNav ul li.active a
+{
+    color: #fff; 
+    background-color: #ff6d1f;
+}
+
+/********************
+募集職種
+********************/
+.section-genre .genreList
+{
+    font-size: 1.5em; 
+
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.section-genre .genreList li
+{
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    list-style: none;
+
+    text-align: center;
+
+    border-bottom: solid 1px #d9d9d9;
+    background-color: #fff;
+}
+.section-genre .genreList li:first-child
+{
+    border-top: solid 1px #d9d9d9;
+}
+
+/********************
+募集要項
+********************/
+.section-requirement .requirementInfo
+{
+    max-width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.section-requirement .requirementInfo_list
+{
+    display: table;
+}
+.section-requirement .requirementInfo_list dt,
+.section-requirement .requirementInfo_list dd
+{
+    display: table-cell;
+
+    box-sizing: border-box; 
+
+    vertical-align: top;
+}
+.section-requirement .requirementInfo_list dt
+{
+    font-weight: bold; 
+
+    width: 105px;
+    padding-right: 2em;
+
+    border-right: solid 2px #ff6d1f;
+}
+.section-requirement .requirementInfo_list dd
+{
+    padding-left: 2em;
+}
+.section-requirement .requirementInfo_list p
+{
+    margin-top: 0;
+}
+
+/********************
+採用ステップ
+********************/
+.section-steps .section_content
+{
+    font-size: 1.15em;
+
+    text-align: center;
+}
+
+/********************
+entry
+********************/
+.section-entry .section_content
+{
+    font-size: 1.15em;
+
+    text-align: center;
+}
+.section-entry .section_content p
+{
+    margin-bottom: 50px; 
+
+    color: #fff;
+}
+.section-entry .entryBannerList
+{
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+
+    text-align: center;
+}
+.section-entry .entryBannerList li
+{
+    position: relative;
+    bottom: 0;
+
+    display: inline-block;
+
+    width: calc( 50% - 10px );
+    margin-right: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    list-style: none;
+
+    -webkit-transition: all .3s ease-in-out 0s;
+    -webkit-transition: all .3s ease 0s;
+            transition: all .3s ease-in-out 0s;
+            transition: all .3s ease 0s; 
+    vertical-align: middle;
+
+    background-color: #fff;
+    box-shadow: 0 3px 0 #000;
+}
+.section-entry .entryBannerList li:last-child
+{
+    margin-right: 0;
+}
+.section-entry .entryBannerList li a
+{
+    display: block;
+}
+.section-entry .entryBannerList li:hover,
+.section-entry .entryBannerList li:active,
+.section-entry .entryBannerList li:focus
+{
+    bottom: -3px;
+
+    box-shadow: 0 0 0 #000;
+}
+
+/****************************************
+求める人物像〜
+****************************************/
+.recruiting-walfare
+{
+    /********************
+  求める人物像
+  ********************/
+    /********************
+  制度、福利厚生
+  ********************/
+}
+.recruiting-walfare .section-requirement
+{
+    position: relative; 
+
+    padding-bottom: 200px;
+
+    text-align: center;
+
+    background: url(../img/motomeru-bg.jpg) center bottom 20% no-repeat;
+    background-size: cover;
+}
+.recruiting-walfare .section-requirement .requirementList
+{
+    display: inline-block; 
+
+    margin-left: 0;
+}
+.recruiting-walfare .section-requirement .requirementList li
+{
+    font-size: 2em;
+
+    display: table;
+
+    margin-bottom: 70px;
+
+    list-style: none;
+
+    letter-spacing: .25em; 
+
+    -webkit-font-feature-settings: 'palt';
+            font-feature-settings: 'palt';
+}
+.recruiting-walfare .section-requirement .requirementList li .num,
+.recruiting-walfare .section-requirement .requirementList li .text
+{
+    display: table-cell;
+
+    vertical-align: middle;
+}
+.recruiting-walfare .section-requirement .requirementList li .text
+{
+    padding-left: 60px;
+}
+.recruiting-walfare .section-requirement .cover
+{
+    display: block; 
+
+    width: 100%;
+}
+.recruiting-walfare .section-walfare
+{
+    background-color: #f3f3f3;
+}
+.recruiting-walfare .section-walfare .walfarePanels
+{
+    position: relative;
+}
+.recruiting-walfare .section-walfare .walfarePanels .row
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row;
+
+    margin-bottom: 10px;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.recruiting-walfare .section-walfare .walfarePanels .row .walfarePanels_child
+{
+    -webkit-transition: all .5s;
+            transition: all .5s;
+}
+.recruiting-walfare .section-walfare .walfarePanels .row .walfarePanels_child:nth-child(even)
+{
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmNDMxZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmODMxZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ff431e), color-stop(100%, #ff831f));
+    background-image: -webkit-linear-gradient(left, #ff431e, #ff831f);
+    background-image:         linear-gradient(to right, #ff431e, #ff831f); 
+    background-size: 100%;
+}
+.recruiting-walfare .section-walfare .walfarePanels .row .walfarePanels_child:hover
+{
+    background-position: 100% 100% !important;
+    background-size: 300% !important;
+}
+.recruiting-walfare .section-walfare .walfarePanels .row:nth-child(even) .walfarePanels_child:nth-child(even)
+{
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmOGQxZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmYjYwNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ff8d1d), color-stop(100%, #ffb605));
+    background-image: -webkit-linear-gradient(left, #ff8d1d, #ffb605);
+    background-image:         linear-gradient(to right, #ff8d1d, #ffb605); 
+    background-size: 100%;
+}
+.recruiting-walfare .section-walfare .walfarePanels .row:nth-child(even) .walfarePanels_child:nth-child(odd)
+{
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmNDMxZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmODMxZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ff431e), color-stop(100%, #ff831f));
+    background-image: -webkit-linear-gradient(left, #ff431e, #ff831f);
+    background-image:         linear-gradient(to right, #ff431e, #ff831f); 
+    background-size: 100%;
+}
+.recruiting-walfare .section-walfare .walfarePanels_child
+{
+    position: relative;
+
+    width: calc( 50% - 10px );
+    max-width: calc( 50% - 10px );
+    margin-right: 5px;
+    margin-left: 5px;
+
+    cursor: pointer;
+
+    color: #fff;
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmOGQxZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmYjYwNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ff8d1d), color-stop(100%, #ffb605));
+    background-image: -webkit-linear-gradient(left, #ff8d1d, #ffb605);
+    background-image:         linear-gradient(to right, #ff8d1d, #ffb605); 
+    background-size: 100%;
+    box-shadow: 0 3px 0 black;
+}
+.recruiting-walfare .section-walfare .walfarePanels_child:nth-child(even)
+{
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmNDMxZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmODMxZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ff431e), color-stop(100%, #ff831f));
+    background-image: -webkit-linear-gradient(left, #ff431e, #ff831f);
+    background-image:         linear-gradient(to right, #ff431e, #ff831f); 
+    background-size: 100%;
+}
+.recruiting-walfare .section-walfare .walfarePanels .icon-plus
+{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    bottom: 0;
+
+    margin: auto;
+
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, .2);
+}
+.recruiting-walfare .section-walfare .walfarePanels .panelTable
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row;
+
+    height: 200px;
+    padding: 30px;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.recruiting-walfare .section-walfare .walfarePanels .panelTable_icon
+{
+    display: table;
+}
+.recruiting-walfare .section-walfare .walfarePanels .panelTable_icon_img,
+.recruiting-walfare .section-walfare .walfarePanels .panelTable_icon_caption
+{
+    display: table-cell;
+
+    vertical-align: middle;
+}
+.recruiting-walfare .section-walfare .walfarePanels .panelTable_icon_img
+{
+    width: 31.03448%;
+}
+.recruiting-walfare .section-walfare .walfarePanels .panelTable_icon_caption
+{
+    padding-left: 8.62069%;
+
+    text-align: center;
+}
+.recruiting-walfare .section-walfare .walfarePanels .panelTable_text
+{
+    overflow: hidden; 
+
+    width: 0;
+
+    white-space: nowrap;
 }

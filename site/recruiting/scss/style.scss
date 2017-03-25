@@ -1,8 +1,14 @@
 @charset "UTF-8";
 @import "compass";
-@import "../common/scss/colors";
-@import "../common/scss/variables";
-@import "../common/scss/mixins";
+@import "../../common/scss/colors";
+@import "../../common/scss/variables";
+@import "../../common/scss/mixins";
+
+////////////////////////////////////////////////
+
+// RECRUITING
+
+////////////////////////////////////////////////
 
 ////////////////////////
 
@@ -11,370 +17,215 @@
 ////////////////////////
 
 .section{
-	margin-top: 150px;
-	margin-bottom: 200px;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	
+	&:nth-child( odd ){
+		background-color: #f3f3f3;
+	}
+
 	&_index{
-		font-family:$roboto_cond;
-		text-align: center;
+		margin-top: 40px;
+		margin-bottom: 65px;
+		letter-spacing: 0.29em;
 		line-height: 1;
-		margin: 0;
-	}
-}
-
-.heroPanel{
-	margin: auto;	
-	display: table;
-	position: relative;
-	
-	&.comingsoon{
-		background-color: #fff;
-		.heroPanel_bg{
-			opacity: 0.2;
-		}			
-	}		
-	
-	&_text,
-	&_bg{
-		display: table-cell;
-		vertical-align: middle;
-		line-height: 1;
-	}
-	&_text{
-		height: 1em;
-		margin: auto;
-		position: absolute;
-		z-index: 1;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		font-family: $roboto_cond;
-		font-weight: bold;
-		letter-spacing: 0.2em;
 		text-align: center;
-	}
-}
-
-
-/********************
-slick reset
-********************/
-
-.slick-prev:before, .slick-next:before { 
-	content: " "!important;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	display: block;
-	transition: transition();
-}
-.slick-prev:after, .slick-next:after { 
-	content: " "!important;
-	width: 0px;
-	height: 1px;
-	margin: auto;
-	display: block;
-	background-color: #fff;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	transition: transition();
-}
-.slick-prev{
-	z-index: 2;
-	&:before{
-		border-width: 8.5px 35px 8.5px 0;
-		border-color: transparent #ffffff transparent transparent;
-	}
-	&:after{
-		left: 0;
-	}
-
-	@include mouseOver(){
-		&:before{
-			left: 0;
-			border-width: 5px 20px 5px 0;
-			// opacity: 0!important;
-		}
-		&:after{
-			width: 10px;
-			left:20px;
-		}		
-	}
-}
-
- .slick-next{
- 	z-index: 2;
- 	&:before { 
-	 	border-width: 8.5px 0 8.5px 35px;
-	 	border-color: transparent transparent transparent #ffffff;
-	 }
-	&:after{
-		right: 0;
-	}	
-
- 	@include mouseOver(){
-
-		&:before{
-			border-width: 5px 0px 5px 20px;
-			// opacity: 0!important;
-		}
-		&:after{
-			width: 10px;
-			right: 20px;
-		}		
-	}
-}
-
-.slick-dots{
-	bottom: 5px;
-	li{
-		&.slick-active{
-			button:before{
-				color: $orange;
-			}			
-		}
-		button:before{
-			color: #fff
-		}
-	} 
-}
-
-
-/********************
-main visual
-********************/
-
-.mainvisual{
-	position: relative;
-	
-	.mvArticle{
-		height: 100%;
-		margin-top: auto;
-		margin-bottom: auto;
-		text-align: center;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		position: absolute;
-		z-index: 1;
-		top: 0;
-		right: 0;
-		left: 0;
-		bottom: 0;
+		position: relative;
 		
-		&_text{
-			font-size: 2.5em;
-			font-feature-settings: 'palt';
-			letter-spacing: 0.18em;
-			color: #fff;
-			text-shadow: 0 0 5px rgba(#000, 0.2);
+		&_main,
+		&_sub{
+			display: block;
 		}
-
-		.button{
-			width: 240px;
-			color: #fff;
-			
-			a{
-				font-weight: bold;
-				&:before,
-				&:after{
-					margin: auto;
-					position: absolute;
-					top: 0;
-					right: 10px;
-					bottom: 0;
-					transition: transition();
-				}
-				&:before{
-					content:  " ";
-					width: 0;
-					height: 1px;
-					right: 0px;
-					background-color: $orange;
-				}
-				&:after{
-					content: " ";
-					display: block;
-					width: 0;
-					height: 0;
-					position: absolute;
-					top: 0;
-					right: 10px;
-					bottom: 0;			
-					border-style: solid;
-					border-width: 5px 0 5px 22px;
-					border-color: transparent transparent transparent $orange;	
-				}
-
-				@include mouseOver{
-					&:before{
-						content:  " ";
-						width: 20px;
-						right: 10px;
-					}
-					&:after{
-						right: 0px;
-						border-width: 5px 0 5px 10px;
-					}					
-				}
+		
+		&_main{
+			font-size: 2em;
+			&:after{
+				content:  " ";
+				width: 100px;
+				height: 2px;
+				margin-top: 35px;
+				margin-bottom: 35px;
+				margin: auto;
+				display: block;
+				position: relative;
+				// position: absolute;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				background-color: $orange;
 			}
 		}
+
+		&_sub{
+			font-size: 1.15em;
+			line-height: 2;
+			// margin-top: 35px;
+		}
+		
 	}
+}
 
-
+.careerSelectContent{
+	display: none;
+	&_content{
+		transition: transition();
+		// opacity: 0;
+		transform-origin: 50%;
+		transform: perspective($perspective) translate3d(0,0,5px);
+	}
+	&.active{
+			display: block;
+		.careerSelectContent_content{
+			transform: perspective($perspective) translate3d(0,0,0);			
+		}
+	}
 }
 
 
 
-////////////////////////
-
-// 個別
-
-////////////////////////
 
 /********************
-what we are
+navigation
 ********************/
-.section-wwa{
-	margin-top: 90px;
+
+
+.section-nav{
+	@include liquid(980, 1400,true);
+	background-color: transparent!important;
 	
-
-	.section_footer.cityView{
-		height: 410px;
-		overflow: hidden;
-		
-		
-		img{
-			width: 100%;
-			
-		}
-		
+	li{
+		list-style: none;
 	}
 
+	a{
+		color: inherit;
+	}
+}
+
+.infoNav ul,
+.careerSelectNav ul{
+	a{
+		font-size: 1.85em;
+		letter-spacing: 0.5em;
+		display: block;
+		
+		@include mouseOver{
+			
+		}
+	}
 }
 
 
-/********************
-business
-********************/
-.section-business{
+.infoNav ul{
+	width: 100%;
+	margin-bottom: 60px;
+	display: table;
+	table-layout: fixed;
+	
+	li{
+		display: table-cell;
+		vertical-align: middle;
+	}
 
-	.businessPanel{
-		@include liquid( 1022, 1400, true );
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		
-		&_panel{
-			line-height: 1;
-			list-style: none;
-			
+	li.active span{
+		border-bottom: solid 2px $orange;
+	}
 
-			a{
-				color: inherit;
-				@include mouseOver(){
-					opacity: 1;
-					.businessPanel_panel_index{
-						letter-spacing: 0.5em;
-					}	
+	a{
+		@include mouseOver{
+			.icon-arrow{
+				&:before{
+					width: 30px;
+				}	
+				&:after{
+					// transform: translateX(5px);
 				}
-			}		
-			
-			
+			}
+		}		
+	}
+
+	span{
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		padding-right: 1em;
+		padding-left: 1em;
+	}
+
+	.icon {
+		height: 10px;
+		margin-top: auto;
+		margin-bottom: auto;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		
+	}
+
+	li:first-child{
+		padding-right: 2em;
+		text-align: right;
+	}
+	li:last-child{
+		padding-left: 2em;
+		text-align: left;
+	}	
+}
+
+.careerSelectNav ul{
+	width: calc( 100% + 5px );
+	display: table;
+	table-layout: fixed;
+	border-spacing: 10px 0;
+	
+	li{
+		display: table-cell;
+		vertical-align: middle;
+		border: solid 1px $gray;
+		text-align: center;
+		a{
+			padding: 0.5em;
 		}
 
-		&_panel_index{
-			transition: transition();
+		@include mouseOver(){
+			&:not(.active) a{
+				background-color: $orange;
+				color: #fff;
+		
+			}
 		}
 
-		&_panel-about{
-			.businessPanel_panel_index{
+		&.active{
+			a{
+				background-color: $orange;
 				color: #fff;
 			}
 		}
 	}
-
 }
 
-
-
 /********************
-person
+募集職種
 ********************/
-.section-person{
-
-	position: relative;
-
-	.gradationBg{
-		width: 100%;
-		display: block;
-		transition: transition();
-		@extend %gradation;
-		
-		
-		&-top{
-			height: 100px;
-			position: absolute;
-			top: 0;
-			z-index: -1;
-		}
-
-		&-bottom{
-			height: 50px
-		}
-	}
-
-	.personImagePanel{
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		
-		&_panel{
-			line-height: 0;
-			list-style: none;		
-			@include liquid( 466, 1400 );
-			
-			img{
-				width: 100%;
-			}
-		}
-	}
-
-}
-
-
-
-/********************
-career
-********************/
-.section-career{
-	margin-bottom: 160px;
-
-	.heroPanel{
-		margin: auto;	
-	}
-}
-
-
-
-/********************
-culture
-********************/
-.section-culture{
-	margin-bottom: 140px;
+.section-genre{
 	
-	.heroPanel
-	{
-		width: 100%;
-		height: 590px;
-		display: block;
-		overflow: hidden;
+	.genreList{
+		width: 95%;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1.5em;
 		
-		&_bg{
-			img{
-				width: 100%;			
+		li{
+			padding-top: 1em;
+			padding-bottom: 1em;
+			list-style: none;
+			text-align: center;
+			border-bottom: solid 1px $gray;
+			background-color: #fff;
+			
+			&:first-child{
+				border-top: solid 1px $gray;
 			}
 		}
 	}
@@ -383,31 +234,290 @@ culture
 
 
 /********************
-recruiting
+募集要項
 ********************/
-.section-recruiting{
-	margin-bottom: 0;
-	padding-top: 5rem;
-	padding-bottom: 5rem;
+.section-requirement{
+
+	.requirementInfo
+	{
+		max-width: 700px;
+		margin-right: auto;
+		margin-left: auto;
+		&_list{
+			display: table;
+			
+			dt,
+			dd{
+				display: table-cell;
+				vertical-align: top;
+				box-sizing: border-box
+			}
+			dt{
+				width: 105px;
+				padding-right: 2em;
+				border-right: solid 2px $orange;
+				font-weight: bold;
+			}
+			dd{
+				padding-left: 2em;
+			}
+			p{
+				margin-top: 0;
+			}
+
+
+			.attention{
+				
+			}
+		}	
+	}
+
+}
+
+
+
+/********************
+採用ステップ
+********************/
+.section-steps{
+
+	.section_content{
+		font-size: 1.15em;
+		text-align: center;	
+	}
+
+}
+
+
+
+/********************
+entry
+********************/
+.section-entry{
+
 	@extend %gradation;
-	text-align: center;
 	
 	.section_index{
-		margin-bottom: 50px;
+		&_main:after{
+			// background: darken( $orange, 20  );
+		}
 	}
 
-	.button{
-		width: 210px;
-		a{
+	.section_content{
+		font-size: 1.15em;
+		text-align: center;	
+		
+		p{
 			color: #fff;
-			border-color: #fff;
-			background-color: transparent;
+			margin-bottom: 50px;
+		}
+	}
+
+	.entryBannerList{
+		max-width: 900px;
+		margin-left: auto;
+		margin-right: auto;
+
+		text-align: center;
+		li{
+			width: calc( 50% - 10px );
+			padding-top: 30px;
+			padding-bottom: 30px;
+			margin-right: 10px;
+			display: inline-block;
+			vertical-align: middle;
+			list-style: none;
+			position: relative;
+			bottom: 0;
+			transition: transition();
+			background-color: #fff;
+			// display: table-cell;
+			box-shadow: 0 3px 0 #000;
 			
-			@include mouseOver{
-				background-color: $orange;
+			&:last-child{
+				margin-right: 0;
+			}
+			a{
+				display: block;
+			}
+
+			@include mouseOver(){
+				bottom: -3px;
+				box-shadow: 0 0px 0 #000;;
+			}
+		}
+	}
+}
+
+
+
+/****************************************
+求める人物像〜
+****************************************/
+
+.recruiting-walfare
+{
+
+/********************
+求める人物像
+********************/
+.section-requirement{
+	// padding-top: 0;
+	// padding-bottom: 0;
+	padding-bottom: 200px;
+	background: url(../img/motomeru-bg.jpg) center bottom 20% no-repeat;
+	background-size: cover;
+	text-align: center;
+	
+	position: relative;
+	// .wrap{
+	// 	margin-top: 30px;
+	// 	position: absolute;
+	// 	top: 0;
+	// }
+	
+	.requirementList{
+		margin-left: 0;
+		display: inline-block;
+
+		li{
+			display: table;
+			margin-bottom: 70px;
+			list-style: none;
+			font-size: 2em;
+			font-feature-settings: 'palt';
+			letter-spacing: 0.25em;
+			
+			.num,.text{
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			.text{
+				padding-left: 60px;
 			}
 		}
 	}
 
+	.cover{
+		width: 100%;
+		display: block;
+	}
 
+}
+
+/********************
+制度、福利厚生
+********************/
+
+.section-walfare{
+	background-color: #f3f3f3;	
+	
+	.walfarePanels{
+		position: relative;
+		
+		.row{
+			margin-bottom: 10px;
+			// display: table;
+			display: flex;
+			flex-direction: row;
+			align-items: stretch;
+			justify-content: space-between;
+			
+			.walfarePanels_child{
+				transition: all 0.5s;				
+				&:nth-child( even ){
+					@include background-image( linear-gradient(to right, #ff431e, #ff831f) );
+				}				
+
+				&:hover{
+					background-position: 100% 100%!important;
+					background-size: 300%!important;
+				}			
+			}
+
+			&:nth-child( even ){
+				.walfarePanels_child{
+					&:nth-child( even ){
+						@include background-image( linear-gradient(to right, #ff8d1d, #ffb605) );
+					}						
+					&:nth-child( odd ){
+						@include background-image( linear-gradient(to right, #ff431e, #ff831f) );
+					}				
+				}				
+			}
+			
+		}
+		&_child{
+			max-width: calc( 50% - 10px );
+			width: calc( 50% - 10px );
+			// padding: 30px;
+			margin-left: 5px;
+			margin-right: 5px;
+			color: #fff;
+			position: relative;
+			box-shadow: 0 3px 0 rgba( #000,1 );
+			cursor: pointer;
+			@include background-image( linear-gradient(to right, #ff8d1d, #ffb605) );
+			// display: table-cell;
+			
+			&:nth-child( even ){
+				@include background-image( linear-gradient(to right, #ff431e, #ff831f) );
+			}
+		}
+
+		.icon-plus{
+			margin: auto;
+			position: absolute;
+			top: 0;
+			right: 20px;
+			bottom: 0;
+			border-radius: 100%;
+			background-color: rgba(#fff,0.2);
+		}
+
+		.panelTable{
+		    padding: 30px;
+		    height: 200px;			
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			align-items: center;
+			justify-content: space-between;
+	
+			///// icon
+			&_icon{
+				display: table;
+				&_img,
+				&_caption{
+					display: table-cell;
+					vertical-align: middle;
+				}
+				&_img{
+					@include liquid( 180, 580 );
+				}
+				&_caption{
+					padding-left: liquidSpace( 50, 580 );
+					text-align: center;
+				}
+			}
+
+			&_text{
+				// width: 50%;
+				// padding-left: 10%;
+				// padding-right: 10%;
+				width: 0;
+				white-space: nowrap;
+				overflow: hidden;
+			}
+		}
+
+
+	}
+	
+
+}
+
+
+	
 }

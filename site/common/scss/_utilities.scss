@@ -201,3 +201,90 @@
 		$font-size: 22px
 	 );
 }
+
+.icon-arrow{
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	&:before,
+	&:after{		
+		display: block;
+		transition: transition();
+		content:  " ";
+	}
+	&:before{
+		width: 10px;
+		height: 1px;
+		right: 10px;
+		margin-top: auto;
+		margin-bottom: auto;
+		position: absolute;
+		top: 0;
+		bottom: 0;		
+		background-color: #000;
+		
+	}
+	&:after{
+		width: 0;
+		height: 0;
+		right: 5px;
+		border-style: solid;
+		border-width: 5px 0 5px 11px;
+		border-color: transparent transparent transparent #000;				
+	}
+
+}
+
+.icon-plus{
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	&:before,
+	&:after{	
+		margin: auto;	
+		display: block;
+		transition: transition();
+		content:  " ";
+		background-color: #fff;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		
+	}
+	//たて
+	&:before{
+		width: 1px;
+		height: 75%;
+	}
+	//よこ
+	&:after{
+		width: 75%;
+		height: 1px;
+		
+	}
+}
+
+
+
+
+
+
+//////////////////
+
+// text
+
+//////////////////
+
+
+.attention{
+	font-size: 0.85em;
+}
+
+.orange{
+	color: $orange;
+}
+
