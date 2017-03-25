@@ -60,15 +60,10 @@
 		}
 		a{
 			line-height: 1;
-			padding-top: 10px;
-			padding-bottom: 10px;
-			display: block;
-			text-align: center;
-			font-family: $roboto_cond;
+			padding: 10px 0;
 			font-weight: bold;
 			letter-spacing: 0.1em;
 			color: #fff;
-			background: $orange;
 		}	
 	}
 
@@ -96,8 +91,10 @@
 
 .footer
 {
+	margin-top: 110px;
 
 	text-align: center;
+	border-top: solid 12px #e7e7e7;
 	
 	// @extend %gradation;
 	
@@ -117,7 +114,6 @@
 		margin-left: auto;
 		margin-right: auto;
 		display: table;
-		border-top: solid 12px #e7e7e7;
 		
 		padding: {
 			top:5rem;
@@ -133,11 +129,13 @@
 		}
 		
 		&_logo{
-			float: left;
+			// float: left;
+			text-align: left;
 		}
 		&_copy{
 			font-size: 1rem;
-			float: right;
+			text-align: right;
+			// float: right;
 		}
 	}
 

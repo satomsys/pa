@@ -31,7 +31,7 @@
 // @param @content CSS properties
 //
 @mixin mouseOver(){
-	transition : all .5s ease 0s;
+	transition : all .3s ease 0s;
 	&:hover , &:active , &:focus{
 		@content;
 	}

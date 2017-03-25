@@ -7,6 +7,19 @@
 //////////////////////////////////////////
 
 
+
+//////////////////
+
+// color
+
+//////////////////
+
+%gradation{
+	@include background-image(linear-gradient(to right, $orange, #ffc61f));
+}
+
+
+
 //////////
 
 // fonts
