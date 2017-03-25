@@ -93,6 +93,11 @@ navigation
 	@include liquid(980, 1400,true);
 	background-color: transparent!important;
 	
+
+	&:last-child{
+		padding-bottom: 0;
+	}
+	
 	li{
 		list-style: none;
 	}
@@ -118,7 +123,6 @@ navigation
 
 .infoNav ul{
 	width: 100%;
-	margin-bottom: 60px;
 	display: table;
 	table-layout: fixed;
 	
@@ -175,6 +179,7 @@ navigation
 
 .careerSelectNav ul{
 	width: calc( 100% + 5px );
+	margin-top: 60px;
 	display: table;
 	table-layout: fixed;
 	border-spacing: 10px 0;
@@ -456,10 +461,17 @@ entry
 			margin-right: 5px;
 			color: #fff;
 			position: relative;
+			bottom: 0;
 			box-shadow: 0 3px 0 rgba( #000,1 );
 			cursor: pointer;
+			transition: transition($s:0.1s);
 			@include background-image( linear-gradient(to right, #ff8d1d, #ffb605) );
 			// display: table-cell;
+			
+			@include mouseOver(){
+				bottom: -3px;
+				box-shadow: 0 0px 0 rgba( #000,1 );
+			}
 			
 			&:nth-child( even ){
 				@include background-image( linear-gradient(to right, #ff431e, #ff831f) );
@@ -487,6 +499,7 @@ entry
 	
 			///// icon
 			&_icon{
+				width: 100%;
 				display: table;
 				&_img,
 				&_caption{
@@ -495,9 +508,10 @@ entry
 				}
 				&_img{
 					@include liquid( 180, 580 );
+					text-align: center;
 				}
 				&_caption{
-					padding-left: liquidSpace( 50, 580 );
+					// padding-left: liquidSpace( 50, 580 );
 					text-align: center;
 				}
 			}
@@ -511,11 +525,7 @@ entry
 				overflow: hidden;
 			}
 		}
-
-
 	}
-	
-
 }
 
 
