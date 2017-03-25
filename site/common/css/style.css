@@ -1,9 +1,19 @@
 @charset 'UTF-8';
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:300,400,700');
+.sitenav .navList_child a:after
+{
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmNmQxZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmYzYxZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ff6d1f), color-stop(100%, #ffc61f));
+    background-image: -webkit-linear-gradient(left, #ff6d1f, #ffc61f);
+    background-image:         linear-gradient(to right, #ff6d1f, #ffc61f); 
+    background-size: 100%;
+}
+
 ::-moz-selection
 {
     background-color: rgba(0, 105, 255, .3);
 }
+
 ::selection
 {
     background-color: rgba(0, 105, 255, .3);
@@ -480,6 +490,77 @@ html.ie8 .icon-facebook:before
 
         background-color: #fff;
     }
+}
+
+.sitenav .navList
+{
+    display: table; 
+
+    width: 940px;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-left: auto;
+}
+.sitenav .navList_child
+{
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 1;
+
+    display: table-cell;
+
+    vertical-align: middle;
+    letter-spacing: .5em;
+}
+.sitenav .navList_child.active
+{
+    font-weight: bold;
+}
+.sitenav .navList_child.active a:after
+{
+    width: 100%;
+}
+.sitenav .navList_child a
+{
+    position: relative;
+
+    display: block;
+
+    padding: 20px;
+
+    -webkit-transition: all .3s ease 0s;
+            transition: all .3s ease 0s; 
+    text-align: center;
+
+    color: inherit;
+}
+.sitenav .navList_child a:after
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 0;
+    height: 3px;
+    margin: auto;
+
+    content: ' ';
+    -webkit-transition: all .3s ease-in-out 0s;
+            transition: all .3s ease-in-out 0s;
+}
+.sitenav .navList_child a:hover,
+.sitenav .navList_child a:active,
+.sitenav .navList_child a:focus
+{
+    color: #ff6d1f;
+}
+.sitenav .navList_child a:hover:after,
+.sitenav .navList_child a:active:after,
+.sitenav .navList_child a:focus:after
+{
+    width: 100%;
 }
 
 .footer
