@@ -674,7 +674,7 @@ html.ie8 .icon-facebook:before
     display: table;
     overflow: hidden; 
 
-    width: 1300px;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
     padding-top: 5rem;
