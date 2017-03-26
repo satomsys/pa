@@ -4,3 +4,410 @@
 @import "../common/scss/variables";
 @import "../common/scss/mixins";
 
+////////////////////////
+
+// modules
+
+////////////////////////
+
+.section{
+	margin-top: 150px;
+	margin-bottom: 200px;
+	&_index{
+		font-family:$roboto_cond;
+		text-align: center;
+		line-height: 1;
+		margin: 0;
+	}
+}
+
+.heroPanel{
+	margin: auto;	
+	display: table;
+	position: relative;
+	
+	&.comingsoon{
+		background-color: #fff;
+		.heroPanel_bg{
+			opacity: 0.2;
+		}			
+	}		
+	
+	&_text,
+	&_bg{
+		display: table-cell;
+		vertical-align: middle;
+		line-height: 1;
+	}
+	&_text{
+		height: 1em;
+		margin: auto;
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		font-family: $roboto_cond;
+		font-weight: bold;
+		letter-spacing: 0.2em;
+		text-align: center;
+	}
+}
+
+
+/********************
+slick reset
+********************/
+
+.slick-prev:before, .slick-next:before { 
+	content: " "!important;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	display: block;
+	transition: transition();
+}
+.slick-prev:after, .slick-next:after { 
+	content: " "!important;
+	width: 0px;
+	height: 1px;
+	margin: auto;
+	display: block;
+	background-color: #fff;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	transition: transition();
+}
+.slick-prev{
+	z-index: 2;
+	&:before{
+		border-width: 8.5px 35px 8.5px 0;
+		border-color: transparent #ffffff transparent transparent;
+	}
+	&:after{
+		left: 0;
+	}
+
+	@include mouseOver(){
+		&:before{
+			left: 0;
+			border-width: 5px 20px 5px 0;
+			// opacity: 0!important;
+		}
+		&:after{
+			width: 10px;
+			left:20px;
+		}		
+	}
+}
+
+ .slick-next{
+ 	z-index: 2;
+ 	&:before { 
+	 	border-width: 8.5px 0 8.5px 35px;
+	 	border-color: transparent transparent transparent #ffffff;
+	 }
+	&:after{
+		right: 0;
+	}	
+
+ 	@include mouseOver(){
+
+		&:before{
+			border-width: 5px 0px 5px 20px;
+			// opacity: 0!important;
+		}
+		&:after{
+			width: 10px;
+			right: 20px;
+		}		
+	}
+}
+
+.slick-dots{
+	bottom: 5px;
+	li{
+		&.slick-active{
+			button:before{
+				color: $orange;
+			}			
+		}
+		button:before{
+			color: #fff
+		}
+	} 
+}
+
+
+/********************
+main visual
+********************/
+
+.mainvisual{
+	position: relative;
+	
+	.mvArticle{
+		height: 100%;
+		margin-top: auto;
+		margin-bottom: auto;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		
+		&_text{
+			font-size: 2.5em;
+			font-feature-settings: 'palt';
+			letter-spacing: 0.18em;
+			color: #fff;
+			text-shadow: 0 0 5px rgba(#000, 0.2);
+		}
+
+		.button{
+			width: 240px;
+			color: #fff;
+			
+			a{
+				font-weight: bold;
+				&:before,
+				&:after{
+					margin: auto;
+					position: absolute;
+					top: 0;
+					right: 10px;
+					bottom: 0;
+					transition: transition();
+				}
+				&:before{
+					content:  " ";
+					width: 0;
+					height: 1px;
+					right: 0px;
+					background-color: $orange;
+				}
+				&:after{
+					content: " ";
+					display: block;
+					width: 0;
+					height: 0;
+					position: absolute;
+					top: 0;
+					right: 10px;
+					bottom: 0;			
+					border-style: solid;
+					border-width: 5px 0 5px 22px;
+					border-color: transparent transparent transparent $orange;	
+				}
+
+				@include mouseOver{
+					&:before{
+						content:  " ";
+						width: 20px;
+						right: 10px;
+					}
+					&:after{
+						right: 0px;
+						border-width: 5px 0 5px 10px;
+					}					
+				}
+			}
+		}
+	}
+
+
+}
+
+
+
+////////////////////////
+
+// 個別
+
+////////////////////////
+
+/********************
+what we are
+********************/
+.section-wwa{
+	margin-top: 90px;
+	
+
+	.section_footer.cityView{
+		height: 410px;
+		overflow: hidden;
+		
+		
+		img{
+			width: 100%;
+			
+		}
+		
+	}
+
+}
+
+
+/********************
+business
+********************/
+.section-business{
+
+	.businessPanel{
+		@include liquid( 1022, 1400, true );
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		
+		&_panel{
+			line-height: 1;
+			list-style: none;
+			
+
+			a{
+				color: inherit;
+				@include mouseOver(){
+					opacity: 1;
+					.businessPanel_panel_index{
+						letter-spacing: 0.5em;
+					}	
+				}
+			}		
+			
+			
+		}
+
+		&_panel_index{
+			transition: transition();
+		}
+
+		&_panel-about{
+			.businessPanel_panel_index{
+				color: #fff;
+			}
+		}
+	}
+
+}
+
+
+
+/********************
+person
+********************/
+.section-person{
+
+	position: relative;
+
+	.gradationBg{
+		width: 100%;
+		display: block;
+		transition: transition();
+		@extend %gradation;
+		
+		
+		&-top{
+			height: 100px;
+			position: absolute;
+			top: 0;
+			z-index: -1;
+		}
+
+		&-bottom{
+			height: 50px
+		}
+	}
+
+	.personImagePanel{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		
+		&_panel{
+			line-height: 0;
+			list-style: none;		
+			@include liquid( 466, 1400 );
+			
+			img{
+				width: 100%;
+			}
+		}
+	}
+
+}
+
+
+
+/********************
+career
+********************/
+.section-career{
+	margin-bottom: 160px;
+
+	.heroPanel{
+		margin: auto;	
+	}
+}
+
+
+
+/********************
+culture
+********************/
+.section-culture{
+	margin-bottom: 140px;
+	
+	.heroPanel
+	{
+		width: 100%;
+		height: 590px;
+		display: block;
+		overflow: hidden;
+		
+		&_bg{
+			img{
+				width: 100%;			
+			}
+		}
+	}
+}
+
+
+
+/********************
+recruiting
+********************/
+.section-recruiting{
+	margin-bottom: 0;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	@extend %gradation;
+	text-align: center;
+	
+	.section_index{
+		margin-bottom: 50px;
+	}
+
+	.button{
+		width: 210px;
+		a{
+			color: #fff;
+			border-color: #fff;
+			background-color: transparent;
+			
+			@include mouseOver{
+				background-color: $orange;
+			}
+		}
+	}
+
+
+}

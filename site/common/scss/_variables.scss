@@ -1,4 +1,3 @@
-@charset "UTF-8";
 //////////////////////////////////////////
 
 //valiables
@@ -8,16 +7,37 @@
 //////////////////////////////////////////
 
 
+
+//////////////////
+
+// color
+
+//////////////////
+
+%gradation{
+	@include background-image(linear-gradient(to right, $orange, #ffc61f));
+}
+
+
+
+//////////
+
+// fonts
+
+//////////
+
+$roboto: 'Roboto', sans-serif;
+$roboto_cond: 'Roboto Condensed', sans-serif;
+
+
 //////////
 
 // value
 
 //////////
 
-$ratio: 1; //カンプが何倍サイズか。
 $perspective : 500px;
-$copymargin: 75px; //コピー1の下マージン
-$perspective : 500px;
+
 
 
 
@@ -42,8 +62,8 @@ $perspective : 500px;
 /////////////////////
 
 //column
-$innerWidth: 980px;
-$outerWidth:1200px;
+$innerWidth: 940px;
+$outerWidth:1300px;
 
 //margin / padding
 $sSpace : 1rem;

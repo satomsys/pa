@@ -1,0 +1,283 @@
+@charset "UTF-8";
+@import "compass";
+@import "../../common/scss/colors";
+@import "../../common/scss/variables";
+@import "../../common/scss/mixins";
+
+////////////////////////////////////////////////
+
+// RECRUITING
+
+////////////////////////////////////////////////
+
+////////////////////////
+
+// modules
+
+////////////////////////
+
+%dlStyle{
+	display: table;
+	
+	dt,
+	dd{
+		display: table-cell;
+		vertical-align: top;
+		box-sizing: border-box
+	}
+	dt{
+		width: 150px;
+		padding-right: 2em;
+		font-weight: bold;
+	}
+	dd{
+		padding-left: 2em;
+	}
+	p{
+		margin-top: 0;
+	}
+	.attention{
+		
+	}	
+}
+
+
+.section{
+	padding-top: 70px;
+	padding-bottom: 70px;
+	
+
+	.contentArticle{
+		@include liquid(980,1300, true);
+		
+		&_index{
+			font-size: 2em;
+			margin-bottom: 2em;
+			font-weight: bold;
+		}
+
+		p{
+			margin-top: 2em;
+			margin-bottom: 2em;
+		}
+	}
+}
+
+.careerSelectContent{
+	display: none;
+	&_content{
+		transition: transition();
+		// opacity: 0;
+		transform-origin: 50%;
+		transform: perspective($perspective) translate3d(0,0,5px);
+	}
+	&.active{
+			display: block;
+		.careerSelectContent_content{
+			transform: perspective($perspective) translate3d(0,0,0);			
+		}
+	}
+}
+
+
+
+
+/********************
+navigation
+********************/
+
+
+.section-nav{
+	@include liquid(980, 1400,true);
+	background-color: transparent!important;
+	
+
+	&:last-child{
+		padding-bottom: 0;
+	}
+	
+	li{
+		list-style: none;
+	}
+
+	a{
+		color: inherit;
+	}
+}
+
+.infoNav ul,
+.careerSelectNav ul{
+	a{
+		font-size: 1.85em;
+		letter-spacing: 0.5em;
+		display: block;
+		
+		@include mouseOver{
+			
+		}
+	}
+}
+
+
+.careerSelectNav ul{
+	width: calc( 100% + 5px );
+	margin-top: 60px;
+	display: table;
+	table-layout: fixed;
+	border-spacing: 10px 0;
+	
+	li{
+		display: table-cell;
+		vertical-align: middle;
+		border: solid 1px $gray;
+		text-align: center;
+		a{
+			padding: 0.5em;
+		}
+
+		@include mouseOver(){
+			&:not(.active) a{
+				background-color: $orange;
+				color: #fff;
+		
+			}
+		}
+
+		&.active{
+			a{
+				background-color: $orange;
+				color: #fff;
+			}
+		}
+	}
+}
+
+
+////////////////////////
+
+// 個別
+
+////////////////////////
+
+
+/********************
+mission
+********************/
+.section-mission{
+	
+	.wrap{
+		max-width: none;
+		padding: 0;
+	}
+
+	.contentArticle-bullet{
+		width: 100%;
+		margin-top: liquidSpace(200,1400);
+		padding-top: 20px;
+		padding-bottom: 20px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: stretch;
+		background-color: rgba(#fff, 0.7);
+		
+		.bullet
+		{
+			padding-right: 30px;
+			padding-left: 30px;
+			position: relative;
+			
+			&_num{
+				margin-top: -5em;
+				display: block;
+				text-align: center;
+			}
+			
+			&_index{
+				width: 100%;
+				margin-top: 1em;
+				margin-bottom: 1em;
+				display: table;
+				position: relative;
+				font-weight: bold;
+				color: $orange;
+				text-align: center;
+				
+				span{
+					height: 200px;
+					display: table-cell;
+					vertical-align: middle;
+					position: relative;
+					z-index: 2;
+				}
+
+				&:after{
+					content:  " ";
+					display: block;
+					width: 200px;
+					height: 200px;
+					margin: auto;
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					
+					border-radius: 100%;
+					@include background-image(linear-gradient( to right bottom, #eaeaea, #fafafa));
+					box-shadow: 2px 3px 0 rgba($gray,0.8), -1px -1px 1px rgba($gray,0.2);
+				}
+				
+			}	
+		}
+		
+	}
+}
+
+
+/********************
+会社概要
+********************/
+.section-company{
+	.requirementInfo
+	{
+		max-width: 700px;
+		margin-right: auto;
+		margin-left: auto;
+		&_list{
+			@extend %dlStyle;			
+			dt{
+				border-right: solid 2px $orange;
+			}
+		}	
+	}
+}
+
+
+
+/********************
+アクセス
+********************/
+.section-access{
+	background-color:  #f3f3f3;
+	.accessDetail
+	{
+		max-width: 700px;
+		margin-right: auto;
+		margin-left: auto;		
+		
+		&_map iframe{
+			max-width: 700px;
+			min-height: 400px;
+			margin-right: auto;
+			margin-bottom: 30px;
+			margin-left: auto;
+			display: block;
+		}
+		&_data{
+
+			@extend %dlStyle;
+			
+		}	
+	}
+}

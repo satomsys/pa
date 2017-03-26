@@ -55,50 +55,67 @@ if( $fadeTarget.length ){
 
 
 /**
-* スワイプの方向を取得（SP
-* @see Position
-* @return $dir {string} left /right スワイプの方向
+* slick.js
 */
-function touchDirection( activeModal, e ){
-		var $pos = Position( e ), //x and y	
-			// $contentWidth = $activeModal.outerWidth();
-			$contentHalfWidth = activeModal.outerWidth() / 2;
 
-			$dir = $contentHalfWidth < $pos.x ? 'right' : 'left';
-
-			return $dir;
-	// })		
-}
-
-/*
-* タップ・スワイプの現在位置を得る
-*/
-function Position( e ){
-	var x = e.originalEvent.touches[0].pageX;
-	var y = e.originalEvent.touches[0].pageY;
-	x = Math.floor(x);
-	y = Math.floor(y);
-	var pos = {'x':x , 'y':y};
-	return pos;
-}
+$('.mainvisual_image').slick({
+  autoplay: true,
+  autoplaySpeed: 6000,
+  dots: true,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  cssEase: 'linear'	
+});
 
 
-/**
-* テンプレート挿入時の、モーダルのpadding設定
-* @param modal { obj } モーダルのオブジェクト
-*/
-function modalPosTop( ){
-	var $navBar = $('.navbar'),
-		$navBarHeight = $navBar.outerHeight();
 
-	$(window).on('reisze', function(){
-		$navBarHeight = $navBar.outerHeight();
-	})
 
-	$('.modal').css({
-		'top': $navBarHeight + 'px'
-	});
+// /**
+// * スワイプの方向を取得（SP
+// * @see Position
+// * @return $dir {string} left /right スワイプの方向
+// */
+// function touchDirection( activeModal, e ){
+// 		var $pos = Position( e ), //x and y	
+// 			// $contentWidth = $activeModal.outerWidth();
+// 			$contentHalfWidth = activeModal.outerWidth() / 2;
+
+// 			$dir = $contentHalfWidth < $pos.x ? 'right' : 'left';
+
+// 			return $dir;
+// 	// })		
+// }
+
+// /*
+// * タップ・スワイプの現在位置を得る
+// */
+// function Position( e ){
+// 	var x = e.originalEvent.touches[0].pageX;
+// 	var y = e.originalEvent.touches[0].pageY;
+// 	x = Math.floor(x);
+// 	y = Math.floor(y);
+// 	var pos = {'x':x , 'y':y};
+// 	return pos;
+// }
+
+
+// /**
+// * テンプレート挿入時の、モーダルのpadding設定
+// * @param modal { obj } モーダルのオブジェクト
+// */
+// function modalPosTop( ){
+// 	var $navBar = $('.navbar'),
+// 		$navBarHeight = $navBar.outerHeight();
+
+// 	$(window).on('reisze', function(){
+// 		$navBarHeight = $navBar.outerHeight();
+// 	})
+
+// 	$('.modal').css({
+// 		'top': $navBarHeight + 'px'
+// 	});
 			
-}
+// }
 
 });

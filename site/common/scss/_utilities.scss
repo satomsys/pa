@@ -22,7 +22,7 @@
 }
 
 .wrap{
-	max-width: $outerWidth + 60;
+	max-width: $outerWidth;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 30px;
@@ -54,6 +54,92 @@
 .clearfix{
 	@include clearfix();
 	@include has-layout;
+}
+
+
+.button{
+	box-sizing: border-box;
+	display: inline-block;
+	line-height: 1;
+	
+	a{
+		padding: 1em;
+		display: block;
+		color: inherit;
+		text-align: center;
+		position: relative;
+		transition: transition();
+		text-transform: uppercase;
+		font-family: $roboto_cond;
+		letter-spacing:  0.1em;
+		border: solid 1px;
+		background-color: $orange;
+		
+		@include mouseOver(){
+			background-color: darken( $orange, 10);
+			letter-spacing: 0.2em;
+		}
+	}
+
+	&.button-ghost{
+		a{
+			border-color: #fff;
+			background-color: transparent;
+		}
+	}
+
+	&.button-nav a{
+		width: auto;
+		
+	}
+
+	&.button-hasArrow a{
+
+		@include mouseOver(){
+			&:before{
+				width: 15px;
+				right: 0;
+				transition-duration: 0.2s;
+			}
+			&:after{
+				right: 0px;
+				border-style: solid;
+				border-width: 5px 0 4px 0px;
+				transition-duration: 0.2s;
+			}
+		}
+
+		&:before,
+		&:after{		
+			margin-top: auto;
+			margin-bottom: auto;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			display: block;
+			transition: transition();
+			content:  " ";
+		}
+		&:before{
+			width: 10px;
+			height: 1px;
+			right: 16px;
+			background-color: #fff;
+			
+		}
+		&:after{
+			width: 0;
+			height: 0;
+			right: 5px;
+			border-style: solid;
+			border-width: 5px 0 4px 11px;
+			border-color: transparent transparent transparent #ffffff;				
+		}
+	}
+
+	&-recruiting{
+		
+	}
 }
 
 
@@ -115,3 +201,90 @@
 		$font-size: 22px
 	 );
 }
+
+.icon-arrow{
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	&:before,
+	&:after{		
+		display: block;
+		transition: transition();
+		content:  " ";
+	}
+	&:before{
+		width: 10px;
+		height: 1px;
+		right: 10px;
+		margin-top: auto;
+		margin-bottom: auto;
+		position: absolute;
+		top: 0;
+		bottom: 0;		
+		background-color: #000;
+		
+	}
+	&:after{
+		width: 0;
+		height: 0;
+		right: 5px;
+		border-style: solid;
+		border-width: 5px 0 5px 11px;
+		border-color: transparent transparent transparent #000;				
+	}
+
+}
+
+.icon-plus{
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	&:before,
+	&:after{	
+		margin: auto;	
+		display: block;
+		transition: transition();
+		content:  " ";
+		background-color: #fff;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		
+	}
+	//たて
+	&:before{
+		width: 1px;
+		height: 75%;
+	}
+	//よこ
+	&:after{
+		width: 75%;
+		height: 1px;
+		
+	}
+}
+
+
+
+
+
+
+//////////////////
+
+// text
+
+//////////////////
+
+
+.attention{
+	font-size: 0.85em;
+}
+
+.orange{
+	color: $orange;
+}
+

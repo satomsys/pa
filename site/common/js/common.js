@@ -1,14 +1,47 @@
-
 $(function(){
-    $('a[href^=#]').click(function(){
-        var speed = 300;
-        var href= $(this).attr("href");
-        var target = $(href == "#" || href == "" ? 'html' : href);
-        var position = target.offset().top;
-        $("html, body").animate({scrollTop:position}, speed, "swing");
-        return false;
-    });
+
+	var $w = $(window),
+		$ua = deviceIs( $w, 768 ),
+		$timer = null;
+
+
+	$w.on( 'load resize', function( e ){
+
+		clearTimeout( $timer );
+		$timer = setTimeout( function(){
+			$ua = deviceIs( $w, 768 );
+		},300);
+	} );		
+
+
+
+
 });
+
+
+
+/**
+* 幅により仮にデバイス判定しUI変更。
+*/
+function deviceIs( w, breakPoint ){
+	var $w = w,
+		$windowWidth = $w.innerWidth();
+
+	return $windowWidth < breakPoint ? 'mobile' : 'desktop'
+}
+
+
+
+// $(function(){
+//     $('a[href^=#]').click(function(){
+//         var speed = 300;
+//         var href= $(this).attr("href");
+//         var target = $(href == "#" || href == "" ? 'html' : href);
+//         var position = target.offset().top;
+//         $("html, body").animate({scrollTop:position}, speed, "swing");
+//         return false;
+//     });
+// });
 
 
 
@@ -18,40 +51,6 @@ $(function(){
 $(function() {
     $.scrollDepth();
 });
-
-/***
-*　back to top スクロール
-*/
-
-// $( function(){
-
-//  var $timer = null;
-
-//  $(window).on( 'scroll', function(){
-
-//      if( $timer == null ){
-
-//          $timer = setTimeout( function(){
-                
-//              var $icon = $( '.backToTop' ); //icon
-//              var $visible = $icon.is( ':visible' );
-//              var $scrollVal = $( window ).scrollTop(); //スクロール値
-//              var $under = $( 'body' ).height() - ( $scrollVal + $( window ).height() ); //ページの残りの長さ
-
-//              if( $scrollVal > 750 && 500 > $under ){
-//                  if(! $visible ){
-//                      $icon.fadeIn( 'slow' );
-//                  }
-//              } else {
-//                  $icon.fadeOut( 'slow' );
-//              }
-
-//              $timer = null;
-
-//          }, 1000 );
-//      }
-
-//  } );
 
 
 //  $( '.backToTop' ).on( 'click', function(){
