@@ -1,6 +1,6 @@
 $(function(){
 	var $pallaraxWrap = $('.pWrap'),
-		$pallaraxImg =$('.pImg'),
+		$pallaraxDirectionSercher = null,
 		$section = $('.section'),
 		$timer = null,
 		$move = $ua == 'desktop' ? 0.125 : 0.05;
@@ -42,9 +42,11 @@ $(function(){
 				$this.css('overFlow','hidden');
 
 				if( $thisOffset <= $scrollBottom - 20 && $scrollVal < $thisOffset + $this.outerHeight() ){
-					console.log( $this.attr('class' ))
-					$this.find('.pImg').css({
-						'transform' : 'translateY(' + $pallaraxVal + 'px)'
+
+					var $pallaraxImg = $this.find('.pImg');
+					
+					$pallaraxImg.css({
+						'transform' : 'translateY(' + $pallaraxVal  + 'px)'
 					});
 
 				} else if( $thisOffset + $this.outerHeight() < $scrollVal ){
