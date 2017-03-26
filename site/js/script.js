@@ -1,56 +1,60 @@
 $(function(){
+	var $pallaraxWrap = $('.pWrap'),
+		$pallaraxImg =$('.pImg'),
+		$section = $('.section'),
+		$timer = null,
+		$move = $ua == 'desktop' ? 0.125 : 0.05;
 
-var $viewitem = $('.viewitem'),
-	$fadeTarget = $('.gofade'),
-	$timer = null,
-	$offsetTop,
-	$scrollBarWidth = window.innerWidth - document.body.clientWidth,
-	$scrollEvents = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll';
+	$w.on('scroll resize', function(){
 
-/**
-* fade in
-*/
-if( $fadeTarget.length ){
-	$window = $(window);
+		clearTimeout( $timer );
 
-	$window.on( 'load', function(){
-		targetFade( $fadeTarget, $window );			
+		var $scrollVal = $(this).scrollTop(),
+			$wHeight = $w.height(),
+			$scrollBottom = $scrollVal + $wHeight,
+			$pallaraxVal = $scrollVal * $move * -1; // うごき
+
+		/**
+		* section add class
+		*/
+
+		$timer = setTimeout(function(){
+			$.each( $section, function(i,e){
+				var $this = $(this),
+					$sectionOffset = $this.offset().top;
+
+				if( $sectionOffset <= $scrollBottom - 20 ){
+					$this.addClass('inview');
+				}
+
+			})
+		}, 200 );
+
+		/**
+		* pallarax
+		*/
+		// $timer = setTimeout(function(){
+
+			$.each( $pallaraxWrap, function(){
+				var $this = $(this),
+					$thisOffset = $this.offset().top;
+
+				$this.css('overFlow','hidden');
+
+				if( $thisOffset <= $scrollBottom - 20 && $scrollVal < $thisOffset + $this.outerHeight() ){
+					console.log( $this.attr('class' ))
+					$this.find('.pImg').css({
+						'transform' : 'translateY(' + $pallaraxVal + 'px)'
+					});
+
+				} else if( $thisOffset + $this.outerHeight() < $scrollVal ){
+					console.log( 'aaa' )
+				}
+			}	);		
+		// }, 300 )
 	});
 
-	$timer = setTimeout(function(){
-		$window.on( 'scroll', function( e ){
-			clearTimeout( $timer );
-			targetFade( $fadeTarget, $window );
-		});
-	}, 400 );
-}
-
-
-
-
-/**
-* フェードインエフェクトの設定 要素のdata-delayでdelay値設定。
-* @param $fadeTarget { obj } .fadeTargetクラスの要素
-* @param wdw { obj } windowオブジェクト
-*/
- function targetFade( fadeTarget, wdw ){
-	var $scrollVal = wdw.scrollTop(),
-		$wH = wdw.innerHeight(),
-		$windowBottom = $scrollVal + $wH - 50;
-
-	$.each( fadeTarget, function( e ){
-		var $this = $(this),
-			$offsetTop = $this.offset().top,
-			$delay = $this.attr('data-delay');
-
-		if( $offsetTop < $windowBottom ){
-			$this.addClass('fadeIn').css({
-				'transition-delay': $delay + 's'
-			});
-		}
-
-	}); 	
- }
+ });
 
 
 
@@ -99,23 +103,3 @@ $('.mainvisual_image').slick({
 // 	return pos;
 // }
 
-
-// /**
-// * テンプレート挿入時の、モーダルのpadding設定
-// * @param modal { obj } モーダルのオブジェクト
-// */
-// function modalPosTop( ){
-// 	var $navBar = $('.navbar'),
-// 		$navBarHeight = $navBar.outerHeight();
-
-// 	$(window).on('reisze', function(){
-// 		$navBarHeight = $navBar.outerHeight();
-// 	})
-
-// 	$('.modal').css({
-// 		'top': $navBarHeight + 'px'
-// 	});
-			
-// }
-
-});

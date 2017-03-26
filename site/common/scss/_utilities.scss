@@ -279,6 +279,17 @@
 
 //////////////////
 
+.fade{
+	transition: transition();
+	transform: translateY(5px);
+	opacity: 0;
+	
+	&.fadeIn{
+		transform: translateY(0px);
+		opacity: 1;		
+	}
+}
+
 
 .attention{
 	font-size: 0.85em;

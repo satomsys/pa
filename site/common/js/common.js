@@ -1,27 +1,30 @@
+var $w,
+	$ua;
+	
 $(function(){
 
-	var $w = $(window),
-		$ua = deviceIs( $w, 768 ),
-		$timer = null,
-		$fadeTarget = $('.gofade'),
-		$scrollEvents = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll';
+	$w = $(window),
+	$ua = deviceIs( $w, 768 ),
+	$timer = null,
+	$fadeTarget = $('.fade'),
+	$scrollEvents = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll';
 
 /**
 * fade in
 */
 if( $fadeTarget.length ){
-	$window = $(window);
 
-	$window.on( 'load', function(){
-		targetFade( $fadeTarget, $window );			
+	$w.on( 'load', function(){
+		targetFade( $fadeTarget, $w );			
 	});
 
-	$timer = setTimeout(function(){
-		$window.on( 'scroll', function( e ){
+		$w.on( 'scroll resize', function( e ){
 			clearTimeout( $timer );
-			targetFade( $fadeTarget, $window );
+			
+			$timer = setTimeout(function(){
+				targetFade( $fadeTarget, $w );
+			}, 100 );
 		});
-	}, 400 );
 }
 
 $w.on( 'load resize', function( e ){

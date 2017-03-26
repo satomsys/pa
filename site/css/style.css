@@ -349,6 +349,15 @@ business
     line-height: 1;
 
     list-style: none;
+
+    -webkit-transition: all .3s ease-in-out 0s;
+            transition: all .3s ease-in-out 0s;
+    -webkit-transition-delay: .5s;
+            transition-delay: .5s;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); 
+
+    opacity: 0;
 }
 .section-business .businessPanel_panel a
 {
@@ -369,6 +378,11 @@ business
 {
     letter-spacing: .5em;
 }
+.section-business .businessPanel_panel:nth-child(even)
+{
+    -webkit-transition-delay: 1s;
+            transition-delay: 1s;
+}
 .section-business .businessPanel_panel_index
 {
     -webkit-transition: all .3s ease-in-out 0s;
@@ -377,6 +391,13 @@ business
 .section-business .businessPanel_panel-about .businessPanel_panel_index
 {
     color: #fff;
+}
+.section-business.inview .businessPanel_panel
+{
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); 
+
+    opacity: 1;
 }
 
 /********************
@@ -390,10 +411,12 @@ person
 {
     display: block;
 
-    width: 100%;
+    width: 0;
 
-    -webkit-transition: all .3s ease-in-out 0s;
-            transition: all .3s ease-in-out 0s;
+    -webkit-transition: all .2s ease-in-out 0s;
+            transition: all .2s ease-in-out 0s; 
+    -webkit-transform: translate(50%);
+            transform: translate(50%);
 }
 .section-person .gradationBg-top
 {
@@ -406,6 +429,13 @@ person
 .section-person .gradationBg-bottom
 {
     height: 50px;
+}
+.section-person.inview .gradationBg
+{
+    width: 100%;
+
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
 }
 .section-person .personImagePanel
 {

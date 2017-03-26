@@ -270,7 +270,10 @@ business
 		&_panel{
 			line-height: 1;
 			list-style: none;
-			
+			opacity: 0;
+			transition: transition();
+			transition-delay: 0.5s;
+			transform: translateY(20px);			
 
 			a{
 				color: inherit;
@@ -281,8 +284,9 @@ business
 					}	
 				}
 			}		
-			
-			
+			&:nth-child(even){
+				transition-delay: 1s;
+			}		
 		}
 
 		&_panel_index{
@@ -294,7 +298,25 @@ business
 				color: #fff;
 			}
 		}
+
+		&_panel-vision{
+			.businessPanel_panel_index{
+			}
+		}
 	}
+
+	&.inview .businessPanel{
+
+		&_panel{
+			opacity: 1;
+			transform: translateY(0px);			
+		}
+		// &_panel_index,
+		// &_img{
+		// 	opacity: 1;
+		// 	transform: translateY(0px);			
+		// }
+	}	
 
 }
 
@@ -308,9 +330,10 @@ person
 	position: relative;
 
 	.gradationBg{
-		width: 100%;
+		width: 0%;
+		transform: translate(50%);
 		display: block;
-		transition: transition();
+		transition: transition($s:0.2s);
 		@extend %gradation;
 		
 		
@@ -323,6 +346,13 @@ person
 
 		&-bottom{
 			height: 50px
+		}
+	}
+
+	&.inview {
+		.gradationBg{
+			width: 100%;
+			transform: translate(0%);			
 		}
 	}
 

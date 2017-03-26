@@ -502,6 +502,23 @@ html.ie8 .icon-facebook:before
     height: 1px;
 }
 
+.fade
+{
+    -webkit-transition: all .3s ease-in-out 0s;
+            transition: all .3s ease-in-out 0s;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+
+    opacity: 0;
+}
+.fade.fadeIn
+{
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+
+    opacity: 1;
+}
+
 .attention
 {
     font-size: .85em;
