@@ -2,21 +2,62 @@ $(function(){
 
 	var $w = $(window),
 		$ua = deviceIs( $w, 768 ),
-		$timer = null;
+		$timer = null,
+		$fadeTarget = $('.gofade'),
+		$scrollEvents = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll';
 
+/**
+* fade in
+*/
+if( $fadeTarget.length ){
+	$window = $(window);
 
-	$w.on( 'load resize', function( e ){
+	$window.on( 'load', function(){
+		targetFade( $fadeTarget, $window );			
+	});
 
-		clearTimeout( $timer );
-		$timer = setTimeout( function(){
-			$ua = deviceIs( $w, 768 );
-		},300);
-	} );		
+	$timer = setTimeout(function(){
+		$window.on( 'scroll', function( e ){
+			clearTimeout( $timer );
+			targetFade( $fadeTarget, $window );
+		});
+	}, 400 );
+}
 
-
-
+$w.on( 'load resize', function( e ){
+	clearTimeout( $timer );
+	$timer = setTimeout( function(){
+		$ua = deviceIs( $w, 768 );
+	},300);
+} );		
 
 });
+
+
+
+/**
+* フェードインエフェクトの設定 要素のdata-delayでdelay値設定。
+* @param $fadeTarget { obj } .fadeTargetクラスの要素
+* @param wdw { obj } windowオブジェクト
+*/
+ function targetFade( fadeTarget, wdw ){
+	var $scrollVal = wdw.scrollTop(),
+		$wH = wdw.innerHeight(),
+		$windowBottom = $scrollVal + $wH - 50;
+
+	$.each( fadeTarget, function( e ){
+		var $this = $(this),
+			$offsetTop = $this.offset().top,
+			$delay = $this.attr('data-delay');
+
+		if( $offsetTop < $windowBottom ){
+			$this.addClass('fadeIn').css({
+				'transition-delay': $delay + 's'
+			});
+		}
+
+	}); 	
+ }
 
 
 

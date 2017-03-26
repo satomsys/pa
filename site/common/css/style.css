@@ -256,7 +256,7 @@ a img:focus
 .button.button-hasArrow a:active:before,
 .button.button-hasArrow a:focus:before
 {
-    right: 0;
+    right: 1px;
 
     width: 15px;
 
@@ -272,7 +272,7 @@ a img:focus
     -webkit-transition-duration: .2s;
             transition-duration: .2s; 
 
-    border-width: 5px 0 4px 0;
+    border-width: 5px 0 5px 4px;
     border-style: solid;
 }
 .button.button-hasArrow a:before,
@@ -307,7 +307,7 @@ a img:focus
     width: 0;
     height: 0;
 
-    border-width: 5px 0 4px 11px;
+    border-width: 5px 0 5px 11px;
     border-style: solid;
     border-color: transparent transparent transparent #fff;
 }
