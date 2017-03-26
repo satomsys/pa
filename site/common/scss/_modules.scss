@@ -247,6 +247,72 @@
 		
 }
 
+.section{
+	&_index{
+		margin-top: 40px;
+		margin-bottom: 65px;
+		letter-spacing: 0.29em;
+		line-height: 1;
+		text-align: center;
+		position: relative;
+		
+		&_main,
+		&_sub{
+			display: block;
+		}
+		
+		&_main{
+			font-size: 2em;
+			&:after{
+				content:  " ";
+				width: 100px;
+				height: 2px;
+				margin-top: 35px;
+				margin-bottom: 35px;
+				margin: auto;
+				display: block;
+				position: relative;
+				// position: absolute;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				background-color: $orange;
+			}
+		}
+
+		&_sub{
+			font-size: 1.15em;
+			line-height: 2;
+			// margin-top: 35px;
+		}	
+	}
+
+	&.hasCoverImg{
+		padding-top: 0;
+		padding-bottom: 0;
+		position: relative;
+		overflow: hidden;
+		.wrap{
+			padding-top: 5%;
+			padding-bottom: 10%;
+			position: relative;
+			z-index: 2;
+		}
+		.cover{
+			width: 120%;
+			max-width: none;
+			margin-right: auto;
+			margin-left: auto;
+			display: block;
+			position: absolute;
+			z-index: 0;
+			top: 0;
+			right: 0;
+			left: 0;
+		}	
+	}	
+}
+
 
 ////////////////////
 
