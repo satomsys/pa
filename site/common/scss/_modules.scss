@@ -145,7 +145,6 @@
 
 			}
 			&:not(.active) a{
-				
 				@include mouseOver{
 					color: $orange;
 					// letter-spacing: 0.6em;
@@ -159,7 +158,8 @@
 					&:hover,
 					&:active,
 					&:focus{
-						color: #aaa;						
+						opacity: 0.2;
+						color: initial;						
 						&:after{width: 0}
 					}
 				}

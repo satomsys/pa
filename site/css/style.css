@@ -1,10 +1,10 @@
 .section-person .gradationBg,
 .section-recruiting
 {
-    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmNmQxZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmYzYxZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ff6d1f), color-stop(100%, #ffc61f));
-    background-image: -webkit-linear-gradient(left, #ff6d1f, #ffc61f);
-    background-image:         linear-gradient(to right, #ff6d1f, #ffc61f); 
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmNmQxZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmYzYxZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-image: -webkit-linear-gradient(180deg, #ff6d1f, #ffc61f);
+    background-image: -webkit-linear-gradient(right, #ff6d1f, #ffc61f);
+    background-image:         linear-gradient(270deg, #ff6d1f, #ffc61f); 
     background-size: 100%;
 }
 
@@ -65,6 +65,32 @@
 
     text-align: center; 
     letter-spacing: .2em;
+}
+
+.overlay
+{
+    position: fixed;
+    z-index: -2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    margin: auto;
+
+    -webkit-transition: all .4s ease-in-out 0s;
+            transition: all .4s ease-in-out 0s; 
+
+    opacity: 0;
+    background-color: #fff;
+}
+.showOverlay .overlay
+{
+    z-index: 1;
+
+    opacity: .8;
 }
 
 /********************
@@ -312,6 +338,169 @@ what we are
 {
     margin-top: 90px;
 }
+.section-wwa .section_index
+{
+    margin-bottom: 100px;
+}
+.section-wwa .poly
+{
+    fill: url(#gradient);
+}
+.section-wwa .wwaArticles
+{
+    position: relative; 
+
+    width: 85.29412%;
+    height: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 41.45161%;
+}
+.section-wwa .wwaArticles_article:not(.active)
+{
+    cursor: pointer;
+    -webkit-transition: all .3s ease 0s;
+            transition: all .3s ease 0s;
+}
+.section-wwa .wwaArticles_article:not(.active):hover,
+.section-wwa .wwaArticles_article:not(.active):active,
+.section-wwa .wwaArticles_article:not(.active):focus
+{
+    opacity: .7;
+}
+.section-wwa .wwaArticles_article_img,
+.section-wwa .wwaArticles_article_content
+{
+    position: absolute;
+}
+.section-wwa .wwaArticles_article_img
+{
+    -webkit-transition: all .2s cubic-bezier(.175, .885, .32, 1.275);
+            transition: all .2s cubic-bezier(.175, .885, .32, 1.275); 
+    -webkit-transform: scale(0);
+            transform: scale(0);
+
+    opacity: 0;
+}
+.section-wwa .wwaArticles_article_content
+{
+    font-size: 1.2em;
+
+    top: 0;
+
+    display: none;
+
+    padding: 40px;
+
+    color: #fff;
+    background: url(../img/whatweare-bg.svg) center center no-repeat;
+    background-size: cover;
+}
+.notesRight .wwaArticles_article_content
+{
+    left: 100%;
+}
+
+.notesLeft .wwaArticles_article_content
+{
+    right: 100%;
+}
+.section-wwa .wwaArticles .wwaArticleText_large
+{
+    font-size: 1.5em;
+}
+.section-wwa .wwaArticles .wwaArticleNote
+{
+    font-size: .5em;
+}
+.section-wwa .wwaArticles .wwa6 .wwaArticles_article_img
+{
+    -webkit-transition-delay: .45s;
+            transition-delay: .45s;
+}
+.section-wwa .wwaArticles .wwa16407 .wwaArticles_article_img
+{
+    -webkit-transition-delay: .35s;
+            transition-delay: .35s;
+}
+.section-wwa .wwaArticles .wwa1 .wwaArticles_article_img
+{
+    -webkit-transition-delay: .3s;
+            transition-delay: .3s;
+}
+.section-wwa .wwaArticles .wwa100 .wwaArticles_article_img
+{
+    -webkit-transition-delay: .5s;
+            transition-delay: .5s;
+}
+.section-wwa .wwaArticles .wwa5 .wwaArticles_article_img
+{
+    -webkit-transition-delay: .52s;
+            transition-delay: .52s;
+}
+.section-wwa.inview .wwaArticles_article_img
+{
+    -webkit-transform: scale(1);
+            transform: scale(1);
+
+    opacity: 1;
+}
+.section-wwa.inview .wwa6 .wwaArticles_article_img
+{
+    top: 0;
+    left: 15.51724%;
+}
+.section-wwa.inview .wwa16407 .wwaArticles_article_img
+{
+    top: 50.97276%;
+    left: 0;
+}
+.section-wwa.inview .wwa1 .wwaArticles_article_img
+{
+    top: 13.61868%;
+    left: 36.2069%;
+}
+.section-wwa.inview .wwa100 .wwaArticles_article_img
+{
+    top: 0;
+    left: 62.24138%;
+}
+.section-wwa.inview .wwa5 .wwaArticles_article_img
+{
+    top: 42.80156%;
+    left: 65.86207%;
+}
+.section-wwa .wwa6 .wwaArticles_article_img
+{
+    width: 8.10345%;
+}
+.section-wwa .wwa16407 .wwaArticles_article_img
+{
+    width: 29.82759%;
+}
+.section-wwa .wwa1 .wwaArticles_article_img
+{
+    width: 26.72414%;
+}
+.section-wwa .wwa100 .wwaArticles_article_img
+{
+    width: 22.06897%;
+}
+.section-wwa .wwa5 .wwaArticles_article_img
+{
+    width: 34.31034%;
+}
+.section-wwa .wwaArticles_article.active .wwaArticles_article_img
+{
+    z-index: 3; 
+
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+}
+.section-wwa .wwaArticles_article.active .wwaArticles_article_content
+{
+    z-index: 2;
+}
 .section-wwa .section_footer.cityView
 {
     overflow: hidden; 
@@ -352,8 +541,8 @@ business
 
     -webkit-transition: all .3s ease-in-out 0s;
             transition: all .3s ease-in-out 0s;
-    -webkit-transition-delay: .5s;
-            transition-delay: .5s;
+    -webkit-transition-delay: .25s;
+            transition-delay: .25s;
     -webkit-transform: translateY(20px);
             transform: translateY(20px); 
 
@@ -496,10 +685,14 @@ recruiting
 .section-recruiting
 {
     margin-bottom: 0;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
 
+    -webkit-animation: gradationAnim 16s ease infinite;
+            animation: gradationAnim 16s ease infinite; 
     text-align: center;
+
+    background-size: 400% 400%;
 }
 .section-recruiting .section_index
 {

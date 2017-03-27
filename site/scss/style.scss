@@ -56,6 +56,27 @@
 }
 
 
+.overlay{
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	background-color: #fff;
+	position: fixed;
+	z-index: -2;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	transition: transition($s:0.4s);
+	
+	.showOverlay &{
+		z-index: 1;
+		opacity: 0.8;
+	}
+}
+
+
 /********************
 slick reset
 ********************/
@@ -222,8 +243,6 @@ main visual
 			}
 		}
 	}
-
-
 }
 
 
@@ -233,12 +252,209 @@ main visual
 // 個別
 
 ////////////////////////
-
+// ※1ラッパー要素ごとに位置指定する場合（テキスト領域の幅が縮んでしまった
 /********************
 what we are
 ********************/
 .section-wwa{
 	margin-top: 90px;
+	
+	.section_index{
+		margin-bottom: 100px;
+	}
+	
+	$boxWrap : 1160;
+	$boxHeight : 514;
+	
+	/////ポリゴン
+	.poly{
+		fill: url(#gradient);
+	}
+	
+	/////ラッパー
+	.wwaArticles
+	{
+		height: 0;
+		padding-top: liquidSpace( 514, 1240 );
+		@include liquid($boxWrap, 1360, true );
+		position: relative;
+		
+		&_article:not(.active){
+			cursor: pointer;
+			@include mouseOver(){
+				opacity: 0.7;
+			}
+		}
+
+		&_article{
+			// position: absolute; ※1
+			
+		}
+		&_article_img,
+		&_article_content{
+			position: absolute;
+		}
+
+
+		&_article_img{
+			transform:scale(0);
+			opacity: 0;
+			transition: easeOutBack($s:0.2s);
+		}
+
+		&_article_content{
+			padding: 40px;			
+			top: 0;
+			display: none;
+			font-size: 1.2em;
+			color: #fff;
+			background: url(../img/whatweare-bg.svg) center center no-repeat;
+			background-size: cover;
+			
+			@at-root{
+				//記事右側表示
+				.notesRight .wwaArticles_article_content{
+					left: 100%;
+				}
+				//記事左側表示
+				.notesLeft .wwaArticles_article_content{
+					right: 100%;
+				}		
+			}
+		}
+
+		.wwaArticleText{
+			&_large{
+				font-size: 1.5em;
+			}
+			
+		}
+		.wwaArticleNote{
+			font-size: 0.5em;			
+		}		
+	}
+
+	//////トランジション設定
+	.wwaArticles
+	{
+		.wwa6 .wwaArticles_article_img{
+			transition-delay: 0.45s;
+		}
+		.wwa16407 .wwaArticles_article_img{
+			transition-delay: 0.35s;
+		}
+
+		.wwa1 .wwaArticles_article_img{
+			transition-delay: 0.3s;
+		}
+		.wwa100 .wwaArticles_article_img{
+			transition-delay: 0.5s;
+		}
+		.wwa5 .wwaArticles_article_img{
+			transition-delay: 0.52s;	
+		}
+	}
+
+
+	/////////位置設定
+	&.inview{
+		.wwaArticles_article_img{
+			transform:scale(1) ;
+			opacity: 1;
+		}
+		.wwa6{
+				// top: 0;
+				// left: liquidSpace(180, $boxWrap);※1
+			.wwaArticles_article_img{
+				top: 0;
+				left: liquidSpace(180, $boxWrap);
+			}
+		}
+		.wwa16407{
+				// top: liquidSpace(262,$boxHeight);
+				// left: 0;※1
+			.wwaArticles_article_img{
+				top: liquidSpace(262,$boxHeight);
+				left: 0;
+			}
+		}
+		.wwa1{
+				// top: liquidSpace(70, $boxHeight);
+				// left: liquidSpace(420, $boxWrap);※1
+			.wwaArticles_article_img{
+				top: liquidSpace(70, $boxHeight);
+				left: liquidSpace(420, $boxWrap);
+			}
+			
+		}
+		.wwa100{
+				// top: 0;
+				// left: liquidSpace(722, $boxWrap);※1
+			.wwaArticles_article_img{
+				top: 0;
+				left: liquidSpace(722, $boxWrap);
+			}		
+		}
+		.wwa5{
+				// top: liquidSpace(220, $boxHeight);
+				// left: liquidSpace(764, $boxWrap);※1
+			.wwaArticles_article_img{
+				top: liquidSpace(220, $boxHeight);
+				left: liquidSpace(764, $boxWrap);
+			}			
+		}
+
+	}
+
+	///////// 幅設定
+	.wwa6{
+			// @include liquid( 94, $boxWrap );※1
+		.wwaArticles_article_img{
+			@include liquid( 94, $boxWrap );
+		}
+	}
+	.wwa16407{
+		
+			// @include liquid( 346, $boxWrap );※1
+		.wwaArticles_article_img{
+			@include liquid( 346, $boxWrap );
+		}
+		
+	}
+	.wwa1{
+			// @include liquid( 310, $boxWrap );※1
+		.wwaArticles_article_img{
+			@include liquid( 310, $boxWrap );
+		}
+		
+	}
+	.wwa100{
+			// @include liquid( 256, $boxWrap );※1
+		.wwaArticles_article_img{
+			@include liquid( 256, $boxWrap );
+		}		
+	}
+	.wwa5{
+			// @include liquid( 398, $boxWrap );※1
+		.wwaArticles_article_img{
+			@include liquid( 398, $boxWrap );
+		}			
+	}
+
+	////////アクティブ時
+	.wwaArticles
+	{
+		&_article.active{
+			.wwaArticles_article_img{
+				transform:scale(1.5);
+				z-index: 3;
+			}		
+			.wwaArticles_article_content{
+				z-index: 2;
+			}
+			
+		}
+	}
 	
 
 	.section_footer.cityView{
@@ -272,7 +488,7 @@ business
 			list-style: none;
 			opacity: 0;
 			transition: transition();
-			transition-delay: 0.5s;
+			transition-delay: 0.25s;
 			transform: translateY(20px);			
 
 			a{
@@ -285,7 +501,7 @@ business
 				}
 			}		
 			&:nth-child(even){
-				transition-delay: 1s;
+				transition-delay:1s;
 			}		
 		}
 
@@ -415,10 +631,15 @@ recruiting
 ********************/
 .section-recruiting{
 	margin-bottom: 0;
-	padding-top: 5rem;
-	padding-bottom: 5rem;
+	padding-top: 10rem;
+	padding-bottom: 10rem;
 	@extend %gradation;
 	text-align: center;
+	
+	background-size: 400% 400%;
+	-webkit-animation: gradationAnim 16s ease infinite;
+	-moz-animation: gradationAnim 16s ease infinite;
+	animation: gradationAnim 16s ease infinite;		
 	
 	.section_index{
 		margin-bottom: 50px;

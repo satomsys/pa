@@ -18,13 +18,13 @@ if( $fadeTarget.length ){
 		targetFade( $fadeTarget, $w );			
 	});
 
-		$w.on( 'scroll resize', function( e ){
-			clearTimeout( $timer );
-			
-			$timer = setTimeout(function(){
-				targetFade( $fadeTarget, $w );
-			}, 100 );
-		});
+	$w.on( 'scroll resize', function( e ){
+		clearTimeout( $timer );
+		
+		$timer = setTimeout(function(){
+			targetFade( $fadeTarget, $w );
+		}, 50 );
+	});
 }
 
 $w.on( 'load resize', function( e ){

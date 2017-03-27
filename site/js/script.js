@@ -3,7 +3,11 @@ $(function(){
 		$pallaraxDirectionSercher = null,
 		$section = $('.section'),
 		$timer = null,
-		$move = $ua == 'desktop' ? 0.125 : 0.05;
+		$move = $ua == 'desktop' ? 0.125 : 0.05,
+		$wwaArticles = $('.wwaArticles'),
+		$wwaArticle = $wwaArticles.find('.wwaArticles_article');
+
+
 
 	$w.on('scroll resize', function(){
 
@@ -17,7 +21,6 @@ $(function(){
 		/**
 		* section add class
 		*/
-
 		$timer = setTimeout(function(){
 			$.each( $section, function(i,e){
 				var $this = $(this),
@@ -55,6 +58,37 @@ $(function(){
 			}	);		
 		// }, 300 )
 	});
+
+
+	/**
+	* what we are
+	*/
+
+	$wwaArticle.on( 'click', function( e ){
+		e.stopPropagation();
+
+		var $this = $(this),
+			$overlay = $('.overlay'),
+			$article = $this.find('.wwaArticles_article_content');
+
+		$this.addClass('active');
+		$article.fadeIn('slow');
+
+		console.log( $article );
+
+		$('body').addClass('showOverlay');
+
+		$overlay.on('click', function(){
+			$('body').removeClass('showOverlay');
+			
+			setTimeout( function(){
+				$this.removeClass('active');
+				$article.fadeOut('fast');
+			}, 200 )
+		})
+
+	})
+
 
  });
 
