@@ -9,3 +9,19 @@
 
 //////////////////////////////////////////
 
+@-webkit-keyframes gradationAnime {
+	from {  background-size: 300%;background-position: 0 top;}
+	to { background-position: 100% top; }
+}
+@-o-keyframes gradationAnime {
+	from {  background-size: 300%;background-position: 0 top;}
+	to { background-position: 100% top; }
+}
+@-moz-keyframes gradationAnime {
+	from {  background-size: 300%;background-position: 0 top;}
+	to { background-position: 100% top; }
+}
+@keyframes gradationAnime {
+	from {  background-size: 300%;background-position: 0 top;}
+	to { background-position: 100% top; }
+}

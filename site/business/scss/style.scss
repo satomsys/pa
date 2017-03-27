@@ -48,7 +48,7 @@
 	
 
 	.contentArticle{
-		@include liquid(980,1300, true);
+		@include liquid(980,1400, true);
 		
 		&_index{
 			font-size: 2em;
@@ -170,25 +170,43 @@ mission
 		padding: 0;
 	}
 
+	.contentArticle
+	{
+		max-width: $outerWidth;
+		
+		&_wrap{
+			@include liquid(980,1400, true);		
+		}
+	}
+
 	.contentArticle-bullet{
-		width: 100%;
+		width: auto;
+		max-width: 100%;
 		margin-top: liquidSpace(200,1400);
-		padding-top: 20px;
-		padding-bottom: 20px;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: stretch;
 		background-color: rgba(#fff, 0.7);
+		
+		&_wrap{	
+ 	@include liquid(980, 1400,true);		
+			padding-top: 20px;
+			padding-bottom: 20px;
+			display: table;
+			table-layout: fixed;
+			// display: flex;
+			// flex-direction: row;
+			// justify-content: space-between;
+			// align-items: stretch;
+		}
 		
 		.bullet
 		{
+			display: table-cell;
+			vertical-align: top;
 			padding-right: 30px;
 			padding-left: 30px;
 			position: relative;
 			
 			&_num{
-				margin-top: -5em;
+				margin-top: -7em;				
 				display: block;
 				text-align: center;
 			}

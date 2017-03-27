@@ -10,11 +10,34 @@
     background-size: 100%;
 }
 
+@-webkit-keyframes gradationAnime
+{
+    from
+    {
+        background-position: 0 top; 
+        background-size: 300%;
+    }
+    to
+    {
+        background-position: 100% top;
+    }
+}
+@keyframes gradationAnime
+{
+    from
+    {
+        background-position: 0 top; 
+        background-size: 300%;
+    }
+    to
+    {
+        background-position: 100% top;
+    }
+}
 ::-moz-selection
 {
     background-color: rgba(0, 105, 255, .3);
 }
-
 ::selection
 {
     background-color: rgba(0, 105, 255, .3);
