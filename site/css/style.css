@@ -414,9 +414,7 @@ person
     width: 0;
 
     -webkit-transition: all .2s ease-in-out 0s;
-            transition: all .2s ease-in-out 0s; 
-    -webkit-transform: translate(50%);
-            transform: translate(50%);
+            transition: all .2s ease-in-out 0s;
 }
 .section-person .gradationBg-top
 {
@@ -433,9 +431,6 @@ person
 .section-person.inview .gradationBg
 {
     width: 100%;
-
-    -webkit-transform: translate(0%);
-            transform: translate(0%);
 }
 .section-person .personImagePanel
 {

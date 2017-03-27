@@ -331,7 +331,6 @@ person
 
 	.gradationBg{
 		width: 0%;
-		transform: translate(50%);
 		display: block;
 		transition: transition($s:0.2s);
 		@extend %gradation;
@@ -351,8 +350,7 @@ person
 
 	&.inview {
 		.gradationBg{
-			width: 100%;
-			transform: translate(0%);			
+			width: 100%;		
 		}
 	}
 
