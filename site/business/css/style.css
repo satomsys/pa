@@ -41,7 +41,7 @@
 }
 .section .contentArticle
 {
-    width: 75.38462%;
+    width: 70%;
     margin-right: auto; 
     margin-left: auto;
 }
@@ -50,10 +50,12 @@
     font-size: 2em;
     font-weight: bold; 
 
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
 }
 .section .contentArticle p
 {
+    line-height: 2; 
+
     margin-top: 2em;
     margin-bottom: 2em;
 }
@@ -66,8 +68,8 @@
 {
     -webkit-transition: all .3s ease-in-out 0s;
             transition: all .3s ease-in-out 0s;
-    -webkit-transform: perspective(500px) translate3d(0, 0, 5px);
-            transform: perspective(500px) translate3d(0, 0, 5px); 
+    -webkit-transform: perspective(500px) scale(1.01) translate3d(0, 0, 2px);
+            transform: perspective(500px) scale(1.01) translate3d(0, 0, 2px); 
     -webkit-transform-origin: 50%;
             transform-origin: 50%;
 }
@@ -77,8 +79,8 @@
 }
 .careerSelectContent.active .careerSelectContent_content
 {
-    -webkit-transform: perspective(500px) translate3d(0, 0, 0);
-            transform: perspective(500px) translate3d(0, 0, 0);
+    -webkit-transform: perspective(500px) scale(1) translate3d(0, 0, 0);
+            transform: perspective(500px) scale(1) translate3d(0, 0, 0);
 }
 
 /********************
@@ -163,42 +165,52 @@ mission
     max-width: none;
     padding: 0;
 }
+.section-mission .contentArticle
+{
+    max-width: 1300px;
+}
+.section-mission .contentArticle_wrap
+{
+    width: 70%;
+    margin-right: auto; 
+    margin-left: auto;
+}
 .section-mission .contentArticle-bullet
 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-        flex-direction: row;
+    width: auto;
+    max-width: 100%;
+    margin-top: 6.07143%;
 
-    width: 100%;
-    margin-top: 14.28571%;
+    background-color: rgba(255, 255, 255, .7);
+}
+.section-mission .contentArticle-bullet_wrap
+{
+    display: table;
+
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
     padding-top: 20px;
     padding-bottom: 20px;
 
-    background-color: rgba(255, 255, 255, .7); 
-
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
+    table-layout: fixed;
 }
 .section-mission .contentArticle-bullet .bullet
 {
     position: relative; 
 
+    display: table-cell;
+
     padding-right: 30px;
     padding-left: 30px;
+
+    vertical-align: top;
 }
 .section-mission .contentArticle-bullet .bullet_num
 {
     display: block;
 
-    margin-top: -5em;
+    margin-top: -7em;
 
     text-align: center;
 }
