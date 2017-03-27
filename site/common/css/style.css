@@ -654,6 +654,12 @@ html.ie8 .icon-facebook:before
 {
     width: 90%;
 }
+.sitenav .navList_child.comingsoon a
+{
+    cursor: default;
+
+    color: #aaa;
+}
 .sitenav .navList_child a
 {
     position: relative;
@@ -699,6 +705,18 @@ html.ie8 .icon-facebook:before
 .sitenav .navList_child:not(.active) a:focus:after
 {
     width: 90%;
+}
+.sitenav .navList_child.comingsoon a:hover,
+.sitenav .navList_child.comingsoon a:active,
+.sitenav .navList_child.comingsoon a:focus
+{
+    color: #aaa;
+}
+.sitenav .navList_child.comingsoon a:hover:after,
+.sitenav .navList_child.comingsoon a:active:after,
+.sitenav .navList_child.comingsoon a:focus:after
+{
+    width: 0;
 }
 
 .footer

@@ -52,13 +52,14 @@
 		
 		&_index{
 			font-size: 2em;
-			margin-bottom: 2em;
+			margin-bottom: 1.5em;
 			font-weight: bold;
 		}
 
 		p{
 			margin-top: 2em;
 			margin-bottom: 2em;
+			line-height: 2;
 		}
 	}
 }
@@ -69,12 +70,12 @@
 		transition: transition();
 		// opacity: 0;
 		transform-origin: 50%;
-		transform: perspective($perspective) translate3d(0,0,5px);
+		transform: perspective($perspective) scale(1.01) translate3d(0,0,2px);
 	}
 	&.active{
 			display: block;
 		.careerSelectContent_content{
-			transform: perspective($perspective) translate3d(0,0,0);			
+			transform: perspective($perspective) scale(1) translate3d(0,0,0);			
 		}
 	}
 }
@@ -182,7 +183,7 @@ mission
 	.contentArticle-bullet{
 		width: auto;
 		max-width: 100%;
-		margin-top: liquidSpace(200,1400);
+		margin-top: liquidSpace(85,1400);
 		background-color: rgba(#fff, 0.7);
 		
 		&_wrap{	
