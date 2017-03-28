@@ -18,8 +18,10 @@
 		text-align: center;
 		line-height: 1;
 		margin: 0;
+		position: relative;
 	}
 }
+
 
 .heroPanel{
 	margin: auto;	
@@ -87,7 +89,7 @@ slick reset
 	height: 0;
 	border-style: solid;
 	display: block;
-	transition: transition();
+	transition: transition($s:0.2s);
 }
 .slick-prev:after, .slick-next:after { 
 	content: " "!important;
@@ -191,6 +193,7 @@ main visual
 			letter-spacing: 0.18em;
 			color: #fff;
 			text-shadow: 0 0 5px rgba(#000, 0.2);
+			transition: all 0.2s;
 		}
 
 		.button{
@@ -241,6 +244,21 @@ main visual
 					}					
 				}
 			}
+		}
+
+	}
+	&.black{
+		.mvArticle_text,
+		.button
+		{
+			color: #000
+		}
+
+		.mvArticle_text{
+			text-shadow: 0 0 5px rgba(#fff, 0.2);			
+		}
+		.button a{
+			border-color: #000;
 		}
 	}
 }
@@ -544,6 +562,14 @@ person
 .section-person{
 
 	position: relative;
+	
+	.section_index{
+		span{
+			&:after{
+				background-color: #fff;
+			}
+		}
+	}
 
 	.gradationBg{
 		width: 0%;
@@ -643,7 +669,13 @@ recruiting
 	
 	.section_index{
 		margin-bottom: 50px;
+		span{
+			&:after{
+				background-color: #fff;
+			}
+		}
 	}
+
 
 	.button{
 		width: 210px;

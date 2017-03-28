@@ -264,6 +264,8 @@
 }
 
 .section{
+
+
 	&_index{
 		margin-top: 40px;
 		margin-bottom: 65px;
@@ -300,7 +302,32 @@
 			font-size: 1.15em;
 			line-height: 2;
 			// margin-top: 35px;
-		}	
+		}
+
+		&-barAnim{
+			span{
+				position: relative;
+				
+				&:after{
+					content: " ";
+					width: 0%;
+					height: 1px;
+					background-color: #000;
+					position: absolute;
+					margin: auto;
+					right: 0;
+					bottom: 1px;
+					left: 0;
+				}
+			}
+
+			img{
+				transition: transition();
+				transition-delay: 0.95s;
+				opacity: 0;
+				transform: translateY(10px);
+			}			
+		}
 	}
 
 	&.hasCoverImg{
@@ -327,7 +354,23 @@
 			left: 0;
 		}	
 	}	
+
+
+	&.inview{
+		.section_index-barAnim{
+			img{
+				opacity: 1;
+				transform: translateY(0%);
+			}			
+		
+			 span:after{
+				animation: fadeinLine 2s ease 0.5s 1 backwards;
+			}
+		}
+	}		
 }
+
+
 
 
 ////////////////////

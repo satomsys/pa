@@ -18,7 +18,9 @@
     font-family: 'Roboto Condensed', sans-serif;
     line-height: 1;
 
-    margin: 0; 
+    position: relative; 
+
+    margin: 0;
 
     text-align: center;
 }
@@ -105,8 +107,8 @@ slick reset
     height: 0;
 
     content: ' ' !important;
-    -webkit-transition: all .3s ease-in-out 0s;
-            transition: all .3s ease-in-out 0s; 
+    -webkit-transition: all .2s ease-in-out 0s;
+            transition: all .2s ease-in-out 0s; 
 
     border-style: solid;
 }
@@ -249,10 +251,12 @@ main visual
 {
     font-size: 2.5em;
 
+    -webkit-transition: all .2s;
+            transition: all .2s; 
     letter-spacing: .18em;
 
     color: #fff;
-    text-shadow: 0 0 5px rgba(0, 0, 0, .2); 
+    text-shadow: 0 0 5px rgba(0, 0, 0, .2);
 
     -webkit-font-feature-settings: 'palt';
             font-feature-settings: 'palt';
@@ -329,6 +333,19 @@ main visual
     right: 0;
 
     border-width: 5px 0 5px 10px;
+}
+.mainvisual.black .mvArticle_text,
+.mainvisual.black .button
+{
+    color: #000;
+}
+.mainvisual.black .mvArticle_text
+{
+    text-shadow: 0 0 5px rgba(255, 255, 255, .2);
+}
+.mainvisual.black .button a
+{
+    border-color: #000;
 }
 
 /********************
@@ -596,6 +613,10 @@ person
 {
     position: relative;
 }
+.section-person .section_index span:after
+{
+    background-color: #fff;
+}
 .section-person .gradationBg
 {
     display: block;
@@ -697,6 +718,10 @@ recruiting
 .section-recruiting .section_index
 {
     margin-bottom: 50px;
+}
+.section-recruiting .section_index span:after
+{
+    background-color: #fff;
 }
 .section-recruiting .button
 {

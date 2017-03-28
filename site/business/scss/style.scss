@@ -65,6 +65,7 @@
 }
 
 .careerSelectContent{
+	min-height: 300px;	
 	display: none;
 	&_content{
 		transition: transition();
@@ -183,11 +184,11 @@ mission
 	.contentArticle-bullet{
 		width: auto;
 		max-width: 100%;
-		margin-top: liquidSpace(85,1400);
+		margin-top: liquidSpace(105,1400);
 		background-color: rgba(#fff, 0.7);
 		
 		&_wrap{	
- 	@include liquid(980, 1400,true);		
+ 			@include liquid(980, 1400,true);		
 			padding-top: 20px;
 			padding-bottom: 20px;
 			display: table;
@@ -200,6 +201,7 @@ mission
 		
 		.bullet
 		{
+			width: 200px;
 			display: table-cell;
 			vertical-align: top;
 			padding-right: 30px;

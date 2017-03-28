@@ -66,6 +66,7 @@
 }
 
 .careerSelectContent{
+	min-height: 300px;
 	display: none;
 	&_content{
 		transition: transition();
@@ -245,7 +246,7 @@ navigation
 
 	.requirementInfo
 	{
-		max-width: 700px;
+		max-width: 720px;
 		margin-right: auto;
 		margin-left: auto;
 		&_list{
@@ -257,17 +258,56 @@ navigation
 				vertical-align: top;
 				box-sizing: border-box
 			}
-			dt{
+			>dt{
 				width: 105px;
 				padding-right: 2em;
 				border-right: solid 2px $orange;
 				font-weight: bold;
 			}
-			dd{
+			>dd{
 				padding-left: 2em;
 			}
 			p{
 				margin-top: 0;
+			}
+			ol{
+				clear: both;
+				margin: 0;
+				overflow: hidden;
+				li{
+					float: left;
+					list-style-position: inside;
+					vertical-align: middle;
+				}
+			}
+
+			section{
+				margin-bottom: 1em;
+			}
+
+			dl{
+				display: table;
+				dt
+				dd{
+					padding: 1em;
+					margin: 0;
+				}
+				dt{
+					width: 6em;
+				}
+			}
+			.listNum{
+				margin-bottom: 5px;
+			}
+			.listHeader{
+				font-weight: bold;
+				font-size: 1.05em;
+				&:before{
+					content: "○";
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 3px;
+				}
 			}
 
 
@@ -403,12 +443,6 @@ entry
 			}
 		}
 	}
-
-	.cover{
-		width: 100%;
-		display: block;
-	}
-
 }
 
 /********************

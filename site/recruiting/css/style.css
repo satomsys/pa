@@ -65,7 +65,9 @@
 
 .careerSelectContent
 {
-    display: none;
+    display: none; 
+
+    min-height: 300px;
 }
 .careerSelectContent_content
 {
@@ -257,7 +259,7 @@ navigation
 ********************/
 .section-requirement .requirementInfo
 {
-    max-width: 700px;
+    max-width: 720px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -274,7 +276,7 @@ navigation
 
     vertical-align: top;
 }
-.section-requirement .requirementInfo_list dt
+.section-requirement .requirementInfo_list > dt
 {
     font-weight: bold; 
 
@@ -283,13 +285,64 @@ navigation
 
     border-right: solid 2px #ff6d1f;
 }
-.section-requirement .requirementInfo_list dd
+.section-requirement .requirementInfo_list > dd
 {
     padding-left: 2em;
 }
 .section-requirement .requirementInfo_list p
 {
     margin-top: 0;
+}
+.section-requirement .requirementInfo_list ol
+{
+    clear: both;
+    overflow: hidden; 
+
+    margin: 0;
+}
+.section-requirement .requirementInfo_list ol li
+{
+    float: left;
+
+    list-style-position: inside;
+
+    vertical-align: middle;
+}
+.section-requirement .requirementInfo_list section
+{
+    margin-bottom: 1em;
+}
+.section-requirement .requirementInfo_list dl
+{
+    display: table;
+}
+.section-requirement .requirementInfo_list dl dt
+      dd
+{
+    margin: 0; 
+    padding: 1em;
+}
+.section-requirement .requirementInfo_list dl dt
+{
+    width: 6em;
+}
+.section-requirement .requirementInfo_list .listNum
+{
+    margin-bottom: 5px;
+}
+.section-requirement .requirementInfo_list .listHeader
+{
+    font-size: 1.05em; 
+    font-weight: bold;
+}
+.section-requirement .requirementInfo_list .listHeader:before
+{
+    display: inline-block;
+
+    margin-right: 3px; 
+
+    content: '○';
+    vertical-align: middle;
 }
 
 /********************
@@ -419,12 +472,6 @@ entry
 .recruiting-walfare .section-requirement .requirementList li .text
 {
     padding-left: 60px;
-}
-.recruiting-walfare .section-requirement .cover
-{
-    display: block; 
-
-    width: 100%;
 }
 .recruiting-walfare .section-walfare
 {

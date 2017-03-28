@@ -106,7 +106,14 @@ $('.mainvisual_image').slick({
   speed: 500,
   fade: true,
   cssEase: 'linear'	
+}).on('afterChange', function(){
+	var activeImg = $(this).find('.slick-active'),
+		textColor = activeImg.data('overtext');
+
+	$('.mainvisual').removeClass('black').addClass( textColor );
 });
+
+
 
 
 

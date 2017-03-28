@@ -62,7 +62,9 @@
 
 .careerSelectContent
 {
-    display: none;
+    display: none; 
+
+    min-height: 300px;
 }
 .careerSelectContent_content
 {
@@ -179,7 +181,7 @@ mission
 {
     width: auto;
     max-width: 100%;
-    margin-top: 6.07143%;
+    margin-top: 7.5%;
 
     background-color: rgba(255, 255, 255, .7);
 }
@@ -201,6 +203,7 @@ mission
 
     display: table-cell;
 
+    width: 200px;
     padding-right: 30px;
     padding-left: 30px;
 
