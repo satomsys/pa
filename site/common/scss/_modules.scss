@@ -29,7 +29,6 @@
 		padding-top: 20px;
 		padding-bottom: 20px;
 		border-bottom: solid 1px $gray;
-		
 	}
 
 	&_logo{
@@ -70,25 +69,154 @@
 
 
 	//////// media queries 
-	@include breakpoint( sp ){
-		z-index: 3;
-		
-		.header_top{
-			padding-top: 0;
-			padding-bottom: 0;		
-			background-color: #fff;
-		}
+	@include breakpoint( tab ){
 
-	} //max 580	
+		width: 100%;
+		margin: auto;
+		position: fixed;
+		z-index: 5;
+		top: 0;
+		right: 0;
+		left: 0;
+		background-color: #fff;
+
+		&_wrap{
+			height: 60px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border-bottom: none;
+		}
+		&_logo{
+			margin-right: auto;
+			
+			.logo{
+				width: 109px;
+			}
+			.recruiting{
+				margin-left: 4px
+			}
+	}
+		&_buttons
+		{
+			display: none;
+		}
+	}
+}
+
+
+////////////////////
+
+// menu button
+
+////////////////////
+
+.menuButton{
+	display: none;
+	
+	//////// media queries 
+	@include breakpoint( tab ){
+		width: 60px;
+		height: 60px;
+		padding: 10px;
+		display: block;
+		box-sizing: border-box;
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		@include background-image(linear-gradient(270deg, darken($orange, 10), darken(#ffa51d,10)));
+		
+		&_bars{
+			width: 40%;
+			height: 40%;
+			margin: auto;
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			
+			&:before,
+			&:after,
+			i{
+				content:  " ";
+				width: 100%;
+				height: 1px;
+				margin-right: auto;
+				margin-left: auto;
+				display: block;
+				position: absolute;
+				right: 0;
+				left: 0;
+				transform-origin: 50% 50%;				
+				transition: transition($s:0.2s);
+				background-color: #fff;
+			}
+
+			&:before{
+				top: 0;
+				// animation: menuOpen_l 0.5s ease 0.2s 1 normal forwards;
+				
+			}
+			&:after{
+				bottom: 0;
+				// animation: menuOpen_r 0.5s ease 0.2s 1 normal forwards;
+			}
+
+			i{
+				margin-top: auto;
+				margin-bottom: auto;
+				top: 0;
+				bottom: 0;
+			}
+		}
+	}	
+	
+
+	///////////////
+	// menu open
+	///////////////
+	.menuClosed &{
+		@include background-image(linear-gradient(270deg, darken($orange, 10), darken(#ffa51d,10)));
+		
+		&_bars{
+			&:before{
+				animation: menuClose_l 0.5s ease 0.2s 1 normal both;
+			}
+			&:after{
+				animation: menuClose_r 0.5s ease 0.2s 1 normal both;
+			}
+		}			
+	}
+	.menuOpen &{
+		@include background-image(linear-gradient(180deg, darken($orange, 10), darken(#ffa51d,10)));
+		&_bars{
+			&:before{
+				animation: menuOpen_l 0.5s ease 0.2s 1 alternate both;
+			}
+			&:after{
+				animation: menuOpen_r 0.5s ease 0.2s 1 alternate both;
+			}
+
+			i{
+				width: 200%;
+				opacity: 0;
+			}
+		}		
+		
+	}
 }
 
 
 
-////////////////////
-
-// nav
 
 ////////////////////
+
+// navigation
+
+////////////////////
+
 
 .sitenav{
 	
@@ -165,7 +293,86 @@
 				}
 			}			
 		}	
+		&_child-buttons{
+			display: none;
+		}
 	}
+
+
+	///////// navigation 
+	@include breakpoint( tab ){
+			width: 100%;
+			height: 100%;
+			margin: auto;
+			padding: 10%;
+			position: fixed;
+			z-index: -2;
+			top: 60px;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			transition: transition();
+			box-sizing: border-box;
+			
+		.navList{
+			width: 100%;
+			max-width: none;
+			display: block;
+			
+			&_child{
+				display: block;	
+				transform: scale(1.1);
+				opacity: 0;
+				transition: transition();		
+			}
+			&_child:not( :last-child ){
+				border-bottom: solid 1px rgba(#111,0.2);	
+			}
+			&_child a {
+				padding: 1em;
+			}
+
+			&_child-buttons{
+				margin-top: 20px;
+				display: block;
+			}
+			&_child-buttons ul
+			{
+				display: flex;
+				flex-direction: row;
+				align-items: stretch;
+				justify-content: space-between;
+				
+				li{
+					width: 33%;
+					font-size: 10px;
+				}
+
+				li a{
+					padding: 1em 2px;
+    				letter-spacing: 0.02em;					
+					border: none;
+				}
+			}			
+		}		
+		@for $i from 1 through 7 {
+			.navList_child:nth-child( #{$i} ){
+				$delay: 0.05 * $i;
+				transition-delay: #{$delay}s;	
+			}				
+		}
+		///////////////
+		// menu open
+		///////////////
+		.menuOpen & {
+			z-index: 2;
+			.navList_child{
+				opacity: 1;
+				transform: scale(1);
+			}
+		}	
+	}
+
 }
 
 
@@ -373,20 +580,37 @@
 
 
 
-////////////////////
-
-// navigation
-
-////////////////////
-
-
-
 
 ////////////////////
 
 // menu open ( overlay )
 
 ////////////////////
+
+.overlay{
+	.showOverlay &,
+	.menuOpen &{
+		z-index: 1;
+		opacity: 0.98;
+		position: fixed;
+	}
+}
+
+.overlay{
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	background-color: #fff;
+	// position: absolute;
+	z-index: -2;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	transition: transition($s:0.3s);
+}
+
 
 
 

@@ -55,3 +55,93 @@
   70%{width: 100%;height: 1px;opacity: 1;transform: translateY(0)}
   100%{width:0%;opacity: 1; height: 1px; transform:translateY(0px)}
 }
+
+
+@-webkit-keyframes menuOpen_l {
+  0% {     top: 0%;   }
+   50%{ top: 50%; transform: rotate(0deg)    }
+  100% {  top: 50%; transform: rotate(45deg);   }
+}
+@-o-keyframes menuOpen_l {
+  0% {     top: 0%;   }
+   50%{ top: 50%; transform: rotate(0deg) }
+  100% { top: 50%; transform: rotate(45deg); }
+}
+@-moz-keyframes menuOpen_l {
+  0% {     top: 0%;   }
+   50%{ top: 50%; transform: rotate(0deg) }
+  100% { top: 50%; transform: rotate(45deg); }
+}
+@keyframes menuOpen_l {
+  0% {     top: 0%;   }
+   50%{ top: 50%; transform: rotate(0deg) }
+  100% { top: 50%; transform: rotate(45deg);}
+}
+
+
+@-webkit-keyframes menuOpen_r {
+  0% {     bottom: 0%;   }
+   50%{ bottom: 50%; transform: rotate(0deg) }
+  100% { top: 50%; transform: rotate(-45deg); }
+}
+@-o-keyframes menuOpen_r {
+  0% {     bottom: 0%;   }
+   50%{ bottom: 50%; transform: rotate(0deg)    }
+  100% {  top: 50%; transform: rotate(-45deg); }
+}
+@-moz-keyframes menuOpen_r {
+  0% {     bottom: 0%;   }
+   50%{ bottom: 50%; transform: rotate(0deg) }
+  100% { top: 50%; transform: rotate(-45deg); }
+}
+@keyframes menuOpen_r {
+  0% {bottom: 0%;   }
+   50%{ bottom: 50%; transform: rotate(0deg) }
+  100% {top: 50%; transform: rotate(-45deg); }
+}
+
+
+
+
+@-webkit-keyframes menuClose_l {
+  0% { top: 50%; transform: rotate(45deg); }
+   50%{ top: 50%; transform: rotate(0deg) }
+  100% {     top: 0%;   }
+}
+@-o-keyframes menuClose_l {
+  0% { top: 50%; transform: rotate(45deg);}
+   50%{ top: 50%; transform: rotate(0deg) }
+  100% {     top: 0%;   }
+}
+@-moz-keyframes menuClose_l {
+  0% { top: 50%; transform: rotate(45deg); }
+   50%{ top: 50%; transform: rotate(0deg) }
+  100% {     top: 0%;   }
+}
+@keyframes menuClose_l {
+  0% { top: 50%; transform: rotate(45deg); }
+   50%{ top: 50%; transform: rotate(0deg) }
+  100% {     top: 0%;   }
+}
+
+
+@-webkit-keyframes menuClose_r {
+  0% { top: 50%; transform: rotate(-45deg); }
+   50%{ bottom: 50%; transform: rotate(0deg) }
+ 100% { bottom: 0%;   }
+}
+@-o-keyframes menuClose_r {
+  0% { top: 50%; transform: rotate(-45deg); }
+   50%{ bottom: 50%; transform: rotate(0deg) }
+  100% { bottom: 0%;   }
+}
+@-moz-keyframes menuClose_r {
+  0% { top: 50%; transform: rotate(-45deg);}
+  50%{ bottom: 50%; transform: rotate(0deg) }
+  100% { bottom: 0%;   }
+}
+@keyframes menuClose_r {
+  0% { top: 50%; transform: rotate(-45deg); }
+   50%{bottom: 50%; transform: rotate(0deg) }
+  100% { bottom: 0%; }
+}

@@ -114,7 +114,16 @@ $('.mainvisual_image').slick({
 });
 
 
+/**
+* scorllMagic.js
+*/
 
+// var controller = new ScrollMagic.Controller();
+
+// $(function(){
+// 	var tween = new TimelineMax().add
+
+// });
 
 
 

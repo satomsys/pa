@@ -7,7 +7,23 @@ $(function(){
 	$ua = deviceIs( $w, 768 ),
 	$timer = null,
 	$fadeTarget = $('.fade'),
-	$scrollEvents = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll';
+	$scrollEvents = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll',
+	$menuButton = $('.menuButton');
+
+	if( $ua == 'mobile' ) $n = new Nav();
+
+/**
+* デバイス判定（幅
+*/
+$w.on( 'load resize', function( e ){
+	clearTimeout( $timer );
+	$timer = setTimeout( function(){
+		$ua = deviceIs( $w, 768 );
+	},300);
+
+	console.log( $ua );
+} );
+
 
 /**
 * fade in
@@ -27,12 +43,20 @@ if( $fadeTarget.length ){
 	});
 }
 
-$w.on( 'load resize', function( e ){
-	clearTimeout( $timer );
-	$timer = setTimeout( function(){
-		$ua = deviceIs( $w, 768 );
-	},300);
-} );		
+
+
+
+/**
+* メニュークリック
+*/
+
+$menuButton.on('click', function( e ){
+	if( $ua !== 'mobile') return;
+	e.stopPropagation();
+
+console.log( 'aaa ')
+	$n.switchClass();
+})		
 
 });
 
@@ -75,6 +99,35 @@ function deviceIs( w, breakPoint ){
 }
 
 
+/**
+* モバイル向けメニュー
+*/
+
+Nav = function(){
+	this.button = $('.menuButton'),
+	this.menu = $('.sitenav'),
+	this.body = $('body');
+
+	this.body.css({
+		'padding-top': $('.header').height()
+	});
+}
+
+Nav.prototype.switchClass = function(){
+	if( this.body.hasClass('menuOpen') ){
+		this.body.removeClass('menuOpen');
+		this.button.removeClass('menuOpen');
+
+		this.body.addClass('menuClosed');
+	}  else {
+		this.body.removeClass('menuClosed');
+
+		this.body.addClass('menuOpen');
+		this.button.addClass('menuOpen');
+	}
+}
+
+
 
 // $(function(){
 //     $('a[href^=#]').click(function(){
@@ -88,13 +141,12 @@ function deviceIs( w, breakPoint ){
 // });
 
 
-
 /**
 * scrollDepth
 */
-$(function() {
-    $.scrollDepth();
-});
+// $(function() {
+//     $.scrollDepth();
+// });
 
 
 //  $( '.backToTop' ).on( 'click', function(){
