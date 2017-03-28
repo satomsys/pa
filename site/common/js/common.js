@@ -54,9 +54,10 @@ $menuButton.on('click', function( e ){
 	if( $ua !== 'mobile') return;
 	e.stopPropagation();
 
-console.log( 'aaa ')
 	$n.switchClass();
-})		
+
+
+});
 
 });
 
@@ -115,15 +116,27 @@ Nav = function(){
 
 Nav.prototype.switchClass = function(){
 	if( this.body.hasClass('menuOpen') ){
+		this.scrollCansel( 'go' )
 		this.body.removeClass('menuOpen');
-		this.button.removeClass('menuOpen');
 
+		this.button.removeClass('menuOpen');
 		this.body.addClass('menuClosed');
 	}  else {
+		this.scrollCansel( 'cansel' )
 		this.body.removeClass('menuClosed');
-
 		this.body.addClass('menuOpen');
 		this.button.addClass('menuOpen');
+	}
+}
+
+Nav.prototype.scrollCansel = function( cansel ){
+	if( cansel == 'cansel'){
+		console.log( this )
+		this.body.on('touchmove.noScroll', function(e) {
+		    e.preventDefault();
+		});
+	}else{
+		this.body.off('.noScroll');
 	}
 }
 

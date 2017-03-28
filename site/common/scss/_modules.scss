@@ -313,6 +313,7 @@
 			left: 0;
 			transition: transition();
 			box-sizing: border-box;
+			overflow: hidden;
 			
 		.navList{
 			width: 100%;
@@ -349,6 +350,7 @@
 				}
 
 				li a{
+					color: #fff;
 					padding: 1em 2px;
     				letter-spacing: 0.02em;					
 					border: none;
@@ -434,22 +436,18 @@
 
 
 	//////// media queries 
-	@include breakpoint( sp ){
+	@include breakpoint( tab ){
 
-		.footer_top
+		margin-top: 60px;
+		&_copyright
 		{
-			li{
-				margin-left: 0;
-				padding-top: 0.5em;
-				padding-bottom: 0.5em;
-				padding-left: 0;
-				display: block;
-				border-left: 0;
-				border-bottom: solid 1px #333;
+			padding: {
+				top:2.5rem;
+				bottom: 2.5rem;
 			}
-		}
+		}		
 
-	} //max 580
+	} //max 780
 }
 
 

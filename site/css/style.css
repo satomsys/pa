@@ -24,6 +24,19 @@
 
     text-align: center;
 }
+@media screen and (max-width: 780px)
+{
+    .section
+    {
+        margin-top: 50px;
+        margin-bottom: 65px;
+    }
+    .section_index
+    {
+        padding-right: 5%; 
+        padding-left: 5%;
+    }
+}
 
 .heroPanel
 {
@@ -139,6 +152,17 @@ slick reset
 
     width: 10px;
 }
+@media screen and (max-width: 780px)
+{
+    .slick-prev
+    {
+        left: 1px;
+    }
+    .slick-prev:before
+    {
+        border-width: 4px 17px 4px 0;
+    }
+}
 
 .slick-next
 {
@@ -169,6 +193,17 @@ slick reset
     right: 20px; 
 
     width: 10px;
+}
+@media screen and (max-width: 780px)
+{
+    .slick-next
+    {
+        right: 1px;
+    }
+    .slick-next:before
+    {
+        border-width: 4px 0 4px 17px;
+    }
 }
 
 .slick-dots
@@ -234,6 +269,13 @@ main visual
 
     -webkit-font-feature-settings: 'palt';
             font-feature-settings: 'palt';
+}
+@media screen and (max-width: 780px)
+{
+    .mainvisual .mvArticle_text
+    {
+        font-size: 1.2em;
+    }
 }
 .mainvisual .mvArticle .button
 {
@@ -308,6 +350,24 @@ main visual
 
     border-width: 5px 0 5px 10px;
 }
+@media screen and (max-width: 780px)
+{
+    .mainvisual .mvArticle .button
+    {
+        width: 50%;
+    }
+    .mainvisual .mvArticle .button a:before,
+    .mainvisual .mvArticle .button a:after
+    {
+        right: 5px;
+    }
+    .mainvisual .mvArticle .button a:after
+    {
+        right: 5px;
+
+        border-width: 3px 0 3px 11px;
+    }
+}
 .mainvisual.black .mvArticle_text,
 .mainvisual.black .button
 {
@@ -329,9 +389,27 @@ what we are
 {
     margin-top: 90px;
 }
+@media screen and (max-width: 780px)
+{
+    .section-wwa
+    {
+        margin-top: 60px;
+    }
+}
 .section-wwa .section_index
 {
     margin-bottom: 100px;
+}
+@media screen and (max-width: 780px)
+{
+    .section-wwa .section_index
+    {
+        margin-bottom: 60px;
+    }
+    .section-wwa .section_index img
+    {
+        width: 75.16667%;
+    }
 }
 .section-wwa .poly
 {
@@ -502,6 +580,18 @@ what we are
 {
     width: 100%;
 }
+@media screen and (max-width: 780px)
+{
+    .section-wwa .section_footer.cityView
+    {
+        height: 100px;
+    }
+    .section-wwa .section_footer.cityView img
+    {
+        width: 130%;
+        max-width: none;
+    }
+}
 
 /********************
 business
@@ -572,12 +662,34 @@ business
 {
     color: #fff;
 }
+@media screen and (max-width: 780px)
+{
+    .section-business .businessPanel
+    {
+            flex-direction: column;
+
+        width: auto;
+        padding-right: 5%; 
+        padding-left: 5%;
+
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+    }
+}
 .section-business.inview .businessPanel_panel
 {
     -webkit-transform: translateY(0px);
             transform: translateY(0px); 
 
     opacity: 1;
+}
+@media screen and (max-width: 780px)
+{
+    .section-business .section_index img
+    {
+        width: 49.58333%;
+    }
 }
 
 /********************
@@ -641,6 +753,13 @@ person
 {
     width: 100%;
 }
+@media screen and (max-width: 780px)
+{
+    .section-person .section_index img
+    {
+        width: 37.83333%;
+    }
+}
 
 /********************
 career
@@ -652,6 +771,20 @@ career
 .section-career .heroPanel
 {
     margin: auto;
+}
+@media screen and (max-width: 780px)
+{
+    .section-career
+    {
+        margin-bottom: 80px;
+    }
+}
+@media screen and (max-width: 780px) and (max-width: 780px)
+{
+    .section-career .section_index img
+    {
+        width: 38.41667%;
+    }
 }
 
 /********************
@@ -672,6 +805,25 @@ culture
 .section-culture .heroPanel_bg img
 {
     width: 100%;
+}
+@media screen and (max-width: 780px)
+{
+    .section-culture
+    {
+        margin-bottom: 70px;
+    }
+    .section-culture .section_index img
+    {
+        width: 44.16667%;
+    }
+    .section-culture .heroPanel
+    {
+        height: auto;
+    }
+    .section-culture .heroPanel_bg img
+    {
+        width: 130%;
+    }
 }
 
 /********************
@@ -715,4 +867,16 @@ recruiting
 .section-recruiting .button a:focus
 {
     background-color: #ff6d1f;
+}
+@media screen and (max-width: 780px)
+{
+    .section-recruiting
+    {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+    .section-recruiting .section_index img
+    {
+        width: 62.66667%;
+    }
 }

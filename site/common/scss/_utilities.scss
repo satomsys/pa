@@ -30,16 +30,16 @@
 	box-sizing: border-box;
 
 
-	//////////media queries
-	@include breakpoint( pc ){
-		padding-left: 25px;
-		padding-right: 25px;
-	}//max 1200
+	// //////////media queries
+	// @include breakpoint( pc ){
+	// 	padding-left: 25px;
+	// 	padding-right: 25px;
+	// }//max 1200
 	
-	@include breakpoint( sp ){
-			padding-left: 15px;
-			padding-right: 15px;
-	}//max 580	
+	@include breakpoint( tab ){
+			padding-left: 5%;
+			padding-right: 5%;
+	}//max
 }
 
 .contain{

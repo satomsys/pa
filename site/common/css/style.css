@@ -437,20 +437,12 @@ a img:focus
     padding-right: 30px;
     padding-left: 30px;
 }
-@media screen and (max-width: 1200px)
+@media screen and (max-width: 780px)
 {
     .wrap
     {
-        padding-right: 25px; 
-        padding-left: 25px;
-    }
-}
-@media screen and (max-width: 580px)
-{
-    .wrap
-    {
-        padding-right: 15px; 
-        padding-left: 15px;
+        padding-right: 5%; 
+        padding-left: 5%;
     }
 }
 
@@ -1127,7 +1119,9 @@ html.ie8 .icon-facebook:before
         bottom: 0;
         left: 0;
 
-        box-sizing: border-box; 
+        overflow: hidden; 
+
+        box-sizing: border-box;
         width: 100%;
         height: 100%;
         margin: auto;
@@ -1197,6 +1191,7 @@ html.ie8 .icon-facebook:before
 
         letter-spacing: .02em;
 
+        color: #fff;
         border: none;
     }
     .sitenav .navList_child:nth-child(1)
@@ -1285,19 +1280,16 @@ html.ie8 .icon-facebook:before
 
     text-align: right;
 }
-@media screen and (max-width: 580px)
+@media screen and (max-width: 780px)
 {
-    .footer .footer_top li
+    .footer
     {
-        display: block;
-
-        margin-left: 0;
-        padding-top: .5em;
-        padding-bottom: .5em;
-        padding-left: 0;
-
-        border-bottom: solid 1px #333; 
-        border-left: 0;
+        margin-top: 60px;
+    }
+    .footer_copyright
+    {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
     }
 }
 

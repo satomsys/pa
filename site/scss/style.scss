@@ -20,6 +20,17 @@
 		margin: 0;
 		position: relative;
 	}
+
+	@include breakpoint( tab ){
+		margin-top: 50px;
+		margin-bottom: 65px;
+
+		&_index{
+			padding-left: 5%;
+			padding-right: 5%;
+		}		
+		
+	}
 }
 
 
@@ -105,6 +116,13 @@ slick reset
 			left:20px;
 		}		
 	}
+
+	@include breakpoint( tab ){
+		left: 1px;
+		&:before{
+			border-width: 4px 17px 4px 0;
+		}
+	}	
 }
 
  .slick-next{
@@ -128,6 +146,13 @@ slick reset
 			right: 20px;
 		}		
 	}
+
+	@include breakpoint( tab ){
+		right: 1px;
+		&:before{
+			border-width: 4px 0px 4px 17px;
+		}
+	}	
 }
 
 .slick-dots{
@@ -175,6 +200,11 @@ main visual
 			color: #fff;
 			text-shadow: 0 0 5px rgba(#000, 0.2);
 			transition: all 0.2s;
+			
+			@include breakpoint( tab ){
+
+				font-size: 1.2em;
+			}				
 		}
 
 		.button{
@@ -225,6 +255,21 @@ main visual
 					}					
 				}
 			}
+			@include breakpoint( tab ){
+				width: 50%;
+				
+				a{
+					&:before,
+					&:after{
+						right: 5px;
+					}
+					&:after{
+
+						right: 5px;
+						border-width: 3px 0 3px 11px;
+					}	
+				}			
+			}			
 		}
 
 	}
@@ -258,8 +303,22 @@ what we are
 .section-wwa{
 	margin-top: 90px;
 	
+	@include breakpoint( tab ){
+		margin-top: 60px;
+	}	
+
 	.section_index{
 		margin-bottom: 100px;
+		
+
+		@include breakpoint( tab ){
+			margin-bottom: 60px;
+			
+			img{
+				@include liquid( 902, 1200 );
+			}			
+		}		
+
 	}
 	
 	$boxWrap : 1160;
@@ -465,6 +524,16 @@ what we are
 			width: 100%;
 			
 		}
+
+		@include breakpoint( tab ){
+			height: 100px;
+			
+			
+			img{
+				width: 130%;
+				max-width: none;
+			}			
+		}		
 		
 	}
 
@@ -518,6 +587,14 @@ business
 			.businessPanel_panel_index{
 			}
 		}
+
+		@include breakpoint( tab ){
+			width: auto;
+			flex-direction: column;
+			padding-left: 5%;
+			padding-right: 5%;
+		}		
+
 	}
 
 	&.inview .businessPanel{
@@ -533,6 +610,13 @@ business
 		// }
 	}	
 
+	@include breakpoint( tab ){
+		.section_index{
+			img{
+				@include liquid( 595, 1200 );
+			}			
+		}
+	}		
 }
 
 
@@ -593,6 +677,15 @@ person
 		}
 	}
 
+
+	@include breakpoint( tab ){
+		.section_index{
+			img{
+				@include liquid( 454, 1200 );
+			}			
+		}
+	}		
+
 }
 
 
@@ -606,6 +699,19 @@ career
 	.heroPanel{
 		margin: auto;	
 	}
+
+
+	@include breakpoint( tab ){
+		margin-bottom: 80px;
+		
+		@include breakpoint( tab ){
+			.section_index{
+				img{
+					@include liquid( 461, 1200 );
+				}			
+			}
+		}		
+	}		
 }
 
 
@@ -629,6 +735,26 @@ culture
 			}
 		}
 	}
+	@include breakpoint( tab ){
+		margin-bottom: 70px;
+		
+		.section_index{
+			img{
+				@include liquid( 530, 1200 );
+			}			
+		}
+
+		.heroPanel
+		{
+			height: auto;
+			
+			&_bg{
+				img{
+					width: 130%;			
+				}
+			}
+		}
+	}		
 }
 
 
@@ -670,6 +796,18 @@ recruiting
 			}
 		}
 	}
+
+	@include breakpoint( tab ){
+		padding-top: 7rem;
+		padding-bottom: 7rem;
+		
+		.section_index{
+			img{
+				@include liquid( 752,1200 );
+			}
+		}
+	}	
+
 
 
 }
