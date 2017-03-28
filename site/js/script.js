@@ -1,7 +1,5 @@
 $(function(){
-	var $pallaraxWrap = $('.pWrap'),
-		$pallaraxDirectionSercher = null,
-		$section = $('.section'),
+	var $section = $('.section'),
 		$timer = null,
 		$move = $ua == 'desktop' ? 0.125 : 0.05,
 		$wwaArticles = $('.wwaArticles'),
@@ -32,38 +30,12 @@ $(function(){
 
 			})
 		}, 200 );
-
-		/**
-		* pallarax
-		*/
-		// $timer = setTimeout(function(){
-
-			$.each( $pallaraxWrap, function(){
-				var $this = $(this),
-					$thisOffset = $this.offset().top;
-
-				$this.css('overFlow','hidden');
-
-				if( $thisOffset <= $scrollBottom - 20 && $scrollVal < $thisOffset + $this.outerHeight() ){
-
-					var $pallaraxImg = $this.find('.pImg');
-					
-					$pallaraxImg.css({
-						'transform' : 'translateY(' + $pallaraxVal  + 'px)'
-					});
-
-				} else if( $thisOffset + $this.outerHeight() < $scrollVal ){
-					console.log( 'aaa' )
-				}
-			}	);		
-		// }, 300 )
 	});
 
 
 	/**
 	* what we are
 	*/
-
 	$wwaArticle.on( 'click', function( e ){
 		e.stopPropagation();
 
@@ -87,7 +59,7 @@ $(function(){
 			}, 200 )
 		})
 
-	})
+	});
 
 
  });
@@ -113,17 +85,6 @@ $('.mainvisual_image').slick({
 	$('.mainvisual').removeClass('black').addClass( textColor );
 });
 
-
-/**
-* scorllMagic.js
-*/
-
-// var controller = new ScrollMagic.Controller();
-
-// $(function(){
-// 	var tween = new TimelineMax().add
-
-// });
 
 
 
