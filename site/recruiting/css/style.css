@@ -8,6 +8,11 @@
     background-size: 100%;
 }
 
+.main
+{
+    overflow: hidden;
+}
+
 .section
 {
     padding-top: 70px;
@@ -17,50 +22,13 @@
 {
     background-color: #f3f3f3;
 }
-.section_index
+@media screen and (max-width: 780px)
 {
-    line-height: 1;
-
-    position: relative; 
-
-    margin-top: 40px;
-    margin-bottom: 65px;
-
-    text-align: center;
-    letter-spacing: .29em;
-}
-.section_index_main,
-.section_index_sub
-{
-    display: block;
-}
-.section_index_main
-{
-    font-size: 2em;
-}
-.section_index_main:after
-{
-    position: relative;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    display: block;
-
-    width: 100px;
-    height: 2px;
-    margin: auto;
-    margin-top: 35px;
-    margin-bottom: 35px;
-
-    content: ' ';
-
-    background-color: #ff6d1f;
-}
-.section_index_sub
-{
-    font-size: 1.15em;
-    line-height: 2;
+    .section
+    {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
 }
 
 .careerSelectContent
@@ -73,8 +41,8 @@
 {
     -webkit-transition: all .3s ease-in-out 0s;
             transition: all .3s ease-in-out 0s;
-    -webkit-transform: perspective(500px) translate3d(0, 0, 5px);
-            transform: perspective(500px) translate3d(0, 0, 5px); 
+    -webkit-transform: perspective(500px) scale(1.01);
+            transform: perspective(500px) scale(1.01); 
     -webkit-transform-origin: 50%;
             transform-origin: 50%;
 }
@@ -84,8 +52,8 @@
 }
 .careerSelectContent.active .careerSelectContent_content
 {
-    -webkit-transform: perspective(500px) translate3d(0, 0, 0);
-            transform: perspective(500px) translate3d(0, 0, 0);
+    -webkit-transform: perspective(500px) scale(1);
+            transform: perspective(500px) scale(1);
 }
 
 /********************
@@ -111,6 +79,13 @@ navigation
 {
     color: inherit;
 }
+@media screen and (max-width: 780px)
+{
+    .section-nav
+    {
+        width: auto;
+    }
+}
 
 .infoNav ul a,
 .careerSelectNav ul a
@@ -122,6 +97,16 @@ navigation
     -webkit-transition: all .3s ease 0s;
             transition: all .3s ease 0s; 
     letter-spacing: .5em;
+}
+@media screen and (max-width: 780px)
+{
+    .infoNav ul a,
+    .careerSelectNav ul a
+    {
+        font-size: 1em;
+
+        letter-spacing: .1em;
+    }
 }
 
 .infoNav ul
@@ -187,6 +172,54 @@ navigation
 
     text-align: left;
 }
+@media screen and (max-width: 780px)
+{
+    .infoNav ul
+    {
+        border-bottom: solid 1px #d9d9d9;
+    }
+    .infoNav ul li.active
+    {
+        position: relative;
+    }
+    .infoNav ul li.active:after
+    {
+        line-height: 0;
+
+        position: absolute;
+        right: 0;
+        bottom: -1px;
+        left: 0;
+
+        display: block;
+
+        width: 100%;
+        height: 1px;
+
+        content: ' ';
+
+        background-color: #ff6d1f;
+    }
+    .infoNav ul li.active span
+    {
+        border-bottom: none;
+    }
+    .infoNav ul span
+    {
+        display: block;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .infoNav ul li:first-child,
+    .infoNav ul li:last-child
+    {
+        padding-right: 0;
+        padding-left: 0;
+
+        text-align: left;
+    }
+}
 
 .careerSelectNav ul
 {
@@ -225,6 +258,24 @@ navigation
     color: #fff; 
     background-color: #ff6d1f;
 }
+@media screen and (max-width: 780px)
+{
+    .careerSelectNav ul
+    {
+        width: 100%;
+        margin-top: 20px;
+
+        border-spacing: 1px 0;
+    }
+    .careerSelectNav ul li
+    {
+        border: none;
+    }
+    .careerSelectNav ul li:not(active)
+    {
+        border: solid 1px #d9d9d9;
+    }
+}
 
 /********************
 募集職種
@@ -252,6 +303,20 @@ navigation
 .section-genre .genreList li:first-child
 {
     border-top: solid 1px #d9d9d9;
+}
+@media screen and (max-width: 780px)
+{
+    .section-genre .genreList
+    {
+        font-size: 1em;
+    }
+    .section-genre .genreList li
+    {
+        padding: 1em;
+
+        border-bottom: solid 1px #d9d9d9;
+        background-color: #fff;
+    }
 }
 
 /********************
@@ -354,6 +419,13 @@ navigation
 
     text-align: center;
 }
+@media screen and (max-width: 780px)
+{
+    .section-steps .section_content
+    {
+        font-size: 1em;
+    }
+}
 
 /********************
 entry
@@ -417,6 +489,28 @@ entry
 
     box-shadow: 0 0 0 #000;
 }
+@media screen and (max-width: 780px)
+{
+    .section-entry .entryBannerList
+    {
+        max-width: 900px;
+        margin-right: auto;
+        margin-left: auto;
+
+        text-align: center;
+    }
+    .section-entry .entryBannerList li
+    {
+        display: block; 
+
+        width: 100%;
+        margin-right: 0;
+    }
+    .section-entry .entryBannerList li:first-child
+    {
+        margin-bottom: 10px;
+    }
+}
 
 /****************************************
 求める人物像〜
@@ -445,7 +539,7 @@ entry
 {
     display: inline-block; 
 
-    margin-left: 0;
+    padding-left: 0;
 }
 .recruiting-walfare .section-requirement .requirementList li
 {
@@ -472,6 +566,47 @@ entry
 .recruiting-walfare .section-requirement .requirementList li .text
 {
     padding-left: 60px;
+}
+@media screen and (max-width: 780px)
+{
+    .recruiting-walfare .section-requirement
+    {
+        padding-bottom: 100px;
+    }
+    .recruiting-walfare .section-requirement .requirementList li
+    {
+        font-size: 1em;
+
+        display: table;
+
+        margin-bottom: 20px;
+
+        list-style: none;
+
+        letter-spacing: .25em; 
+
+        -webkit-font-feature-settings: 'palt';
+                font-feature-settings: 'palt';
+    }
+    .recruiting-walfare .section-requirement .requirementList li:first-child .num img
+    {
+        width: 44px;
+    }
+    .recruiting-walfare .section-requirement .requirementList li .num,
+    .recruiting-walfare .section-requirement .requirementList li .text
+    {
+        text-align: left;
+    }
+    .recruiting-walfare .section-requirement .requirementList li .num
+    {
+        width: 50px;
+    }
+    .recruiting-walfare .section-requirement .requirementList li .text
+    {
+        padding-left: 30px;
+
+        text-align: left;
+    }
 }
 .recruiting-walfare .section-walfare
 {
@@ -534,6 +669,23 @@ entry
     background-image:         linear-gradient(to right, #ff431e, #ff831f); 
     background-size: 100%;
 }
+@media screen and (max-width: 780px)
+{
+    .recruiting-walfare .section-walfare .walfarePanels .row
+    {
+            flex-direction: column;
+
+        margin-bottom: 0; 
+
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+    }
+    .recruiting-walfare .section-walfare .walfarePanels .row .walfarePanels_child
+    {
+        margin-bottom: 10px;
+    }
+}
 .recruiting-walfare .section-walfare .walfarePanels_child
 {
     position: relative;
@@ -573,6 +725,14 @@ entry
     background-image: -webkit-linear-gradient(left, #ff431e, #ff831f);
     background-image:         linear-gradient(to right, #ff431e, #ff831f); 
     background-size: 100%;
+}
+@media screen and (max-width: 780px)
+{
+    .recruiting-walfare .section-walfare .walfarePanels_child
+    {
+        width: auto; 
+        max-width: none;
+    }
 }
 .recruiting-walfare .section-walfare .walfarePanels .icon-plus
 {
@@ -638,4 +798,11 @@ entry
     width: 0;
 
     white-space: nowrap;
+}
+@media screen and (max-width: 780px)
+{
+    .recruiting-walfare .section-walfare .walfarePanels .panelTable
+    {
+        height: 100px;
+    }
 }

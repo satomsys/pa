@@ -8,9 +8,11 @@ $(function(){
 	$timer = null,
 	$fadeTarget = $('.fade'),
 	$scrollEvents = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll',
-	$menuButton = $('.menuButton');
+	$menuButton = $('.menuButton'),
+	$pageIndex = $('.pageIndex');
 
 	if( $ua == 'mobile' ) $n = new Nav();
+
 
 /**
 * デバイス判定（幅
@@ -44,8 +46,6 @@ if( $fadeTarget.length ){
 }
 
 
-
-
 /**
 * メニュークリック
 */
@@ -55,9 +55,21 @@ $menuButton.on('click', function( e ){
 	e.stopPropagation();
 
 	$n.switchClass();
-
-
 });
+
+
+/**
+* 下層ページインデックスアニメ
+*/
+
+if( 0 < $pageIndex.length ){
+	$w.on('load', function(){
+		setTimeout( function(){ 
+			$pageIndex.addClass('inview');
+		},150 );
+	});
+}
+
 
 });
 
@@ -116,13 +128,13 @@ Nav = function(){
 
 Nav.prototype.switchClass = function(){
 	if( this.body.hasClass('menuOpen') ){
-		this.scrollCansel( 'go' )
+		// this.scrollCansel( 'go' )
 		this.body.removeClass('menuOpen');
 
 		this.button.removeClass('menuOpen');
 		this.body.addClass('menuClosed');
 	}  else {
-		this.scrollCansel( 'cansel' )
+		// this.scrollCansel( 'cansel' )
 		this.body.removeClass('menuClosed');
 		this.body.addClass('menuOpen');
 		this.button.addClass('menuOpen');

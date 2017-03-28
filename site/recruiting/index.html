@@ -50,27 +50,35 @@
           <li class="button button-nav button-entry"><a href="">ENTRY<!-- <img src="common/img/header-button-entry.png" width="42" alt="ENTRY"> --></a></li>
         </ul>
       </nav>
+      <span class="menuButton"><i class="menuButton_bars"><i></i></i></span>      
     </div>
   </header>
   <!-- ///// header -->
 
-  <!-- ***** navigation -->
+ <!-- ***** navigation -->
   <nav class="sitenav">
     <ul class="navList">
-      <li class="navList_child"><a href="">BUSINESS</a></li>
-      <li class="navList_child comingsoon"><a href="">PERSON</a></li>
-      <li class="navList_child comingsoon"><a href="">CAREER</a></li>
-      <li class="navList_child comingsoon"><a href="">CULTURE</a></li>
-      <li class="navList_child comingsoon"><a href="">WHY JOIN US?</a></li>
+      <li class="navList_child"><a href="../business/">BUSINESS</a></li>
+      <li class="navList_child comingsoon"><a>PERSON</a></li>
+      <li class="navList_child comingsoon"><a>CAREER</a></li>
+      <li class="navList_child comingsoon"><a>CULTURE</a></li>
+      <li class="navList_child comingsoon"><a>WHY JOIN US?</a></li>
       <li class="navList_child active"><a>RECRUITING</a></li>
+      <li class="navList_child navList_child-buttons">
+         <ul>
+          <li class="button button-nav button-companyinfo"><a href="">COMPANY INFO.</a></li>
+          <li class="button button-nav button-mypage"><a href="">MY PAGE</a></li>
+          <li class="button button-nav button-entry"><a href="">ENTRY</a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
-  <!-- ///// navigation -->  
+  <!-- ///// navigation -->
 
   <main class="main">
     <header class="pageIndex">
-      <h2 class="pageIndex_text">
-        <img src="img/recruiting-index.png" width="550" alt="RECRUITING">
+      <h2 class="pageIndex_text barAnim">
+        <span><img src="img/recruiting-index.png" width="550" alt="RECRUITING"></span>
       </h2>
     </header>
 
@@ -293,7 +301,7 @@
           <div class="wrap">
             <header>
               <h3 class="section_index">
-                <span class="section_index_main"><img src="img/entry-index.png" width="158" alt="ENTRY"></span>
+                <span class="section_index_main"><img src="img/entry-index.svg" width="158" alt="ENTRY"></span>
               </h3>
             </header>
             <div class="section_content">
@@ -377,6 +385,8 @@
     <script type="text/javascript" src="../common/js/common.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <!-- /////scripts -->
+
+    <i class="overlay"></i>    
  </body>
 
 </html>
