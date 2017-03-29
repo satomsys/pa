@@ -36,9 +36,6 @@
 	p{
 		margin-top: 0;
 	}
-	.attention{
-		
-	}	
 }
 
 
@@ -76,8 +73,12 @@
 	}
 
 	@include breakpoint( tab ){
+
+		&,
+		&.hasCoverImg{
 		padding-top: 40px;
-		padding-bottom: 40px;	
+		padding-bottom: 40px;
+		}
 		
 		.contentArticle{
 			width: 90%;
@@ -96,7 +97,17 @@
 				letter-spacing: 0.05em;
 			}
 		}
-	}	
+		&.hasCoverImg {
+			.wrap{
+				padding-top: 0;
+			}
+			
+			.cover{
+				display: none;
+			}
+		}
+	}
+
 }
 
 .careerSelectContent{
@@ -233,6 +244,33 @@ navigation
 
 ////////////////////////
 
+/********************
+社長Message
+********************/
+
+.section-philosophy
+{
+	background-color: #c6f4fd;
+
+	&.hasCoverImg .cover{
+		top: auto;
+		bottom: 0;
+	}
+	@include breakpoint( tab ){
+
+		background: url(../img/_sp/philosophy-bg.jpg) center top no-repeat;
+		background-size: cover;
+
+		.section_index{
+			img{
+				@include liquid(311, 640, true );	
+			}
+		}
+	}	
+}
+
+
+
 
 /********************
 mission
@@ -346,6 +384,10 @@ mission
 				padding-left: 0;
 				display: table;
 				
+				&:last-child{
+					margin-bottom: 0;
+				}
+				
 				&_num{
 					display: none;
 				}	
@@ -382,6 +424,98 @@ mission
 		}
 		
 	}
+
+	@include breakpoint( tab ){
+
+		background: #fff url(../img/_sp/mission-bg.jpg) center bottom no-repeat;
+		background-size: cover;		
+
+		.section_index{
+			img{
+				@include liquid(202, 640, true );	
+			}
+		}
+	}		
+}
+
+
+/********************
+社長Message
+********************/
+
+.section-ceo
+{
+	background-color: #e7f2f2;
+
+	.ceoName{
+		height: 1em;
+		position: absolute;
+		right: 1%;
+		bottom: 5%;
+		font-size: 1.4em;
+		
+		.position{
+			margin-right: 1em;
+			font-size: 0.5em;
+		}
+
+		@include breakpoint( pc ){
+			margin-top: auto;
+			margin-bottom: auto;
+			top: 0;
+			bottom: 0;
+		}
+
+		@include breakpoint( tab ){
+			transform: translateY(-10%);
+			font-size: 1em;
+
+			.position{
+				margin-top: 5px;
+				font-size: 0.5em;
+			}			
+		}
+		// @include breakpoint( sp ){
+		// 	margin-top: 2em;
+		// 	text-align: right;
+		// 	position: static;
+		// }
+		
+		////見出し下の余白ありVer
+		@include breakpoint( sp ){
+			top: 10%;
+			bottom: auto;
+			right: auto;
+			left: 30%;
+			text-align: left;
+			
+			span{
+				display: block;
+			}
+		}		
+	}
+
+	@include breakpoint( tab ){
+
+			background: #e7f2f2 url(../img/_sp/ceomessage-bg.jpg) center top no-repeat;
+			background-size: cover;								
+
+		.section_index{
+			
+			// margin-bottom: 50%;
+
+			img{
+				@include liquid(356, 640, true );	
+			}
+		}
+	}		
+
+	@include breakpoint( sp ){
+		background-size: contain;		
+		.section_index{	
+			margin-bottom: 50%;
+		}
+	}	
 }
 
 
@@ -410,6 +544,15 @@ mission
 			}
 		}
 	}
+
+	@include breakpoint( tab ){
+
+		.section_index{
+			img{
+				@include liquid(260, 640, true );	
+			}
+		}
+	}		
 }
 
 
@@ -443,15 +586,26 @@ mission
 	}
 
 	@include breakpoint( tab ){
+
+		.section_index{
+			img{
+				@include liquid(187, 640, true );	
+			}
+		}
+
+
+
 		.accessDetail
 		{
-			
 			&_map iframe{
 				max-width: 100%;
 				min-height: 0px;
 			}
 			&_data{
-							}	
+				dt{
+					width: 105px;
+				}			
+			}	
 		}
 	}		
 }

@@ -75,7 +75,8 @@
 }
 @media screen and (max-width: 780px)
 {
-    .section
+    .section,
+    .section.hasCoverImg
     {
         padding-top: 40px;
         padding-bottom: 40px;
@@ -101,6 +102,14 @@
         margin-bottom: 2em;
 
         letter-spacing: .05em;
+    }
+    .section.hasCoverImg .wrap
+    {
+        padding-top: 0;
+    }
+    .section.hasCoverImg .cover
+    {
+        display: none;
     }
 }
 
@@ -259,6 +268,33 @@ navigation
 }
 
 /********************
+社長Message
+********************/
+.section-philosophy
+{
+    background-color: #c6f4fd;
+}
+.section-philosophy.hasCoverImg .cover
+{
+    top: auto;
+    bottom: 0;
+}
+@media screen and (max-width: 780px)
+{
+    .section-philosophy
+    {
+        background: url(../img/_sp/philosophy-bg.jpg) center top no-repeat;
+        background-size: cover;
+    }
+    .section-philosophy .section_index img
+    {
+        width: 48.59375%;
+        margin-right: auto; 
+        margin-left: auto;
+    }
+}
+
+/********************
 mission
 ********************/
 .section-mission .wrap
@@ -401,6 +437,10 @@ mission
         padding-right: 0;
         padding-left: 0;
     }
+    .section-mission .contentArticle-bullet .bullet:last-child
+    {
+        margin-bottom: 0;
+    }
     .section-mission .contentArticle-bullet .bullet_num
     {
         display: none;
@@ -437,6 +477,112 @@ mission
         padding-left: 1em;
     }
 }
+@media screen and (max-width: 780px)
+{
+    .section-mission
+    {
+        background: #fff url(../img/_sp/mission-bg.jpg) center bottom no-repeat;
+        background-size: cover;
+    }
+    .section-mission .section_index img
+    {
+        width: 31.5625%;
+        margin-right: auto; 
+        margin-left: auto;
+    }
+}
+
+/********************
+社長Message
+********************/
+.section-ceo
+{
+    background-color: #e7f2f2;
+}
+.section-ceo .ceoName
+{
+    font-size: 1.4em; 
+
+    position: absolute;
+    right: 1%;
+    bottom: 5%;
+
+    height: 1em;
+}
+.section-ceo .ceoName .position
+{
+    font-size: .5em; 
+
+    margin-right: 1em;
+}
+@media screen and (max-width: 1200px)
+{
+    .section-ceo .ceoName
+    {
+        top: 0;
+        bottom: 0; 
+
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+@media screen and (max-width: 780px)
+{
+    .section-ceo .ceoName
+    {
+        font-size: 1em; 
+
+        -webkit-transform: translateY(-10%);
+                transform: translateY(-10%);
+    }
+    .section-ceo .ceoName .position
+    {
+        font-size: .5em; 
+
+        margin-top: 5px;
+    }
+}
+@media screen and (max-width: 580px)
+{
+    .section-ceo .ceoName
+    {
+        top: 10%;
+        right: auto;
+        bottom: auto;
+        left: 30%;
+
+        text-align: left;
+    }
+    .section-ceo .ceoName span
+    {
+        display: block;
+    }
+}
+@media screen and (max-width: 780px)
+{
+    .section-ceo
+    {
+        background: #e7f2f2 url(../img/_sp/ceomessage-bg.jpg) center top no-repeat;
+        background-size: cover;
+    }
+    .section-ceo .section_index img
+    {
+        width: 55.625%;
+        margin-right: auto; 
+        margin-left: auto;
+    }
+}
+@media screen and (max-width: 580px)
+{
+    .section-ceo
+    {
+        background-size: contain;
+    }
+    .section-ceo .section_index
+    {
+        margin-bottom: 50%;
+    }
+}
 
 /********************
 会社概要
@@ -460,6 +606,15 @@ mission
     .section-company .requirementInfo dd > span
     {
         word-break: break-all;
+    }
+}
+@media screen and (max-width: 780px)
+{
+    .section-company .section_index img
+    {
+        width: 40.625%;
+        margin-right: auto; 
+        margin-left: auto;
     }
 }
 
@@ -492,9 +647,19 @@ mission
 }
 @media screen and (max-width: 780px)
 {
+    .section-access .section_index img
+    {
+        width: 29.21875%;
+        margin-right: auto; 
+        margin-left: auto;
+    }
     .section-access .accessDetail_map iframe
     {
         max-width: 100%;
         min-height: 0;
+    }
+    .section-access .accessDetail_data dt
+    {
+        width: 105px;
     }
 }

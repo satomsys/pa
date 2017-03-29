@@ -38,7 +38,6 @@ $w.on( 'load resize', function( e ){
 * fade in
 */
 if( $fadeTarget.length ){
-
 	$w.on( 'load', function(){
 		targetFade( $fadeTarget, $w );			
 	});
@@ -48,7 +47,7 @@ if( $fadeTarget.length ){
 		
 		$timer = setTimeout(function(){
 			targetFade( $fadeTarget, $w );
-		}, 50 );
+		}, 100 );
 	});
 }
 
