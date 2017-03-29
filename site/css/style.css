@@ -274,7 +274,11 @@ main visual
 {
     .mainvisual .mvArticle_text
     {
-        font-size: 1.2em;
+        font-size: 1.25em; 
+
+        margin-bottom: 2em;
+
+        letter-spacing: .1em;
     }
 }
 .mainvisual .mvArticle .button
@@ -393,22 +397,30 @@ what we are
 {
     .section-wwa
     {
-        margin-top: 60px;
+        margin-top: 40px;
     }
 }
 .section-wwa .section_index
 {
     margin-bottom: 100px;
 }
+.section-wwa .section_index .sub
+{
+    margin-top: 50px;
+}
 @media screen and (max-width: 780px)
 {
     .section-wwa .section_index
     {
-        margin-bottom: 60px;
+        margin-bottom: 40px;
     }
     .section-wwa .section_index img
     {
         width: 75.16667%;
+    }
+    .section-wwa .section_index img.sub
+    {
+        margin-top: 20px;
     }
 }
 .section-wwa .poly
@@ -661,6 +673,7 @@ business
 .section-business .businessPanel_panel-about .businessPanel_panel_index
 {
     color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .5);
 }
 @media screen and (max-width: 780px)
 {
@@ -759,6 +772,16 @@ person
     {
         width: 37.83333%;
     }
+    .section-person .gradationBg-top
+    {
+        top: -10px; 
+
+        height: 150px;
+    }
+    .section-person .gradationBg-bottom
+    {
+        height: 20px;
+    }
 }
 
 /********************
@@ -800,7 +823,7 @@ culture
     overflow: hidden; 
 
     width: 100%;
-    height: 590px;
+    height: 550px;
 }
 .section-culture .heroPanel_bg img
 {
@@ -818,11 +841,12 @@ culture
     }
     .section-culture .heroPanel
     {
-        height: auto;
+        height: 180px;
     }
     .section-culture .heroPanel_bg img
     {
-        width: 130%;
+        width: 150%;
+        max-width: none;
     }
 }
 

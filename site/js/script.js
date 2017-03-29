@@ -7,7 +7,7 @@ $(function(){
 
 
 
-	$w.on('scroll resize', function(){
+	$w.on('scroll resize load', function(){
 		clearTimeout( $timer );
 
 		var $scrollVal = $(this).scrollTop(),
@@ -21,14 +21,15 @@ $(function(){
 		$timer = setTimeout(function(){
 			$.each( $section, function(i,e){
 				var $this = $(this),
-					$sectionOffset = $this.offset().top;
+					$sectionOffset = $this.offset().top
+					$scrollDelay = $ua == 'desktop' ? 20 : 30;
 
-				if( $sectionOffset <= $scrollBottom - 20 ){
+				if( $sectionOffset <= $scrollBottom - $scrollDelay ){
 					$this.addClass('inview');
 				}
 
 			})
-		}, 200 );
+		}, 100 );
 	});
 
 

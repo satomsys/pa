@@ -202,8 +202,9 @@ main visual
 			transition: all 0.2s;
 			
 			@include breakpoint( tab ){
-
-				font-size: 1.2em;
+				margin-bottom: 2em;
+				letter-spacing: 0.1em;
+				font-size: 1.25em;
 			}				
 		}
 
@@ -304,19 +305,27 @@ what we are
 	margin-top: 90px;
 	
 	@include breakpoint( tab ){
-		margin-top: 60px;
+		margin-top: 40px;
 	}	
 
 	.section_index{
 		margin-bottom: 100px;
 		
+		.sub{
+			margin-top: 50px
+		}
+		
 
 		@include breakpoint( tab ){
-			margin-bottom: 60px;
-			
+			margin-bottom: 40px;
+						
 			img{
 				@include liquid( 902, 1200 );
 			}			
+			img.sub{
+				margin-top: 20px;
+				// @include liquid( 660, 1200 );
+			}
 		}		
 
 	}
@@ -580,6 +589,7 @@ business
 		&_panel-about{
 			.businessPanel_panel_index{
 				color: #fff;
+				text-shadow: 0 0 5px rgba(#000, 0.5)
 			}
 		}
 
@@ -684,6 +694,18 @@ person
 				@include liquid( 454, 1200 );
 			}			
 		}
+
+		.gradationBg{			
+			
+			&-top{
+				height: 150px;
+				top: -10px;
+			}
+
+			&-bottom{
+				height: 20px
+			}
+		}		
 	}		
 
 }
@@ -725,7 +747,7 @@ culture
 	.heroPanel
 	{
 		width: 100%;
-		height: 590px;
+		height: 550px;
 		display: block;
 		overflow: hidden;
 		
@@ -746,11 +768,12 @@ culture
 
 		.heroPanel
 		{
-			height: auto;
+			height: 180px;
 			
 			&_bg{
 				img{
-					width: 130%;			
+					width: 150%;
+					max-width: none;
 				}
 			}
 		}

@@ -13,7 +13,7 @@ $(function(){
 			$wrapHeight = $this.outerHeight(),
 			$imgHeight = $img.outerHeight(),
 			$durationVal = $(window).height() + $wrapHeight,
-			$moveVal = $w.innerHeight() / 4.5 * -1;
+			$moveVal = $ua == 'desktop' ? $w.innerHeight() / 4.5 * -1 : $w.innerHeight() / 8 * -1;
 			// $moveVal = $wrapHeight - $imgHeight ;
 
 		/**
