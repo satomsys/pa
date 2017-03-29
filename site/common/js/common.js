@@ -4,7 +4,7 @@ var $w,
 $(function(){
 
 	$w = $(window),
-	$ua = deviceIs( $w, 768 ),
+	$ua = deviceIs( $w, 780 ),
 	$timer = null,
 	$fadeTarget = $('.fade'),
 	$scrollEvents = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll',
@@ -17,14 +17,19 @@ $(function(){
 
 /**
 * デバイス判定（幅
+* @see  deviceIs
 */
 $w.on( 'load resize', function( e ){
 	clearTimeout( $timer );
 	$timer = setTimeout( function(){
-		$ua = deviceIs( $w, 768 );
+		$ua = deviceIs( $w, 780 );
 	},300);
 
 	console.log( $ua );
+
+	//ナビpadding
+	if($ua == 'desktop' ) $('body').css({paddingTop:0});
+
 } );
 
 
@@ -52,7 +57,6 @@ if( $fadeTarget.length ){
 /**
 * メニュークリック
 */
-
 $menuButton.on('click', function( e ){
 	if( $ua !== 'mobile') return;
 	e.stopPropagation();
@@ -65,7 +69,6 @@ $menuButton.on('click', function( e ){
 /**
 * 下層ページインデックスアニメ
 */
-
 if( 0 < $pageIndex.length ){
 	$w.on('load', function(){
 		setTimeout( function(){ 
@@ -73,6 +76,7 @@ if( 0 < $pageIndex.length ){
 		},150 );
 	});
 }
+
 
 });
 
@@ -118,6 +122,7 @@ function deviceIs( w, breakPoint ){
 
 /**
 * モバイル向けメニュー
+* @constructor
 */
 Nav = function(){
 	this.button = $('.menuButton'),
@@ -128,7 +133,10 @@ Nav = function(){
 		'padding-top': $('.header').height()
 	});
 }
-
+/**
+* ナビ開閉のためのクラス差し替え
+* @extends Nav
+*/
 Nav.prototype.switchClass = function(){
 	if( this.body.hasClass('menuOpen') ){
 		// this.scrollCansel( 'go' )
@@ -143,7 +151,10 @@ Nav.prototype.switchClass = function(){
 		this.button.addClass('menuOpen');
 	}
 }
-
+/**
+* スクロールキャンセル
+* @extends Nav
+*/
 Nav.prototype.scrollCansel = function( cansel ){
 	if( cansel == 'cansel'){
 		console.log( this )

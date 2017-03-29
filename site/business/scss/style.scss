@@ -399,7 +399,16 @@ mission
 			dt{
 				border-right: solid 2px $orange;
 			}
-		}	
+		}
+
+		@include breakpoint( tab ){
+			dt{
+				width: 105px;
+			}
+			dd>span{
+				word-break: break-all;
+			}
+		}
 	}
 }
 

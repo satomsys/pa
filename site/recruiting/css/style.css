@@ -13,6 +13,16 @@
     overflow: hidden;
 }
 
+@media screen and (max-width: 780px)
+{
+    .pageIndex_text
+    {
+        width: 68.75%;
+        margin-right: auto; 
+        margin-left: auto;
+    }
+}
+
 .section
 {
     padding-top: 70px;
@@ -350,9 +360,23 @@ navigation
 
     border-right: solid 2px #ff6d1f;
 }
+@media screen and (max-width: 780px)
+{
+    .section-requirement .requirementInfo_list > dt
+    {
+        padding-right: .5em;
+    }
+}
 .section-requirement .requirementInfo_list > dd
 {
     padding-left: 2em;
+}
+@media screen and (max-width: 780px)
+{
+    .section-requirement .requirementInfo_list > dd
+    {
+        padding-left: 1em;
+    }
 }
 .section-requirement .requirementInfo_list p
 {
@@ -364,6 +388,7 @@ navigation
     overflow: hidden; 
 
     margin: 0;
+    padding: 0;
 }
 .section-requirement .requirementInfo_list ol li
 {
@@ -391,8 +416,46 @@ navigation
 {
     width: 6em;
 }
+@media screen and (max-width: 780px)
+{
+    .section-requirement .requirementInfo_list dl
+    {
+        display: block;
+    }
+    .section-requirement .requirementInfo_list dl dt,
+    .section-requirement .requirementInfo_list dl dd
+    {
+        display: block;
+    }
+    .section-requirement .requirementInfo_list dl dt
+    {
+        width: auto;
+
+        border-bottom: solid 1px #d9d9d9;
+    }
+    .section-requirement .requirementInfo_list dl dt padding
+    {
+        top: 0;
+        right: 5px;
+        bottom: 5px;
+        left: 5px;
+    }
+    .section-requirement .requirementInfo_list dl dd
+    {
+        margin-top: 5px;
+        margin-left: 0; 
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
 .section-requirement .requirementInfo_list .listNum
 {
+    margin-bottom: 5px;
+}
+.section-requirement .requirementInfo_list .listIndex
+{
+    font-size: 1.15em;
+
     margin-bottom: 5px;
 }
 .section-requirement .requirementInfo_list .listHeader
@@ -408,6 +471,25 @@ navigation
 
     content: '○';
     vertical-align: middle;
+}
+.section-requirement .requirementInfo_list-school li
+{
+    display: inline-block;
+}
+.section-requirement .requirementInfo_list-school li:not(:first-child):before
+{
+    content: '・';
+}
+@media screen and (max-width: 780px)
+{
+    .section-requirement .requirementInfo_list-school li
+    {
+        display: inline;
+    }
+    .section-requirement .requirementInfo_list-school li:not(:first-child):before
+    {
+        content: '/';
+    }
 }
 
 /********************
@@ -464,10 +546,8 @@ entry
 
     list-style: none;
 
-    -webkit-transition: all .3s ease-in-out 0s;
-    -webkit-transition: all .3s ease 0s;
-            transition: all .3s ease-in-out 0s;
-            transition: all .3s ease 0s; 
+    -webkit-transition: all .1s ease-in-out 0s;
+            transition: all .1s ease-in-out 0s;
     vertical-align: middle;
 
     background-color: #fff;
@@ -489,6 +569,14 @@ entry
 
     box-shadow: 0 0 0 #000;
 }
+.section-entry .entryBannerList-career li a
+{
+    font-weight: bold;
+
+    letter-spacing: .25em;
+
+    color: #eb5200;
+}
 @media screen and (max-width: 780px)
 {
     .section-entry .entryBannerList
@@ -505,6 +593,22 @@ entry
 
         width: 100%;
         margin-right: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .section-entry .entryBannerList li a
+    {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .section-entry .entryBannerList li a,
+    .section-entry .entryBannerList li img
+    {
+        line-height: 1;
+    }
+    .section-entry .entryBannerList li img
+    {
+        width: 50%;
     }
     .section-entry .entryBannerList li:first-child
     {

@@ -20,6 +20,16 @@
 	overflow: hidden
 }
 
+
+
+.pageIndex_text{
+	@include breakpoint( tab ){
+		@include liquid(550, 800, true );
+	}	
+}
+
+
+
 .section{
 	padding-top: 70px;
 	padding-bottom: 70px;
@@ -33,6 +43,8 @@
 		padding-bottom: 40px;			
 	}
 }
+
+
 
 .careerSelectContent{
 	min-height: 300px;
@@ -313,9 +325,17 @@ navigation
 				padding-right: 2em;
 				border-right: solid 2px $orange;
 				font-weight: bold;
+				
+				@include breakpoint( tab ){
+					padding-right: 0.5em;
+				}		
+
 			}
 			>dd{
 				padding-left: 2em;
+				@include breakpoint( tab ){
+					padding-left: 1em;
+				}					
 			}
 			p{
 				margin-top: 0;
@@ -323,6 +343,7 @@ navigation
 			ol{
 				clear: both;
 				margin: 0;
+				padding: 0;
 				overflow: hidden;
 				li{
 					float: left;
@@ -345,10 +366,42 @@ navigation
 				dt{
 					width: 6em;
 				}
+
+				@include breakpoint( tab ){
+					display: block;
+					dt,
+					dd{
+						display: block;
+					}					
+					
+					dt{
+						width: auto;
+						border-bottom: solid 1px $gray;
+						padding{
+							top: 0;
+							right: 5px;
+							bottom: 5px;
+							left: 5px;
+						}
+					}
+					dd{
+						padding-right: 0;
+						padding-left: 0;
+						margin-top: 5px;
+						margin-left: 0;
+					}
+				}					
 			}
+
 			.listNum{
 				margin-bottom: 5px;
 			}
+
+			.listIndex{
+				font-size: 1.15em;
+				margin-bottom: 5px;
+			}
+
 			.listHeader{
 				font-weight: bold;
 				font-size: 1.05em;
@@ -364,7 +417,26 @@ navigation
 			.attention{
 				
 			}
-		}	
+		}
+		&_list-school{
+			li{
+				display: inline-block;
+				&:not(:first-child):before{
+					content: "・";
+				}
+			}
+
+			@include breakpoint( tab ){
+				li{
+					display: inline;
+					&:not(:first-child):before{
+						content: "/";
+					}
+				}
+			}					
+		}
+
+
 	}
 
 }
@@ -430,7 +502,7 @@ entry
 			list-style: none;
 			position: relative;
 			bottom: 0;
-			transition: transition();
+			transition: transition($s:0.1s);
 			background-color: #fff;
 			// display: table-cell;
 			box-shadow: 0 3px 0 #000;
@@ -442,10 +514,18 @@ entry
 				display: block;
 			}
 
-			@include mouseOver(){
+			&:hover,
+			&:active,
+			&:focus{
 				bottom: -3px;
 				box-shadow: 0 0px 0 #000;;
 			}
+		}
+
+		&-career li a{
+			letter-spacing: 0.25em;
+			font-weight: bold;
+			color: darken($orange, 10);
 		}
 	}
 
@@ -460,8 +540,22 @@ entry
 			text-align: center;
 			li{
 				width: 100%;
+				padding-top: 0px;
+				padding-bottom: 0px;
 				margin-right: 0px;
 				display: block;
+				
+				a{
+					padding-top: 15px;
+					padding-bottom: 15px;
+				}
+				
+				a,img{
+					line-height: 1;
+				}
+				img{
+					width: 50%;
+				}
 				
 				&:first-child{
 					margin-bottom: 10px;

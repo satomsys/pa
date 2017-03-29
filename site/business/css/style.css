@@ -451,6 +451,17 @@ mission
 {
     border-right: solid 2px #ff6d1f;
 }
+@media screen and (max-width: 780px)
+{
+    .section-company .requirementInfo dt
+    {
+        width: 105px;
+    }
+    .section-company .requirementInfo dd > span
+    {
+        word-break: break-all;
+    }
+}
 
 /********************
 アクセス
