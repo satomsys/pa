@@ -12,7 +12,7 @@ var $careerSelectNav = $('.careerSelectNav').find('li'),
 			$target = $('.careerSelectContent' + '.' + $genre);
 
 
-		if( $self.hasClass('active') ) return;
+		if( $self.hasClass('active') || $self.hasClass('comingsoon') ) return;
 
 		$careerSelectContent.fadeOut(300).removeClass('active');
 		$careerSelectNav.removeClass('active');
@@ -23,8 +23,6 @@ var $careerSelectNav = $('.careerSelectNav').find('li'),
 
 		// console.log( $careerSelectContent )  
 		// console.log( $careerSelectContent.filter( $( '.' + $genre ) )) ;
-
-
 	})
 
 });

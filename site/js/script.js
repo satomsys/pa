@@ -8,7 +8,6 @@ $(function(){
 
 
 	$w.on('scroll resize', function(){
-
 		clearTimeout( $timer );
 
 		var $scrollVal = $(this).scrollTop(),
@@ -31,6 +30,7 @@ $(function(){
 			})
 		}, 200 );
 	});
+
 
 
 	/**

@@ -34,6 +34,16 @@
     margin-top: 0;
 }
 
+@media screen and (max-width: 780px)
+{
+    .pageIndex_text
+    {
+        width: 55.25%;
+        margin-right: auto; 
+        margin-left: auto;
+    }
+}
+
 .section
 {
     padding-top: 70px;
@@ -48,16 +58,50 @@
 .section .contentArticle_index
 {
     font-size: 2em;
-    font-weight: bold; 
+    font-weight: bold;
 
     margin-bottom: 1.5em;
+
+    letter-spacing: .24em;
 }
 .section .contentArticle p
 {
-    line-height: 2; 
+    line-height: 2;
 
     margin-top: 2em;
     margin-bottom: 2em;
+
+    letter-spacing: .05em;
+}
+@media screen and (max-width: 780px)
+{
+    .section
+    {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .section .contentArticle
+    {
+        width: 90%;
+    }
+    .section .contentArticle_index
+    {
+        font-size: 1.3em;
+        font-weight: bold;
+
+        margin-bottom: 1.5em;
+
+        letter-spacing: .24em;
+    }
+    .section .contentArticle p
+    {
+        line-height: 2;
+
+        margin-top: 2em;
+        margin-bottom: 2em;
+
+        letter-spacing: .05em;
+    }
 }
 
 .careerSelectContent
@@ -108,6 +152,13 @@ navigation
 {
     color: inherit;
 }
+@media screen and (max-width: 780px)
+{
+    .section-nav
+    {
+        width: auto;
+    }
+}
 
 .infoNav ul a,
 .careerSelectNav ul a
@@ -119,6 +170,16 @@ navigation
     -webkit-transition: all .3s ease 0s;
             transition: all .3s ease 0s; 
     letter-spacing: .5em;
+}
+@media screen and (max-width: 780px)
+{
+    .infoNav ul a,
+    .careerSelectNav ul a
+    {
+        font-size: 1em;
+
+        letter-spacing: .1em;
+    }
 }
 
 .careerSelectNav ul
@@ -153,10 +214,48 @@ navigation
     color: #fff; 
     background-color: #ff6d1f;
 }
+.careerSelectNav ul li.active
+{
+    border: none;
+}
 .careerSelectNav ul li.active a
 {
     color: #fff; 
     background-color: #ff6d1f;
+}
+.careerSelectNav ul li.comingsoon
+{
+    -webkit-transition: all .3s ease 0s;
+            transition: all .3s ease 0s; 
+
+    opacity: .35;
+}
+.careerSelectNav ul li.comingsoon:hover a,
+.careerSelectNav ul li.comingsoon:active a,
+.careerSelectNav ul li.comingsoon:focus a
+{
+    cursor: default;
+
+    color: inherit;
+    background-color: transparent;
+}
+@media screen and (max-width: 780px)
+{
+    .careerSelectNav ul
+    {
+        width: 100%;
+        margin-top: 20px;
+
+        border-spacing: 1px 0;
+    }
+    .careerSelectNav ul li
+    {
+        border: none;
+    }
+    .careerSelectNav ul li:not(active)
+    {
+        border: solid 1px #d9d9d9;
+    }
 }
 
 /********************
@@ -177,6 +276,13 @@ mission
     margin-right: auto; 
     margin-left: auto;
 }
+@media screen and (max-width: 780px)
+{
+    .section-mission .contentArticle_wrap
+    {
+        width: 90%;
+    }
+}
 .section-mission .contentArticle-bullet
 {
     width: auto;
@@ -196,6 +302,15 @@ mission
     padding-bottom: 20px;
 
     table-layout: fixed;
+}
+@media screen and (max-width: 780px)
+{
+    .section-mission .contentArticle-bullet_wrap
+    {
+        display: block; 
+
+        width: auto;
+    }
 }
 .section-mission .contentArticle-bullet .bullet
 {
@@ -235,8 +350,10 @@ mission
 }
 .section-mission .contentArticle-bullet .bullet_index span
 {
+    font-size: 1.15em; 
+
     position: relative;
-    z-index: 2; 
+    z-index: 2;
 
     display: table-cell;
 
@@ -268,6 +385,57 @@ mission
     background-image:         linear-gradient(to right bottom, #eaeaea, #fafafa);
     background-size: 100%;
     box-shadow: 2px 3px 0 rgba(217, 217, 217, .8), -1px -1px 1px rgba(217, 217, 217, .2);
+}
+.section-mission .contentArticle-bullet .bullet_content
+{
+    font-size: .95em;
+}
+@media screen and (max-width: 780px)
+{
+    .section-mission .contentArticle-bullet .bullet
+    {
+        display: table; 
+
+        width: auto;
+        margin-bottom: 2em;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .section-mission .contentArticle-bullet .bullet_num
+    {
+        display: none;
+    }
+    .section-mission .contentArticle-bullet .bullet_index,
+    .section-mission .contentArticle-bullet .bullet_content
+    {
+        display: table-cell;
+
+        vertical-align: top;
+    }
+    .section-mission .contentArticle-bullet .bullet_index
+    {
+        width: 110px;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        text-align: left;
+    }
+    .section-mission .contentArticle-bullet .bullet_index span
+    {
+        font-size: 1em; 
+
+        height: auto;
+    }
+    .section-mission .contentArticle-bullet .bullet_index:after
+    {
+        display: none;
+    }
+    .section-mission .contentArticle-bullet .bullet_content
+    {
+        font-size: .95em;
+
+        padding-left: 1em;
+    }
 }
 
 /********************
@@ -306,4 +474,16 @@ mission
     margin-right: auto;
     margin-bottom: 30px;
     margin-left: auto;
+}
+.section-access .accessDetail_data dd
+{
+    padding-left: 0;
+}
+@media screen and (max-width: 780px)
+{
+    .section-access .accessDetail_map iframe
+    {
+        max-width: 100%;
+        min-height: 0;
+    }
 }

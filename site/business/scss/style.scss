@@ -42,6 +42,16 @@
 }
 
 
+
+.pageIndex_text
+{
+	@include breakpoint( tab ){
+		@include liquid(442, 800, true );
+	}		
+}
+
+
+
 .section{
 	padding-top: 70px;
 	padding-bottom: 70px;
@@ -54,14 +64,39 @@
 			font-size: 2em;
 			margin-bottom: 1.5em;
 			font-weight: bold;
+			letter-spacing: 0.24em;
 		}
 
 		p{
 			margin-top: 2em;
 			margin-bottom: 2em;
 			line-height: 2;
+			letter-spacing: 0.05em;
 		}
 	}
+
+	@include breakpoint( tab ){
+		padding-top: 40px;
+		padding-bottom: 40px;	
+		
+		.contentArticle{
+			width: 90%;
+		
+			&_index{
+				font-size: 1.3em;
+				margin-bottom: 1.5em;
+				font-weight: bold;
+				letter-spacing: 0.24em;
+			}
+
+			p{
+				margin-top: 2em;
+				margin-bottom: 2em;
+				line-height: 2;
+				letter-spacing: 0.05em;
+			}
+		}
+	}	
 }
 
 .careerSelectContent{
@@ -105,6 +140,11 @@ navigation
 	a{
 		color: inherit;
 	}
+
+	@include breakpoint( tab ){
+		width: auto;		
+	}	
+
 }
 
 .infoNav ul,
@@ -118,6 +158,13 @@ navigation
 			
 		}
 	}
+
+	@include breakpoint( tab ){
+		a{
+			font-size: 1em;
+			letter-spacing: 0.1em;
+		}
+	}		
 }
 
 
@@ -141,17 +188,42 @@ navigation
 			&:not(.active) a{
 				background-color: $orange;
 				color: #fff;
-		
 			}
 		}
 
 		&.active{
+			border: none;
 			a{
 				background-color: $orange;
 				color: #fff;
 			}
 		}
+
+		&.comingsoon{
+			opacity: 0.35;
+			@include mouseOver(){
+				a{
+					cursor: default;
+					color: inherit;
+					background-color: transparent
+				}
+			}			
+		}
 	}
+
+	@include breakpoint( tab ){
+		width: 100%;
+		margin-top: 20px;
+		border-spacing: 1px 0;
+		
+		li{
+			border: none;
+			
+			&:not( active ){
+				border: solid 1px $gray;
+			}
+		}
+	}		
 }
 
 
@@ -176,9 +248,15 @@ mission
 	{
 		max-width: $outerWidth;
 		
-		&_wrap{
+		&_wrap
+		{
 			@include liquid(980,1400, true);		
+		
+			@include breakpoint( tab ){
+				width: 90%;
+			}			
 		}
+
 	}
 
 	.contentArticle-bullet{
@@ -197,6 +275,11 @@ mission
 			// flex-direction: row;
 			// justify-content: space-between;
 			// align-items: stretch;
+			
+			@include breakpoint( tab ){
+				width: auto;
+				display: block;
+			}				
 		}
 		
 		.bullet
@@ -230,6 +313,7 @@ mission
 					vertical-align: middle;
 					position: relative;
 					z-index: 2;
+					font-size: 1.15em;
 				}
 
 				&:after{
@@ -249,7 +333,52 @@ mission
 					box-shadow: 2px 3px 0 rgba($gray,0.8), -1px -1px 1px rgba($gray,0.2);
 				}
 				
+			}
+
+			&_content{
+				font-size: .95em;
 			}	
+
+			@include breakpoint( tab ){
+				width: auto;
+				margin-bottom: 2em;
+				padding-right: 0;
+				padding-left: 0;
+				display: table;
+				
+				&_num{
+					display: none;
+				}	
+
+				&_index,
+				&_content{
+					display: table-cell;
+					vertical-align: top;
+				}				
+
+				&_index{
+					width: 110px;
+					margin-top: 0em;
+					margin-bottom: 0em;
+					text-align: left;
+					
+					span{
+						height: auto;
+						font-size: 1em;
+					}
+
+
+					&:after{
+						display: none;
+					}
+				
+				}
+
+				&_content{
+					font-size: .95em;
+					padding-left: 1em;
+				}	
+			}				
 		}
 		
 	}
@@ -296,9 +425,24 @@ mission
 			display: block;
 		}
 		&_data{
-
-			@extend %dlStyle;
 			
+			@extend %dlStyle;
+			dd{
+				padding-left: 0
+			}
 		}	
 	}
+
+	@include breakpoint( tab ){
+		.accessDetail
+		{
+			
+			&_map iframe{
+				max-width: 100%;
+				min-height: 0px;
+			}
+			&_data{
+							}	
+		}
+	}		
 }

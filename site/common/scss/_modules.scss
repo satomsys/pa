@@ -479,7 +479,15 @@
 	background-size: 400% 400%;
 	-webkit-animation: gradationAnim 20s ease infinite;
 	-moz-animation: gradationAnim 20s ease infinite;
-	animation: gradationAnim 20s ease infinite;			
+	animation: gradationAnim 20s ease infinite;		
+	
+	//////// media queries 
+	@include breakpoint( tab ){
+
+		padding-top: 70px;
+		padding-bottom: 70px;
+
+	} //max 780
 		
 }
 
