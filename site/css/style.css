@@ -643,27 +643,23 @@ business
 }
 .section-business .businessPanel_panel a
 {
-    -webkit-transition: all .3s ease 0s;
-            transition: all .3s ease 0s; 
-
     color: inherit;
-}
-.section-business .businessPanel_panel a:hover,
-.section-business .businessPanel_panel a:active,
-.section-business .businessPanel_panel a:focus
-{
-    opacity: 1;
-}
-.section-business .businessPanel_panel a:hover .businessPanel_panel_index,
-.section-business .businessPanel_panel a:active .businessPanel_panel_index,
-.section-business .businessPanel_panel a:focus .businessPanel_panel_index
-{
-    letter-spacing: .5em;
 }
 .section-business .businessPanel_panel:nth-child(even)
 {
     -webkit-transition-delay: 1s;
             transition-delay: 1s;
+}
+.section-business .businessPanel_panel a:not(.comingsoon)
+{
+    -webkit-transition: all .3s ease 0s;
+            transition: all .3s ease 0s;
+}
+.section-business .businessPanel_panel a:not(.comingsoon):hover .businessPanel_panel_index,
+.section-business .businessPanel_panel a:not(.comingsoon):active .businessPanel_panel_index,
+.section-business .businessPanel_panel a:not(.comingsoon):focus .businessPanel_panel_index
+{
+    letter-spacing: .5em;
 }
 .section-business .businessPanel_panel_index
 {
@@ -674,6 +670,12 @@ business
 {
     color: #fff;
     text-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+.section-business .businessPanel_panel-about.comingsoon .businessPanel_panel_index
+{
+    opacity: .5;
+    color: #000;
+    text-shadow: none;
 }
 @media screen and (max-width: 780px)
 {

@@ -570,16 +570,17 @@ business
 
 			a{
 				color: inherit;
-				@include mouseOver(){
-					opacity: 1;
-					.businessPanel_panel_index{
-						letter-spacing: 0.5em;
-					}	
-				}
 			}		
 			&:nth-child(even){
 				transition-delay:1s;
 			}		
+		}
+		&_panel a:not(.comingsoon){
+			@include mouseOver(){
+				.businessPanel_panel_index{
+					letter-spacing: 0.5em;
+				}	
+			}
 		}
 
 		&_panel_index{
@@ -590,6 +591,12 @@ business
 			.businessPanel_panel_index{
 				color: #fff;
 				text-shadow: 0 0 5px rgba(#000, 0.5)
+			}
+
+			&.comingsoon .businessPanel_panel_index{
+				color: #000;
+				opacity: .5;
+				text-shadow: none;				
 			}
 		}
 
