@@ -795,6 +795,11 @@ html.ie8 .icon-facebook:before
     color: #ff6d1f;
 }
 
+.menuOpen
+{
+    overflow: hidden;
+}
+
 .header_wrap,
 .header_buttons
 {
@@ -860,7 +865,7 @@ html.ie8 .icon-facebook:before
     .header
     {
         position: fixed;
-        z-index: 5;
+        z-index: 10;
         top: 0;
         right: 0;
         left: 0;
@@ -1126,7 +1131,7 @@ html.ie8 .icon-facebook:before
         bottom: 0;
         left: 0;
 
-        overflow: hidden; 
+        overflow: hidden;
 
         box-sizing: border-box;
         width: 100%;
@@ -1136,6 +1141,10 @@ html.ie8 .icon-facebook:before
 
         -webkit-transition: all .3s ease-in-out 0s;
                 transition: all .3s ease-in-out 0s;
+        -webkit-transition-delay: .95s;
+                transition-delay: .95s;
+
+        background-color: rgba(255, 255, 255, 0);
     }
     .sitenav .navList
     {
@@ -1244,7 +1253,12 @@ html.ie8 .icon-facebook:before
     }
     .menuOpen .sitenav
     {
-        z-index: 2;
+        z-index: 9;
+
+        -webkit-transition-delay: 0s;
+                transition-delay: 0s;
+
+        background-color: rgba(255, 255, 255, .96);
     }
     .menuOpen .sitenav .navList_child
     {
@@ -1494,10 +1508,8 @@ html.ie8 .icon-facebook:before
             animation: fadeinLine 2s ease .5s 1 backwards;
 }
 
-.showOverlay .overlay,
-.menuOpen .overlay
+.showOverlay .overlay
 {
-    position: fixed; 
     z-index: 1;
 
     opacity: .98;
@@ -1510,6 +1522,7 @@ html.ie8 .icon-facebook:before
 
 .overlay
 {
+    position: fixed;
     z-index: -2;
     top: 0;
     right: 0;
