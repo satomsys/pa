@@ -16,6 +16,10 @@
 
 ////////////////////////
 
+.main{
+	overflow: hidden
+}
+
 .section{
 	padding-top: 70px;
 	padding-bottom: 70px;
@@ -24,44 +28,9 @@
 		background-color: #f3f3f3;
 	}
 
-	&_index{
-		margin-top: 40px;
-		margin-bottom: 65px;
-		letter-spacing: 0.29em;
-		line-height: 1;
-		text-align: center;
-		position: relative;
-		
-		&_main,
-		&_sub{
-			display: block;
-		}
-		
-		&_main{
-			font-size: 2em;
-			&:after{
-				content:  " ";
-				width: 100px;
-				height: 2px;
-				margin-top: 35px;
-				margin-bottom: 35px;
-				margin: auto;
-				display: block;
-				position: relative;
-				// position: absolute;
-				bottom: 0;
-				right: 0;
-				left: 0;
-				background-color: $orange;
-			}
-		}
-
-		&_sub{
-			font-size: 1.15em;
-			line-height: 2;
-			// margin-top: 35px;
-		}
-		
+	@include breakpoint( tab ){
+		padding-top: 40px;
+		padding-bottom: 40px;			
 	}
 }
 
@@ -72,14 +41,18 @@
 		transition: transition();
 		// opacity: 0;
 		transform-origin: 50%;
-		transform: perspective($perspective) translate3d(0,0,5px);
+		transform: perspective($perspective) scale(1.01);
 	}
 	&.active{
 			display: block;
 		.careerSelectContent_content{
-			transform: perspective($perspective) translate3d(0,0,0);			
+			transform: perspective($perspective) scale(1);			
 		}
 	}
+
+	@include breakpoint( tab ){
+
+	}	
 }
 
 
@@ -106,6 +79,10 @@ navigation
 	a{
 		color: inherit;
 	}
+
+	@include breakpoint( tab ){
+		width: auto;
+	}		
 }
 
 .infoNav ul,
@@ -119,6 +96,14 @@ navigation
 			
 		}
 	}
+
+	@include breakpoint( tab ){
+		a{
+			font-size: 1em;
+			letter-spacing: 0.1em;
+		}
+		
+	}		
 }
 
 
@@ -176,6 +161,44 @@ navigation
 		padding-left: 2em;
 		text-align: left;
 	}	
+
+	@include breakpoint( tab ){
+		border-bottom : solid 1px $gray;	
+	
+		li.active{
+			position: relative;
+			
+			&:after{
+				content:  " ";
+				width: 100%;
+				line-height: 0;
+				height: 1px;
+				display: block;
+				position: absolute;
+				bottom: -1px;
+				right: 0;
+				left: 0;
+				background-color: $orange;
+			}
+			
+			 span{
+				border-bottom: none;
+			}
+		}
+
+
+		span{
+			display: block;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}		
+		li:first-child,
+		li:last-child{
+			padding-left: 0;
+			padding-right: 0px;
+			text-align: left;
+		}	
+	}		
 }
 
 .careerSelectNav ul{
@@ -209,6 +232,21 @@ navigation
 			}
 		}
 	}
+
+	@include breakpoint( tab ){
+		width: 100%;
+		margin-top: 20px;
+		border-spacing: 1px 0;
+		
+		li{
+			border: none;
+			
+			&:not( active ){
+				border: solid 1px $gray;
+			}
+		}
+	}		
+
 }
 
 /********************
@@ -235,6 +273,19 @@ navigation
 			}
 		}
 	}
+
+	@include breakpoint( tab ){
+		.genreList{
+			font-size: 1em;
+			
+			li{
+				padding: 1em;
+				border-bottom: solid 1px $gray;
+				background-color: #fff;
+			}
+		}
+	}	
+
 }
 
 
@@ -331,6 +382,12 @@ navigation
 		text-align: center;	
 	}
 
+	@include breakpoint( tab ){
+		.section_content{
+			font-size: 1em;
+		}		
+	}		
+
 }
 
 
@@ -392,6 +449,29 @@ entry
 			}
 		}
 	}
+
+
+	@include breakpoint( tab ){
+
+		.entryBannerList{
+			max-width: 900px;
+			margin-left: auto;
+			margin-right: auto;
+
+			text-align: center;
+			li{
+				width: 100%;
+				margin-right: 0px;
+				display: block;
+				
+				&:first-child{
+					margin-bottom: 10px;
+				}
+			}
+		}		
+
+	}		
+
 }
 
 
@@ -422,7 +502,7 @@ entry
 	// }
 	
 	.requirementList{
-		margin-left: 0;
+		padding-left: 0;
 		display: inline-block;
 
 		li{
@@ -443,7 +523,41 @@ entry
 			}
 		}
 	}
+
+	@include breakpoint( tab ){
+
+		padding-bottom: 100px;
+
+		.requirementList{
+
+			li{
+				display: table;
+				margin-bottom: 20px;
+				list-style: none;
+				font-size: 1em;
+				font-feature-settings: 'palt';
+				letter-spacing: 0.25em;
+				
+
+				&:first-child .num img{ width: 44px }
+				
+				.num,.text{
+					text-align: left;
+				}				
+				.num{
+					width: 50px;
+				}
+
+				.text{
+					padding-left: 30px;
+					text-align: left
+				}
+			}
+		}		
+
+	}		
 }
+
 
 /********************
 制度、福利厚生
@@ -485,6 +599,16 @@ entry
 					}				
 				}				
 			}
+
+			@include breakpoint( tab ){
+				flex-direction: column;
+				margin-bottom: 0;
+				
+				.walfarePanels_child{
+					margin-bottom: 10px;
+				}				
+			
+			}			
 			
 		}
 		&_child{
@@ -510,6 +634,11 @@ entry
 			&:nth-child( even ){
 				@include background-image( linear-gradient(to right, #ff431e, #ff831f) );
 			}
+
+			@include breakpoint( tab ){
+				max-width: none;
+				width: auto;
+			}				
 		}
 
 		.icon-plus{
@@ -558,6 +687,9 @@ entry
 				white-space: nowrap;
 				overflow: hidden;
 			}
+			@include breakpoint( tab ){
+				height: 100px;
+			}				
 		}
 	}
 }
