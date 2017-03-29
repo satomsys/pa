@@ -623,9 +623,10 @@ business
 		@include liquid( 1022, 1400, true );
 		display: flex;
 		flex-direction: row;
-		align-items: center;
+		align-items: stretch;		
 		
 		&_panel{
+			width: 100%;
 			line-height: 1;
 			list-style: none;
 			opacity: 0;
@@ -744,13 +745,20 @@ person
 
 	.personImagePanel{
 		display: flex;
+		justify-content: center;
 		flex-direction: row;
 		flex-wrap: wrap;
+		overflow: hidden;
 		
 		&_panel{
-			line-height: 0;
-			list-style: none;		
+			max-width: 100%;
 			@include liquid( 466, 1400 );
+			line-height: 0;
+			list-style: none;
+			overflow: hidden;
+			figure{
+				margin: 0;
+			}		
 			
 			img{
 				width: 100%;

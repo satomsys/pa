@@ -705,13 +705,15 @@ business
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
 }
 .section-business .businessPanel_panel
 {
     line-height: 1;
+
+    width: 100%;
 
     list-style: none;
 
@@ -830,8 +832,12 @@ person
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    overflow: hidden; 
         flex-direction: row;
 
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
@@ -842,9 +848,16 @@ person
 {
     line-height: 0;
 
-    width: 33.28571%; 
+    overflow: hidden; 
+
+    width: 33.28571%;
+    max-width: 100%;
 
     list-style: none;
+}
+.section-person .personImagePanel_panel figure
+{
+    margin: 0;
 }
 .section-person .personImagePanel_panel img
 {
