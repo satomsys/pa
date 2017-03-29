@@ -657,7 +657,8 @@ entry
 ********************/
 
 .section-walfare{
-	background-color: #f3f3f3;	
+	background-color: #f3f3f3;		
+	overflow: hidden;	
 	
 	// .walfarePanels{
 	// 	@include liquid( 1130, 1300, true );
@@ -668,7 +669,23 @@ entry
 		display: flex;
 		align-items: stretch;
 		justify-content: center;
-		flex-direction: row;		
+		flex-direction: row;	
+		
+		@include breakpoint( tab ){
+			display: block;
+			padding-right: 0;
+			background-image: none!important;
+
+			&:after{
+				content:  " ";
+				display: block;
+				width: auto;
+				height: 0;
+				margin-right: -6%;
+				padding-top: 39%;
+				overflow: hidden;
+			}
+		}
 		
 		&_index,
 		&_content{	
@@ -684,7 +701,17 @@ entry
 				
 				display: flex;
 				align-items: center;
-				flex-direction: row;				
+				flex-direction: row;
+				
+			@include breakpoint( tab ){
+				padding:{
+					top: 30px;
+					right: 2.5%;
+					bottom: 30px;
+					left: 2.5%;
+				}
+				display: block;
+			}						
 		}		
 		
 		&_index{
@@ -706,6 +733,20 @@ entry
 				margin-top: 1em;				
 			}
 
+			@include breakpoint( tab ){
+				width: auto;
+				margin-left: -15%;
+				padding-left: 15%;
+				transform: skew( -15deg );
+				
+				.ja{
+					margin-top: 0.5em;
+				}
+				h4{
+					transform: skew( 15deg );
+				}				
+			}				
+
 		}
 
 		&_content{
@@ -720,6 +761,17 @@ entry
 			div{
 				transform: skew( 15deg );
 			}
+			@include breakpoint( tab ){
+				width: auto;
+				margin-left: auto;
+				margin-right: auto;
+				transform: none;
+				background-color: transparent;
+				
+				div{
+					transform: none;
+				}				
+			}				
 		}
 
 
@@ -727,32 +779,69 @@ entry
 		&-teambuilding{
 			background: url(../img/team-img.jpg) right center no-repeat;
 			background-size: contain;
+			
+			@include breakpoint( tab ){
+				&:after{
+					background: url(../img/_sp/team-img.jpg) right center no-repeat;
+					background-size: contain;					
+				}
+			}				
 		}
 		///////// education ~ 
 		&-education{
 			background: url(../img/education-img.jpg) right center no-repeat;
 			background-size: contain;
+			@include breakpoint( tab ){
+				&:after{
+					background: url(../img/_sp/education-img.jpg) right center no-repeat;
+					background-size: contain;					
+				}
+			}			
 		}
 		///////// training for new ~ 
 		&-training{
 			background: url(../img/training-img.jpg) right center no-repeat;
 			background-size: contain;
+			@include breakpoint( tab ){
+				&:after{
+					background: url(../img/_sp/training-img.jpg) right center no-repeat;
+					background-size: contain;					
+				}
+			}			
 		}
 		///////// highly ~ 
 		&-highly{
 			background: url(../img/highly-img.jpg) right center no-repeat;
 			background-size: contain;
+			@include breakpoint( tab ){
+				&:after{
+					background: url(../img/_sp/highly-img.jpg) right center no-repeat;
+					background-size: contain;					
+				}
+			}			
 		}
 		///////// qualification ~ 
 		&-qualification{
 			background: url(../img/qualification-img.jpg) right center no-repeat;
 			background-size: contain;
+			@include breakpoint( tab ){
+				&:after{
+					background: url(../img/_sp/qualification-img.jpg) right center no-repeat;
+					background-size: contain;					
+				}
+			}			
 		}
 		///////// maternity ~ 
 		&-maternity{
 			background: url(../img/maternity-img.jpg) right center no-repeat;
 			background-size: contain;
-		}		
+			@include breakpoint( tab ){
+				&:after{
+					background: url(../img/_sp/maternity-img.jpg) right center no-repeat;
+					background-size: contain;					
+				}
+			}			
+		}
 	}
 }
 

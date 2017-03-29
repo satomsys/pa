@@ -714,6 +714,8 @@ entry
 }
 .recruiting-walfare .section-walfare
 {
+    overflow: hidden; 
+
     background-color: #f3f3f3;
 }
 .recruiting-walfare .section-walfare .walfarePanel
@@ -736,6 +738,29 @@ entry
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
 }
+@media screen and (max-width: 780px)
+{
+    .recruiting-walfare .section-walfare .walfarePanel
+    {
+        display: block;
+
+        padding-right: 0;
+
+        background-image: none !important;
+    }
+    .recruiting-walfare .section-walfare .walfarePanel:after
+    {
+        display: block;
+        overflow: hidden; 
+
+        width: auto;
+        height: 0;
+        margin-right: -6%;
+        padding-top: 39%;
+
+        content: ' ';
+    }
+}
 .recruiting-walfare .section-walfare .walfarePanel_index,
 .recruiting-walfare .section-walfare .walfarePanel_content
 {
@@ -756,6 +781,19 @@ entry
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
+}
+@media screen and (max-width: 780px)
+{
+    .recruiting-walfare .section-walfare .walfarePanel_index,
+    .recruiting-walfare .section-walfare .walfarePanel_content
+    {
+        display: block; 
+
+        padding-top: 30px;
+        padding-right: 2.5%;
+        padding-bottom: 30px;
+        padding-left: 2.5%;
+    }
 }
 .recruiting-walfare .section-walfare .walfarePanel_index
 {
@@ -785,6 +823,27 @@ entry
 {
     margin-top: 1em;
 }
+@media screen and (max-width: 780px)
+{
+    .recruiting-walfare .section-walfare .walfarePanel_index
+    {
+        width: auto;
+        margin-left: -15%;
+        padding-left: 15%;
+
+        -webkit-transform: skew(-15deg);
+                transform: skew(-15deg);
+    }
+    .recruiting-walfare .section-walfare .walfarePanel_index .ja
+    {
+        margin-top: .5em;
+    }
+    .recruiting-walfare .section-walfare .walfarePanel_index h4
+    {
+        -webkit-transform: skew(15deg);
+                transform: skew(15deg);
+    }
+}
 .recruiting-walfare .section-walfare .walfarePanel_content
 {
     width: 200%;
@@ -805,33 +864,100 @@ entry
     -webkit-transform: skew(15deg);
             transform: skew(15deg);
 }
+@media screen and (max-width: 780px)
+{
+    .recruiting-walfare .section-walfare .walfarePanel_content
+    {
+        width: auto;
+        margin-right: auto;
+        margin-left: auto;
+
+        -webkit-transform: none;
+                transform: none;
+
+        background-color: transparent;
+    }
+    .recruiting-walfare .section-walfare .walfarePanel_content div
+    {
+        -webkit-transform: none;
+                transform: none;
+    }
+}
 .recruiting-walfare .section-walfare .walfarePanel-teambuilding
 {
     background: url(../img/team-img.jpg) right center no-repeat;
     background-size: contain;
+}
+@media screen and (max-width: 780px)
+{
+    .recruiting-walfare .section-walfare .walfarePanel-teambuilding:after
+    {
+        background: url(../img/_sp/team-img.jpg) right center no-repeat;
+        background-size: contain;
+    }
 }
 .recruiting-walfare .section-walfare .walfarePanel-education
 {
     background: url(../img/education-img.jpg) right center no-repeat;
     background-size: contain;
 }
+@media screen and (max-width: 780px)
+{
+    .recruiting-walfare .section-walfare .walfarePanel-education:after
+    {
+        background: url(../img/_sp/education-img.jpg) right center no-repeat;
+        background-size: contain;
+    }
+}
 .recruiting-walfare .section-walfare .walfarePanel-training
 {
     background: url(../img/training-img.jpg) right center no-repeat;
     background-size: contain;
+}
+@media screen and (max-width: 780px)
+{
+    .recruiting-walfare .section-walfare .walfarePanel-training:after
+    {
+        background: url(../img/_sp/training-img.jpg) right center no-repeat;
+        background-size: contain;
+    }
 }
 .recruiting-walfare .section-walfare .walfarePanel-highly
 {
     background: url(../img/highly-img.jpg) right center no-repeat;
     background-size: contain;
 }
+@media screen and (max-width: 780px)
+{
+    .recruiting-walfare .section-walfare .walfarePanel-highly:after
+    {
+        background: url(../img/_sp/highly-img.jpg) right center no-repeat;
+        background-size: contain;
+    }
+}
 .recruiting-walfare .section-walfare .walfarePanel-qualification
 {
     background: url(../img/qualification-img.jpg) right center no-repeat;
     background-size: contain;
 }
+@media screen and (max-width: 780px)
+{
+    .recruiting-walfare .section-walfare .walfarePanel-qualification:after
+    {
+        background: url(../img/_sp/qualification-img.jpg) right center no-repeat;
+        background-size: contain;
+    }
+}
 .recruiting-walfare .section-walfare .walfarePanel-maternity
 {
     background: url(../img/maternity-img.jpg) right center no-repeat;
     background-size: contain;
+}
+@media screen and (max-width: 780px)
+{
+    .recruiting-walfare .section-walfare .walfarePanel-maternity:after
+    {
+        background: url(../img/_sp/maternity-img.jpg) right center no-repeat;
+        background-size: contain;
+    }
 }
