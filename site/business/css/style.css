@@ -73,12 +73,21 @@
 
     letter-spacing: .05em;
 }
+@media screen and (max-width: 1200px)
+{
+    .section.hasCoverImg .cover
+    {
+        width: auto;
+        max-width: none; 
+        height: 100%;
+    }
+}
 @media screen and (max-width: 780px)
 {
     .section,
     .section.hasCoverImg
     {
-        padding-top: 40px;
+        padding-top: 70px;
         padding-bottom: 40px;
     }
     .section .contentArticle
@@ -196,7 +205,6 @@ navigation
     display: table;
 
     width: calc( 100% + 5px );
-    margin-top: 60px;
 
     table-layout: fixed;
     border-spacing: 10px 0;
@@ -268,7 +276,7 @@ navigation
 }
 
 /********************
-社長Message
+philosophy
 ********************/
 .section-philosophy
 {
@@ -278,6 +286,14 @@ navigation
 {
     top: auto;
     bottom: 0;
+}
+@media screen and (max-width: 1200px)
+{
+    .section-philosophy
+    {
+        width: auto; 
+        height: 100%;
+    }
 }
 @media screen and (max-width: 780px)
 {
@@ -530,22 +546,16 @@ mission
 {
     .section-ceo .ceoName
     {
-        font-size: 1em; 
+        position: static;
 
-        -webkit-transform: translateY(-10%);
-                transform: translateY(-10%);
-    }
-    .section-ceo .ceoName .position
-    {
-        font-size: .5em; 
-
-        margin-top: 5px;
+        text-align: right;
     }
 }
 @media screen and (max-width: 580px)
 {
     .section-ceo .ceoName
     {
+        position: absolute;
         top: 10%;
         right: auto;
         bottom: auto;

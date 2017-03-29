@@ -72,11 +72,22 @@
 		}
 	}
 
+	@include breakpoint( pc ){
+
+		&.hasCoverImg {
+			.cover{
+				height: 100%;
+				width: auto;
+				max-width: none;
+			}
+		}		
+		
+	}
 	@include breakpoint( tab ){
 
 		&,
 		&.hasCoverImg{
-		padding-top: 40px;
+		padding-top: 70px;
 		padding-bottom: 40px;
 		}
 		
@@ -181,7 +192,6 @@ navigation
 
 .careerSelectNav ul{
 	width: calc( 100% + 5px );
-	margin-top: 60px;
 	display: table;
 	table-layout: fixed;
 	border-spacing: 10px 0;
@@ -245,7 +255,7 @@ navigation
 ////////////////////////
 
 /********************
-社長Message
+philosophy
 ********************/
 
 .section-philosophy
@@ -255,6 +265,10 @@ navigation
 	&.hasCoverImg .cover{
 		top: auto;
 		bottom: 0;
+	}
+	@include breakpoint( pc ){
+		height: 100%;
+		width: auto;		
 	}
 	@include breakpoint( tab ){
 
@@ -467,13 +481,8 @@ mission
 		}
 
 		@include breakpoint( tab ){
-			transform: translateY(-10%);
-			font-size: 1em;
-
-			.position{
-				margin-top: 5px;
-				font-size: 0.5em;
-			}			
+			position: static;
+			text-align: right;
 		}
 		// @include breakpoint( sp ){
 		// 	margin-top: 2em;
@@ -483,6 +492,7 @@ mission
 		
 		////見出し下の余白ありVer
 		@include breakpoint( sp ){
+			position: absolute;
 			top: 10%;
 			bottom: auto;
 			right: auto;
