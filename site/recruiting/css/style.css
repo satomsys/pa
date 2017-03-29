@@ -398,6 +398,21 @@ navigation
 
     vertical-align: middle;
 }
+.section-requirement .requirementInfo_list ol li:last-child
+{
+    margin-left: 1em;
+}
+@media screen and (max-width: 780px)
+{
+    .section-requirement .requirementInfo_list ol li
+    {
+        float: none;
+    }
+    .section-requirement .requirementInfo_list ol li:last-child
+    {
+        margin-left: 0;
+    }
+}
 .section-requirement .requirementInfo_list section
 {
     margin-bottom: 1em;

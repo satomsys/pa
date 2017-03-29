@@ -40,26 +40,29 @@ $(function(){
 	$wwaArticle.on( 'click', function( e ){
 		e.stopPropagation();
 
-		var $this = $(this),
-			$overlay = $('.overlay'),
-			$article = $this.find('.wwaArticles_article_content');
+		var $modal = new WwaModal( $(this) );
 
-		$this.addClass('active');
-		$article.fadeIn('slow');
+		$modal.switchClass();
 
-		console.log( $article );
+		// var $this = $(this),
+		// 	$overlay = $('.overlay'),
+		// 	$article = $this.find('.wwaArticles_article_content');
 
-		$('body').addClass('showOverlay');
+		// $this.addClass('active');
+		// $article.fadeIn('slow');
 
-		$overlay.on('click', function(){
-			$('body').removeClass('showOverlay');
+		// console.log( $article );
+
+		// $('body').addClass('showOverlay');
+
+		// $overlay.on('click', function(){
+		// 	$('body').removeClass('showOverlay');
 			
-			setTimeout( function(){
-				$this.removeClass('active');
-				$article.fadeOut('fast');
-			}, 200 )
-		})
-
+		// 	setTimeout( function(){
+		// 		$this.removeClass('active');
+		// 		$article.fadeOut('fast');
+		// 	}, 200 )
+		// });
 	});
 
 
@@ -87,7 +90,38 @@ $('.mainvisual_image').slick({
 });
 
 
+/**
+* what we are　モーダル
+*/
+var WwaModal = function( e ){
+		this.wrap = e,
+		this.overlay = $('.overlay'),
+		this.body = $('body'),
+		this.article = this.wrap.find('.wwaArticles_article_content');
 
+		console.log( this.wrap,this.article );
+
+		this.overlay.on('click', function(){
+			this.closeModal( 200 );
+		});
+} 
+WwaModal.prototype.switchClass = function(){
+	//open
+	if( !this.body.hasClass('showOverlay') ){
+		this.body.addClass('showOverlay');
+		this.wrap.addClass('active');
+	} else {
+		this.body.removeClass('showOverlay');
+		this.wrap.removeClass('active');
+	}
+}
+WwaModal.prototype.closeModal = function( delay ){
+	this.body.removeClass('showOverlay');
+
+	setTimeout( function(){
+		this.wrap.removeClass('active');
+	}, delay );	
+}
 
 // /**
 // * スワイプの方向を取得（SP

@@ -884,7 +884,7 @@ html.ie8 .icon-facebook:before
     }
     .header_logo .logo
     {
-        width: 109px;
+        width: 150px;
     }
     .header_logo .recruiting
     {
@@ -1358,7 +1358,7 @@ html.ie8 .icon-facebook:before
 
     display: block;
 
-    width: 100px;
+    width: 50px;
     height: 2px;
     margin: auto;
     margin-top: 35px;

@@ -349,7 +349,18 @@ navigation
 					float: left;
 					list-style-position: inside;
 					vertical-align: middle;
+					&:last-child{
+						margin-left: 1em;
+					}
 				}
+				@include breakpoint( tab ){
+					li{
+						float: none;
+						&:last-child{
+							margin-left: 0em;
+						}
+					}					
+				}					
 			}
 
 			section{
