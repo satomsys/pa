@@ -346,6 +346,11 @@ what we are
 		@include liquid($boxWrap, 1360, true );
 		position: relative;
 		
+		@include breakpoint( tab ){
+			width: auto;
+			padding-top: 103%;
+		}		
+		
 		&_article:not(.active){
 			cursor: pointer;
 			@include mouseOver(){
@@ -436,6 +441,12 @@ what we are
 				top: 0;
 				left: liquidSpace(180, $boxWrap);
 			}
+			@include breakpoint( tab ){
+				.wwaArticles_article_img{
+					top: liquidSpace(121,640);					
+					left: liquidSpace(128,640);					
+				}
+			}				
 		}
 		.wwa16407{
 				// top: liquidSpace(262,$boxHeight);
@@ -444,6 +455,12 @@ what we are
 				top: liquidSpace(262,$boxHeight);
 				left: 0;
 			}
+			@include breakpoint( tab ){
+				.wwaArticles_article_img{
+					top: liquidSpace(315,640);					
+					left: liquidSpace(43,640);					
+				}
+			}				
 		}
 		.wwa1{
 				// top: liquidSpace(70, $boxHeight);
@@ -452,6 +469,12 @@ what we are
 				top: liquidSpace(70, $boxHeight);
 				left: liquidSpace(420, $boxWrap);
 			}
+			@include breakpoint( tab ){
+				.wwaArticles_article_img{
+					top: 0;
+					left: liquidSpace(252, 640);
+				}				
+			}			
 			
 		}
 		.wwa100{
@@ -460,7 +483,14 @@ what we are
 			.wwaArticles_article_img{
 				top: 0;
 				left: liquidSpace(722, $boxWrap);
-			}		
+			}
+
+			@include breakpoint( tab ){
+				.wwaArticles_article_img{
+					top: liquidSpace(226, 640);
+					left: liquidSpace(370, 640);					
+				}
+			}	
 		}
 		.wwa5{
 				// top: liquidSpace(220, $boxHeight);
@@ -468,7 +498,13 @@ what we are
 			.wwaArticles_article_img{
 				top: liquidSpace(220, $boxHeight);
 				left: liquidSpace(764, $boxWrap);
-			}			
+			}	
+			@include breakpoint( tab ){
+				.wwaArticles_article_img{
+					top: liquidSpace(401,640);					
+					left: liquidSpace(342,640);					
+				}
+			}	
 		}
 
 	}
@@ -479,6 +515,14 @@ what we are
 		.wwaArticles_article_img{
 			@include liquid( 94, $boxWrap );
 		}
+
+
+		@include breakpoint( tab ){
+			.wwaArticles_article_img{
+				@include liquid( 83, 640 );
+			}	
+		}	
+		
 	}
 	.wwa16407{
 		
@@ -486,26 +530,47 @@ what we are
 		.wwaArticles_article_img{
 			@include liquid( 346, $boxWrap );
 		}
-		
+
+		@include breakpoint( tab ){
+			.wwaArticles_article_img{
+				@include liquid( 254, 640 );
+			}	
+		}			
 	}
 	.wwa1{
 			// @include liquid( 310, $boxWrap );※1
 		.wwaArticles_article_img{
 			@include liquid( 310, $boxWrap );
 		}
+		@include breakpoint( tab ){
+			.wwaArticles_article_img{
+				@include liquid( 174, 640 );
+			}	
+		}			
 		
 	}
 	.wwa100{
 			// @include liquid( 256, $boxWrap );※1
 		.wwaArticles_article_img{
 			@include liquid( 256, $boxWrap );
-		}		
+		}	
+			@include breakpoint( tab ){
+			.wwaArticles_article_img{
+				@include liquid(200, 640 );
+			}	
+		}	
 	}
 	.wwa5{
 			// @include liquid( 398, $boxWrap );※1
 		.wwaArticles_article_img{
 			@include liquid( 398, $boxWrap );
-		}			
+		}	
+
+		@include breakpoint( tab ){
+			.wwaArticles_article_img{
+				@include liquid( 270, 640 );
+			}	
+		}	
 	}
 
 	////////アクティブ時

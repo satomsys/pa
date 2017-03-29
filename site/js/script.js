@@ -40,9 +40,10 @@ $(function(){
 	$wwaArticle.on( 'click', function( e ){
 		e.stopPropagation();
 
-		var $modal = new WwaModal( $(this) );
+		var $WwaModal = new WwaModal( $(this) ),
+			$overlay = $('.overlay');
 
-		$modal.switchClass();
+		$WwaModal.switchClass();
 
 		// var $this = $(this),
 		// 	$overlay = $('.overlay'),
@@ -63,6 +64,10 @@ $(function(){
 		// 		$article.fadeOut('fast');
 		// 	}, 200 )
 		// });
+
+		$overlay.on('click', function(){
+			$WwaModal.closeModal(200);
+		} );
 	});
 
 
@@ -81,6 +86,7 @@ $('.mainvisual_image').slick({
   infinite: true,
   speed: 500,
   fade: true,
+  swipe: true,
   cssEase: 'linear'	
 }).on('afterChange', function(){
 	var activeImg = $(this).find('.slick-active'),
@@ -95,15 +101,8 @@ $('.mainvisual_image').slick({
 */
 var WwaModal = function( e ){
 		this.wrap = e,
-		this.overlay = $('.overlay'),
 		this.body = $('body'),
 		this.article = this.wrap.find('.wwaArticles_article_content');
-
-		console.log( this.wrap,this.article );
-
-		this.overlay.on('click', function(){
-			this.closeModal( 200 );
-		});
 } 
 WwaModal.prototype.switchClass = function(){
 	//open
@@ -118,8 +117,10 @@ WwaModal.prototype.switchClass = function(){
 WwaModal.prototype.closeModal = function( delay ){
 	this.body.removeClass('showOverlay');
 
+	var wrap = this.wrap;
+
 	setTimeout( function(){
-		this.wrap.removeClass('active');
+		wrap.removeClass('active');
 	}, delay );	
 }
 
