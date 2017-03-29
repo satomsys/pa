@@ -659,131 +659,100 @@ entry
 .section-walfare{
 	background-color: #f3f3f3;	
 	
-	.walfarePanels{
-		position: relative;
+	// .walfarePanels{
+	// 	@include liquid( 1130, 1300, true );
+	// }
+	.walfarePanel{
+		margin-bottom: 20px;
+		padding-right: liquidSpace( 300, 1130 );
+		display: flex;
+		align-items: stretch;
+		justify-content: center;
+		flex-direction: row;		
 		
-		.row{
-			margin-bottom: 10px;
-			// display: table;
-			display: flex;
-			flex-direction: row;
-			align-items: stretch;
-			justify-content: space-between;
-			
-			.walfarePanels_child{
-				transition: all 0.5s;				
-				&:nth-child( even ){
-					@include background-image( linear-gradient(to right, #ff431e, #ff831f) );
-				}				
-
-				&:hover{
-					background-position: 100% 100%!important;
-					background-size: 300%!important;
-				}			
-			}
-
-			&:nth-child( even ){
-				.walfarePanels_child{
-					&:nth-child( even ){
-						@include background-image( linear-gradient(to right, #ff8d1d, #ffb605) );
-					}						
-					&:nth-child( odd ){
-						@include background-image( linear-gradient(to right, #ff431e, #ff831f) );
-					}				
-				}				
-			}
-
-			@include breakpoint( tab ){
-				flex-direction: column;
-				margin-bottom: 0;
+		&_index,
+		&_content{	
+				// padding-top: percentage( 70 / 1130 );
+				// padding-right: percentage( 50 / 1130 );
+				// padding-bottom: percentage( 70 / 1130 );
+				// padding-left: percentage( 50 / 1130 );
+				padding-top: 70px;
+				padding-right: 50px;
+				padding-bottom: 70px;
+				padding-left: 50px;				
+				box-sizing: border-box;
 				
-				.walfarePanels_child{
-					margin-bottom: 10px;
-				}				
+				display: flex;
+				align-items: center;
+				flex-direction: row;				
+		}		
+		
+		&_index{
+			// @include liquid( 350, 1130 );
+			width: 300px;
+			padding-right: 100px;
+			flex-grow: 1;
+			flex-basis: 100%;
 			
-			}			
-			
-		}
-		&_child{
-			max-width: calc( 50% - 10px );
-			width: calc( 50% - 10px );
-			// padding: 30px;
-			margin-left: 5px;
-			margin-right: 5px;
+			font-size: 1.15em;
 			color: #fff;
-			position: relative;
-			bottom: 0;
-			box-shadow: 0 3px 0 rgba( #000,1 );
-			cursor: pointer;
-			transition: transition($s:0.1s);
-			@include background-image( linear-gradient(to right, #ff8d1d, #ffb605) );
-			// display: table-cell;
 			
-			@include mouseOver(){
-				bottom: -3px;
-				box-shadow: 0 0px 0 rgba( #000,1 );
-			}
+			@include background-image( linear-gradient( to left, #ff991f ,#ff3d1f) );
 			
-			&:nth-child( even ){
-				@include background-image( linear-gradient(to right, #ff431e, #ff831f) );
+			p{
+				margin: 0;
+			}
+			.ja{
+				margin-top: 1em;				
 			}
 
-			@include breakpoint( tab ){
-				max-width: none;
-				width: auto;
-			}				
 		}
 
-		.icon-plus{
-			margin: auto;
-			position: absolute;
-			top: 0;
-			right: 20px;
-			bottom: 0;
-			border-radius: 100%;
-			background-color: rgba(#fff,0.2);
-		}
-
-		.panelTable{
-		    padding: 30px;
-		    height: 200px;			
-			display: flex;
-			flex-direction: row;
-			flex-wrap: nowrap;
-			align-items: center;
-			justify-content: space-between;
-	
-			///// icon
-			&_icon{
-				width: 100%;
-				display: table;
-				&_img,
-				&_caption{
-					display: table-cell;
-					vertical-align: middle;
-				}
-				&_img{
-					@include liquid( 180, 580 );
-					text-align: center;
-				}
-				&_caption{
-					// padding-left: liquidSpace( 50, 580 );
-					text-align: center;
-				}
+		&_content{
+			width: 200%;
+			flex-grow: 2;			
+			margin-left: -7%;
+			margin-right: -5%;
+			transform: skew( -15deg );
+					
+			background-color: #fff;
+			
+			div{
+				transform: skew( 15deg );
 			}
-
-			&_text{
-				// width: 50%;
-				// padding-left: 10%;
-				// padding-right: 10%;
-				width: 0;
-				white-space: nowrap;
-				overflow: hidden;
-			}
-			@include breakpoint( tab ){
-				height: 100px;
-			}				
 		}
+
+
+		///////// team building
+		&-teambuilding{
+			background: url(../img/team-img.jpg) right center no-repeat;
+			background-size: contain;
+		}
+		///////// education ~ 
+		&-education{
+			background: url(../img/education-img.jpg) right center no-repeat;
+			background-size: contain;
+		}
+		///////// training for new ~ 
+		&-training{
+			background: url(../img/training-img.jpg) right center no-repeat;
+			background-size: contain;
+		}
+		///////// highly ~ 
+		&-highly{
+			background: url(../img/highly-img.jpg) right center no-repeat;
+			background-size: contain;
+		}
+		///////// qualification ~ 
+		&-qualification{
+			background: url(../img/qualification-img.jpg) right center no-repeat;
+			background-size: contain;
+		}
+		///////// maternity ~ 
+		&-maternity{
+			background: url(../img/maternity-img.jpg) right center no-repeat;
+			background-size: contain;
+		}		
 	}
 }
 
