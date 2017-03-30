@@ -1,9 +1,10 @@
-var $w,
-	$ua;
+$w=null,
+$ua=null;
 	
 $(function(){
 
 	$w = $(window),
+	$n = null,
 	$ua = deviceIs( $w, 780 ),
 	$timer = null,
 	$fadeTarget = $('.fade'),
@@ -20,16 +21,9 @@ $(function(){
 * @see  deviceIs
 */
 $w.on( 'load resize', function( e ){
-	clearTimeout( $timer );
-	$timer = setTimeout( function(){
-		$ua = deviceIs( $w, 780 );
-	},300);
-
-	console.log( $ua );
-
+	$ua = deviceIs( $w, 780 );
 	//ナビpadding
-	if($ua == 'desktop' ) $('body').css({paddingTop:0});
-
+	if( $ua == 'desktop' && $n ) $n.reset();
 } );
 
 
@@ -101,7 +95,6 @@ if( 0 < $pageIndex.length ){
 				'transition-delay': $delay + 's'
 			});
 		}
-
 	}); 	
  }
 
@@ -114,7 +107,7 @@ function deviceIs( w, breakPoint ){
 	var $w = w,
 		$windowWidth = $w.innerWidth();
 
-	return $windowWidth < breakPoint ? 'mobile' : 'desktop'
+	return $windowWidth < breakPoint ? 'mobile' : 'desktop';
 }
 
 
@@ -163,6 +156,15 @@ Nav.prototype.scrollCansel = function( cansel ){
 	}else{
 		this.body.off('.noScroll');
 	}
+}
+/**
+* リセット用
+* @extends Nav
+*/
+Nav.prototype.reset = function( cansel ){
+	this.body.removeClass('menuOpen').css({'padding-top': 0});
+	this.button.removeClass('menuOpen');
+	this.body.addClass('menuClosed');
 }
 
 

@@ -72,6 +72,19 @@
 
 
 /********************
+fancybox reset
+********************/
+
+.fancybox-slide>*,
+.fancybox-iframe{
+	background-color: transparent;
+}
+body:-webkit-full-page-media{
+	background-color: transparent;
+}
+
+
+/********************
 slick reset
 ********************/
 
@@ -302,6 +315,11 @@ main visual
 /********************
 what we are
 ********************/
+
+.viewWhatWeAre{
+	overflow: hidden;	
+}
+
 .section-wwa{
 	margin-top: 90px;
 	overflow: hidden;
@@ -345,7 +363,6 @@ what we are
 		width: 40px;
 		height: 40px;
 		position: absolute;
-		top: 0;
 
 		&:before,
 		&:after{

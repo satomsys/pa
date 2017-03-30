@@ -1525,7 +1525,8 @@ html.ie8 .icon-facebook:before
             animation: fadeinLine 2s ease .5s 1 backwards;
 }
 
-.showOverlay .overlay
+.showOverlay .overlay,
+.viewWhatWeAre .overlay
 {
     z-index: 1;
 

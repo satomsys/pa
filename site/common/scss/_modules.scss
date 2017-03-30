@@ -672,7 +672,9 @@
 ////////////////////
 
 .overlay{
-	.showOverlay &/*,
+	.showOverlay &,
+	.viewWhatWeAre &
+	/*,
 	.menuOpen &*/{
 		z-index: 1;
 		opacity: 0.98;

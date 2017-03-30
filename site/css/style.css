@@ -83,6 +83,20 @@
 }
 
 /********************
+fancybox reset
+********************/
+.fancybox-slide > *,
+.fancybox-iframe
+{
+    background-color: transparent;
+}
+
+body:-webkit-full-page-media
+{
+    background-color: transparent;
+}
+
+/********************
 slick reset
 ********************/
 .slick-prev:before,
@@ -391,6 +405,11 @@ main visual
 /********************
 what we are
 ********************/
+.viewWhatWeAre
+{
+    overflow: hidden;
+}
+
 .section-wwa
 {
     overflow: hidden; 
@@ -433,8 +452,7 @@ what we are
 }
 .section-wwa .closeWwaModalButton
 {
-    position: absolute;
-    top: 0; 
+    position: absolute; 
 
     width: 40px;
     height: 40px;
