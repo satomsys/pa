@@ -2,6 +2,7 @@ $(function(){
 	var $section = $('.section'),
 		$timer = null,
 		$move = $ua == 'desktop' ? 0.125 : 0.085,
+		$WwaModal = null,
 		$wwaArticles = $('.wwaArticles'),
 		$wwaArticle = $wwaArticles.find('.wwaArticles_article');
 
@@ -10,12 +11,12 @@ $(function(){
 	$w.on('scroll resize load', function(){
 		clearTimeout( $timer );
 
-
-		console.log( $ua )
 		var $scrollVal = $(this).scrollTop(),
 			$wHeight = $w.height(),
 			$scrollBottom = $scrollVal + $wHeight,
 			$pallaraxVal = $scrollVal * $move * -1; // うごき
+
+		if( $ua == 'desktop' && $WwaModal ) $WwaModal.reset();
 
 		/**
 		* section add class
@@ -29,8 +30,7 @@ $(function(){
 				if( $sectionOffset <= $scrollBottom - $scrollDelay ){
 					$this.addClass('inview');
 				}
-
-			})
+			});
 		}, 100 );
 	});
 
@@ -121,6 +121,11 @@ WwaModal.prototype.switchClass = function(){
 		this.body.addClass('viewWhatWeAre');
 		this.wrap.addClass('active');
 
+		if( $ua == 'mobile' ){
+			$('.closeWwaModalButton').remove();
+			this.article.append('<i class="closeWwaModalButton"></i>');
+			return;
+		}
 		this.setPosition();
 
 		$('svg#poly').remove();
@@ -151,8 +156,6 @@ WwaModal.prototype.closeModal = function( delay ){
 * @extends WwaModal
 */
 WwaModal.prototype.setPosition = function( ){
-
-	if( $ua == 'mobile' ) return;
 
 	var $wrapOffset_left = this.wwaArticles.offset().left,
 		$wrapOffset_top = this.wwaArticles.offset().top,
