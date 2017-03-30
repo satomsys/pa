@@ -218,7 +218,7 @@ main visual
 			@include breakpoint( tab ){
 				margin-bottom: 2em;
 				letter-spacing: 0.1em;
-				font-size: 2em;
+				font-size: 1.645	em;
 			}				
 		}
 
@@ -721,7 +721,9 @@ what we are
 				}	
 			}
 			&_article_content{
-				@include background-image(linear-gradient(to right, #ff3d1f, #ff991f));
+				@include breakpoint( tab ){
+					@include background-image(linear-gradient(to right, #ff3d1f, #ff991f));
+				}
 			}
 		}
 		
