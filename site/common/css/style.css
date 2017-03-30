@@ -1311,12 +1311,18 @@ html.ie8 .icon-facebook:before
 {
     .footer
     {
-        margin-top: 60px;
+        margin-top: 60px; 
+
+        border-top-width: 5px;
     }
     .footer_copyright
     {
-        padding-top: 2.5rem;
-        padding-bottom: 2.5rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .footer_copyright_logo
+    {
+        width: 100px;
     }
 }
 

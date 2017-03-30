@@ -455,13 +455,17 @@
 
 	//////// media queries 
 	@include breakpoint( tab ){
+		border-top-width: 5px;
 
 		margin-top: 60px;
 		&_copyright
 		{
+			&_logo{
+				width: 100px;
+			}
 			padding: {
-				top:2.5rem;
-				bottom: 2.5rem;
+				top:1.5rem;
+				bottom: 1.5rem;
 			}
 		}		
 
