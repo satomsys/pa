@@ -900,6 +900,17 @@ html.ie8 .icon-facebook:before
         display: none;
     }
 }
+@media screen and (max-width: 350px)
+{
+    .header_logo .logo
+    {
+        width: 109px;
+    }
+    .header_logo .recruiting
+    {
+        margin-left: 1px;
+    }
+}
 
 .menuButton
 {

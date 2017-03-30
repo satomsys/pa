@@ -106,6 +106,18 @@
 			display: none;
 		}
 	}
+
+	//////// media queries 
+	@include breakpoint( 350 ){
+		&_logo{
+			.logo{
+				width: 109px;
+			}
+			.recruiting{
+				margin-left: 1px
+			}			
+		}
+	}	
 }
 
 
