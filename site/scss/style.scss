@@ -214,11 +214,12 @@ main visual
 			color: #fff;
 			text-shadow: 0 0 5px rgba(#000, 0.2);
 			transition: all 0.2s;
+			font-weight: 200;
 			
 			@include breakpoint( tab ){
 				margin-bottom: 2em;
 				letter-spacing: 0.1em;
-				font-size: 1.645	em;
+				font-size: 1.645em;
 			}				
 		}
 
@@ -445,12 +446,13 @@ what we are
 		}
 
 		&_article_content{
+			width: 50%;
 			min-width: 300px;
-			padding: 40px;			
+			padding: 40px 20px;			
 			top: 0;
 			z-index: -1;
 			opacity: 0;
-			// display: none;
+			box-sizing: border-box;
 			font-size: 1.2em;
 			font-weight: bold;
 			color: #fff;
@@ -479,6 +481,7 @@ what we are
 			}
 
 			@include breakpoint( tab ){
+				width: 80%;
 				padding-right: 5%;
 				padding-left: 5%;
 				
@@ -494,7 +497,11 @@ what we are
 			
 		}
 		.wwaArticleNote{
-			font-size: 0.5em;			
+			font-size: 0.5em;
+			
+			@include breakpoint( tab ){
+				margin-top: 2em;
+			}		
 		}		
 	}
 
@@ -622,9 +629,9 @@ what we are
 		.wwaArticles_article_img{
 			@include liquid( 346, $boxWrap );
 		}
-		.wwaArticles_article_content{
-			transform: translateX(5%);
-		}
+		// .wwaArticles_article_content{
+		// 	transform: translateX(5%);
+		// }
 
 		@include breakpoint( tab ){
 			.wwaArticles_article_img{
