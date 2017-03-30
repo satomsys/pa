@@ -716,6 +716,7 @@
 
 .barAnim{
 	span{
+		display: inline-block;
 		position: relative;
 		
 		&:after{

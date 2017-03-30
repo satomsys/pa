@@ -1593,7 +1593,9 @@ html.ie8 .icon-facebook:before
 
 .barAnim span
 {
-    position: relative;
+    position: relative; 
+
+    display: inline-block;
 }
 .barAnim span:after
 {

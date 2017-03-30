@@ -24,7 +24,7 @@ if( $loadingAnim.length ){
 	$w.on('load', function(){
 		$loadingAnim.addClass('loaded');
 		$loadingAnim.find('.loadingAnim_borderLeft').on( 'transitionend', function(){
-			$loadingAnim.delay(200).fadeOut('fast', function(){ 
+			$loadingAnim.delay(200).fadeOut('slow', function(){ 
 				$loadingAnim.remove();
 			});
 		});
