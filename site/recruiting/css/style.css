@@ -804,9 +804,9 @@ entry
     {
         display: block; 
 
-        padding-top: 30px;
+        padding-top: 15px;
         padding-right: 2.5%;
-        padding-bottom: 30px;
+        padding-bottom: 15px;
         padding-left: 2.5%;
     }
 }
@@ -851,6 +851,8 @@ entry
     }
     .recruiting-walfare .section-walfare .walfarePanel_index .ja
     {
+        line-height: 1;
+
         margin-top: .5em;
     }
     .recruiting-walfare .section-walfare .walfarePanel_index h4
