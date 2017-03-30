@@ -260,6 +260,8 @@ main visual
 {
     font-size: 2.5em;
 
+    margin-top: 0;
+
     -webkit-transition: all .2s;
             transition: all .2s; 
     letter-spacing: .18em;
@@ -274,7 +276,7 @@ main visual
 {
     .mainvisual .mvArticle_text
     {
-        font-size: 1.25em; 
+        font-size: 2em; 
 
         margin-bottom: 2em;
 
@@ -713,7 +715,7 @@ business
 {
     line-height: 1;
 
-    width: 100%;
+    max-width: 100%;
 
     list-style: none;
 
@@ -725,6 +727,10 @@ business
             transform: translateY(20px); 
 
     opacity: 0;
+}
+.section-business .businessPanel_panel img
+{
+    width: 100%;
 }
 .section-business .businessPanel_panel a
 {
@@ -832,12 +838,10 @@ person
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    overflow: hidden; 
         flex-direction: row;
 
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    width: 100%;
+
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
@@ -851,17 +855,39 @@ person
     overflow: hidden; 
 
     width: 33.28571%;
-    max-width: 100%;
+    max-width: 35.84615%;
 
     list-style: none;
-}
-.section-person .personImagePanel_panel figure
-{
-    margin: 0;
 }
 .section-person .personImagePanel_panel img
 {
     width: 100%;
+}
+.no-flexboxlegacy .personImagePanel
+{
+    display: block;
+    overflow: hidden;
+
+    *zoom: 1;
+}
+.no-flexboxlegacy .personImagePanel:after
+{
+    display: table;
+    clear: both; 
+
+    content: '';
+}
+.no-flexboxlegacy .personImagePanel_panel
+{
+    float: left;
+}
+.no-flexboxlegacy .personImagePanel_panel:nth-child(4)
+{
+    clear: both;
+}
+.no-flexboxlegacy .gradationBg-bottom
+{
+    clear: both;
 }
 @media screen and (max-width: 780px)
 {

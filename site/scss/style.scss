@@ -194,6 +194,7 @@ main visual
 		bottom: 0;
 		
 		&_text{
+			margin-top: 0;
 			font-size: 2.5em;
 			font-feature-settings: 'palt';
 			letter-spacing: 0.18em;
@@ -204,7 +205,7 @@ main visual
 			@include breakpoint( tab ){
 				margin-bottom: 2em;
 				letter-spacing: 0.1em;
-				font-size: 1.25em;
+				font-size: 2em;
 			}				
 		}
 
@@ -623,16 +624,24 @@ business
 		@include liquid( 1022, 1400, true );
 		display: flex;
 		flex-direction: row;
-		align-items: stretch;		
+		align-items: stretch;	
+		
+		// display: table;
+		// table-layout: fixed;
 		
 		&_panel{
-			width: 100%;
+			max-width: 100%;
 			line-height: 1;
 			list-style: none;
 			opacity: 0;
 			transition: transition();
 			transition-delay: 0.25s;
-			transform: translateY(20px);			
+			transform: translateY(20px);
+			
+			// display: table-cell;
+			// vertical-align: middle;
+			
+			img{width: 100%}
 
 			a{
 				color: inherit;
@@ -744,27 +753,47 @@ person
 	}
 
 	.personImagePanel{
+		width: 100%;
 		display: flex;
-		justify-content: center;
 		flex-direction: row;
 		flex-wrap: wrap;
-		overflow: hidden;
 		
 		&_panel{
-			max-width: 100%;
+			max-width: percentage(466 / 1300);
 			@include liquid( 466, 1400 );
 			line-height: 0;
 			list-style: none;
 			overflow: hidden;
-			figure{
-				margin: 0;
-			}		
 			
 			img{
+				// max-width: none;
 				width: 100%;
 			}
 		}
 	}
+
+	@at-root .no-flexboxlegacy{
+
+		.personImagePanel{
+			overflow: hidden;
+			display: block;
+			
+			@include clearfix;
+			
+			&_panel{
+				float: left;
+				
+				&:nth-child(4){
+					clear: both;
+				}				
+			}
+		}
+
+		.gradationBg-bottom{
+			clear: both;
+		}
+
+	}	
 
 
 	@include breakpoint( tab ){
