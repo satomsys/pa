@@ -800,6 +800,120 @@ html.ie8 .icon-facebook:before
     overflow: hidden;
 }
 
+.loadingAnim
+{
+    position: fixed;
+    z-index: 100; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+        flex-direction: row;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+    background-color: #fff;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.loadingAnim_inner
+{
+    text-align: center;
+}
+.loadingAnim .border
+{
+    position: absolute;
+
+    display: block;
+
+    background-color: #ff6d1f;
+}
+.loadingAnim_borderTop,
+.loadingAnim_borderBottom
+{
+    width: 100%;
+    height: 5px;
+
+    -webkit-transition: all .3s ease-in-out 0s;
+            transition: all .3s ease-in-out 0s;
+}
+.loadingAnim_borderLeft,
+.loadingAnim_borderRight
+{
+    width: 5px;
+    height: 100%;
+
+    -webkit-transition: all .3s ease-in-out 0s;
+            transition: all .3s ease-in-out 0s;
+}
+.loadingAnim_borderTop
+{
+    top: 0;
+    right: 0;
+
+    -webkit-transition-delay: .25s;
+            transition-delay: .25s;
+}
+.loadingAnim_borderRight
+{
+    right: 0;
+    bottom: 0;
+
+    -webkit-transition-delay: .5s;
+            transition-delay: .5s;
+}
+.loadingAnim_borderBottom
+{
+    bottom: 0;
+    left: 0;
+
+    -webkit-transition-delay: .75s;
+            transition-delay: .75s;
+}
+.loadingAnim_borderLeft
+{
+    top: 0;
+    left: 0;
+
+    -webkit-transition-delay: 1s;
+            transition-delay: 1s;
+}
+.loadingAnim img
+{
+    line-height: 2;
+}
+.loaded .loadingAnim_borderTop
+{
+    width: 0;
+}
+.loaded .loadingAnim_borderBottom
+{
+    width: 0;
+}
+.loaded .loadingAnim_borderLeft
+{
+    height: 0;
+}
+.loaded .loadingAnim_borderRight
+{
+    height: 0;
+}
+
 .header_wrap,
 .header_buttons
 {

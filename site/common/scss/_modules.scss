@@ -12,6 +12,100 @@
 	overflow: hidden;
 }
 
+
+////////////////////
+
+// loadgin
+
+////////////////////
+
+.loadingAnim{
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	background-color: #fff;
+	z-index: 100;
+	
+	&_inner{
+		text-align: center;
+	}
+
+	.border{
+		position: absolute;
+		display: block;
+		background-color: $orange;
+	}
+
+	&_borderTop,
+	&_borderBottom{
+		width: 100%;
+		height: 5px;
+		transition: transition();
+	}
+	&_borderLeft,
+	&_borderRight{
+		width: 5px;
+		height: 100%;
+		transition: transition();
+	}
+
+
+	&_borderTop{
+		top: 0;
+		right: 0;
+		transition-delay: 0.25s;
+	}
+	&_borderRight{
+		bottom: 0;
+		right: 0;
+		transition-delay: 0.5s;
+	}	
+	&_borderBottom{
+		left: 0;
+		bottom: 0;
+		transition-delay: 0.75s;
+	}	
+	&_borderLeft{
+		top: 0;
+		left: 0;
+		transition-delay: 1s;
+	}
+
+
+	img{
+		line-height: 2;
+	}
+
+	@at-root .loaded .loadingAnim{
+
+		&_borderTop{
+			width: 0
+		}
+		&_borderBottom{
+			width: 0
+		}	
+		&_borderLeft{
+			height: 0;
+		}
+		&_borderRight{
+			height: 0
+		}		
+		
+	}
+}
+
+
+
 ////////////////////
 
 // header

@@ -10,10 +10,26 @@ $(function(){
 	$fadeTarget = $('.fade'),
 	$scrollEvents = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll',
 	$menuButton = $('.menuButton'),
-	$pageIndex = $('.pageIndex');
+	$pageIndex = $('.pageIndex'),
+	$loadingAnim = $('.loadingAnim');
 
 	if( $ua == 'mobile' ) $n = new Nav();
 
+
+
+/**
+* loading animation
+*/
+if( $loadingAnim.length ){
+	$w.on('load', function(){
+		$loadingAnim.addClass('loaded');
+		$loadingAnim.find('.loadingAnim_borderLeft').on( 'transitionend', function(){
+			$loadingAnim.delay(200).fadeOut('fast', function(){ 
+				$loadingAnim.remove();
+			});
+		});
+	});
+}
 
 
 /**
@@ -64,9 +80,17 @@ $menuButton.on('click', function( e ){
 */
 if( 0 < $pageIndex.length ){
 	$w.on('load', function(){
-		setTimeout( function(){ 
-			$pageIndex.addClass('inview');
-		},150 );
+		if( $loadingAnim.length ){
+			$loadingAnim.find('.loadingAnim_borderLeft').on( 'transitionend', function(){
+				setTimeout( function(){ 
+					$pageIndex.addClass('inview');
+				},150 );
+			});		
+		} else {
+			setTimeout( function(){ 
+				$pageIndex.addClass('inview');
+			},150 );
+		}
 	});
 }
 
