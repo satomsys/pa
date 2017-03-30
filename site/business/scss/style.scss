@@ -290,7 +290,14 @@ philosophy
 mission
 ********************/
 .section-mission{
-	
+
+	&.hasCoverImg .cover{
+		top: 0;
+	    bottom: 0;
+	    margin-top: auto;
+	    margin-bottom: auto;
+	}
+
 	.wrap{
 		max-width: none;
 		padding: 0;
@@ -441,12 +448,12 @@ mission
 
 	@include breakpoint( tab ){
 
-		background: #fff url(../img/_sp/mission-bg.jpg) center bottom no-repeat;
+		background: #fff url(../img/_sp/mission-bg.jpg) center center no-repeat;
 		background-size: cover;		
 
 		.section_index{
 			img{
-				@include liquid(202, 640, true );	
+				@include liquid(611, 640, true );	
 			}
 		}
 	}		
@@ -507,8 +514,8 @@ mission
 
 	@include breakpoint( tab ){
 
-			background: #e7f2f2 url(../img/_sp/ceomessage-bg.jpg) center top no-repeat;
-			background-size: cover;								
+		background: #e7f2f2 url(../img/_sp/ceomessage-bg.jpg) center 10% top no-repeat;
+		background-size: cover;								
 
 		.section_index{
 			

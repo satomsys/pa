@@ -82,6 +82,12 @@ $("[data-fancybox]").fancybox({
 * slick.js
 */
 
+var $textList = [
+ '未来は、加速する',
+ '存在を超え、暮らしを支え、街をつくる'
+];
+
+
 $('.mainvisual_image').slick({
   autoplay: true,
   autoplaySpeed: 6000,
@@ -92,9 +98,11 @@ $('.mainvisual_image').slick({
   swipe: true,
   cssEase: 'linear'	
 }).on('afterChange', function(){
-	var activeImg = $(this).find('.slick-active'),
+	var activeImg = $(this).find('.slick-active')
+		textPattern = activeImg.data('textpattern'),
 		textColor = activeImg.data('overtext');
 
+	$('.mvArticle_text').find('span').html( $textList[textPattern] );
 	$('.mainvisual').removeClass('black').addClass( textColor );
 });
 

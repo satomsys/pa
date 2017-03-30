@@ -313,6 +313,14 @@ philosophy
 /********************
 mission
 ********************/
+.section-mission.hasCoverImg .cover
+{
+    top: 0;
+    bottom: 0;
+
+    margin-top: auto;
+    margin-bottom: auto;
+}
 .section-mission .wrap
 {
     max-width: none;
@@ -497,12 +505,12 @@ mission
 {
     .section-mission
     {
-        background: #fff url(../img/_sp/mission-bg.jpg) center bottom no-repeat;
+        background: #fff url(../img/_sp/mission-bg.jpg) center center no-repeat;
         background-size: cover;
     }
     .section-mission .section_index img
     {
-        width: 31.5625%;
+        width: 95.46875%;
         margin-right: auto; 
         margin-left: auto;
     }
@@ -572,7 +580,7 @@ mission
 {
     .section-ceo
     {
-        background: #e7f2f2 url(../img/_sp/ceomessage-bg.jpg) center top no-repeat;
+        background: #e7f2f2 url(../img/_sp/ceomessage-bg.jpg) center 10% top no-repeat;
         background-size: cover;
     }
     .section-ceo .section_index img
