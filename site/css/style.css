@@ -393,6 +393,8 @@ what we are
 ********************/
 .section-wwa
 {
+    overflow: hidden; 
+
     margin-top: 90px;
 }
 @media screen and (max-width: 780px)
@@ -428,6 +430,53 @@ what we are
 .section-wwa .poly
 {
     fill: url(#gradient);
+}
+.section-wwa .closeWwaModalButton
+{
+    position: absolute;
+    top: 0; 
+
+    width: 40px;
+    height: 40px;
+}
+.section-wwa .closeWwaModalButton:before,
+.section-wwa .closeWwaModalButton:after
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 1px;
+    margin: auto;
+
+    content: ' ';
+
+    background-color: #fff;
+}
+.section-wwa .closeWwaModalButton:before
+{
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+.section-wwa .closeWwaModalButton:after
+{
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+.section-wwa .notesRight .closeWwaModalButton
+{
+    top: 5px;
+    right: -35px;
+}
+.section-wwa .notesLeft .closeWwaModalButton
+{
+    bottom: 5px;
+    left: -35px;
 }
 .section-wwa .wwaArticles
 {
@@ -476,16 +525,19 @@ what we are
 .section-wwa .wwaArticles_article_content
 {
     font-size: 1.2em;
+    font-weight: bold;
 
+    z-index: -1;
     top: 0;
 
-    display: none;
-
+    min-width: 300px;
     padding: 40px;
 
+    -webkit-transition: opacity .25s ease 0s;
+            transition: opacity .25s ease 0s; 
+
+    opacity: 0;
     color: #fff;
-    background: url(../img/whatweare-bg.svg) center center no-repeat;
-    background-size: cover;
 }
 .notesRight .wwaArticles_article_content
 {
@@ -495,6 +547,18 @@ what we are
 .notesLeft .wwaArticles_article_content
 {
     right: 100%;
+}
+.section-wwa .wwaArticles_article_content svg
+{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -10%; 
+
+    height: 100%;
+    margin: auto;
 }
 .section-wwa .wwaArticles .wwaArticleText_large
 {
@@ -616,6 +680,11 @@ what we are
 {
     width: 29.82759%;
 }
+.section-wwa .wwa16407 .wwaArticles_article_content
+{
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
+}
 @media screen and (max-width: 780px)
 {
     .section-wwa .wwa16407 .wwaArticles_article_img
@@ -666,6 +735,13 @@ what we are
 .section-wwa .wwaArticles_article.active .wwaArticles_article_content
 {
     z-index: 2;
+
+    -webkit-transition-delay: 1s;
+            transition-delay: 1s; 
+    -webkit-transition-duration: .3s;
+            transition-duration: .3s;
+
+    opacity: 1;
 }
 .section-wwa .section_footer.cityView
 {

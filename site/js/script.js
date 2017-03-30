@@ -66,8 +66,9 @@ $(function(){
 		// });
 
 		$overlay.on('click', function(){
+			e.stopPropagation();
 			$WwaModal.closeModal(200);
-		} );
+		} );	
 	});
 
 
@@ -102,18 +103,36 @@ $('.mainvisual_image').slick({
 var WwaModal = function( e ){
 		this.wrap = e,
 		this.body = $('body'),
+		this.wwaArticles = $('.wwaArticles'),
+		this.img = this.wrap.find('.wwaArticles_article_img');
 		this.article = this.wrap.find('.wwaArticles_article_content');
 } 
+
+/**
+* モーダル開閉、svg付与
+* @extends WwaModal
+*/
 WwaModal.prototype.switchClass = function(){
 	//open
 	if( !this.body.hasClass('showOverlay') ){
 		this.body.addClass('showOverlay');
 		this.wrap.addClass('active');
+
+		this.setPosition();
+
+		$('svg#poly').remove();
+		this.article.append('<svg version="1.1" id="poly" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 631 225" style="enable-background:new 0 0 631 225;" xml:space="preserve"><style type="text/css">.st0{fill:url(#SVGID_1_);}</style><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="631" y1="113.5" x2="1.818989e-12" y2="113.5" gradientTransform="matrix(1 0 0 -1 0 226)"><stop  offset="0" style="stop-color:#FFC61F"/><stop  offset="1" style="stop-color:#FF6D1F"/></linearGradient><polygon class="st0" points="79,0 0,79 0,225 552,225 631,146 631,0 "/></svg><i class="closeWwaModalButton"></i>');
 	} else {
 		this.body.removeClass('showOverlay');
 		this.wrap.removeClass('active');
+
 	}
 }
+
+/**
+* モーダル閉じる
+* @extends WwaModal
+*/
 WwaModal.prototype.closeModal = function( delay ){
 	this.body.removeClass('showOverlay');
 
@@ -122,6 +141,46 @@ WwaModal.prototype.closeModal = function( delay ){
 	setTimeout( function(){
 		wrap.removeClass('active');
 	}, delay );	
+}
+
+/**
+* コメント部分のポジショニング
+* @extends WwaModal
+*/
+WwaModal.prototype.setPosition = function( ){
+	var $wrapOffset_left = this.wwaArticles.offset().left,
+		$wrapOffset_top = this.wwaArticles.offset().top,
+		$imgOffset_left = this.img.offset().left,
+		$imgOffset_top = this.img.offset().top,	
+		$imgWidth = this.img.width();
+
+		console.log(
+			'$wrapOffset_left', $wrapOffset_left,
+			'$wrapOffset_top', $wrapOffset_top,
+			'$imgOffset_left', $imgOffset_left,
+			'$imgOffset_top', $imgOffset_top,
+			'$imgWidth', $imgWidth
+			
+		)
+		
+	$articleOffset = {
+		left: Math.ceil($imgOffset_left -$wrapOffset_left + $imgWidth + ( $imgWidth *1.5 - $imgWidth) ),
+		right: Math.ceil(this.wwaArticles.width() - ($imgOffset_left - $wrapOffset_left) + ( $imgWidth *1.5 - $imgWidth) ),
+		top:  Math.ceil($imgOffset_top - $wrapOffset_top )
+	};
+
+
+	if( this.wrap.hasClass('notesRight') ){
+		this.article.css({
+			top: $articleOffset.top,
+			left: $articleOffset.left
+		});
+	} else {
+		this.article.css({
+			top: $articleOffset.top,
+			right: $articleOffset.right
+		});			
+	}
 }
 
 // /**

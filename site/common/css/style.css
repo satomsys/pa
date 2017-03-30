@@ -1550,8 +1550,8 @@ html.ie8 .icon-facebook:before
     height: 100%;
     margin: auto;
 
-    -webkit-transition: all .3s ease-in-out 0s;
-            transition: all .3s ease-in-out 0s; 
+    -webkit-transition: all .3s ease .1s;
+            transition: all .3s ease .1s; 
 
     opacity: 0;
     background-color: #fff;
