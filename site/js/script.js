@@ -96,20 +96,10 @@ $('.mainvisual_image').slick({
   fade: true,
   swipe: true,
   cssEase: 'linear'	
-}).on('beforeChange', function(){
+}).on('afterChange', function(){
 	var activeImg = $(this).find('.slick-active')
 		textPattern = activeImg.data('textpattern'),
 		textColor = activeImg.data('overtext');
-
-
-		// if( textPattern !== textPatternSave ){
-		// 	$('.mvArticle_text').find('span').fadeOut( 'fast', function(){
-		// 		var $this = $( this );
-		// 		$this.parent().append( '<span>' + $textList[textPattern] + '</span>').hide().fadeIn('fast', function(){
-		// 			$this.remove();
-		// 		});
-		// 	});
-		// }
 
 		if( textPattern !== textPatternSave ){
 			var $span = $('.mvArticle_text').find('span:first-child');
@@ -118,8 +108,8 @@ $('.mainvisual_image').slick({
 			$span.on('oTransitionEnd mozTransitionEnd webkitTransitionEnd transitionend', function(){
 				$('.mvArticle_text').html(' ').append( '<span>' + $textList[textPattern] + '</span>').removeClass('willFadeOut').addClass('willFadein');
 				setTimeout( function(){
-						$('.mvArticle_text').addClass('fadeInDone');
-				},100)			
+					$('.mvArticle_text').addClass('fadeInDone');
+				},20);		
 			});
 		}		
 

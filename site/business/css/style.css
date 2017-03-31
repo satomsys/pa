@@ -562,8 +562,8 @@ mission
 {
     .section-ceo .ceoName
     {
-        top: 25%;
-        bottom: auto;
+        right: 18%;
+        bottom: 19%;
     }
 }
 @media screen and (max-width: 1200px)

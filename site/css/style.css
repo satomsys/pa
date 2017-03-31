@@ -298,8 +298,8 @@ main visual
 
     margin-top: 0;
 
-    -webkit-transition: all .2s;
-            transition: all .2s;
+    -webkit-transition: all .1s;
+            transition: all .1s;
     letter-spacing: .18em;
 
     color: #fff;
@@ -331,6 +331,8 @@ main visual
 }
 .mainvisual .mvArticle_text.fadeInDone span
 {
+    -webkit-transition-duration: .09s;
+            transition-duration: .09s;
     -webkit-transform: perspective(200px) translate3d(0, 0px, 0);
             transform: perspective(200px) translate3d(0, 0px, 0);
 

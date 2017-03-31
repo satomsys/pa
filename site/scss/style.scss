@@ -229,7 +229,7 @@ main visual
 			letter-spacing: 0.18em;
 			color: #fff;
 			text-shadow: 0 0 5px rgba(#000, 0.2);
-			transition: all 0.2s;
+			transition: all 0.1s;
 			font-weight: 200;
 			
 			span{
@@ -248,6 +248,7 @@ main visual
 			}
 			&.fadeInDone span{				
 				// transition-delay: 0.2s;
+				transition-duration: 0.09s;
 				transform: perspective(200px) translate3d(0,0px,0);
 				opacity: 1;
 			}

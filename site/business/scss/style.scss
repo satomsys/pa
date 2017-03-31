@@ -504,8 +504,8 @@ mission
 		}
 
 		@include breakpoint( 1500 ){
-			top: 25%;
-			bottom: auto;			
+			right: 18%;
+			bottom: 19%;			
 		}
 		@include breakpoint( pc ){
 			margin-top: auto;
