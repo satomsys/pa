@@ -227,6 +227,11 @@ main visual
 				margin-bottom: 2em;
 				letter-spacing: 0.1em;
 				font-size: 1.645em;
+				
+				.offindent{
+					display: inline-block;
+					text-indent: -1em;
+				}
 			}				
 		}
 
@@ -368,8 +373,8 @@ what we are
 
 	/////閉じるボタン
 	.closeWwaModalButton{
-		width: 40px;
-		height: 40px;
+		width: 25px;
+		height: 25px;
 		position: absolute;
 
 		&:before,
@@ -404,19 +409,16 @@ what we are
 				background-color: #000;
 			}			
 		}			
-
-
 	}
-
 	.notesRight .closeWwaModalButton,
 	.notesTop .closeWwaModalButton{	
 
 		top: 5px;
-		right: -35px;	
+		right: 20px;	
 	}
 	.notesLeft .closeWwaModalButton{
 		bottom: 5px;
-		left: -35px;			
+		left: -5px;			
 	}		
 	
 	/////ラッパー
@@ -463,7 +465,7 @@ what we are
 			z-index: -1;
 			opacity: 0;
 			box-sizing: border-box;
-			font-size: 1.2em;
+			font-size: 1.14em;
 			font-weight: bold;
 			color: #fff;
 			transition: opacity 0.25s ease 0s;
@@ -487,7 +489,7 @@ what we are
 				top: 0;
 				right: 0;
 				bottom: 0;
-				left: -10%;
+				left: -5%;
 			}
 
 			@include breakpoint( tab ){
@@ -511,7 +513,7 @@ what we are
 			margin-bottom: 1em;
 		}
 		.wwaArticleNote{
-			font-size: 0.5em;
+			font-size: 0.75em;
 			
 			@include breakpoint( tab ){
 				margin-top: 2em;
@@ -541,7 +543,9 @@ what we are
 	}
 
 
-	/////////位置設定
+	//////////////////
+	//位置設定
+	//////////////////
 	&.inview{
 		.wwaArticles_article_img{
 			transform:scale(1) ;
@@ -582,6 +586,7 @@ what we are
 				top: liquidSpace(70, $boxHeight);
 				left: liquidSpace(420, $boxWrap);
 			}
+
 			@include breakpoint( tab ){
 				.wwaArticles_article_img{
 					top: 0;
@@ -622,14 +627,15 @@ what we are
 
 	}
 
-	///////// 幅設定
+	//////////////////
+	//幅設定
+	//////////////////
+
 	.wwa6{
 			// @include liquid( 94, $boxWrap );※1
 		.wwaArticles_article_img{
 			@include liquid( 94, $boxWrap );
 		}
-
-
 		@include breakpoint( tab ){
 			.wwaArticles_article_img{
 				@include liquid( 83, 640 );
@@ -643,10 +649,6 @@ what we are
 		.wwaArticles_article_img{
 			@include liquid( 346, $boxWrap );
 		}
-		// .wwaArticles_article_content{
-		// 	transform: translateX(5%);
-		// }
-
 		@include breakpoint( tab ){
 			.wwaArticles_article_img{
 				@include liquid( 254, 640 );
@@ -661,12 +663,11 @@ what we are
 		.wwaArticles_article_img{
 			@include liquid( 310, $boxWrap );
 		}
-
 		@include breakpoint( tab ){
 			.wwaArticles_article_img{
 				@include liquid( 174, 640 );
 			}	
-		}			
+		}		
 		
 	}
 	.wwa100{
@@ -674,7 +675,7 @@ what we are
 		.wwaArticles_article_img{
 			@include liquid( 256, $boxWrap );
 		}	
-			@include breakpoint( tab ){
+		@include breakpoint( tab ){
 			.wwaArticles_article_img{
 				@include liquid(200, 640 );
 			}	
@@ -693,12 +694,14 @@ what we are
 		}	
 	}
 
-	////////アクティブ時
+	////////////////
+	//アクティブ時
+	////////////////
 	.wwaArticles
 	{
 		&_article.active{
 			.wwaArticles_article_img{
-				transform:scale(1.5);
+				transform:scale(1.25);
 				z-index: 3;
 			}		
 			.wwaArticles_article_content{
@@ -706,7 +709,19 @@ what we are
 				opacity: 1;
 				transition-duration: 0.3s;
 				transition-delay: 1s;
-			}			
+			}		
+
+			&.wwa1{
+				@include breakpoint( tab,min ){
+					.wwaArticles_article_img{
+						left: liquidSpace(420, $boxWrap)/1.25;
+					}
+					.wwaArticles_article_content{
+						transform: translateX(-5%);
+					}
+				}
+					
+			}
 		}
 	}
 
@@ -750,8 +765,6 @@ what we are
 		
 	}
 
-
-	
 
 	.section_footer.cityView{
 		height: 410px;
@@ -818,6 +831,11 @@ business
 				.businessPanel_panel_index{
 					letter-spacing: 0.5em;
 				}	
+			}
+		}
+		&_panel a.comingsoon{
+			@include mouseOver(){
+				&,img{opacity: 1;}
 			}
 		}
 

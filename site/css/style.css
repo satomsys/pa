@@ -308,6 +308,12 @@ main visual
 
         letter-spacing: .1em;
     }
+    .mainvisual .mvArticle_text .offindent
+    {
+        display: inline-block;
+
+        text-indent: -1em;
+    }
 }
 .mainvisual .mvArticle .button
 {
@@ -466,8 +472,8 @@ what we are
 {
     position: absolute; 
 
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
 }
 .section-wwa .closeWwaModalButton:before,
 .section-wwa .closeWwaModalButton:after
@@ -519,12 +525,12 @@ what we are
 .section-wwa .notesTop .closeWwaModalButton
 {
     top: 5px;
-    right: -35px;
+    right: 20px;
 }
 .section-wwa .notesLeft .closeWwaModalButton
 {
     bottom: 5px;
-    left: -35px;
+    left: -5px;
 }
 .section-wwa .wwaArticles
 {
@@ -572,7 +578,7 @@ what we are
 }
 .section-wwa .wwaArticles_article_content
 {
-    font-size: 1.2em;
+    font-size: 1.14em;
     font-weight: bold;
 
     z-index: -1;
@@ -605,7 +611,7 @@ what we are
     top: 0;
     right: 0;
     bottom: 0;
-    left: -10%; 
+    left: -5%; 
 
     height: 100%;
     margin: auto;
@@ -637,7 +643,7 @@ what we are
 }
 .section-wwa .wwaArticles .wwaArticleNote
 {
-    font-size: .5em;
+    font-size: .75em;
 }
 @media screen and (max-width: 780px)
 {
@@ -807,8 +813,8 @@ what we are
 {
     z-index: 3; 
 
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
 }
 .section-wwa .wwaArticles_article.active .wwaArticles_article_content
 {
@@ -820,6 +826,18 @@ what we are
             transition-duration: .3s;
 
     opacity: 1;
+}
+@media screen and (min-width: 780px)
+{
+    .section-wwa .wwaArticles_article.active.wwa1 .wwaArticles_article_img
+    {
+        left: 28.96552%;
+    }
+    .section-wwa .wwaArticles_article.active.wwa1 .wwaArticles_article_content
+    {
+        -webkit-transform: translateX(-5%);
+                transform: translateX(-5%);
+    }
 }
 @media screen and (max-width: 780px)
 {
@@ -962,6 +980,20 @@ business
 .section-business .businessPanel_panel a:not(.comingsoon):focus .businessPanel_panel_index
 {
     letter-spacing: .5em;
+}
+.section-business .businessPanel_panel a.comingsoon
+{
+    -webkit-transition: all .3s ease 0s;
+            transition: all .3s ease 0s;
+}
+.section-business .businessPanel_panel a.comingsoon:hover,
+.section-business .businessPanel_panel a.comingsoon:hover img,
+.section-business .businessPanel_panel a.comingsoon:active,
+.section-business .businessPanel_panel a.comingsoon:active img,
+.section-business .businessPanel_panel a.comingsoon:focus,
+.section-business .businessPanel_panel a.comingsoon:focus img
+{
+    opacity: 1;
 }
 .section-business .businessPanel_panel_index
 {
