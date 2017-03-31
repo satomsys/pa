@@ -350,19 +350,19 @@
 			&.active{
 				font-weight: bold;
 				
-				a{
+				>a{
 					&:after{
 						width: 90%;
 					}
 				}
 			}
 			&.comingsoon{
-				a{
+				>a{
 					cursor: default;
 					opacity: 0.2;
 				}
 			}
-			a{
+			>a{
 				padding: 20px 20px 5px;
 				display: block;
 				position: relative;
@@ -394,7 +394,7 @@
 				}
 			}
 			&.comingsoon{
-				a{
+				>a{
 					&:hover,
 					&:active,
 					&:focus{
@@ -441,7 +441,7 @@
 				transition: transition();	
 				
 				&.active{
-					a{
+					>a{
 						&:after{
 							width: 100%;
 							bottom: -1px
@@ -718,13 +718,14 @@
 
 
 .barAnim{
-	span{
-		// display: inline-block;
+	>span{
+		display: inline-block;
 		position: relative;
 		
 		&:after{
 			content: " ";
 			width: 0%;
+			display: block;
 			height: 1px;
 			background-color: #000;
 			position: absolute;
@@ -739,7 +740,8 @@
 		background-color: #fff
 	}
 
-	img{
+	img,
+	.section_index_ja{
 		transition: transition();
 		transition-delay: 0.95s;
 		opacity: 0;
@@ -749,12 +751,13 @@
 
 .inview{
 	.barAnim{
-		img{
+		img,
+		.section_index_ja{
 			opacity: 1;
 			transform: translateY(0%);
 		}			
 	
-		 span:after{
+		 >span:after{
 			animation: fadeinLine 2s ease 0.5s 1 backwards;
 		}
 	}

@@ -34,26 +34,26 @@
 @-webkit-keyframes fadeinLine {
   0%{ width: 0; opacity: 1;}
   25%{width: 100%;height: 1px;}
-  70%{width: 100%;height: 1px;opacity: 1;transform: translateY(0)}
-  100%{width:0%;opacity: 1; height: 1px; transform:translateY(0px)}
+  70%{width: 100%;height: 1px;opacity: 1;}
+  100%{width:0%;opacity: 1; height: 1px;}
 }
 @-o-keyframes fadeinLine {
   0%{ width: 0; opacity: 1;}
   25%{width: 100%;height: 1px;}
-  70%{width: 100%;height: 1px;opacity: 1;transform: translateY(0)}
-  100%{width:0%;opacity: 1; height: 1px; transform:translateY(0px)}
+  70%{width: 100%;height: 1px;opacity: 1;}
+  100%{width:0%;opacity: 1; height: 1px;}
 }
 @-moz-keyframes fadeinLine {
   0%{ width: 0; opacity: 1;}
   25%{width: 100%;height: 1px;}
-  70%{width: 100%;height: 1px;opacity: 1;transform: translateY(0)}
-  100%{width:0%;opacity: 1; height: 1px; transform:translateY(0px)}
+  70%{width: 100%;height: 1px;opacity: 1;}
+  100%{width:0%;opacity: 1; height: 1px;}
 }
 @keyframes fadeinLine {
   0%{ width: 0; opacity: 1;}
   25%{width: 100%;height: 1px;}
-  70%{width: 100%;height: 1px;opacity: 1;transform: translateY(0)}
-  100%{width:0%;opacity: 1; height: 1px; transform:translateY(0px)}
+  70%{width: 100%;height: 1px;opacity: 1;}
+  100%{width:0%;opacity: 1; height: 1px;}
 }
 
 

@@ -340,7 +340,9 @@ navigation
 }
 .section-requirement .requirementInfo_list
 {
-    display: table;
+    display: table; 
+
+    width: 100%;
 }
 .section-requirement .requirementInfo_list dt,
 .section-requirement .requirementInfo_list dd
@@ -419,7 +421,14 @@ navigation
 }
 .section-requirement .requirementInfo_list dl
 {
-    display: table;
+    display: table; 
+
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.section-requirement .requirementInfo_list dl:last-child
+{
+    margin-bottom: 0;
 }
 .section-requirement .requirementInfo_list dl dt
       dd
@@ -477,6 +486,8 @@ navigation
 {
     font-size: 1.05em; 
     font-weight: bold;
+
+    margin-bottom: 5px;
 }
 .section-requirement .requirementInfo_list .listHeader:before
 {
@@ -486,6 +497,13 @@ navigation
 
     content: '○';
     vertical-align: middle;
+}
+@media screen and (max-width: 580px)
+{
+    .section-requirement .requirementInfo_list .listHeader
+    {
+        font-size: 1em;
+    }
 }
 .section-requirement .requirementInfo_list-school li
 {
@@ -556,8 +574,6 @@ entry
 
     width: calc( 50% - 10px );
     margin-right: 10px;
-    padding-top: 30px;
-    padding-bottom: 30px;
 
     list-style: none;
 
@@ -574,7 +590,10 @@ entry
 }
 .section-entry .entryBannerList li a
 {
-    display: block;
+    display: block; 
+
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .section-entry .entryBannerList li:hover,
 .section-entry .entryBannerList li:active,
@@ -594,6 +613,20 @@ entry
 }
 @media screen and (max-width: 780px)
 {
+    .section-entry .section_index
+    {
+        width: 24.6875%;
+        margin-right: auto; 
+        margin-left: auto;
+    }
+    .section-entry .section_content
+    {
+        font-size: 1em;
+    }
+    .section-entry .section_content p
+    {
+        display: none;
+    }
     .section-entry .entryBannerList
     {
         max-width: 900px;

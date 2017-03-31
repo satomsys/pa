@@ -90,7 +90,6 @@
 
 	&.button-nav a{
 		width: auto;
-		
 	}
 
 	&.button-hasArrow a{
@@ -135,6 +134,10 @@
 			border-width: 5px 0 5px 11px;
 			border-color: transparent transparent transparent #ffffff;				
 		}
+	}
+
+	&.button-readMore{
+		font-weight: bold;
 	}
 
 	&-recruiting{

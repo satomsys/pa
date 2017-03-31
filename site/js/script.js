@@ -96,7 +96,7 @@ $('.mainvisual_image').slick({
   fade: true,
   swipe: true,
   cssEase: 'linear'	
-}).on('afterChange', function(){
+}).on('beforeChange', function(){
 	var activeImg = $(this).find('.slick-active')
 		textPattern = activeImg.data('textpattern'),
 		textColor = activeImg.data('overtext');
@@ -177,6 +177,8 @@ WwaModal.prototype.switchClass = function(){
 /**
 * svg六角形polygon計算
 * @extends WwaModal
+* 
+* point_rect【店の順番】hよこ/vたて
 */
 WwaModal.prototype.calcSvg = function( delay ){
 	var $viewBoxW = this.article.outerWidth(),

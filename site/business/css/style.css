@@ -121,6 +121,14 @@
         display: none;
     }
 }
+@media screen and (max-width: 580px)
+{
+    .section .contentArticle p
+    {
+        margin-top: 1.2em;
+        margin-bottom: 1.2em;
+    }
+}
 
 .careerSelectContent
 {
@@ -501,6 +509,14 @@ mission
         padding-left: 1em;
     }
 }
+@media screen and (max-width: 1200px)
+{
+    .section-mission.hasCoverImg .cover
+    {
+        width: 100%;
+        height: auto;
+    }
+}
 @media screen and (max-width: 780px)
 {
     .section-mission
@@ -525,19 +541,30 @@ mission
 }
 .section-ceo .ceoName
 {
-    font-size: 1.4em; 
+    font-size: 1.4em;
 
     position: absolute;
     right: 1%;
-    bottom: 5%;
+    bottom: 25%;
 
     height: 1em;
+    margin: auto;
+
+    text-shadow: 0 0 5px #fff;
 }
 .section-ceo .ceoName .position
 {
     font-size: .5em; 
 
     margin-right: 1em;
+}
+@media screen and (max-width: 1500px)
+{
+    .section-ceo .ceoName
+    {
+        top: 25%;
+        bottom: auto;
+    }
 }
 @media screen and (max-width: 1200px)
 {
@@ -563,8 +590,10 @@ mission
 {
     .section-ceo .ceoName
     {
+        font-size: 1.1em;
+
         position: absolute;
-        top: 10%;
+        top: 13.5%;
         right: auto;
         bottom: auto;
         left: 30%;
@@ -580,7 +609,7 @@ mission
 {
     .section-ceo
     {
-        background: #e7f2f2 url(../img/_sp/ceomessage-bg.jpg) center 10% top no-repeat;
+        background: #e7f2f2 url(../img/_sp/ceomessage-bg.jpg) center top no-repeat;
         background-size: cover;
     }
     .section-ceo .section_index img

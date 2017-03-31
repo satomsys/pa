@@ -12,12 +12,11 @@
 
 .section{
 	margin-top: 150px;
-	margin-bottom: 200px;
+	margin-bottom: 150px;
 	&_index{
-		font-family:$roboto_cond;
 		text-align: center;
 		line-height: 1;
-		margin: 0;
+		margin: 0 0 70px;
 		position: relative;
 	}
 
@@ -29,11 +28,20 @@
 		display: inline-block;
 	}
 
+	.barAnim > span:after{
+		bottom: 0;
+	}
+
 	@include breakpoint( tab ){
 		margin-top: 50px;
 		margin-bottom: 65px;
+		
+		&_index_ja{
+			margin-top: 1.5em;
+		}		
 
 		&_index{
+			margin-bottom: 45px;
 			padding-left: 5%;
 			padding-right: 5%;
 		}		
@@ -239,7 +247,7 @@ main visual
 				opacity: 0;
 			}
 			&.fadeInDone span{				
-				transition-delay: 0.2s;
+				// transition-delay: 0.2s;
 				transform: perspective(200px) translate3d(0,0px,0);
 				opacity: 1;
 			}
@@ -929,7 +937,9 @@ person
 	position: relative;
 	
 	.section_index{
+		margin-bottom: 1em;
 		span{
+			color: #fff;
 			&:after{
 				background-color: #fff;
 			}
@@ -944,9 +954,9 @@ person
 		
 		
 		&-top{
-			height: 100px;
+			height: 200px;
 			position: absolute;
-			top: 0;
+			top: -20px;
 			z-index: -1;
 		}
 
@@ -1033,7 +1043,6 @@ person
 career
 ********************/
 .section-career{
-	margin-bottom: 160px;
 
 	.heroPanel{
 		margin: auto;	
@@ -1041,14 +1050,10 @@ career
 
 
 	@include breakpoint( tab ){
-		margin-bottom: 80px;
-		
-		@include breakpoint( tab ){
-			.section_index{
-				img{
-					@include liquid( 461, 1200 );
-				}			
-			}
+		.section_index{
+			img{
+				@include liquid( 461, 1200 );
+			}			
 		}		
 	}		
 }
@@ -1059,6 +1064,7 @@ career
 culture
 ********************/
 .section-culture{
+	margin-top: 100px;
 	margin-bottom: 140px;
 	
 	.heroPanel
@@ -1123,6 +1129,10 @@ recruiting
 	
 	.section_index{
 		margin-bottom: 50px;
+		
+		&_ja{
+			color: #fff;
+		}
 		span{
 			&:after{
 				background-color: #fff;

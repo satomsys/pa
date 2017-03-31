@@ -312,6 +312,7 @@ navigation
 		margin-right: auto;
 		margin-left: auto;
 		&_list{
+			width: 100%;
 			display: table;
 			
 			dt,
@@ -368,7 +369,13 @@ navigation
 			}
 
 			dl{
+				margin-top: 0;
+				margin-bottom: 5px;
 				display: table;
+				
+				&:last-child{
+					margin-bottom: 0;
+				}
 				dt
 				dd{
 					padding: 1em;
@@ -414,6 +421,7 @@ navigation
 			}
 
 			.listHeader{
+					margin-bottom: 5px;
 				font-weight: bold;
 				font-size: 1.05em;
 				&:before{
@@ -422,6 +430,10 @@ navigation
 					vertical-align: middle;
 					margin-right: 3px;
 				}
+
+				@include breakpoint( sp ){
+					font-size: 1em;
+				} 
 			}
 
 
@@ -505,8 +517,6 @@ entry
 		text-align: center;
 		li{
 			width: calc( 50% - 10px );
-			padding-top: 30px;
-			padding-bottom: 30px;
 			margin-right: 10px;
 			display: inline-block;
 			vertical-align: middle;
@@ -522,6 +532,8 @@ entry
 				margin-right: 0;
 			}
 			a{
+				padding-top: 30px;
+				padding-bottom: 30px;				
 				display: block;
 			}
 
@@ -542,6 +554,18 @@ entry
 
 
 	@include breakpoint( tab ){
+
+		.section_index{
+			@include liquid(158, 640, true );
+		}
+
+		.section_content{
+			font-size: 1em;
+			
+			p{
+				display: none;
+			}
+		}		
 
 		.entryBannerList{
 			max-width: 900px;
@@ -626,6 +650,7 @@ entry
 				padding-left: 60px;
 			}
 		}
+
 	}
 
 	@include breakpoint( tab ){
@@ -700,10 +725,6 @@ entry
 		
 		&_index,
 		&_content{	
-				// padding-top: percentage( 70 / 1130 );
-				// padding-right: percentage( 50 / 1130 );
-				// padding-bottom: percentage( 70 / 1130 );
-				// padding-left: percentage( 50 / 1130 );
 				padding-top: 70px;
 				padding-right: 50px;
 				padding-bottom: 70px;

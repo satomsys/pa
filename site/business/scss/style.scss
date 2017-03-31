@@ -119,6 +119,17 @@
 		}
 	}
 
+	@include breakpoint( sp ){
+
+		.contentArticle{
+			 p{
+				margin-top: 1.2em;
+				margin-bottom: 1.2em;
+			}			
+		}			
+
+	}	
+
 }
 
 .careerSelectContent{
@@ -269,6 +280,8 @@ philosophy
 	@include breakpoint( pc ){
 		height: 100%;
 		width: auto;		
+
+
 	}
 	@include breakpoint( tab ){
 
@@ -446,6 +459,14 @@ mission
 		
 	}
 
+	@include breakpoint( pc ){
+		
+		&.hasCoverImg .cover{
+			width: 100%;
+			height: auto;
+		}		
+		
+	}
 	@include breakpoint( tab ){
 
 		background: #fff url(../img/_sp/mission-bg.jpg) center center no-repeat;
@@ -470,16 +491,22 @@ mission
 
 	.ceoName{
 		height: 1em;
+		margin: auto;
 		position: absolute;
 		right: 1%;
-		bottom: 5%;
+		bottom: 25%;
 		font-size: 1.4em;
+		text-shadow: 0 0 5px #fff;
 		
 		.position{
 			margin-right: 1em;
 			font-size: 0.5em;
 		}
 
+		@include breakpoint( 1500 ){
+			top: 25%;
+			bottom: auto;			
+		}
 		@include breakpoint( pc ){
 			margin-top: auto;
 			margin-bottom: auto;
@@ -491,16 +518,12 @@ mission
 			position: static;
 			text-align: right;
 		}
-		// @include breakpoint( sp ){
-		// 	margin-top: 2em;
-		// 	text-align: right;
-		// 	position: static;
-		// }
 		
 		////見出し下の余白ありVer
 		@include breakpoint( sp ){
 			position: absolute;
-			top: 10%;
+			font-size: 1.1em;
+			top: 13.5%;
 			bottom: auto;
 			right: auto;
 			left: 30%;
@@ -514,7 +537,7 @@ mission
 
 	@include breakpoint( tab ){
 
-		background: #e7f2f2 url(../img/_sp/ceomessage-bg.jpg) center 10% top no-repeat;
+		background: #e7f2f2 url(../img/_sp/ceomessage-bg.jpg) center top no-repeat;
 		background-size: cover;								
 
 		.section_index{
