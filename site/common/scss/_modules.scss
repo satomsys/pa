@@ -337,6 +337,7 @@
 		margin-bottom: 25px;
 		margin-left: auto;
 		display: table;
+		font-weight: 400;
 		// table-layout: fixed;
 		
 		&_child{
@@ -619,6 +620,7 @@
 		line-height: 1;
 		text-align: center;
 		position: relative;
+		font-weight: 200;
 		
 		&_main,
 		&_sub{

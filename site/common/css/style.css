@@ -290,6 +290,7 @@ html,
 body
 {
     font-family: 'Noto Sans Japanese', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+    font-weight: 300;
     line-height: 1.75;
 
     position: relative;
@@ -1152,7 +1153,9 @@ html.ie8 .icon-facebook:before
 
 .sitenav .navList
 {
-    display: table; 
+    font-weight: 400; 
+
+    display: table;
 
     max-width: 940px;
     margin-right: auto;
@@ -1476,9 +1479,10 @@ html.ie8 .icon-facebook:before
 
 .section_index
 {
+    font-weight: 200; 
     line-height: 1;
 
-    position: relative; 
+    position: relative;
 
     margin-top: 40px;
     margin-bottom: 65px;

@@ -24,6 +24,17 @@
 
     text-align: center;
 }
+.section_index_ja
+{
+    margin-top: 2.5em;
+
+    letter-spacing: .35em;
+
+    color: #444;
+
+    -webkit-font-feature-settings: 'palt';
+            font-feature-settings: 'palt';
+}
 @media screen and (max-width: 780px)
 {
     .section
@@ -504,7 +515,8 @@ what we are
         background-color: #000;
     }
 }
-.section-wwa .notesRight .closeWwaModalButton
+.section-wwa .notesRight .closeWwaModalButton,
+.section-wwa .notesTop .closeWwaModalButton
 {
     top: 5px;
     right: -35px;
@@ -569,7 +581,7 @@ what we are
     box-sizing: border-box;
     width: 50%;
     min-width: 300px;
-    padding: 40px 20px;
+    padding: 40px;
 
     -webkit-transition: opacity .25s ease 0s;
             transition: opacity .25s ease 0s; 
@@ -602,14 +614,26 @@ what we are
 {
     .section-wwa .wwaArticles_article_content
     {
+        font-size: .9em; 
+
         width: 80%;
         padding-right: 5%;
         padding-left: 5%;
     }
 }
-.section-wwa .wwaArticles .wwaArticleText_large
+.section-wwa .wwaArticles .wwaArticleText
 {
     font-size: 1.5em;
+    line-height: 1.2;
+}
+.section-wwa .wwaArticles .wwaArticleText_large
+{
+    font-size: 1.25em;
+}
+.section-wwa .wwaArticles .wwaArticleInfo
+{
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 .section-wwa .wwaArticles .wwaArticleNote
 {
@@ -1138,6 +1162,13 @@ culture
 .section-culture .heroPanel_bg img
 {
     width: 100%;
+}
+@media screen and (max-width: 1200px)
+{
+    .section-culture .heroPanel
+    {
+        height: 350px;
+    }
 }
 @media screen and (max-width: 780px)
 {

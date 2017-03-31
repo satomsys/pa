@@ -21,6 +21,13 @@
 		position: relative;
 	}
 
+	&_index_ja{
+		margin-top: 2.5em;
+		letter-spacing: 0.35em;
+		color: #444;
+		font-feature-settings: 'palt'
+	}
+
 	@include breakpoint( tab ){
 		margin-top: 50px;
 		margin-bottom: 65px;
@@ -400,7 +407,10 @@ what we are
 
 
 	}
-	.notesRight .closeWwaModalButton{
+
+	.notesRight .closeWwaModalButton,
+	.notesTop .closeWwaModalButton{	
+
 		top: 5px;
 		right: -35px;	
 	}
@@ -448,7 +458,7 @@ what we are
 		&_article_content{
 			width: 50%;
 			min-width: 300px;
-			padding: 40px 20px;			
+			padding: 40px;			
 			top: 0;
 			z-index: -1;
 			opacity: 0;
@@ -484,17 +494,21 @@ what we are
 				width: 80%;
 				padding-right: 5%;
 				padding-left: 5%;
-				
-				// transform: skew( 15deg );
+				font-size: 0.9em;
 			}				
 
 		}
 
 		.wwaArticleText{
+			font-size: 1.5em;
+			line-height: 1.2;
 			&_large{
-				font-size: 1.5em;
+				font-size: 1.25em;
 			}
-			
+		}
+		.wwaArticleInfo{
+			margin-top: 1em;
+			margin-bottom: 1em;
 		}
 		.wwaArticleNote{
 			font-size: 0.5em;
@@ -1013,6 +1027,13 @@ culture
 				width: 100%;			
 			}
 		}
+	}
+	@include breakpoint( pc ){
+	
+		.heroPanel
+		{
+			height: 350px;
+		}		
 	}
 	@include breakpoint( tab ){
 		margin-bottom: 70px;
