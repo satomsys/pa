@@ -25,7 +25,8 @@
 		margin-top: 2.5em;
 		letter-spacing: 0.35em;
 		color: #444;
-		font-feature-settings: 'palt'
+		font-feature-settings: 'palt';
+		display: inline-block;
 	}
 
 	@include breakpoint( tab ){
@@ -223,6 +224,26 @@ main visual
 			transition: all 0.2s;
 			font-weight: 200;
 			
+			span{
+				display: inline-block;
+				transition: transition();
+			}
+			
+			&.willFadein span{
+				transform: perspective(200px) translate3d(0,5px,1px);
+				opacity: 0;
+				
+			}
+			&.willFadeOut span{
+				transform: perspective(200px) translate3d(0,5px,1px);
+				opacity: 0;
+			}
+			&.fadeInDone span{				
+				transition-delay: 0.2s;
+				transform: perspective(200px) translate3d(0,0px,0);
+				opacity: 1;
+			}
+
 			@include breakpoint( tab ){
 				margin-bottom: 2em;
 				letter-spacing: 0.1em;
@@ -234,6 +255,7 @@ main visual
 				}
 			}				
 		}
+
 
 		.button{
 			width: 240px;
@@ -285,6 +307,12 @@ main visual
 			}
 			@include breakpoint( tab ){
 				width: 50%;
+				margin-right: auto;
+				margin-left: auto;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 10%;
 				
 				a{
 					&:before,

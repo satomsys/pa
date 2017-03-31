@@ -83,7 +83,7 @@ $menuButton.on('click', function( e ){
 if( 0 < $pageIndex.length ){
 	$w.on('load', function(){
 		if( $loadingAnim.length ){
-			$loadingAnim.find('.loadingAnim_borderLeft').on( 'transitionend', function(){
+			$loadingAnim.find('.loadingAnim_borderLeft').on( 'oTransitionEnd mozTransitionEnd webkitTransitionEnd transitionend', function(){
 				setTimeout( function(){ 
 					$pageIndex.addClass('inview');
 				},150 );

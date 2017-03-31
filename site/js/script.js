@@ -102,16 +102,27 @@ $('.mainvisual_image').slick({
 		textColor = activeImg.data('overtext');
 
 
-		if( textPattern !== textPatternSave ){
-			$('.mvArticle_text').find('span').fadeOut( 'fast', function(){
-				var $this = $( this );
-				$this.parent().append( '<span>' + $textList[textPattern] + '</span>').hide().fadeIn('fast', function(){
-					$this.remove();
-				});
-			});
-		}
+		// if( textPattern !== textPatternSave ){
+		// 	$('.mvArticle_text').find('span').fadeOut( 'fast', function(){
+		// 		var $this = $( this );
+		// 		$this.parent().append( '<span>' + $textList[textPattern] + '</span>').hide().fadeIn('fast', function(){
+		// 			$this.remove();
+		// 		});
+		// 	});
+		// }
 
-	// $('.mvArticle_text').find('span').html( $textList[textPattern] );
+		if( textPattern !== textPatternSave ){
+			var $span = $('.mvArticle_text').find('span:first-child');
+			
+			$span.parent().removeClass('willFadein willFadeOut fadeInDone').addClass('willFadeOut');
+			$span.on('oTransitionEnd mozTransitionEnd webkitTransitionEnd transitionend', function(){
+				$('.mvArticle_text').html(' ').append( '<span>' + $textList[textPattern] + '</span>').removeClass('willFadeOut').addClass('willFadein');
+				setTimeout( function(){
+						$('.mvArticle_text').addClass('fadeInDone');
+				},100)			
+			});
+		}		
+
 	$('.mainvisual').removeClass('black').addClass( textColor );
 	
 	textPatternSave = textPattern;
