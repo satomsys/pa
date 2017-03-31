@@ -40,6 +40,8 @@ $w.on( 'load resize', function( e ){
 	$ua = deviceIs( $w, 780 );
 	//ナビpadding
 	if( $ua == 'desktop' && $n ) $n.reset();
+
+	console.log( $ua );
 } );
 
 

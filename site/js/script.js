@@ -83,7 +83,7 @@ $("[data-fancybox]").fancybox({
 */
 
 var $textList = [
- '存在を超え、暮らしを支え、街をつくる',
+ '存在を超え、<br class="tabShow">暮らしを支え、<br class="tabShow">街をつくる',
  '未来は、加速する'
 ],
 	textPatternSave = null
@@ -155,7 +155,6 @@ WwaModal.prototype.switchClass = function(){
 
 	}
 }
-
 /**
 * モーダル閉じる
 * @extends WwaModal
@@ -169,7 +168,6 @@ WwaModal.prototype.closeModal = function( delay ){
 		wrap.removeClass('active');
 	}, delay );	
 }
-
 /**
 * コメント部分のポジショニング
 * @extends WwaModal
@@ -186,9 +184,9 @@ WwaModal.prototype.setPosition = function( ){
 	// console.log( '$wrapOffset_left', $wrapOffset_left,'$wrapOffset_top', $wrapOffset_top,'$imgOffset_left', $imgOffset_left,'$imgOffset_top', $imgOffset_top,'$imgWidth', $imgWidth );
 		
 	$articleOffset = {
-		left: 	Math.ceil($imgOffset_left -$wrapOffset_left + $imgWidth + $imgScalable ),
-		right: 	Math.ceil(this.wwaArticles.width() - ($imgOffset_left - $wrapOffset_left) + $imgScalable ),
-		top:  	Math.ceil($imgOffset_top - $wrapOffset_top )
+		left: 	Math.ceil( $imgOffset_left - $wrapOffset_left + $imgWidth + $imgScalable ),
+		right: 	Math.ceil( this.wwaArticles.width() - ($imgOffset_left - $wrapOffset_left) + $imgScalable ),
+		top:  	Math.ceil( $imgOffset_top - $wrapOffset_top )
 	};
 
 	if( this.wrap.hasClass('notesRight') ){
@@ -196,15 +194,18 @@ WwaModal.prototype.setPosition = function( ){
 			top: $articleOffset.top,
 			left: $articleOffset.left
 		});
-	} else {
+	} else if( this.wrap.hasClass('notesLeft') ){
 		this.article.css({
 			top: $articleOffset.top,
 			right: $articleOffset.right
 		});			
+	} else {
+		this.article.css({
+			top: $articleOffset.top - this.img.height(),
+			left: $imgOffset_left - $wrapOffset_left + $imgWidth / 2
+		});			
 	}
 }
-
-
 /**
 * リセット用
 * @extend Wwamodal
