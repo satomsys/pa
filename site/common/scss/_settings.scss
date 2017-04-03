@@ -20,6 +20,7 @@
 html,body{
 	// font-size: $basefontSize;
 	line-height: $baselineHeight;
+	background-color: #fff;
 	position: relative;
 	font-family: $fontFamily;
 	font-weight: 300;
@@ -29,7 +30,6 @@ html,body{
 }
 html{
 	font-size: 10px;
-	background-color: #fff;
 }
 
 body{

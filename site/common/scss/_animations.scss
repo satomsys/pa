@@ -145,3 +145,21 @@
    50%{bottom: 50%; transform: rotate(0deg) }
   100% { bottom: 0%; }
 }
+
+
+@-webkit-keyframes loadOpacity {
+  from { opacity:1 }
+  to { opacity: 0.4 }
+}
+@-o-keyframes loadOpacity {
+  from { opacity:1 }
+  to { opacity: 0.4 }
+}
+@-moz-keyframes loadOpacity {
+  from { opacity:1 }
+  to { opacity: 0.4 }
+}
+@keyframes loadOpacity {
+  from { opacity:1 }
+  to { opacity: 0.4 }
+}

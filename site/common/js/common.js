@@ -20,16 +20,25 @@ $(function(){
 /**
 * loading animation
 */
-if( $loadingAnim.length ){
-	$w.on('load', function(){
+if( $loadingAnim ){
+	var $loadFunc = function(){
 		$loadingAnim.addClass('loaded');
-		$loadingAnim.find('.loadingAnim_borderLeft').on( 'transitionend', function(){
-			$loadingAnim.delay(200).fadeOut('slow', function(){ 
+		$loadingAnim.find('.loadingAnim_borderLeft').on( 'oTransitionEnd mozTransitionEnd webkitTransitionEnd transitionend', function(){
+			$loadingAnim.fadeOut('slow', function(){ 
 				$loadingAnim.remove();
 			});
 		});
-	});
+	};
+
+	$w.on('load', $loadFunc );
+	// //////// follow
+	setTimeout(function(){
+		if( ! $('.loadingAnim').hasClass('loaded') ){
+			$loadFunc;
+		}
+	}, 2000 );
 }
+
 
 
 /**
