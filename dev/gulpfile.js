@@ -36,11 +36,13 @@ var dir = {
 */
 gulp.task( 'connect-sync', function(){
 	php.server({
-		port: 8001,
-		base: '../site/'
+		port: 8006,
+		base: '../site/',
+	    bin: '/Applications/MAMP/bin/php/php5.6.2/bin/php',
+	    ini: '/Applications/MAMP/bin/php/php5.6.2/conf/php.ini'		
 	}, function(){
 		browserSync({
-			proxy: 'localhost:8001'
+			proxy: 'localhost:8006'
 		});
 	});
 });
