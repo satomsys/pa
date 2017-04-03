@@ -85,7 +85,10 @@
 	}
 	@include breakpoint( tab ){
 
-		&,
+		&{
+			padding-top: 40px;
+			padding-bottom: 40px;			
+		}
 		&.hasCoverImg{
 		padding-top: 70px;
 		padding-bottom: 40px;
@@ -245,7 +248,6 @@ navigation
 
 	@include breakpoint( tab ){
 		width: 100%;
-		margin-top: 20px;
 		border-spacing: 1px 0;
 		
 		li{
