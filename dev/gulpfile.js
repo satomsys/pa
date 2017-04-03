@@ -13,6 +13,7 @@ var imagemin_png = require( 'imagemin-pngquant' );
 var rename = require( 'gulp-rename' );
 // var prettify = require( 'gulp-prettify' );
 var csscomb = require( 'gulp-csscomb' );
+var php = require( 'gulp-connect-php' );
 //////////////////////////////////////////////////////
 
 var dir = {
@@ -31,17 +32,27 @@ var dir = {
 	}
 
 /**
+* php
+*/
+gulp.task( 'connect-sync', function(){
+	php.server({
+		port: 8001,
+		base: '../site/'
+	}, function(){
+		browserSync({
+			proxy: 'localhost:8001'
+		});
+	});
+});
+
+/**
 * browser sync setting
 */
 gulp.task('browserSync' , function(){
 	browserSync({
 		notify : true ,
 		// files: ["./**/*.ejs"], //ウォッチ対象のファイル
-		server : {
-			baseDir : dir.top,  //ベースディレクトリ
-			index :  dir.index, //インデックスファイル
-			// directory: true //ディレクトリ表示するか
-		}
+		proxy: 'localhost'
 	});
 });
 gulp.task('browserSyncReload' , function(){
@@ -171,9 +182,9 @@ gulp.task('prettify', function() {
 /**
 * default tasks
 */
-gulp.task('default' ,['browserSync' , 'sassCompileReload'] ,  function(){
+gulp.task('default' ,['connect-sync' , 'sassCompileReload'] ,  function(){
 	gulp.watch( dir.top + '/**/scss/*.scss' , ['sassCompileReload']);
 	// gulp.watch('./**/*.ejs', ['ejsReload','browserSyncReload']);
 	// gulp.watch([ './**/*.ejs', dir.top + 'include/**/*.json', '!' + dir.top + './**/* _.ejs' ] , ['ejsReload','browserSyncReload']);
-	gulp.watch( dir.top + '/**/*.html' , ['browserSyncReload']);
+	gulp.watch( [dir.top + '/**/*.html',dir.top + '/**/*.php' ] , ['browserSyncReload']);
 });

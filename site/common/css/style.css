@@ -910,8 +910,6 @@ html.ie8 .icon-facebook:before
 }
 .loadingAnim img
 {
-    line-height: 2;
-
     -webkit-animation: loadOpacity .5s ease 0s infinite alternate;
             animation: loadOpacity .5s ease 0s infinite alternate;
 }
