@@ -35,58 +35,12 @@
 
  <body class="business business-vision">
 
-  <div class="loadingAnim">
-    <!-- ***** loadingAnimation -->
-    <div class="loadingAnim_inner">
-        <i class="border loadingAnim_borderTop"></i>
-        <i class="border loadingAnim_borderRight"></i>
-        <i class="border loadingAnim_borderBottom"></i>
-        <i class="border loadingAnim_borderLeft"></i>
-        <img src="../common/img/logo.gif" width="218" class="logo" alt="PROPERTY AGENT"><br>
-        <img src="../common/img/header-text-recruiting.svg" class="recruiting" width="97" alt="RECRUITING 2019">
-    </div>
-    <!-- ///// loadingAnimation -->
-  </div> 
+  <?php
+    $nowActive = 'business';
+    $isChild = true;
 
-  <!-- ***** header -->
-  <header class="header">
-    <div class="wrap header_wrap">
-      <h1 class="header_logo">
-        <a href="../"><img src="../common/img/logo.gif" width="218" class="logo" alt="PROPERTY AGENT">
-          <img src="../common/img/header-text-recruiting.svg" class="recruiting" width="97" alt="RECRUITING 2019"></a>
-      </h1>
-
-      <nav class="header_buttons">
-        <ul>
-          <li class="button button-nav button-companyinfo"><a href="http://www.propertyagent.co.jp/" target="_blank">COMPANY INFO.</a></li>
-          <li class="button button-nav button-mypage"><a href="https://job.rikunabi.com/2018/company/r914110010/" target="_blank">MY PAGE</a></li>
-          <li class="button button-nav button-entry"><a href="https://job.rikunabi.com/2018/company/entry/confirm" target="_blank">ENTRY</a></li>
-        </ul>
-      </nav>
-      <span class="menuButton"><i class="menuButton_bars"><i></i></i></span>        
-    </div>
-  </header>
-  <!-- ///// header -->
-
-  <!-- ***** navigation -->
-  <nav class="sitenav">
-    <ul class="navList">
-      <li class="navList_child active"><a>BUSINESS</a></li>
-      <li class="navList_child comingsoon"><a>PERSON</a></li>
-      <li class="navList_child comingsoon"><a>CAREER</a></li>
-      <li class="navList_child comingsoon"><a>CULTURE</a></li>
-      <li class="navList_child comingsoon"><a>WHY JOIN US</a></li>
-      <li class="navList_child"><a href="../recruiting/">RECRUITING</a></li>
-      <li class="navList_child navList_child-buttons">
-         <ul>
-          <li class="button button-nav button-companyinfo"><a href="http://www.propertyagent.co.jp/" target="_blank">COMPANY INFO.</a></li>
-          <li class="button button-nav button-mypage"><a href="https://job.rikunabi.com/2018/company/r914110010/" target="_blank">MY PAGE</a></li>
-          <li class="button button-nav button-entry"><a href="https://job.rikunabi.com/2018/company/entry/confirm" target="_blank">ENTRY</a></li>
-        </ul>
-      </li>      
-    </ul>
-  </nav>
-  <!-- ///// navigation -->  
+    include $_SERVER['DOCUMENT_ROOT'] . '/recruit/common/_inc/_header.php';
+  ?>
 
   <main class="main">
     <header class="pageIndex">
@@ -389,26 +343,14 @@
 
   </main>
 
-  <footer class="footer">
-    <div class="wrap">
-      <div class="footer_copyright">
-        <div class="footer_copyright_logo"><img src="../common/img/logo.gif" width="218" alt="PROPERTY AGENT"></div>
-        <div class="footer_copyright_copy">
-          © 2017 PROPERTY AGENT Inc. All rights reserved.
-        </div>
-      </div>
-    </div>
-  </footer>
-
-    <!-- *****scripts -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-
-    <script type="text/javascript" src="../common/js/common.js"></script>
+  <?php
+    $scripts = <<<EOS
     <script type="text/javascript" src="../common/js/careerSelectNav.js"></script>
-    <!-- /////scripts -->
+EOS;
 
-    <i class="overlay"></i>     
+    include $_SERVER['DOCUMENT_ROOT'] . '/recruit/common/_inc/_footer.php';
+  ?>
+
  </body>
 
 </html>

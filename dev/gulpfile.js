@@ -17,7 +17,7 @@ var php = require( 'gulp-connect-php' );
 //////////////////////////////////////////////////////
 
 var dir = {
-	top: '../site',
+	top: '../recruit',
 	below: '/',
 	index: 'index.html'
 },
@@ -37,12 +37,13 @@ var dir = {
 gulp.task( 'connect-sync', function(){
 	php.server({
 		port: 8006,
-		base: '../site/',
-	    bin: '/Applications/MAMP/bin/php/php5.6.2/bin/php',
-	    ini: '/Applications/MAMP/bin/php/php5.6.2/conf/php.ini'		
+		base: '/recruit/',
+	    bin: '/Applications/MAMP/bin/php/php5.6.27/bin/php',
+	    ini: '/Applications/MAMP/bin/php/php5.6.27/conf/php.ini'		
 	}, function(){
 		browserSync({
-			proxy: 'localhost:8006'
+			proxy: 'localhost:8006/recruit/',
+			baseDir: '/recruit'			
 		});
 	});
 });
