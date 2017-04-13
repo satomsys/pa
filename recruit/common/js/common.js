@@ -154,7 +154,7 @@ function deviceIs( w, breakPoint ){
 Nav = function(){
 	this.button = $('.menuButton'),
 	this.menu = $('.sitenav'),
-	this.body = $('body');
+	this.body = $('html');
 
 	this.body.css({
 		'padding-top': $('.header').height()
