@@ -773,6 +773,7 @@ entry
     display: flex;
         flex-direction: row; 
 
+    min-height: 250px;
     margin-bottom: 20px;
     padding-right: 26.54867%;
 
@@ -869,7 +870,7 @@ entry
 }
 .recruiting-walfare .section-walfare .walfarePanel_index .ja
 {
-    margin-top: 1em;
+    font-size: 1.5em;
 }
 @media screen and (max-width: 780px)
 {
@@ -884,9 +885,8 @@ entry
     }
     .recruiting-walfare .section-walfare .walfarePanel_index .ja
     {
+        font-size: 1em; 
         line-height: 1;
-
-        margin-top: .5em;
     }
     .recruiting-walfare .section-walfare .walfarePanel_index h4
     {

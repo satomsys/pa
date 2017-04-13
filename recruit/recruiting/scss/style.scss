@@ -700,6 +700,7 @@ entry
 	// 	@include liquid( 1130, 1300, true );
 	// }
 	.walfarePanel{
+		min-height: 250px;
 		margin-bottom: 20px;
 		padding-right: liquidSpace( 300, 1130 );
 		display: flex;
@@ -762,7 +763,8 @@ entry
 				margin: 0;
 			}
 			.ja{
-				margin-top: 1em;				
+				font-size: 1.5em;
+				// margin-top: 1em;				
 			}
 
 			@include breakpoint( tab ){
@@ -773,7 +775,7 @@ entry
 				
 				.ja{
 					line-height: 1;
-					margin-top: 0.5em;
+					font-size: 1em;
 				}
 				h4{
 					transform: skew( 15deg );
