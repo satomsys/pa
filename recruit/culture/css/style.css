@@ -164,15 +164,10 @@
     display: -ms-flexbox;
     display: flex;
     overflow: hidden;
-        flex-direction: row;
 
-    width: 100%;
     padding-right: 1%;
     padding-left: 1%;
 
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-align: center;
@@ -183,7 +178,7 @@
 {
     float: left; 
 
-    width: calc( 33.33% - 4% );
+    max-width: calc( 33.33% - 4% );
     margin-right: 2%;
     margin-left: 2%;
 

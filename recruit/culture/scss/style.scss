@@ -168,18 +168,16 @@
 
 .instaBox
 {
-	width: 100%;
 	padding-left: 1%;
 	padding-right: 1%;
 	overflow: hidden;
 	
 	display: flex;
-	flex-direction: row;
 	flex-wrap: wrap;
 	align-items:center;
 	
 	li{
-		width: calc( 33.33% - 4% );
+		max-width: calc( 33.33% - 4% );
 		margin-left: 2%;
 		margin-right: 2%;
 		list-style: none; 
