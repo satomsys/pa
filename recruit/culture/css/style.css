@@ -1,9 +1,90 @@
+@media screen and (max-width: 780px)
+{
+    .pageIndex_text
+    {
+        width: 49.625%;
+        margin-right: auto; 
+        margin-left: auto;
+    }
+}
+
 /**
 * fancyBox
 */
-/**
-* fancyBox
-*/
+.fancybox-controls
+{
+    overflow: auto;
+}
+
+.fancybox-button
+{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+
+    margin-top: auto;
+    margin-bottom: auto;
+
+    -webkit-transition: all .3s;
+            transition: all .3s; 
+
+    border-radius: 100%;
+    background-color: rgba(255, 109, 31, .8);
+}
+.fancybox-button:hover,
+.fancybox-button:active
+{
+    background-color: #ff6d1f;
+}
+.fancybox-button--left
+{
+    left: 2%;
+}
+.fancybox-button--right
+{
+    right: 2%;
+}
+@media screen and (max-width: 780px)
+{
+    .fancybox-button--left,
+    .fancybox-button--right,
+    .fancybox-button button:not(.fancybox-button--close)
+    {
+        display: block !important;
+
+        width: 22px;
+        height: 22px;
+    }
+    .fancybox-button--left:after,
+    .fancybox-button--right:after
+    {
+        top: 8px;
+    }
+    .fancybox-button--left:after
+    {
+        left: 9px;
+    }
+    .fancybox-button--right:after
+    {
+        right: 9px;
+    }
+}
+
+.fancybox-close-small:after
+{
+    -webkit-transition: all .3s;
+            transition: all .3s;
+
+    color: #fff;
+    background-color: #ff6d1f;
+}
+.fancybox-close-small:hover:after,
+.fancybox-close-small:active:after
+{
+    color: #fff;
+    background-color: rgba(255, 109, 31, .8);
+}
+
 .fancybox-slider-wrap .instaBox_content
 {
     box-sizing: border-box; 
@@ -45,7 +126,36 @@
 
     color: #fff;
     border: none;
-    background-color: #555;
+    background-color: #8c8c8c;
+}
+@media screen and (max-width: 780px)
+{
+    .fancybox-slider-wrap .instaBox_content
+    {
+        max-width: 90%;
+        padding: 30px;
+    }
+    .fancybox-slider-wrap .instaBox_content_img,
+    .fancybox-slider-wrap .instaBox_content_text
+    {
+        display: block;
+
+        width: auto;
+    }
+    .fancybox-slider-wrap .instaBox_content_text
+    {
+        position: relative;
+
+        word-wrap: break-word;
+    }
+    .fancybox-slider-wrap .instaBox_content_text .button-linkToInsta
+    {
+        position: static;
+
+        display: block;
+
+        margin-top: 20px;
+    }
 }
 
 .instaBox
@@ -63,9 +173,6 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
 }
 .instaBox li
 {

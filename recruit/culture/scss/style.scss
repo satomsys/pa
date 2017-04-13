@@ -16,17 +16,91 @@
 
 ////////////////////////
 
-
-/**
-* fancyBox
-*/
-
-.fancybox-slide>*{
-	
+.pageIndex_text
+{
+	@include breakpoint( tab ){
+		@include liquid(397, 800, true );
+	}		
 }
+
+
 /**
 * fancyBox
 */
+
+.fancybox-controls{
+	overflow: auto;
+}
+
+.fancybox-button{
+	margin-top: auto;
+	margin-bottom: auto;
+	position: fixed;	
+	top: 0;
+	bottom: 0;
+	background-color: rgba( $orange, 0.8 );
+	border-radius: 100%;
+	transition: all 0.3s;
+	
+	&:hover,
+	&:active{
+		background-color: $orange;
+	}
+	
+	&--left{
+		left: 2%;
+	}
+	&--right{
+		right: 2%;
+	}
+
+
+	@include breakpoint( tab ){
+		&--left, &--right, & button:not(.fancybox-button--close) {
+	   		display: block!important;
+	   		width: 22px;
+	   		height: 22px;
+	   	}
+
+		&--left,
+		&--right{
+			&:after{
+				top: 8px;			
+			}
+		}
+		&--left{
+			&:after{
+				left:9px;
+			}			
+			
+		}
+		&--right{
+			&:after{
+				right:9px;
+			}			
+			
+		}
+	}	
+}
+
+.fancybox-close-small{
+	// top: -20px;
+	// right: -20px;
+	
+	&:after{
+		transition: all 0.3s;		
+		color: #fff;
+		background-color: $orange;	
+	}
+
+	&:hover:after,
+	&:active:after{
+		color: #fff;
+		background-color: rgba( $orange, 0.8 );			
+	}	
+
+}
+
 .fancybox-slider-wrap .instaBox{
 
 	&_content{
@@ -55,12 +129,38 @@
 			a{
 				font-size: 1rem;
 				color: #fff;
-				background-color: #555;
+				background-color: #8c8c8c;
 				border: none;
 				letter-spacing: 0.01em!important;		
 			}
 		}			
 	}
+
+	@include breakpoint( tab ){
+		
+		&_content{
+			max-width: 90%;
+			padding: 30px;
+		}		
+
+		&_content_img,
+		&_content_text{
+			display: block;
+			width: auto;
+		}		
+		
+		&_content_text{
+			position: relative;
+			word-wrap: break-word;
+			
+
+			.button-linkToInsta{
+				display: block;
+				position: static;
+				margin-top: 20px;
+			}			
+		}		
+	}		
 
 
 }
@@ -75,7 +175,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items:center;
-	justify-content: center;
 	
 	li{
 		max-width: calc( 33.33% - 4% );

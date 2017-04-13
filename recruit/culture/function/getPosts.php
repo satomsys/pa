@@ -1,5 +1,5 @@
 <?php
-include 'authorize.php';
+// include 'authorize.php';
 /**
 * instagram account
 * seveninc.anonymous@gmail / seven0214
@@ -8,6 +8,25 @@ include 'authorize.php';
 * access token: 5320366701.6c39fc0.5453885bc0ba4fc8bc46a130c1d5b458
 * user id: 5320366701.6c39fc0.5453885bc0ba4fc8bc46a130c1d5b458
 */
+
+/**
+* json decodeがPHP5.1に対応していないためテスト不可。
+* @link http://blog.livedoor.jp/shoooo1/archives/6064462.html
+*/
+   if (!function_exists('json_encode')) {
+        require_once 'JSON.php';
+            function json_encode($value) {
+                $s = new Services_JSON();
+                return $s->encodeUnsafe($value);
+            }
+
+            function json_decode($json, $assoc = false) {
+                $s = new Services_JSON($assoc ? SERVICES_JSON_LOOSE_TYPE : 0);
+                return $s->decode($json);
+            }
+    }
+
+
 
 	$access_token = '5320366701.6c39fc0.5453885bc0ba4fc8bc46a130c1d5b458';
 	//↓こっちは取得できた。
@@ -41,11 +60,11 @@ include 'authorize.php';
 	if( !$obj || !isset($obj->user->id) || !isset($obj->user->username) || !isset($obj->user->profile_picture) || !isset($obj->access_token) ){
 		$error = 'データを上手く取得できませんでした。' ;
 	}
-	if( !isset( $error ) && !empty( $error ) ){
-		$html = '<p><mark>' . $error . '</mark>もう一度、認証をするには、<a href="' . explode( '?' , $_SERVER['REQUEST_URI'] )[0] . '">こちら</a>をクリックして下さい。</p>' ;
+	// if( !isset( $error ) && !empty( $error ) ){
+	// 	$html = '<p><mark>' . $error . '</mark>もう一度、認証をするには、<a href="' . explode( '?' , $_SERVER['REQUEST_URI'] )[0] . '">こちら</a>をクリックして下さい。</p>' ;
 
-		return;
-	}
+	// 	return;
+	// }
 
 	/**
 	* HTML格納
@@ -57,18 +76,16 @@ include 'authorize.php';
 	// var_dump( $data );
 	$dataMax = count($data) - 1;
 
-	$data_images = [];
-	$data_texts = [];
-	$data_htmlSet = [];
+	$data_htmlSet = array();
 	$dataCount = 0;
 	$instaBox = '';
 
 	foreach( $data as $post ){
-		$data_htmlSet[$dataCount] = [
+		$data_htmlSet[$dataCount] = array(
 			'image' => $post->images->standard_resolution->url,
 			'text' => $post->caption->text,
 			'link' => $post->link
-		 ];
+		 );
 
 		 $instaBox .= $dataCount == 0 ? '<ul class="instaBox">' : '';
 		 $instaBox .= <<<EOD
