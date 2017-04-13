@@ -15,7 +15,13 @@
 // modules
 
 ////////////////////////
-
+.pageIndex{
+	margin-bottom: 80px;
+	
+	@include breakpoint( tab ){
+		margin-bottom: 40px;
+	}		
+}
 .pageIndex_text
 {
 	@include breakpoint( tab ){
@@ -24,183 +30,183 @@
 }
 
 
-/**
-* fancyBox
-*/
+// /**
+// * fancyBox
+// */
 
-.fancybox-controls{
-	overflow: auto;
-}
+// .fancybox-controls{
+// 	overflow: auto;
+// }
 
-.fancybox-button{
-	margin-top: auto;
-	margin-bottom: auto;
-	position: fixed;	
-	top: 0;
-	bottom: 0;
-	background-color: rgba( $orange, 0.8 );
-	border-radius: 100%;
-	transition: all 0.3s;
+// .fancybox-button{
+// 	margin-top: auto;
+// 	margin-bottom: auto;
+// 	position: fixed;	
+// 	top: 0;
+// 	bottom: 0;
+// 	background-color: rgba( $orange, 0.8 );
+// 	border-radius: 100%;
+// 	transition: all 0.3s;
 	
-	&:hover,
-	&:active{
-		background-color: $orange;
-	}
+// 	&:hover,
+// 	&:active{
+// 		background-color: $orange;
+// 	}
 	
-	&--left{
-		left: 2%;
-	}
-	&--right{
-		right: 2%;
-	}
+// 	&--left{
+// 		left: 2%;
+// 	}
+// 	&--right{
+// 		right: 2%;
+// 	}
 
 
-	@include breakpoint( tab ){
-		&--left, &--right, & button:not(.fancybox-button--close) {
-	   		display: block!important;
-	   		width: 22px;
-	   		height: 22px;
-	   	}
+// 	@include breakpoint( tab ){
+// 		&--left, &--right, & button:not(.fancybox-button--close) {
+// 	   		display: block!important;
+// 	   		width: 22px;
+// 	   		height: 22px;
+// 	   	}
 
-		&--left,
-		&--right{
-			&:after{
-				top: 8px;			
-			}
-		}
-		&--left{
-			&:after{
-				left:9px;
-			}			
+// 		&--left,
+// 		&--right{
+// 			&:after{
+// 				top: 8px;			
+// 			}
+// 		}
+// 		&--left{
+// 			&:after{
+// 				left:9px;
+// 			}			
 			
-		}
-		&--right{
-			&:after{
-				right:9px;
-			}			
+// 		}
+// 		&--right{
+// 			&:after{
+// 				right:9px;
+// 			}			
 			
-		}
-	}	
-}
+// 		}
+// 	}	
+// }
 
-.fancybox-close-small{
-	// top: -20px;
-	// right: -20px;
+// .fancybox-close-small{
+// 	// top: -20px;
+// 	// right: -20px;
 	
-	&:after{
-		transition: all 0.3s;		
-		color: #fff;
-		background-color: $orange;	
-	}
+// 	&:after{
+// 		transition: all 0.3s;		
+// 		color: #fff;
+// 		background-color: $orange;	
+// 	}
 
-	&:hover:after,
-	&:active:after{
-		color: #fff;
-		background-color: rgba( $orange, 0.8 );			
-	}	
+// 	&:hover:after,
+// 	&:active:after{
+// 		color: #fff;
+// 		background-color: rgba( $orange, 0.8 );			
+// 	}	
 
-}
+// }
 
-.fancybox-slider-wrap .instaBox{
+// .fancybox-slider-wrap .instaBox{
 
-	&_content{
-		padding: 80px;
-		max-width: 920px;
-		box-sizing: border-box;
-	}
-	&_content_img,
-	&_content_text{
-		display: block;
-		@include liquid( 560, 920, true );
-	}
-	&_content_img{
-		margin-bottom: 30px;
-	}
-	&_content_text{
-		position: relative;
+// 	&_content{
+// 		padding: 80px;
+// 		max-width: 920px;
+// 		box-sizing: border-box;
+// 	}
+// 	&_content_img,
+// 	&_content_text{
+// 		display: block;
+// 		@include liquid( 560, 920, true );
+// 	}
+// 	&_content_img{
+// 		margin-bottom: 30px;
+// 	}
+// 	&_content_text{
+// 		position: relative;
 		
 
-		.button-linkToInsta{
-			width: 100px;
-			position: absolute;
-			top: 0;
-			right: -140px;
-			text-align: center;
-			a{
-				font-size: 1rem;
-				color: #fff;
-				background-color: #8c8c8c;
-				border: none;
-				letter-spacing: 0.01em!important;		
-			}
-		}			
-	}
+// 		.button-linkToInsta{
+// 			width: 100px;
+// 			position: absolute;
+// 			top: 0;
+// 			right: -140px;
+// 			text-align: center;
+// 			a{
+// 				font-size: 1rem;
+// 				color: #fff;
+// 				background-color: #8c8c8c;
+// 				border: none;
+// 				letter-spacing: 0.01em!important;		
+// 			}
+// 		}			
+// 	}
 
-	@include breakpoint( tab ){
+// 	@include breakpoint( tab ){
 		
-		&_content{
-			max-width: 90%;
-			padding: 30px;
-		}		
+// 		&_content{
+// 			max-width: 90%;
+// 			padding: 30px;
+// 		}		
 
-		&_content_img,
-		&_content_text{
-			display: block;
-			width: auto;
-		}		
+// 		&_content_img,
+// 		&_content_text{
+// 			display: block;
+// 			width: auto;
+// 		}		
 		
-		&_content_text{
-			position: relative;
-			word-wrap: break-word;
+// 		&_content_text{
+// 			position: relative;
+// 			word-wrap: break-word;
 			
 
-			.button-linkToInsta{
-				display: block;
-				position: static;
-				margin-top: 20px;
-			}			
-		}		
-	}		
+// 			.button-linkToInsta{
+// 				display: block;
+// 				position: static;
+// 				margin-top: 20px;
+// 			}			
+// 		}		
+// 	}		
 
 
-}
+// }
 
 
-.instaBox
-{
-	width: 100%;
-	padding-left: 1%;
-	padding-right: 1%;
-	overflow: hidden;
+// .instaBox
+// {
+// 	width: 100%;
+// 	padding-left: 1%;
+// 	padding-right: 1%;
+// 	overflow: hidden;
 	
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	align-items:center;
+// 	display: flex;
+// 	flex-direction: row;
+// 	flex-wrap: wrap;
+// 	align-items:center;
 	
-	li{
-		width: calc( 33.33% - 4% );
-		margin-left: 2%;
-		margin-right: 2%;
-		list-style: none; 
-		float: left;
+// 	li{
+// 		width: calc( 33.33% - 4% );
+// 		margin-left: 2%;
+// 		margin-right: 2%;
+// 		list-style: none; 
+// 		float: left;
 		
-	}	
+// 	}	
 
-	&_image{
-		border-radius: 20px;
-		cursor: pointer;
+// 	&_image{
+// 		border-radius: 20px;
+// 		cursor: pointer;
 		
-		figure{
-			display: table-cell;
-			vertical-align: middle;
-		}
-	}
+// 		figure{
+// 			display: table-cell;
+// 			vertical-align: middle;
+// 		}
+// 	}
 
-	&_content{
-		display: none;
-	}
-}
+// 	&_content{
+// 		display: none;
+// 	}
+// }
 
 
 
@@ -209,3 +215,151 @@
 // 個別
 
 ////////////////////////
+
+
+.career-index
+{
+
+	
+.careerPerson
+{
+	max-width: 1040px;
+	margin-left: auto;
+	margin-right: auto;
+	display: table;
+	border-spacing: 80px 0;
+	
+	@include breakpoint( tab ){
+		display: block;
+	}		
+	
+	&_list{
+		display: table-cell;
+		text-align: center;
+		vertical-align: top;
+		
+
+		@include mouseOver{	
+			.careerPerson_img:before,
+			.careerPerson_img figure:before{
+				width: 100%;
+			}
+			.careerPerson_img:after,
+			.careerPerson_img figure:after{
+				height: 100%;
+			}				
+		}
+
+		@include breakpoint( tab ){
+			padding-bottom: 20px;
+			display: block;
+			
+			&:not(:first-child){
+				padding-top: 20px;
+				border-top: solid 1px $gray;			
+			}
+		}			
+	}
+
+	&_num{
+		line-height: 1;
+		margin-bottom: 20px;
+		font-size: 5em;
+		color: #bcb5ab;
+		text-align: center;
+		
+		span,.story{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		span{
+			line-height: 1;
+			font-family: $roboto;
+			font-weight: 300;
+		}
+		.story{
+			position: relative;
+			margin-right: -40px;
+		}
+		@include breakpoint( tab ){
+			margin-bottom: 5px;
+		}			
+	}
+
+	&_img{
+		position: relative;
+		
+		//画像の囲み線
+		&:before,
+		&:after,
+		figure:before,
+		figure:after{
+			content: " ";
+			display: block;
+			position: absolute;
+			background-color: $orange;
+			transition: all 0.3s;
+			z-index: 1;
+			mix-blend-mode: overlay;
+		}
+
+		&:before,
+		figure:before{
+			width: 0%;
+			height: 15px;
+		}
+		&:after,
+		figure:after{
+			width: 15px;
+			height: 0%;
+		}	
+
+		&:before{
+			top: 0;
+			left: 0;
+			// transition-delay: 0.1s;
+		}
+		&:after{
+			top: 0;
+			right: 0;
+			// transition-delay: 0.2s;
+		}
+		figure:before{
+			bottom: 0;
+			right: 0;
+			// transition-delay: 0.3s;
+		}
+		figure:after{
+			left: 0;
+			bottom: 0;
+			// transition-delay: 0.4s;
+		}			
+
+
+	}
+
+	&_footer_name{
+		margin: 20px;
+		line-height: 1;
+		color: inherit;
+		
+		.ja{
+			display: block;
+			font-weight: 200;
+			letter-spacing: 0.05em;
+			font-size: 2.1em;
+			color: #999;	
+		}
+
+		.en{
+			letter-spacing: 0.15em;
+			margin-top: 1em;
+			display: block;
+			font-family: $roboto;
+			color: $orange;
+		}
+	}
+}
+
+	
+}
