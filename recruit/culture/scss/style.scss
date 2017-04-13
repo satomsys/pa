@@ -1,0 +1,653 @@
+@charset "UTF-8";
+@import "compass";
+@import "../../common/scss/colors";
+@import "../../common/scss/variables";
+@import "../../common/scss/mixins";
+
+////////////////////////////////////////////////
+
+// RECRUITING
+
+////////////////////////////////////////////////
+
+////////////////////////
+
+// modules
+
+////////////////////////
+
+%dlStyle{
+	display: table;
+	
+	dt,
+	dd{
+		display: table-cell;
+		vertical-align: top;
+		box-sizing: border-box
+	}
+	dt{
+		width: 150px;
+		padding-right: 2em;
+		font-weight: bold;
+	}
+	dd{
+		padding-left: 2em;
+	}
+	p{
+		margin-top: 0;
+	}
+}
+
+
+
+.pageIndex_text
+{
+	@include breakpoint( tab ){
+		@include liquid(442, 800, true );
+	}		
+}
+
+
+
+.section{
+	padding-top: 70px;
+	padding-bottom: 70px;
+	
+
+	.contentArticle{
+		@include liquid(980,1400, true);
+		
+		&_index{
+			font-size: 2em;
+			margin-bottom: 1.5em;
+			font-weight: bold;
+			letter-spacing: 0.24em;
+		}
+
+		p{
+			margin-top: 2em;
+			margin-bottom: 2em;
+			line-height: 2;
+			letter-spacing: 0.05em;
+		}
+	}
+
+	@include breakpoint( pc ){
+
+		&.hasCoverImg {
+			.cover{
+				height: 100%;
+				width: auto;
+				max-width: none;
+			}
+		}		
+		
+	}
+	@include breakpoint( tab ){
+
+		&{
+			padding-top: 40px;
+			padding-bottom: 40px;			
+		}
+		&.hasCoverImg{
+		padding-top: 70px;
+		padding-bottom: 40px;
+		}
+		
+		.contentArticle{
+			width: 90%;
+		
+			&_index{
+				font-size: 1.3em;
+				margin-bottom: 1.5em;
+				font-weight: bold;
+				letter-spacing: 0.24em;
+			}
+
+			p{
+				margin-top: 2em;
+				margin-bottom: 2em;
+				line-height: 2;
+				letter-spacing: 0.05em;
+			}
+		}
+		&.hasCoverImg {
+			.wrap{
+				padding-top: 0;
+			}
+			
+			.cover{
+				display: none;
+			}
+		}
+	}
+
+	@include breakpoint( sp ){
+
+		.contentArticle{
+			 p{
+				margin-top: 1.2em;
+				margin-bottom: 1.2em;
+			}			
+		}			
+
+	}	
+
+}
+
+.careerSelectContent{
+	min-height: 300px;	
+	display: none;
+	&_content{
+		transition: transition();
+		// opacity: 0;
+		transform-origin: 50%;
+		transform: perspective($perspective) scale(1.01) translate3d(0,0,2px);
+	}
+	&.active{
+			display: block;
+		.careerSelectContent_content{
+			transform: perspective($perspective) scale(1) translate3d(0,0,0);			
+		}
+	}
+}
+
+
+
+
+/********************
+navigation
+********************/
+
+
+.section-nav{
+	@include liquid(980, 1400,true);
+	background-color: transparent!important;
+	
+
+	&:last-child{
+		padding-bottom: 0;
+	}
+	
+	li{
+		list-style: none;
+	}
+
+	a{
+		color: inherit;
+	}
+
+	@include breakpoint( tab ){
+		width: auto;		
+	}	
+
+}
+
+.infoNav ul,
+.careerSelectNav ul{
+	a{
+		font-size: 1.85em;
+		letter-spacing: 0.5em;
+		display: block;
+		
+		@include mouseOver{
+			
+		}
+	}
+
+	@include breakpoint( tab ){
+		a{
+			font-size: 1em;
+			letter-spacing: 0.1em;
+		}
+	}		
+}
+
+
+.careerSelectNav ul{
+	width: calc( 100% + 5px );
+	display: table;
+	table-layout: fixed;
+	border-spacing: 10px 0;
+	
+	li{
+		display: table-cell;
+		vertical-align: middle;
+		border: solid 1px $gray;
+		text-align: center;
+		a{
+			padding: 0.5em;
+		}
+
+		@include mouseOver(){
+			&:not(.active) a{
+				background-color: $orange;
+				color: #fff;
+			}
+		}
+
+		&.active{
+			border: none;
+			a{
+				background-color: $orange;
+				color: #fff;
+			}
+		}
+
+		&.comingsoon{
+			opacity: 0.35;
+			@include mouseOver(){
+				a{
+					cursor: default;
+					color: inherit;
+					background-color: transparent
+				}
+			}			
+		}
+	}
+
+	@include breakpoint( tab ){
+		width: 100%;
+		border-spacing: 1px 0;
+		
+		li{
+			border: none;
+			
+			&:not( active ){
+				border: solid 1px $gray;
+			}
+		}
+	}		
+}
+
+
+////////////////////////
+
+// 個別
+
+////////////////////////
+
+/********************
+philosophy
+********************/
+
+.section-philosophy
+{
+	background-color: #c6f4fd;
+
+	&.hasCoverImg .cover{
+		top: auto;
+		bottom: 0;
+	}
+	@include breakpoint( pc ){
+		height: 100%;
+		width: auto;		
+
+
+	}
+	@include breakpoint( tab ){
+
+		background: url(../img/_sp/philosophy-bg.jpg) center top no-repeat;
+		background-size: cover;
+
+		.section_index{
+			img{
+				@include liquid(311, 640, true );	
+			}
+		}
+	}	
+}
+
+
+
+
+/********************
+mission
+********************/
+.section-mission{
+
+	&.hasCoverImg .cover{
+		top: 0;
+	    bottom: 0;
+	    margin-top: auto;
+	    margin-bottom: auto;
+	}
+
+	.wrap{
+		max-width: none;
+		padding: 0;
+	}
+
+	.contentArticle
+	{
+		max-width: $outerWidth;
+		
+		&_wrap
+		{
+			@include liquid(980,1400, true);		
+		
+			@include breakpoint( tab ){
+				width: 90%;
+			}			
+		}
+
+	}
+
+	.contentArticle-bullet{
+		width: auto;
+		max-width: 100%;
+		margin-top: liquidSpace(105,1400);
+		background-color: rgba(#fff, 0.7);
+		
+		&_wrap{	
+ 			@include liquid(980, 1400,true);		
+			padding-top: 20px;
+			padding-bottom: 20px;
+			display: table;
+			table-layout: fixed;
+			// display: flex;
+			// flex-direction: row;
+			// justify-content: space-between;
+			// align-items: stretch;
+			
+			@include breakpoint( tab ){
+				width: auto;
+				display: block;
+			}				
+		}
+		
+		.bullet
+		{
+			width: 200px;
+			display: table-cell;
+			vertical-align: top;
+			padding-right: 30px;
+			padding-left: 30px;
+			position: relative;
+			
+			&_num{
+				margin-top: -7em;				
+				display: block;
+				text-align: center;
+			}
+			
+			&_index{
+				width: 100%;
+				margin-top: 1em;
+				margin-bottom: 1em;
+				display: table;
+				position: relative;
+				font-weight: bold;
+				color: $orange;
+				text-align: center;
+				
+				span{
+					height: 200px;
+					display: table-cell;
+					vertical-align: middle;
+					position: relative;
+					z-index: 2;
+					font-size: 1.15em;
+				}
+
+				&:after{
+					content:  " ";
+					display: block;
+					width: 200px;
+					height: 200px;
+					margin: auto;
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					
+					border-radius: 100%;
+					@include background-image(linear-gradient( to right bottom, #eaeaea, #fafafa));
+					box-shadow: 2px 3px 0 rgba($gray,0.8), -1px -1px 1px rgba($gray,0.2);
+				}
+				
+			}
+
+			&_content{
+				font-size: .95em;
+			}	
+
+			@include breakpoint( tab ){
+				width: auto;
+				margin-bottom: 2em;
+				padding-right: 0;
+				padding-left: 0;
+				display: table;
+				
+				&:last-child{
+					margin-bottom: 0;
+				}
+				
+				&_num{
+					display: none;
+				}	
+
+				&_index,
+				&_content{
+					display: table-cell;
+					vertical-align: top;
+				}				
+
+				&_index{
+					width: 110px;
+					margin-top: 0em;
+					margin-bottom: 0em;
+					text-align: left;
+					
+					span{
+						height: auto;
+						font-size: 1em;
+					}
+
+
+					&:after{
+						display: none;
+					}
+				
+				}
+
+				&_content{
+					font-size: .95em;
+					padding-left: 1em;
+				}	
+			}				
+		}
+		
+	}
+
+	@include breakpoint( pc ){
+		
+		&.hasCoverImg .cover{
+			width: 100%;
+			height: auto;
+		}		
+		
+	}
+	@include breakpoint( tab ){
+
+		background: #fff url(../img/_sp/mission-bg.jpg) center center no-repeat;
+		background-size: cover;		
+
+		.section_index{
+			img{
+				@include liquid(611, 640, true );	
+			}
+		}
+	}		
+}
+
+
+/********************
+社長Message
+********************/
+
+.section-ceo
+{
+	background-color: #e7f2f2;
+
+	.ceoName{
+		height: 1em;
+		margin: auto;
+		position: absolute;
+		right: 1%;
+		bottom: 25%;
+		font-size: 1.4em;
+		text-shadow: 0 0 5px #fff;
+		
+		.position{
+			margin-right: 1em;
+			font-size: 0.5em;
+		}
+
+		@include breakpoint( 1500 ){
+			right: 18%;
+			bottom: 19%;			
+		}
+		@include breakpoint( pc ){
+			margin-top: auto;
+			margin-bottom: auto;
+			top: 0;
+			bottom: 0;
+		}
+
+		@include breakpoint( tab ){
+			position: static;
+			text-align: right;
+		}
+		
+		////見出し下の余白ありVer
+		@include breakpoint( sp ){
+			position: absolute;
+			font-size: 1.1em;
+			top: 13.5%;
+			bottom: auto;
+			right: auto;
+			left: 30%;
+			text-align: left;
+			
+			span{
+				display: block;
+			}
+		}		
+	}
+
+	@include breakpoint( tab ){
+
+		background: #e7f2f2 url(../img/_sp/ceomessage-bg.jpg) center top no-repeat;
+		background-size: cover;								
+
+		.section_index{
+			
+			// margin-bottom: 50%;
+
+			img{
+				@include liquid(356, 640, true );	
+			}
+		}
+	}		
+
+	@include breakpoint( sp ){
+		background-size: contain;		
+		.section_index{	
+			margin-bottom: 50%;
+		}
+	}	
+}
+
+
+/********************
+会社概要
+********************/
+.section-company{
+	.requirementInfo
+	{
+		max-width: 700px;
+		margin-right: auto;
+		margin-left: auto;
+		&_list{
+			@extend %dlStyle;			
+			dt{
+				border-right: solid 2px $orange;
+			}
+		}
+
+		@include breakpoint( tab ){
+			dt{
+				width: 105px;
+			}
+			dd>span{
+				word-break: break-all;
+			}
+		}
+	}
+
+	@include breakpoint( tab ){
+
+		.section_index{
+			img{
+				@include liquid(260, 640, true );	
+			}
+		}
+	}		
+}
+
+
+
+/********************
+アクセス
+********************/
+.section-access{
+	background-color:  #f3f3f3;
+	.accessDetail
+	{
+		max-width: 700px;
+		margin-right: auto;
+		margin-left: auto;		
+		
+		&_map iframe{
+			max-width: 700px;
+			min-height: 400px;
+			margin-right: auto;
+			margin-bottom: 30px;
+			margin-left: auto;
+			display: block;
+		}
+		&_data{
+			
+			@extend %dlStyle;
+			dd{
+				padding-left: 0
+			}
+		}	
+	}
+
+	@include breakpoint( tab ){
+
+		.section_index{
+			img{
+				@include liquid(187, 640, true );	
+			}
+		}
+
+
+
+		.accessDetail
+		{
+			&_map iframe{
+				max-width: 100%;
+				min-height: 0px;
+			}
+			&_data{
+				dt{
+					width: 105px;
+				}			
+			}	
+		}
+	}		
+}
