@@ -589,6 +589,70 @@ a img:focus
     border-style: solid;
     border-color: transparent transparent transparent #fff;
 }
+.button.button-hasArrow-back a
+{
+    -webkit-transition: all .3s ease 0s;
+            transition: all .3s ease 0s;
+}
+.button.button-hasArrow-back a:hover:before,
+.button.button-hasArrow-back a:active:before,
+.button.button-hasArrow-back a:focus:before
+{
+    left: 1px;
+
+    width: 15px;
+
+    -webkit-transition-duration: .2s;
+            transition-duration: .2s;
+}
+.button.button-hasArrow-back a:hover:after,
+.button.button-hasArrow-back a:active:after,
+.button.button-hasArrow-back a:focus:after
+{
+    left: 0;
+
+    -webkit-transition-duration: .2s;
+            transition-duration: .2s; 
+
+    border-width: 5px 4px 5px 0;
+    border-style: solid;
+}
+.button.button-hasArrow-back a:before,
+.button.button-hasArrow-back a:after
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    display: block;
+
+    margin-top: auto;
+    margin-bottom: auto;
+
+    content: ' '; 
+    -webkit-transition: all .3s ease-in-out 0s;
+            transition: all .3s ease-in-out 0s;
+}
+.button.button-hasArrow-back a:before
+{
+    left: 16px;
+
+    width: 10px;
+    height: 1px;
+
+    background-color: #fff;
+}
+.button.button-hasArrow-back a:after
+{
+    left: 5px;
+
+    width: 0;
+    height: 0;
+
+    border-width: 5px 11px 5px 0;
+    border-style: solid;
+    border-color: transparent #fff transparent transparent;
+}
 .button.button-readMore
 {
     font-weight: bold;
