@@ -1,3 +1,6 @@
+<?php
+  include './function/getPosts.php';
+?>    
 <!DOCTYPE html>
 <!--[if lte IE 9]>
 <html lang="ja" class="ie">
@@ -50,18 +53,12 @@
       </h2>
     </header>
 
-    
     <!-- ***** content -->
-    <article class="careerSelectContent content">    
+    <section class="">    
         <div class="wrap">
-          <header>
-            <h3 class="section_index">Coming Soon</h3>
-          </header>
-          <div class="section_content">
-            
-          </div>
+            <?php  echo $instaBox; ?>
         </div>
-    </article>
+    </section>
     <!-- ///// content -->
 
   </main>
