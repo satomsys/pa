@@ -1,0 +1,207 @@
+@media screen and (max-width: 780px)
+{
+    .pageIndex_text
+    {
+        width: 49.625%;
+        margin-right: auto; 
+        margin-left: auto;
+    }
+}
+
+/**
+* fancyBox
+*/
+.fancybox-controls
+{
+    overflow: auto;
+}
+
+.fancybox-button
+{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+
+    margin-top: auto;
+    margin-bottom: auto;
+
+    -webkit-transition: all .3s;
+            transition: all .3s; 
+
+    border-radius: 100%;
+    background-color: rgba(255, 109, 31, .8);
+}
+.fancybox-button:hover,
+.fancybox-button:active
+{
+    background-color: #ff6d1f;
+}
+.fancybox-button--left
+{
+    left: 2%;
+}
+.fancybox-button--right
+{
+    right: 2%;
+}
+@media screen and (max-width: 780px)
+{
+    .fancybox-button--left,
+    .fancybox-button--right,
+    .fancybox-button button:not(.fancybox-button--close)
+    {
+        display: block !important;
+
+        width: 22px;
+        height: 22px;
+    }
+    .fancybox-button--left:after,
+    .fancybox-button--right:after
+    {
+        top: 8px;
+    }
+    .fancybox-button--left:after
+    {
+        left: 9px;
+    }
+    .fancybox-button--right:after
+    {
+        right: 9px;
+    }
+}
+
+.fancybox-close-small:after
+{
+    -webkit-transition: all .3s;
+            transition: all .3s;
+
+    color: #fff;
+    background-color: #ff6d1f;
+}
+.fancybox-close-small:hover:after,
+.fancybox-close-small:active:after
+{
+    color: #fff;
+    background-color: rgba(255, 109, 31, .8);
+}
+
+.fancybox-slider-wrap .instaBox_content
+{
+    box-sizing: border-box; 
+    max-width: 920px;
+    padding: 80px;
+}
+.fancybox-slider-wrap .instaBox_content_img,
+.fancybox-slider-wrap .instaBox_content_text
+{
+    display: block;
+
+    width: 60.86957%;
+    margin-right: auto; 
+    margin-left: auto;
+}
+.fancybox-slider-wrap .instaBox_content_img
+{
+    margin-bottom: 30px;
+}
+.fancybox-slider-wrap .instaBox_content_text
+{
+    position: relative;
+}
+.fancybox-slider-wrap .instaBox_content_text .button-linkToInsta
+{
+    position: absolute;
+    top: 0;
+    right: -140px;
+
+    width: 100px;
+
+    text-align: center;
+}
+.fancybox-slider-wrap .instaBox_content_text .button-linkToInsta a
+{
+    font-size: 1rem;
+
+    letter-spacing: .01em !important; 
+
+    color: #fff;
+    border: none;
+    background-color: #8c8c8c;
+}
+@media screen and (max-width: 780px)
+{
+    .fancybox-slider-wrap .instaBox_content
+    {
+        max-width: 90%;
+        padding: 30px;
+    }
+    .fancybox-slider-wrap .instaBox_content_img,
+    .fancybox-slider-wrap .instaBox_content_text
+    {
+        display: block;
+
+        width: auto;
+    }
+    .fancybox-slider-wrap .instaBox_content_text
+    {
+        position: relative;
+
+        word-wrap: break-word;
+    }
+    .fancybox-slider-wrap .instaBox_content_text .button-linkToInsta
+    {
+        position: static;
+
+        display: block;
+
+        margin-top: 20px;
+    }
+}
+
+.instaBox
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+        flex-direction: row;
+
+    width: 100%;
+    padding-right: 1%;
+    padding-left: 1%;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.instaBox li
+{
+    float: left; 
+
+    width: calc( 33.33% - 4% );
+    margin-right: 2%;
+    margin-left: 2%;
+
+    list-style: none;
+}
+.instaBox_image
+{
+    cursor: pointer; 
+
+    border-radius: 20px;
+}
+.instaBox_image figure
+{
+    display: table-cell;
+
+    vertical-align: middle;
+}
+.instaBox_content
+{
+    display: none;
+}
