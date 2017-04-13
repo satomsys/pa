@@ -1309,6 +1309,8 @@ html.ie8 .icon-facebook:before
 
         -webkit-transition: all .3s ease-in-out 0s;
                 transition: all .3s ease-in-out 0s; 
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
 
         opacity: 0;
     }
@@ -1421,6 +1423,9 @@ html.ie8 .icon-facebook:before
     }
     .menuOpen .sitenav .navList_child
     {
+        -webkit-transform: scale(1);
+                transform: scale(1); 
+
         opacity: 1;
     }
 }
