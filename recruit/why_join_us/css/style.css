@@ -1,0 +1,203 @@
+.pageIndex
+{
+    margin-bottom: 80px;
+}
+@media screen and (max-width: 780px)
+{
+    .pageIndex
+    {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 780px)
+{
+    .pageIndex_text
+    {
+        width: 42.625%;
+        margin-right: auto; 
+        margin-left: auto;
+    }
+}
+
+.career-index .careerPerson
+{
+    display: table;
+
+    max-width: 1040px;
+    margin-right: auto;
+    margin-left: auto;
+
+    border-spacing: 80px 0;
+}
+@media screen and (max-width: 780px)
+{
+    .career-index .careerPerson
+    {
+        display: block;
+    }
+}
+.career-index .careerPerson_list
+{
+    display: table-cell;
+
+    -webkit-transition: all .3s ease 0s;
+            transition: all .3s ease 0s; 
+    text-align: center;
+    vertical-align: top;
+}
+.career-index .careerPerson_list:hover .careerPerson_img:before,
+.career-index .careerPerson_list:hover .careerPerson_img figure:before,
+.career-index .careerPerson_list:active .careerPerson_img:before,
+.career-index .careerPerson_list:active .careerPerson_img figure:before,
+.career-index .careerPerson_list:focus .careerPerson_img:before,
+.career-index .careerPerson_list:focus .careerPerson_img figure:before
+{
+    width: 100%;
+}
+.career-index .careerPerson_list:hover .careerPerson_img:after,
+.career-index .careerPerson_list:hover .careerPerson_img figure:after,
+.career-index .careerPerson_list:active .careerPerson_img:after,
+.career-index .careerPerson_list:active .careerPerson_img figure:after,
+.career-index .careerPerson_list:focus .careerPerson_img:after,
+.career-index .careerPerson_list:focus .careerPerson_img figure:after
+{
+    height: 100%;
+}
+@media screen and (max-width: 780px)
+{
+    .career-index .careerPerson_list
+    {
+        display: block; 
+
+        padding-bottom: 20px;
+    }
+    .career-index .careerPerson_list:not(:first-child)
+    {
+        padding-top: 20px;
+
+        border-top: solid 1px #d9d9d9;
+    }
+}
+.career-index .careerPerson_num
+{
+    font-size: 5em;
+    line-height: 1;
+
+    margin-bottom: 20px;
+
+    text-align: center; 
+
+    color: #bcb5ab;
+}
+.career-index .careerPerson_num span,
+.career-index .careerPerson_num .story
+{
+    display: inline-block;
+
+    vertical-align: middle;
+}
+.career-index .careerPerson_num span
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300; 
+    line-height: 1;
+}
+.career-index .careerPerson_num .story
+{
+    position: relative;
+
+    margin-right: -40px;
+}
+@media screen and (max-width: 780px)
+{
+    .career-index .careerPerson_num
+    {
+        margin-bottom: 5px;
+    }
+}
+.career-index .careerPerson_img
+{
+    position: relative;
+}
+.career-index .careerPerson_img:before,
+.career-index .careerPerson_img:after,
+.career-index .careerPerson_img figure:before,
+.career-index .careerPerson_img figure:after
+{
+    position: absolute;
+    z-index: 1;
+
+    display: block;
+
+    content: ' ';
+    -webkit-transition: all .3s;
+            transition: all .3s;
+
+    background-color: #ff6d1f;
+
+    mix-blend-mode: overlay;
+}
+.career-index .careerPerson_img:before,
+.career-index .careerPerson_img figure:before
+{
+    width: 0;
+    height: 15px;
+}
+.career-index .careerPerson_img:after,
+.career-index .careerPerson_img figure:after
+{
+    width: 15px;
+    height: 0;
+}
+.career-index .careerPerson_img:before
+{
+    top: 0;
+    left: 0;
+}
+.career-index .careerPerson_img:after
+{
+    top: 0;
+    right: 0;
+}
+.career-index .careerPerson_img figure:before
+{
+    right: 0; 
+    bottom: 0;
+}
+.career-index .careerPerson_img figure:after
+{
+    bottom: 0; 
+    left: 0;
+}
+.career-index .careerPerson_footer_name
+{
+    line-height: 1;
+
+    margin: 20px;
+
+    color: inherit;
+}
+.career-index .careerPerson_footer_name .ja
+{
+    font-size: 2.1em;
+    font-weight: 200;
+
+    display: block;
+
+    letter-spacing: .05em;
+
+    color: #999;
+}
+.career-index .careerPerson_footer_name .en
+{
+    font-family: 'Roboto', sans-serif;
+
+    display: block;
+
+    margin-top: 1em;
+
+    letter-spacing: .15em;
+
+    color: #ff6d1f;
+}

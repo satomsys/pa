@@ -63,7 +63,7 @@ function dirPath( $nowActive, $thisDir, $isChild ){
       <li class="navList_child comingsoon"><a>PERSON</a></li>
       <li class="navList_child <?php echo isActive($nowActive, 'career');?>"><a <?php echo dirPath($nowActive, 'career', $isChild); ?>>CAREER</a></li>
       <li class="navList_child <?php echo isActive($nowActive, 'culture');?>"><a <?php echo dirPath($nowActive, 'culture', $isChild); ?>>CULTURE</a></li>
-      <li class="navList_child comingsoon"><a>WHY JOIN US</a></li>
+      <li class="navList_child <?php echo isActive($nowActive, 'why_join_us');?>"><a <?php echo dirPath($nowActive, 'why_join_us', $isChild); ?>>WHY JOIN US</a></li>
       <li class="navList_child <?php echo isActive($nowActive, 'recruiting');?>"><a <?php echo dirPath($nowActive, 'recruiting', $isChild); ?>>RECRUITING</a></li>
       <li class="navList_child navList_child-buttons">
          <ul>

@@ -1,0 +1,6 @@
+
+/**
+* fancybox
+*/
+$("[data-fancybox]").fancybox({
+});
