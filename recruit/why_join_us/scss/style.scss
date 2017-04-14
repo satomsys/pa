@@ -107,106 +107,40 @@
 
 // }
 
-// .fancybox-slider-wrap .instaBox{
-
-// 	&_content{
-// 		padding: 80px;
-// 		max-width: 920px;
-// 		box-sizing: border-box;
-// 	}
-// 	&_content_img,
-// 	&_content_text{
-// 		display: block;
-// 		@include liquid( 560, 920, true );
-// 	}
-// 	&_content_img{
-// 		margin-bottom: 30px;
-// 	}
-// 	&_content_text{
-// 		position: relative;
+/**
+* パネル
+*/
+.wjuQ
+{
+	
+	&_row
+	{
+		max-width: 980px;
+		height: 0px;
+		margin-right: auto;
+		margin-left: auto;
+		padding-top: liquidSpace( 360, 980 );
+		position: relative;
+		overflow: hidden;
 		
-
-// 		.button-linkToInsta{
-// 			width: 100px;
-// 			position: absolute;
-// 			top: 0;
-// 			right: -140px;
-// 			text-align: center;
-// 			a{
-// 				font-size: 1rem;
-// 				color: #fff;
-// 				background-color: #8c8c8c;
-// 				border: none;
-// 				letter-spacing: 0.01em!important;		
-// 			}
-// 		}			
-// 	}
-
-// 	@include breakpoint( tab ){
-		
-// 		&_content{
-// 			max-width: 90%;
-// 			padding: 30px;
-// 		}		
-
-// 		&_content_img,
-// 		&_content_text{
-// 			display: block;
-// 			width: auto;
-// 		}		
-		
-// 		&_content_text{
-// 			position: relative;
-// 			word-wrap: break-word;
+		&_panel{
+			position: absolute;
+			top: 0;
 			
-
-// 			.button-linkToInsta{
-// 				display: block;
-// 				position: static;
-// 				margin-top: 20px;
-// 			}			
-// 		}		
-// 	}		
+			@include mouseOver{
+				opacity: 0.8;
+			}
+		}
+	}
+}
 
 
-// }
-
-
-// .instaBox
-// {
-// 	width: 100%;
-// 	padding-left: 1%;
-// 	padding-right: 1%;
-// 	overflow: hidden;
-	
-// 	display: flex;
-// 	flex-direction: row;
-// 	flex-wrap: wrap;
-// 	align-items:center;
-	
-// 	li{
-// 		width: calc( 33.33% - 4% );
-// 		margin-left: 2%;
-// 		margin-right: 2%;
-// 		list-style: none; 
-// 		float: left;
-		
-// 	}	
-
-// 	&_image{
-// 		border-radius: 20px;
-// 		cursor: pointer;
-		
-// 		figure{
-// 			display: table-cell;
-// 			vertical-align: middle;
-// 		}
-// 	}
-
-// 	&_content{
-// 		display: none;
-// 	}
-// }
+/**
+* fancyBox
+*/
+.wjuQ_modal{
+	display: none;	
+}
 
 
 
@@ -221,3 +155,30 @@
 		clip-path: url( #panel#{$i});
 	}
 }
+
+
+/**
+* Q01
+*/
+.wjuQ_row_panel-01{
+	width: percentage( 524 / 980 );
+	height: auto;
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/**
+* Q02
+*/
+.wjuQ_row_panel-02{
+	width: percentage( 543 / 980 );
+	height: auto;
+	
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+
