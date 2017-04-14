@@ -216,3 +216,8 @@
 
 ////////////////////////
 
+@for $i from 1 through 8 {
+	.mask-#{$i}{
+		clip-path: url( #panel#{$i});
+	}
+}

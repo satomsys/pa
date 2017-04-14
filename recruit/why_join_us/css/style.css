@@ -19,3 +19,51 @@
         margin-left: auto;
     }
 }
+
+.mask-1
+{
+    -webkit-clip-path: url(#panel1);
+            clip-path: url(#panel1);
+}
+
+.mask-2
+{
+    -webkit-clip-path: url(#panel2);
+            clip-path: url(#panel2);
+}
+
+.mask-3
+{
+    -webkit-clip-path: url(#panel3);
+            clip-path: url(#panel3);
+}
+
+.mask-4
+{
+    -webkit-clip-path: url(#panel4);
+            clip-path: url(#panel4);
+}
+
+.mask-5
+{
+    -webkit-clip-path: url(#panel5);
+            clip-path: url(#panel5);
+}
+
+.mask-6
+{
+    -webkit-clip-path: url(#panel6);
+            clip-path: url(#panel6);
+}
+
+.mask-7
+{
+    -webkit-clip-path: url(#panel7);
+            clip-path: url(#panel7);
+}
+
+.mask-8
+{
+    -webkit-clip-path: url(#panel8);
+            clip-path: url(#panel8);
+}
