@@ -97,6 +97,13 @@ navigation
 	}		
 }
 
+nav + nav > ul{
+	margin-top: 60px;
+	@include breakpoint( tab ){
+		margin-top: 20px;
+	}
+}
+
 .infoNav ul,
 .careerSelectNav ul{
 	a{
@@ -214,7 +221,6 @@ navigation
 
 .careerSelectNav ul{
 	width: calc( 100% + 5px );
-	margin-top: 60px;
 	display: table;
 	table-layout: fixed;
 	border-spacing: 10px 0;
@@ -246,7 +252,6 @@ navigation
 
 	@include breakpoint( tab ){
 		width: 100%;
-		margin-top: 20px;
 		border-spacing: 1px 0;
 		
 		li{
@@ -753,6 +758,7 @@ entry
 			padding-right: 100px;
 			flex-grow: 1;
 			flex-basis: 100%;
+			align-items: flex-start;
 			
 			font-size: 1.15em;
 			color: #fff;
@@ -763,7 +769,7 @@ entry
 				margin: 0;
 			}
 			.ja{
-				font-size: 1.5em;
+				font-size: 1.125em;
 				// margin-top: 1em;				
 			}
 

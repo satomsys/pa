@@ -97,6 +97,18 @@ navigation
     }
 }
 
+nav + nav > ul
+{
+    margin-top: 60px;
+}
+@media screen and (max-width: 780px)
+{
+    nav + nav > ul
+    {
+        margin-top: 20px;
+    }
+}
+
 .infoNav ul a,
 .careerSelectNav ul a
 {
@@ -236,7 +248,6 @@ navigation
     display: table;
 
     width: calc( 100% + 5px );
-    margin-top: 60px;
 
     table-layout: fixed;
     border-spacing: 10px 0;
@@ -273,7 +284,6 @@ navigation
     .careerSelectNav ul
     {
         width: 100%;
-        margin-top: 20px;
 
         border-spacing: 1px 0;
     }
@@ -863,6 +873,9 @@ entry
     flex-grow: 1;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
 }
 .recruiting-walfare .section-walfare .walfarePanel_index p
 {
@@ -870,7 +883,7 @@ entry
 }
 .recruiting-walfare .section-walfare .walfarePanel_index .ja
 {
-    font-size: 1.5em;
+    font-size: 1.125em;
 }
 @media screen and (max-width: 780px)
 {
