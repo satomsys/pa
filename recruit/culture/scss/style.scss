@@ -25,6 +25,70 @@
 
 
 /**
+* slick
+*/
+
+.slick-next,
+.slick-prev{
+	width: 55px;
+	height: 55px;
+	display: block;
+	background-color: $orange;
+	
+	&:before
+	{
+		content:  " ";
+		display: block;
+		width: 25%;
+		height: 25%;
+		margin: auto;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		border-top: solid 2px #fff;
+		border-right: solid 2px #fff;
+		opacity: 1;
+	}
+
+	@include mouseOver(){
+		background-color: lighten( $orange, 10 );
+	}
+
+	@include breakpoint( tab ){
+		width: 25px;
+		height: 25px;
+		
+		&:before
+		{
+			border-width: 1px;
+		}		
+	}		
+}
+
+.slick-next{
+	&:before{
+		transform: rotate(45deg );
+	}
+
+	@include breakpoint( tab ){
+		right: 0px;
+	}		
+}
+.slick-prev{
+	&:before{
+		transform: rotate(-135deg );
+	}
+
+	@include breakpoint( tab ){
+		left: 0px;
+	}		
+}
+
+
+
+/**
 * fancyBox
 */
 
@@ -83,6 +147,13 @@
 	}	
 }
 
+
+
+.cultureModal{
+	display: none;
+}
+
+
 .fancybox-close-small{
 	// top: -20px;
 	// right: -20px;
@@ -101,22 +172,25 @@
 
 }
 
-.fancybox-slider-wrap .instaBox{
 
-	&_content{
-		padding: 80px;
-		max-width: 920px;
-		box-sizing: border-box;
-	}
-	&_content_img,
-	&_content_text{
+/*** instagram ***/
+.cultureModal-insta{
+
+	max-width: 920px;
+	padding: 80px;
+	box-sizing: border-box;
+
+	.cultureModal-insta_img,
+	.cultureModal-insta_text{
 		display: block;
 		@include liquid( 560, 920, true );
 	}
-	&_content_img{
+
+	.cultureModal-insta_img{
 		margin-bottom: 30px;
 	}
-	&_content_text{
+
+	.cultureModal-insta_text{
 		position: relative;
 		
 
@@ -138,18 +212,16 @@
 
 	@include breakpoint( tab ){
 		
-		&_content{
-			max-width: 90%;
-			padding: 30px;
-		}		
+		max-width: 90%;
+		padding: 30px;
 
-		&_content_img,
-		&_content_text{
+		.cultureModal-insta_img,
+		.cultureModal-insta_text{
 			display: block;
 			width: auto;
 		}		
 		
-		&_content_text{
+		.cultureModal-insta_text{
 			position: relative;
 			word-wrap: break-word;
 			
@@ -161,10 +233,105 @@
 			}			
 		}		
 	}		
-
-
 }
 
+
+/*** style ***/
+
+.cultureModal-style{
+	display: none;
+	color: #fff;
+	background-color: transparent;
+	
+	&_wrap{
+		max-width: 550px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	&_index{
+		margin-bottom: 1em;
+		font-size: 2em;
+		font-weight: 300;
+		letter-spacing: 0.26em;
+	}
+
+	&_content{
+		letter-spacing: 0.025em;
+		margin-bottom: 100px;
+	}
+	
+	
+	&_close{
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+		position: static!important;
+	}
+
+	.fancybox-close-small{
+		display: block
+	}
+
+	@include breakpoint( tab ){
+
+		&_index{
+			line-height: 1.45;
+			font-size: 1.25em;
+		}
+		&_content{
+			margin-bottom: 50px;
+		}		
+	}		
+}
+
+
+
+
+/********************
+cultureVisual
+********************/
+
+.cultureVisual{
+    margin-bottom: 60px;
+    position: relative;
+    
+    img{
+    	width: 100%;
+    	margin-right: auto;
+    	margin-left: auto;
+    }
+ 
+}
+    
+.button-cultureStyle{
+	width: 270px;
+	margin-right: auto;
+	margin-left: auto;
+	position: absolute;
+	right: 0;
+	bottom: 50px;
+	left: 0;	
+	z-index: 2;
+	
+	a{
+		font-weight: 400;
+		border: none;
+    	color: #fff;
+    	@extend %gradation;
+	}
+
+	@include breakpoint( tab ){
+		width: 150px;
+		bottom: 2.5%;
+	}	
+}
+
+
+
+/********************
+instagram
+********************/
 
 .instaBox
 {
@@ -195,10 +362,6 @@
 			display: table-cell;
 			vertical-align: middle;
 		}
-	}
-
-	&_content{
-		display: none;
 	}
 }
 

@@ -95,9 +95,9 @@
 	      <img src="{$data_htmlSet[$dataCount]['image']}" alt="">
 	    </figure>
 	</a>
-	<article id="insta{$dataCount}" class="instaBox_content">
-	    <img class="instaBox_content_img" src="{$data_htmlSet[$dataCount]['image']}" alt="">
-	    <div  class="instaBox_content_text" >
+	<article id="insta{$dataCount}" class="cultureModal cultureModal-insta">
+	    <img class="cultureModal-insta_img" src="{$data_htmlSet[$dataCount]['image']}" alt="">
+	    <div  class="cultureModal-insta_text" >
 	    	{$data_htmlSet[$dataCount]['text']}
 
 	    	<div class="button button-linkToInsta"><a href="{$data_htmlSet[$dataCount]['link']}" target="_blank">instagramで開く</a></div>

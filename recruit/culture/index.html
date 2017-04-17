@@ -17,6 +17,8 @@
     <!-- ***** my style -->
     <link rel="stylesheet" type="text/css" href="../common/css/style.css">
     <link rel="stylesheet" href="../common/js/fancybox/jquery.fancybox.min.css">     
+    <link rel="stylesheet" href="../common/js/slick/slick-theme.css">     
+    <link rel="stylesheet" href="../common/js/slick/slick.css">     
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- ///// my style -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -53,6 +55,27 @@
       </h2>
     </header>
 
+    <!-- ***** mainvisual slider -->
+    <div class="cultureVisual">
+        <div class="cultureVisual_button button button-hasArrow button-cultureStyle">
+            <a data-fancybox data-src="#style1">
+                PREVIEW
+            </a>
+        </div>
+        <div class="cultureVisual_slider">
+            <div>
+                <img src="img/mainvisual-1.jpg" data-preview="#style1" alt="">
+            </div>
+            <div>
+                <img src="img/mainvisual-2.jpg" data-preview="#style2" alt="">
+            </div>
+            <div>
+                <img src="img/mainvisual-3.jpg" data-preview="#style3" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- ///// mainvisual slider -->
+
     <!-- ***** content -->
     <section class="">    
         <div class="wrap">
@@ -61,10 +84,49 @@
     </section>
     <!-- ///// content -->
 
+    <!-- ***** modal mainvisual -->
+    <div class="cultureModals">
+
+        <div id="style1" class="cultureModal cultureModal-style">
+            <div class="cultureModal-style_wrap">
+                <div class="cultureModal-style_index">
+                    効率的かつ、<br>成果につながるミーティング。<br>ただ、それだけではない。
+                </div>
+                <div class="cultureModal-style_content">
+                    ダミーコピーです。就職活動をするに当たってまず考えた事。大手や公務員なら安定できるという考え方は、世間の価値観に流されているような気がしていました。まず、自分はどうなりたいのか。軸をはっきり持つことです。言うなれば、会社は箱。自分自身が安定していてこそ、会社と言う箱を活用できるのです。私は、何をすれば自分の成長につながるのかという視点で仕事を探して、営業職を極めることに決めました。
+営業の仕事を自分なりに分析し、営業の力とはなんだろうかと考えました。その結果、商品価値を伝えるアプローチ力と、顧客からニーズを引き出す力が重要だと気づいたのです。デフレが続く時代には、潜在的なニーズを引き出す力が要求されます。その力を最も効果的に磨けるのは高い成長性を持つベンチャー企業。ターゲットと業界を絞ると、すぐに宅建主任の資格取得に挑みました。
+                </div>
+                <div class="button button-hasArrow-back button-cultureStyle cultureModal-style_close">
+                    <a>
+                        CLOSE
+                    </a>
+                </div>
+            </div>
+        </div>
+         <div id="style2" class="cultureModal cultureModal-style">
+            <div class="cultureModal-style_wrap">
+                <div class="cultureModal-style_index">
+                    aaaasdasd
+                </div>
+                <div class="cultureModal-style_content">
+                    ながるのかという視点で仕事を探して、営業職を極めることに決めました。
+営業の仕事を自分なりに分析し、営業の力とはなんだろうかと考えました。その結果、商品価値を伝えるアプローチ力と、顧客からニーズを引き出す力が重要だと気づいたのです。デフレが続く時代には、潜在的なニーズを引き出す力が要求されます。その力を最も効果的に磨けるのは高い成長性を持つベンチャー企業。ターゲットと業界を絞ると、すぐに宅建主任の資格取得に挑みました。
+                </div>
+                <div class="button button-hasArrow-back button-cultureStyle cultureModal-style_close">
+                    <a>
+                        CLOSE
+                    </a>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <!-- ///// modal mainvisual -->
+
   </main>
 
   <?php
     $scripts = <<<EOS
+    <script src="../common/js/slick/slick.min.js"></script>    
     <script src="../common/js/fancybox/jquery.fancybox.min.js"></script>    
     <script type="text/javascript" src="js/scripts.js"></script>
 EOS;
