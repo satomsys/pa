@@ -13,6 +13,8 @@ $(".button-cultureStyle").on('click', function(){
 */
 
 $('.cultureVisual_slider').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,	
   autoplay: true,
   autoplaySpeed: 5000,
   dots: false,
@@ -20,7 +22,8 @@ $('.cultureVisual_slider').slick({
   speed: 500,
   fade: true,
   swipe: true,
-  cssEase: 'linear'	
+  cssEase: 'linear',
+  asNavFor: '.sliderNav'
 }).on('afterChange', function(){
 	var $activeImg = $(this).find('.slick-active img')
 		$previewStyle = $activeImg.data('preview')
@@ -28,3 +31,13 @@ $('.cultureVisual_slider').slick({
 
 		$button.attr( 'data-src', $previewStyle );
 });
+
+
+ $('.sliderNav').slick({
+	slidesToShow: 18,
+	slidesToScroll: 1, 
+	asNavFor: '.cultureVisual_slider',
+	dots: true,
+	centerMode: false,
+	focusOnSelect: true
+ });

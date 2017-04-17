@@ -324,11 +324,31 @@ cultureVisual
 
     margin-bottom: 60px;
 }
-.cultureVisual img
+.cultureVisual_slider img
 {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
+}
+.cultureVisual_nav .sliderNav
+{
+    display: table;
+}
+.cultureVisual_nav li
+{
+    display: table-cell;
+
+    max-width: 60px;
+
+    cursor: pointer;
+    -webkit-transition: all .3s ease 0s;
+            transition: all .3s ease 0s;
+}
+.cultureVisual_nav li:hover,
+.cultureVisual_nav li:active,
+.cultureVisual_nav li:focus
+{
+    opacity: .8;
 }
 
 .button-cultureStyle

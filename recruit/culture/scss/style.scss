@@ -296,10 +296,28 @@ cultureVisual
     margin-bottom: 60px;
     position: relative;
     
-    img{
+    &_slider img{
     	width: 100%;
     	margin-right: auto;
     	margin-left: auto;
+    }
+
+    &_nav{
+    	.wrap{
+    		
+    	}
+    	.sliderNav{
+    		display: table;
+    	}
+    	li{
+    		max-width: 60px;
+    		display: table-cell;
+    		cursor: pointer;
+    		
+    		@include mouseOver(){
+    			opacity: 0.8;
+    		}
+    	}
     }
  
 }

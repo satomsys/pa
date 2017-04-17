@@ -1,5 +1,6 @@
 <?php
   include './function/getPosts.php';
+  include './function/makeSlides.php';
 ?>    
 <!DOCTYPE html>
 <!--[if lte IE 9]>
@@ -44,6 +45,7 @@
   <?php
     $nowActive = 'culture';
     $isChild = true;
+    $slides = new Slides(18);
 
     include $_SERVER['DOCUMENT_ROOT'] . '/recruit/common/_inc/_header.php';
   ?>
@@ -63,7 +65,8 @@
             </a>
         </div>
         <div class="cultureVisual_slider">
-            <div>
+        <?php echo $slides->mainslide(); ?>
+            <!-- <div>
                 <img src="img/mainvisual-1.jpg" data-preview="#style1" alt="">
             </div>
             <div>
@@ -71,6 +74,31 @@
             </div>
             <div>
                 <img src="img/mainvisual-3.jpg" data-preview="#style3" alt="">
+            </div> -->
+        </div>
+        <div class="cultureVisual_nav">
+            <div class="wrap">
+                <ul class="sliderNav">
+                    <?php echo $slides->slidenav(); ?>
+                  <!-- <li class="sliderNav_item"><img src="img/_test/nav-gallery1.jpg" width="60"></li>
+                  <li class="sliderNav_item"><img src="img/_test/nav-gallery2.jpg" width="60"></li>
+                  <li class="sliderNav_item"><img src="img/_test/nav-gallery3.jpg" width="60"></li>
+                  <li class="sliderNav_item"><img src="img/_test/nav-gallery4.jpg" width="60"></li>
+                  <li class="sliderNav_item"><img src="img/_test/nav-gallery5.jpg" width="60"></li>
+                  <li class="sliderNav_item"><img src="img/_test/nav-gallery6.jpg" width="60"></li>
+                  <li class="sliderNav_item"><img src="img/_test/nav-gallery7.jpg" width="60"></li>
+                  <li class="sliderNav_item"><img src="img/_test/nav-gallery8.jpg" width="60"></li>
+                  <li class="sliderNav_item"><img src="img/_test/nav-gallery9.jpg" width="60"></li>
+                  <li class="sliderNav_item"><img src="img/_test/nav-gallery10.jpg" width="60"></li>
+                  <li class="sliderNav_item"><img src="img/_test/nav-gallery11.jpg" width="60"></li>
+                  <li class="sliderNav_item"><img src="img/_test/nav-gallery12.jpg" width="60"></li>
+                  <li class="sliderNav_item"><img src="img/_test/nav-gallery13.jpg" width="60"></li>
+                  <li class="sliderNav_item"><img src="img/_test/nav-gallery14.jpg" width="60"></li>
+                  <li class="sliderNav_item"><img src="img/_test/nav-gallery15.jpg" width="60"></li>
+                  <li class="sliderNav_item"><img src="img/_test/nav-gallery16.jpg" width="60"></li>
+                  <li class="sliderNav_item"><img src="img/_test/nav-gallery17.jpg" width="60"></li>
+                  <li class="sliderNav_item"><img src="img/_test/nav-gallery18.jpg" width="60"></li> -->
+                </ul>
             </div>
         </div>
     </div>
