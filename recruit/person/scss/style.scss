@@ -15,6 +15,13 @@
 // modules
 
 ////////////////////////
+.pageIndex_text
+{
+	@include breakpoint( tab ){
+		@include liquid(337, 800, true );
+	}		
+}
+
 
 .person-index
 {

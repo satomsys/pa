@@ -1,3 +1,13 @@
+@media screen and (max-width: 780px)
+{
+    .pageIndex_text
+    {
+        width: 42.125%;
+        margin-right: auto; 
+        margin-left: auto;
+    }
+}
+
 .person-index .persons
 {
     display: -webkit-box;
