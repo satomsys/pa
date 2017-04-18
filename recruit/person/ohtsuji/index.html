@@ -1,6 +1,3 @@
-<?php
-  //include './include/nav-otherStory.php';
-?>    
 <!DOCTYPE html>
 <!--[if lte IE 9]>
 <html lang="ja" class="ie">
@@ -17,6 +14,7 @@
     <!-- ***** my style -->
     <link rel="stylesheet" type="text/css" href="../../common/css/style.css">
     <link rel="stylesheet" href="../../common/js/fancybox/jquery.fancybox.min.css">     
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- ///// my style -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -37,10 +35,10 @@
     <script type="text/javascript" src="../../common/js/analytics.js"></script>
 </head>
 
- <body class="wju wju-child wju-child-test">
+ <body class="person person-child person-child-layout1">
 
   <?php
-    $nowActive = 'why_join_us';
+    $nowActive = 'person';
     $isChild = true;
 
     include $_SERVER['DOCUMENT_ROOT'] . '/recruit/common/_inc/_header.php';
@@ -49,81 +47,115 @@
   <main class="main">
     <header class="pageIndex">
       <h2 class="pageIndex_text">
-        <span><img src="../img/wju-index.svg" width="530" alt="WHY JOIN US"></span>
+        <span><img src="../img/person-index.svg" width="337" alt="WHY JOIN US"></span>
       </h2>
     </header>
 
     <!-- ***** content -->
-    <article class="">    
-        <div class="wrap">
 
-            <!-- *** title -->
-            <header>
-                <div class="wjuIndex">
-                    <img class="wjuIndex_num" src="../img/num-01-sla.svg" width="141" alt="01">
-                    <h3 class="wjuIndex_q">
-                        では、オリンピック後はどうなる？
-                    </h3>
-                    <p class="wjuIndex_yes">
-                        <span>はい！さらに詳しく、私が答えます！</span>
-                    </p>
-                </div>
-            </header>
-            <!-- /// title -->
-            <div class="wjuContent">
-                <header>
-                    <h4 class="wjuContent_name paleGradation">
-                      <span>開発企画部　仕入課</span>
-                      <span class="name">松山 佳広</span>
-                      <span>2011年 新卒入社</span>
-                    </h4>
+    <section class="personVisual">
+        <article class="fade personVisual_profile">
+            <div>
+                <header class="personVisual_profile_num">
+                    <img src="img/wwn01.svg" alt="WHY WORK NOW? 01" width="164">
                 </header>
-                <!-- *** mainvisual -->
-                <div class="wjuContent_mainvisual">
-                    <img src="img/main.jpg" alt="">
-                </div>
-                <!-- /// mainvisual -->
-                <div class="wjuContent_content">
-                    <div class="wjuSectionIntro">
-                        <section class="wjuSection">
-                            <h5 class="wjuSection_index">
-                                全体としては下落の予測。
-                            </h5>
-                            <div class="wjuSection_content">
-                                ダミーコピーです。就職活動をするに当たってまず考えた事。大手や公務員なら安定できるという考え方は、世間の価値観に流されているような気がしていました。まず、自分はどうなりたいのか。軸をはっきり持つことです。言うなれば、会社は箱。自分自身が安定していてこそ、会社と言う箱を活用できるのです。私は、何をすれば自分の成長につながるのかという視点で仕事を探して、営業職を極めることに決めました。
-                            </div>
-                        </section>
-                        <section class="wjuSection wjuSection-float">
-                            <h5 class="wjuSection_index">
-                                全体としては下落の予測。
-                            </h5>
-                            <div class="wjuSection_img">
-                                <figure><img src="img/section1-img.jpg" width="387" alt=""></figure>
-                            </div>
-                            <div class="wjuSection_content">
-                                ダミーコピーです。就職活動をするに当たってまず考えた事。大手や公務員なら安定できるという考え方は、世間の価値観に流されているような気がしていました。まず、自分はどうなりたいのか。軸をはっきり持つことです。言うなれば、会社は箱。自分自身が安定していてこそ、会社と言う箱を活用できるのです。私は、何をすれば自分の成長につながるのかという視点で仕事を探して、営業職を極めることに決めました。
-                            </div>
-                        </section>
+                <div class="personVisual_profile_content">
+                    <div class="profileTop">
+                        <h3 class="name">
+                            <span class="ja">大辻 大貴</span>
+                            <span class="en">Ohtsuji Daiki</span>
+                        </h3>
+                        <p class="join">2012年入社</p>
                     </div>
-                    <section class="wjuSection wjuSection-onBg">
-                        <h5 class="wjuSection_index">
-                            <span>だからこそ、<br>
-                                私たちが「不動産のプロ」として<br>
-                                お客様から求められる瞬間だと考えます。</span>
-                            <i class="gradation"></i>
-                        </h5>
-                        <div class="wjuSection_content">
-                            ダミーコピーです。就職活動をするに当たってまず考えた事。大手や公務員なら安定できるという考え方は、世間の価値観に流されているような気がしていました。まず、自分はどうなりたいのか。軸をはっきり持つことです。言うなれば、会社は箱。自分自身が安定していてこそ、会社と言う箱を活用できるのです。私は、何をすれば自分の成長につながるのかという視点で仕事を探して、営業職を極めることに決めました。
-                        </div>
-                    </section>                                        
+                    <div class="profileText">
+                        □□□□□□□□□□□□□□□□□<br>□□□□□□□□□□□□□□□
+                    </div>
                 </div>
-                <div class="wjuContent_footer">
-                    <div class="button button-wju button-hasArrow-back"><a href="">BACK</a></div>
+                <i class="personVisual_bg"></i>
+                <i class="personVisual_bg-back"></i>
+            </div>
+        </article>
+        <img src="img/ohtsuji-main.jpg" alt="">
+    </section>
+
+    <!-- *** section 1 -->
+    <section class="section section-1">    
+        <div class="wrap">
+            <figure class="section_img">
+                <img src="img/ohtsuji-section1-img.jpg" width="435" alt="">
+            </figure>
+            <div class="section_text">
+                <h4 class="section_text_index">
+                    信頼を得るのは難しい。
+                </h4>
+                <div class="section_text_content">
+                    ダミーコピーです。就職活動をするに当たってまず考えた事。大手や公務員なら安定できるという考え方は、世間の価値観に流されているような気がしていました。まず、自分はどうなりたいのか。軸をはっきり持つことです。言うなれば、会社は箱。自分自身が安定していてこそ、会社と言う箱を活用できるのです。私は、何をすれば自分の成長につながるのかという視点で仕事を探して、営業職を極めることに決めました。
+営業の仕事を自分なりに分析し、営業の力とはなんだろうかと考えました。その結果、商品価値を伝えるアプローチ力と、顧客からニーズを引き出す力が重要だと気づいたのです。デフレが続く時代には、潜在的なニーズを引き出す力が要求されます。その力を最も効果的に磨けるのは高い成長性を持つベンチャー企業。ターゲットと業界を絞ると、すぐに宅建主任の資格取得に挑みました。
                 </div>
             </div>
-
+           
         </div>
-    </article>
+    </section>
+    <!-- /// section 1 -->
+
+    <!-- *** section 2 -->
+    <section class="section section-2 section-fullImg">    
+        <div class="wrap">
+            <h4 class="section_index">
+                人を動かすって、なんだろう。
+            </h4>
+            <figure class="section_img">
+                <img src="img/ohtsuji-section2-img.jpg" alt="">
+            </figure>
+            <div class="section_text">
+                <div class="section_text_content">
+                    ダミーコピーです。就職活動をするに当たってまず考えた事。大手や公務員なら安定できるという考え方は、世間の価値観に流されているような気がしていました。まず、自分はどうなりたいのか。軸をはっきり持つことです。言うなれば、会社は箱。自分自身が安定していてこそ、会社と言う箱を活用できるのです。私は、何をすれば自分の成長につながるのかという視点で仕事を探して、営業職を極めることに決めました。
+営業の仕事を自分なりに分析し、営業の力とはなんだろうかと考えました。その結果、商品価値を伝えるアプローチ力と、顧客からニーズを引き出す力が重要だと気づいたのです。デフレが続く時代には、潜在的なニーズを引き出す力が要求されます。その力を最も効果的に磨けるのは高い成長性を持つベンチャー企業。ターゲットと業界を絞ると、すぐに宅建主任の資格取得に挑みました。
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /// section 2 -->
+
+    <!-- *** section 3 -->
+    <section class="section section-3">    
+        <div class="wrap">
+            <h4 class="section_index">
+                お客さまから教わったこと。
+            </h4>
+            <figure class="section_img">
+                <img src="img/ohtsuji-section3-img.jpg" width="666" alt="">
+            </figure>
+            <div class="section_text">
+                <div class="section_text_content">
+                    ダミーコピーです。就職活動をするに当たってまず考えた事。大手や公務員なら安定できるという考え方は、世間の価値観に流されているような気がしていました。まず、自分はどうなりたいのか。軸をはっきり持つことです。言うなれば、会社は箱。自分自身が安定していてこそ、会社と言う箱を活用できるのです。私は、何をすれば自分の成長につながるのかという視点で仕事を探して、営業職を極めることに決めました。
+営業の仕事を自分なりに分析し、営業の力とはなんだろうかと考えました。その結果、商品価値を伝えるアプローチ力と、顧客からニーズを引き出す力が重要だと気づいたのです。デフレが続く時代には、潜在的なニーズを引き出す力が要求されます。その力を最も効果的に磨けるのは高い成長性を持つベンチャー企業。ターゲットと業界を絞ると、すぐに宅建主任の資格取得に挑みました。
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /// section 3 -->
+
+     <!-- *** section 4 -->
+    <section class="section section-4 section-fullImg">    
+        <div class="wrap">
+            <figure class="section_img">
+                <img src="img/ohtsuji-section3-img.jpg" width="666" alt="">
+            </figure>
+            <div class="section_text">
+                <h4 class="section_text_index">
+                   ぶつかりながら、<br>
+                   進む。
+                </h4>
+                <div class="section_text_content">
+                    ダミーコピーです。就職活動をするに当たってまず考えた事。大手や公務員なら安定できるという考え方は、世間の価値観に流されているような気がしていました。まず、自分はどうなりたいのか。軸をはっきり持つことです。言うなれば、会社は箱。自分自身が安定していてこそ、会社と言う箱を活用できるのです。私は、何をすれば自分の成長につながるのかという視点で仕事を探して、営業職を極めることに決めました。
+営業の仕事を自分なりに分析し、営業の力とはなんだろうかと考えました。その結果、商品価値を伝えるアプローチ力と、顧客からニーズを引き出す力が重要だと気づいたのです。デフレが続く時代には、潜在的なニーズを引き出す力が要求されます。その力を最も効果的に磨けるのは高い成長性を持つベンチャー企業。ターゲットと業界を絞ると、すぐに宅建主任の資格取得に挑みました。
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /// section 4 -->
+
     <!-- ///// content -->
 
   </main>

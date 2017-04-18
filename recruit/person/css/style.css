@@ -1,13 +1,16 @@
+@charset 'UTF-8';
+/************
+インデックス
+************/
 @media screen and (max-width: 780px)
 {
-    .pageIndex_text
+    .person-index .pageIndex_text
     {
         width: 42.125%;
         margin-right: auto; 
         margin-left: auto;
     }
 }
-
 .person-index .persons
 {
     display: -webkit-box;
@@ -62,4 +65,197 @@
     {
         max-width: 50%;
     }
+}
+
+/************
+下層
+************/
+.person-child .pageIndex
+{
+    margin-bottom: 0; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+@media screen and (max-width: 780px)
+{
+    .person-child .pageIndex
+    {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+.person-child .pageIndex .pageIndex_text
+{
+    max-width: 363px;
+    margin-left: 0;
+}
+@media screen and (max-width: 780px)
+{
+    .person-child .pageIndex .pageIndex_text
+    {
+        width: 45.375%; 
+        padding-left: 5%;
+    }
+}
+.person-child .personVisual
+{
+    position: relative;
+
+    max-width: 100%;
+}
+.person-child .personVisual_profile,
+.person-child .personVisual_bg,
+.person-child .personVisual_bg-back
+{
+    width: 320px;
+    height: 320px;
+}
+.person-child .personVisual_profile
+{
+    line-height: 1;
+
+    position: absolute;
+    right: 14.28571%;
+    bottom: 9%;
+
+    display: table;
+
+    width: 320px;
+    height: 320px;
+
+    color: #fff;
+}
+.person-child .personVisual_profile > div
+{
+    display: table-cell;
+
+    padding: 10%;
+
+    vertical-align: middle;
+}
+.person-child .personVisual .profileTop
+{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+
+    border-bottom: solid 2px #fff;
+}
+.person-child .personVisual_profile_num,
+.person-child .personVisual_profile_content
+{
+    position: relative;
+    z-index: 2;
+}
+.person-child .personVisual_profile_num
+{
+    margin-bottom: 50px; 
+
+    text-align: right;
+}
+.person-child .personVisual .join
+{
+    font-size: .9em; 
+
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+.person-child .personVisual .profileText
+{
+    line-height: 1.4;
+
+    z-index: .9em;
+}
+.person-child .personVisual .name
+{
+    font-size: 11px;
+
+    letter-spacing: .23em;
+
+    color: #fff;
+}
+.person-child .personVisual .name .ja
+{
+    font-size: 2em;
+}
+.person-child .personVisual .name .en
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300; 
+
+    margin-left: 1em;
+}
+.person-child .personVisual_bg,
+.person-child .personVisual_bg-back
+{
+    position: absolute;
+
+    opacity: .95;
+    background-color: #ff6d1f;
+}
+.person-child .personVisual_bg
+{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    mix-blend-mode: multiply;
+}
+.person-child .personVisual_bg-back
+{
+    bottom: -20px;
+    left: -20px;
+
+    mix-blend-mode: screen;
+}
+.person-child .section .wrap
+{
+    max-width: 1024px;
+    padding-right: 0;
+    padding-left: 0;
+}
+.person-child .section_text_index,
+.person-child .section_index
+{
+    font-size: 3.15em;
+    font-weight: 100;
+    line-height: 1.5; 
+
+    margin-bottom: 1em;
+
+    text-align: center;
+    letter-spacing: .23;
+}
+.person-child .section-1 .wrap
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.person-child .section-1 .section_text
+{
+    width: 51.75781%; 
+    margin-left: 50px;
+
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+.person-child .section-fullImg .wrap
+{
+    max-width: none;
+}
+.person-child .section-fullImg .section_img
+{
+    overflow: hidden; 
+
+    width: 100%;
+    height: 530px;
 }
