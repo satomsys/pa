@@ -10,7 +10,70 @@
 
 ////////////////////////////////////////////////
 
-.paleGradation{
-	@include background-image( linear-gradient( to bottom, #fff9d8, #ffe9d6));
-}
+.personVisual{
+	
+	&_profile,
+	&_bg,
+	&_bg-back{
+		right: liquidSpace( 200,1400 );
+		bottom: liquidSpace( 126,1400 );		
+	}
+	
+	&_profile{
+		right: liquidSpace( 200,1400 );
+		bottom: liquidSpace( 126,1400 );
+		
+		>div{
+		}
 
+		@include breakpoint( tab ){
+		}
+	}
+
+	.profileTop{
+	}
+
+	 &_profile_num{
+	 	@include breakpoint( tab ){
+	 		@include liquid( 164, 640 );
+	 	}
+	 }
+
+	// &_profile_num,
+	// &_profile_content,{
+	// 	position: relative;
+	// 	z-index: 2;
+	// }
+	// &_profile_num{
+	// }
+
+	// .join{
+	// }
+
+	// .profileText{
+	// }
+
+	// .name{
+
+		
+	// 	.ja{
+
+	// 	}
+	// 	.en{
+
+	// 	}
+	// }
+
+	// &_bg,
+	// &_bg-back{
+
+
+	// }
+
+	// &_bg{
+
+	// }
+	// &_bg-back{
+
+	// }
+}
