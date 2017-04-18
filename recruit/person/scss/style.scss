@@ -16,3 +16,52 @@
 
 ////////////////////////
 
+.person-index
+{
+
+	.persons{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		overflow: hidden;
+	}
+	.person
+	{
+		max-width: 33.3%;
+		line-height: 1;
+		margin: 0 0 -1px 0;
+		padding: 0;
+		position: relative;
+		
+		&:hover,
+		// &:active,
+		&:focus{
+			.person_content{
+				opacity: 1;
+			}
+		}
+		
+		&_content{
+			margin: auto;
+			padding-top: percentage( 75 / 386 );
+			padding-right: percentage( 50 / 467 );
+			padding-bottom: percentage( 36 / 386 );
+			padding-left: percentage( 50 / 467 );
+			
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			opacity: 0;
+			transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+			
+			background-color: rgba( $orange, 0.5 );
+		}
+
+
+		@include breakpoint( tab ){
+			max-width: 50%;
+		}
+	}
+}

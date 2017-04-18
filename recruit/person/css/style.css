@@ -1,0 +1,55 @@
+.person-index .persons
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden; 
+
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.person-index .person
+{
+    line-height: 1;
+
+    position: relative; 
+
+    max-width: 33.3%;
+    margin: 0 0 -1px 0;
+    padding: 0;
+}
+.person-index .person:hover .person_content,
+.person-index .person:focus .person_content
+{
+    opacity: 1;
+}
+.person-index .person_content
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    margin: auto;
+    padding-top: 19.43005%;
+    padding-right: 10.70664%;
+    padding-bottom: 9.32642%;
+    padding-left: 10.70664%;
+
+    -webkit-transition: all .5s cubic-bezier(.785, .135, .15, .86) 0s;
+            transition: all .5s cubic-bezier(.785, .135, .15, .86) 0s;
+
+    opacity: 0;
+    background-color: rgba(255, 109, 31, .5);
+}
+@media screen and (max-width: 780px)
+{
+    .person-index .person
+    {
+        max-width: 50%;
+    }
+}
