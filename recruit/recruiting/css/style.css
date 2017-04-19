@@ -376,6 +376,7 @@ nav + nav > ul
 {
     .section-requirement .requirementInfo_list > dt
     {
+        width: 95px;
         padding-right: .5em;
     }
 }
@@ -532,6 +533,27 @@ nav + nav > ul
     .section-requirement .requirementInfo_list-school li:not(:first-child):before
     {
         content: '/';
+    }
+}
+.section-requirement .requirementInfo .fukurikousei > div
+{
+    display: inline-block;
+
+    vertical-align: top;
+}
+.section-requirement .requirementInfo .fukurikousei > div img
+{
+    margin-left: 20px;
+}
+@media screen and (max-width: 780px)
+{
+    .section-requirement .requirementInfo .fukurikousei > div
+    {
+        display: inline;
+    }
+    .section-requirement .requirementInfo .fukurikousei > div img
+    {
+        margin-left: 0;
     }
 }
 

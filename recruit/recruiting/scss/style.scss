@@ -333,6 +333,7 @@ nav + nav > ul{
 				font-weight: bold;
 				
 				@include breakpoint( tab ){
+					width: 95px;
 					padding-right: 0.5em;
 				}		
 
@@ -462,6 +463,24 @@ nav + nav > ul{
 					}
 				}
 			}					
+		}
+
+		.fukurikousei > div {
+			display: inline-block;
+			vertical-align: top;
+			
+			img{
+				margin-left: 20px
+			}
+			
+			@include breakpoint( tab ){
+				display: inline;
+				
+				img{
+					margin-left: 0;
+				}
+
+			}			
 		}
 
 
