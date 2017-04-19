@@ -71,7 +71,7 @@ $("[data-fancybox]").fancybox({
 		css : {
 			width : '1280px',
 			maxWidth: '80%',
-			minHeight: '30%'
+			minHeight: '400px'
 		}		
 	}
 });

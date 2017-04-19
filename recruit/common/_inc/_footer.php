@@ -1,7 +1,8 @@
  <footer class="footer">
     <div class="wrap">
       <div class="footer_copyright">
-        <div class="footer_copyright_logo"><img src="/recruit/common/img/logo.gif" width="218" alt="PROPERTY AGENT"></div>
+        <div class="footer_copyright_logo">
+          <a <?php echo dirPath($nowActive, 'index', $isChild); ?> ><img src="/recruit/common/img/logo.gif" width="218" alt="PROPERTY AGENT"></a></div>
         <div class="footer_copyright_copy">
           © 2017 PROPERTY AGENT Inc. All rights reserved.
         </div>

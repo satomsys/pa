@@ -77,6 +77,10 @@ navigation
 
     background-color: transparent !important;
 }
+.section-nav:first-of-type
+{
+    margin-top: -20px;
+}
 .section-nav:last-child
 {
     padding-bottom: 0;
@@ -97,10 +101,22 @@ navigation
     }
 }
 
+nav + nav > ul
+{
+    margin-top: 60px;
+}
+@media screen and (max-width: 780px)
+{
+    nav + nav > ul
+    {
+        margin-top: 20px;
+    }
+}
+
 .infoNav ul a,
 .careerSelectNav ul a
 {
-    font-size: 1.85em;
+    font-size: 1.35em;
 
     display: block;
 
@@ -135,6 +151,9 @@ navigation
 }
 .infoNav ul li.active span
 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
     border-bottom: solid 2px #ff6d1f;
 }
 .infoNav ul a
@@ -154,8 +173,8 @@ navigation
 
     display: inline-block;
 
-    padding-right: 1em;
-    padding-left: 1em; 
+    padding-right: 1.5em;
+    padding-left: 1.5em; 
 
     vertical-align: middle;
 }
@@ -236,7 +255,6 @@ navigation
     display: table;
 
     width: calc( 100% + 5px );
-    margin-top: 60px;
 
     table-layout: fixed;
     border-spacing: 10px 0;
@@ -273,7 +291,6 @@ navigation
     .careerSelectNav ul
     {
         width: 100%;
-        margin-top: 20px;
 
         border-spacing: 1px 0;
     }
@@ -366,6 +383,7 @@ navigation
 {
     .section-requirement .requirementInfo_list > dt
     {
+        width: 95px;
         padding-right: .5em;
     }
 }
@@ -522,6 +540,27 @@ navigation
     .section-requirement .requirementInfo_list-school li:not(:first-child):before
     {
         content: '/';
+    }
+}
+.section-requirement .requirementInfo .fukurikousei > div
+{
+    display: inline-block;
+
+    vertical-align: top;
+}
+.section-requirement .requirementInfo .fukurikousei > div img
+{
+    margin-left: 20px;
+}
+@media screen and (max-width: 780px)
+{
+    .section-requirement .requirementInfo .fukurikousei > div
+    {
+        display: inline;
+    }
+    .section-requirement .requirementInfo .fukurikousei > div img
+    {
+        margin-left: 0;
     }
 }
 
@@ -773,6 +812,7 @@ entry
     display: flex;
         flex-direction: row; 
 
+    min-height: 250px;
     margin-bottom: 20px;
     padding-right: 26.54867%;
 
@@ -862,6 +902,9 @@ entry
     flex-grow: 1;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
 }
 .recruiting-walfare .section-walfare .walfarePanel_index p
 {
@@ -869,7 +912,7 @@ entry
 }
 .recruiting-walfare .section-walfare .walfarePanel_index .ja
 {
-    margin-top: 1em;
+    font-size: 1.125em;
 }
 @media screen and (max-width: 780px)
 {
@@ -884,9 +927,8 @@ entry
     }
     .recruiting-walfare .section-walfare .walfarePanel_index .ja
     {
+        font-size: 1em; 
         line-height: 1;
-
-        margin-top: .5em;
     }
     .recruiting-walfare .section-walfare .walfarePanel_index h4
     {
