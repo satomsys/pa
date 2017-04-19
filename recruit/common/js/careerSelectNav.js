@@ -2,14 +2,14 @@ $(function(){
 
 var $careerSelectNav = $('.careerSelectNav').find('li'),
 	$careerSelectContent = $('.careerSelectContent'),
-	$startPos = $('.section-genre').offset().top,
+	$startPos = $('.scrollPoint').offset().top,
 	$timer = null;
 
 
 	$w.on('resize load', function(){	
 		$timer = setTimeout( function(){
 			clearTimeout( $timer );
-			$startPos = $('.section-genre').offset().top;		
+			$startPos = $('.scrollPoint').offset().top;		
 		}, 500);
 	});
 
