@@ -1,0 +1,18 @@
+.personVisual_profile,
+.personVisual_bg,
+.personVisual_bg-back
+{
+    top: 0;
+    bottom: 0;
+    left: 16.71429%;
+
+    margin-top: auto;
+    margin-bottom: auto;
+}
+@media screen and (max-width: 780px)
+{
+    .personVisual_profile_num
+    {
+        width: 25.625%;
+    }
+}

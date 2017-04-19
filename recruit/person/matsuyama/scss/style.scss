@@ -1,0 +1,81 @@
+@charset "UTF-8";
+@import "compass";
+@import "../../../common/scss/colors";
+@import "../../../common/scss/variables";
+@import "../../../common/scss/mixins";
+
+////////////////////////////////////////////////
+
+// PERSON ~ 下層 大辻
+
+////////////////////////////////////////////////
+
+.personVisual{
+	
+	&_profile,
+	&_bg,
+	&_bg-back{
+		top: 0;
+		bottom: 0;
+		left: liquidSpace( 234,1400 );
+		margin-top: auto;
+		margin-bottom: auto;
+		// bottom: liquidSpace( 123,1400 );		
+	}
+	
+	&_profile{
+		
+		>div{
+		}
+
+		@include breakpoint( tab ){
+		}
+	}
+
+	.profileTop{
+	}
+
+	 &_profile_num{
+	 	@include breakpoint( tab ){
+	 		@include liquid( 164, 640 );
+	 	}
+	 }
+
+	// &_profile_num,
+	// &_profile_content,{
+	// 	position: relative;
+	// 	z-index: 2;
+	// }
+	// &_profile_num{
+	// }
+
+	// .join{
+	// }
+
+	// .profileText{
+	// }
+
+	// .name{
+
+		
+	// 	.ja{
+
+	// 	}
+	// 	.en{
+
+	// 	}
+	// }
+
+	// &_bg,
+	// &_bg-back{
+
+
+	// }
+
+	// &_bg{
+
+	// }
+	// &_bg-back{
+
+	// }
+}
