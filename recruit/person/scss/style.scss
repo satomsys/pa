@@ -101,12 +101,13 @@
 		height: 100%;
 		width: 100%;
 		display: table;
-		margin: auto;
-		// box-sizing: border-box;
-		padding-top: percentage( 75 / 386 );
-		padding-right: percentage( 50 / 467 );
-		padding-bottom: percentage( 36 / 386 );
-		padding-left: percentage( 50 / 467 );
+		margin: 0;
+		box-sizing: border-box;
+		padding: 20% 10% 20% 10%;
+		// padding-top: percentage( 75 / 386 );
+		// padding-right: percentage( 50 / 467 );
+		// padding-bottom: percentage( 36 / 386 );
+		// padding-left: percentage( 50 / 467 );
 
 		position: absolute;
 		top: 0;
@@ -285,24 +286,31 @@
 	&_bg,
 	&_bg-back{
 		width: 320px;
-		height: 320px;
+		height: 320px;		
+		margin-top: auto;
+		margin-bottom: auto;
+		position: absolute;
+		top: 0;
 		right: liquidSpace( 200,1400 );
-		bottom: liquidSpace( 126,1400 );		
+		bottom: 0;		
 	}
 	
 	&_profile{
+
 		line-height: 1;
-		display: table;
-		position: absolute;
+		display: block;
 		z-index: 2;
-		right: liquidSpace( 200,1400 );
-		bottom: liquidSpace( 126,1400 );
+
 		color: #fff;
 		
 		>div{
+			height: 100%;
 			padding: 10%;
-			display: table-cell;
-			vertical-align: middle;
+			// display: block;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;			
 		}
 
 		@include breakpoint( tab ){
@@ -313,6 +321,7 @@
 			background-color: $orange;
 			
 			>div{
+				padding: 5%;
 				display: block;
 			}
 		}

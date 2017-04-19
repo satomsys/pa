@@ -123,13 +123,11 @@
 
     display: table;
 
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
-    margin: auto;
-    padding-top: 19.43005%;
-    padding-right: 10.70664%;
-    padding-bottom: 9.32642%;
-    padding-left: 10.70664%;
+    margin: 0;
+    padding: 20% 10% 20% 10%;
 
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
@@ -318,32 +316,43 @@
 .person-child .personVisual_bg,
 .person-child .personVisual_bg-back
 {
+    position: absolute;
+    top: 0;
     right: 14.28571%;
-    bottom: 9%; 
+    bottom: 0; 
 
     width: 320px;
     height: 320px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 .person-child .personVisual_profile
 {
     line-height: 1;
 
-    position: absolute;
     z-index: 2;
-    right: 14.28571%;
-    bottom: 9%;
 
-    display: table;
+    display: block;
 
     color: #fff;
 }
 .person-child .personVisual_profile > div
 {
-    display: table-cell;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: column;
 
+    box-sizing: border-box;
+    height: 100%;
     padding: 10%;
 
-    vertical-align: middle;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 @media screen and (max-width: 780px)
 {
@@ -360,7 +369,9 @@
     }
     .person-child .personVisual_profile > div
     {
-        display: block;
+        display: block; 
+
+        padding: 5%;
     }
 }
 .person-child .personVisual .profileTop
