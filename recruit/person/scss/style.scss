@@ -343,7 +343,7 @@ $width: 1024;
 				width: 130%;
 				top: 0;
 				right: 0;
-				left: 0;
+				left: -15%;
 			}			
 		}
 		@include breakpoint( 1500 ){
@@ -354,7 +354,7 @@ $width: 1024;
 			img{
 				width: auto;
 				max-width: none;
-				height: 200%;
+				height: 180%;
 			}
 		}
 		@include breakpoint( sp ){
@@ -478,6 +478,14 @@ $width: 1024;
 			padding: 25px 5%;
 			text-shadow: none;
 			position: static;
+			
+			&_index{
+				text-align: center;
+			}
+			&_content{
+				max-width: none;
+
+			}
 		}		
 	}
 

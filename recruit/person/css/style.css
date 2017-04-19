@@ -389,7 +389,7 @@
     {
         top: 0;
         right: 0;
-        left: 0; 
+        left: -15%; 
 
         width: 130%;
         max-width: none;
@@ -408,7 +408,7 @@
     {
         width: auto;
         max-width: none;
-        height: 200%;
+        height: 180%;
     }
 }
 @media screen and (max-width: 580px)
@@ -558,6 +558,14 @@
         padding: 25px 5%;
 
         text-shadow: none;
+    }
+    .person-child .section-last .section_text_index
+    {
+        text-align: center;
+    }
+    .person-child .section-last .section_text_content
+    {
+        max-width: none;
     }
 }
 .person-child .section-last .section_bg
