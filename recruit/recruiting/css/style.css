@@ -74,12 +74,13 @@ navigation
     width: 70%;
     margin-right: auto;
     margin-left: auto;
+    padding-bottom: 40px;
 
     background-color: transparent !important;
 }
 .section-nav:first-of-type
 {
-    margin-top: -20px;
+    padding-top: 20px;
 }
 .section-nav:last-child
 {
@@ -103,7 +104,7 @@ navigation
 
 nav + nav > ul
 {
-    margin-top: 60px;
+    margin-top: 30px;
 }
 @media screen and (max-width: 780px)
 {
@@ -307,6 +308,11 @@ nav + nav > ul
 /********************
 募集職種
 ********************/
+.section-genre .section_index
+{
+    margin-top: 0;
+    margin-bottom: 40px;
+}
 .section-genre .genreList
 {
     font-size: 1.5em; 
@@ -333,6 +339,10 @@ nav + nav > ul
 }
 @media screen and (max-width: 780px)
 {
+    .section-genre .section_index
+    {
+        margin-bottom: 30px;
+    }
     .section-genre .genreList
     {
         font-size: 1em;
