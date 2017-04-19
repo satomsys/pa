@@ -79,6 +79,10 @@ navigation
 	@include liquid(980, 1400,true);
 	background-color: transparent!important;
 	
+	&:first-of-type{
+		margin-top: -20px;
+	}
+	
 
 	&:last-child{
 		padding-bottom: 0;
@@ -107,7 +111,8 @@ nav + nav > ul{
 .infoNav ul,
 .careerSelectNav ul{
 	a{
-		font-size: 1.85em;
+		font-size: 1.35em;
+		// font-size: 1.85em;
 		letter-spacing: 0.5em;
 		display: block;
 		
@@ -136,6 +141,8 @@ nav + nav > ul{
 	}
 
 	li.active span{
+		padding-top: 20px;
+		padding-bottom: 20px;
 		border-bottom: solid 2px $orange;
 	}
 
@@ -156,8 +163,8 @@ nav + nav > ul{
 		display: inline-block;
 		vertical-align: middle;
 		position: relative;
-		padding-right: 1em;
-		padding-left: 1em;
+		padding-right: 1.5em;
+		padding-left: 1.5em;
 	}
 
 	.icon {
