@@ -116,7 +116,7 @@ a
 	}
 	
 	@include mouseOver(){
-		color: darken($link , 15);
+		color: darken($orange , 15);
 	}	
 	img{
 		@include mouseOver(){

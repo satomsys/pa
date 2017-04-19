@@ -403,7 +403,7 @@ a
             transition: all .3s ease 0s; 
     text-decoration: none;
 
-    color: #12aaaf;
+    color: #777;
     outline: none;
 }
 a,
@@ -422,7 +422,7 @@ a:hover,
 a:active,
 a:focus
 {
-    color: #0b676a;
+    color: #d24900;
 }
 a img
 {
