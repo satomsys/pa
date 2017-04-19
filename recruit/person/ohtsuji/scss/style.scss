@@ -15,13 +15,16 @@
 	&_profile,
 	&_bg,
 	&_bg-back{
+
 		right: liquidSpace( 200,1400 );
-		bottom: liquidSpace( 126,1400 );		
+		// bottom: liquidSpace( 126,1400 );		
+		top: 0;
+		bottom: 0;
+		margin-top: auto;
+		margin-bottom: auto;
 	}
 	
 	&_profile{
-		right: liquidSpace( 200,1400 );
-		bottom: liquidSpace( 126,1400 );
 		
 		>div{
 		}

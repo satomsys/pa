@@ -395,10 +395,23 @@ $width: 1024;
 		align-items: center;
 	}
 
+	////////// 01の方を基準に写真→テキスト
 	.section_text{
 		margin-left: 50px;
 		flex-grow: 1;
 		@include liquid( 530, $width );
+	}
+
+	////////// 位置反転（01の方を基準にテキスト→写真
+	&.reverseLayout{
+		.section_img{
+			order: 2;
+		}	
+		.section_text{	
+			margin-left: 0;
+			margin-right: 50px;
+			order: 1;
+		}
 	}
 
 	@include breakpoint( tab ){
@@ -414,6 +427,12 @@ $width: 1024;
 			margin-left:20px;
 			flex-grow: 1;
 		}
+
+		&.reverseLayout{
+			.section_text{	
+				margin-right: 20px;
+			}
+		}		
 
 	}	
 }
@@ -446,6 +465,8 @@ $width: 1024;
 .section-last
 {
 	position: relative;
+	
+	////////// 位置（01の方を基準に写真の右側
 	.section_text
 	{
 		width: 50%;
@@ -488,6 +509,31 @@ $width: 1024;
 			}
 		}		
 	}
+
+	////////// 位置反転（01の方を基準に写真の左側
+	&.reverseLayout{
+		.section_text{
+			margin-right: auto;
+			margin-left: 0;
+			padding-right: 80px;		
+		}
+		.section_text_index{
+			max-width: 560px;
+			margin-left: auto;
+			margin-right: 0;
+		}
+		.section_text_content{
+			margin-left: auto;
+			margin-right: 0;
+		}
+
+		@include breakpoint( tab ){
+			.section_text{
+				padding-right: 5%;		
+			}			
+		}					
+	}
+
 
 	.section_bg{
 		width: 100%;
