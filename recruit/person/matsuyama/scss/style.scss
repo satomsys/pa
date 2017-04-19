@@ -1,0 +1,109 @@
+@charset "UTF-8";
+@import "compass";
+@import "../../../common/scss/colors";
+@import "../../../common/scss/variables";
+@import "../../../common/scss/mixins";
+
+////////////////////////////////////////////////
+
+// PERSON ~ 下層 大辻
+
+////////////////////////////////////////////////
+
+.person-child 
+{
+	.personVisual{
+	
+		&_profile,
+		&_bg,
+		&_bg-back{
+			top: 0;
+			bottom: 0;
+			left: liquidSpace( 234,1400 );
+			margin-top: auto;
+			margin-bottom: auto;
+			// bottom: liquidSpace( 123,1400 );		
+		}
+		
+		&_profile{
+			
+			>div{
+			}
+
+			@include breakpoint( tab ){
+			}
+		}
+
+		.profileTop{
+		}
+
+		 &_profile_num{
+		 	@include breakpoint( tab ){
+		 		@include liquid( 164, 640 );
+		 	}
+		 }
+
+		// &_profile_num,
+		// &_profile_content,{
+		// 	position: relative;
+		// 	z-index: 2;
+		// }
+		// &_profile_num{
+		// }
+
+		// .join{
+		// }
+
+		// .profileText{
+		// }
+
+		.name{
+
+			span{
+				display: inline-block;
+			}
+			.ja{
+			}
+			.en{
+				margin-top: 10px;
+				margin-left: 0
+			}
+
+			@include breakpoint( tab ){
+				.ja{
+					font-size: 2em;
+				}
+				.en{
+					margin-left: 1em;
+				}
+			}
+		}
+
+		// &_bg,
+		// &_bg-back{
+
+
+		// }
+
+		// &_bg{
+
+		// }
+		// &_bg-back{
+
+		// }
+		
+	}
+	
+	.section-last
+	{
+
+		@include breakpoint( tab ){
+			.section_img
+			{
+				img{
+					left: -60%;
+				}
+			}
+		} 
+	}	
+}

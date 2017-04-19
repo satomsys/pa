@@ -614,13 +614,22 @@
 	background-size: 400% 400%;
 	-webkit-animation: gradationAnim 20s ease infinite;
 	-moz-animation: gradationAnim 20s ease infinite;
-	animation: gradationAnim 20s ease infinite;		
+	animation: gradationAnim 20s ease infinite;
+	
+	&.pageIndex-tiny
+	{
+		padding-left: 5%;
+	}		
 	
 	//////// media queries 
 	@include breakpoint( tab ){
 
 		padding-top: 50px;
 		padding-bottom: 50px;
+		
+		&.pageIndex-tiny
+		{
+		}			
 
 	} //max 780
 		

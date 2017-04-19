@@ -1,0 +1,704 @@
+@charset "UTF-8";
+@import "compass";
+@import "../../common/scss/colors";
+@import "../../common/scss/variables";
+@import "../../common/scss/mixins";
+
+////////////////////////////////////////////////
+
+// RECRUITING
+
+////////////////////////////////////////////////
+
+
+/************
+インデックス
+************/
+.person-index
+{
+////////////////////////
+
+// modules
+
+////////////////////////
+.pageIndex_text{
+	@include breakpoint( tab ){
+		@include liquid(337, 800, true );
+	}		
+}
+
+.persons{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	overflow: hidden;
+}
+.person
+{
+	width: 33.3%;
+	line-height: 1;
+	margin: 0 0 -1px 0;
+	padding: 0;
+	position: relative;
+	
+	&:hover,
+	// &:active,
+	&:focus{
+		.person_content{
+			opacity: 1;
+		}
+	}
+	
+	&_content{
+		margin: auto;
+		padding-top: percentage( 75 / 386 );
+		padding-right: percentage( 50 / 467 );
+		padding-bottom: percentage( 36 / 386 );
+		padding-left: percentage( 50 / 467 );
+		
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		opacity: 0;
+		transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+		
+		background-color: rgba( $orange, 0.5 );
+	}
+
+
+	@include breakpoint( tab ){
+		width: 50%;
+	}
+}
+
+}
+
+
+/************
+下層
+************/
+
+////////////////////////
+
+// modules
+
+////////////////////////
+
+/////// transition setting 
+
+.section
+{
+
+	&_text{
+		transition-delay: 0.25s;
+	}
+
+	&_img{
+		transition-delay: 0.5s;
+	}
+
+	.fade{
+		transition-duration: 0.6s;
+		transform-style: preserve-3d;
+		transform: perspective(20px) translateY(-20px );
+		
+		&.fadeIn{
+			transform: translateY( 0px );
+		}
+		@include breakpoint( tab ){
+			transform: translateY( 10px );
+			
+			&.fadeIn{
+				transform: translateY( 0 ) ;
+			}
+		}		
+	}
+
+}
+
+
+
+.person-child
+{
+
+
+.pageIndex{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 0px;
+
+	@include breakpoint( tab ){
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}		
+
+	.pageIndex_text
+	{
+		max-width: 363px;
+		margin-left: 0;
+		@include breakpoint( tab ){
+			@include liquid(363, 800 );
+		}		
+	}
+
+}
+
+.personVisual{
+	// height: 
+	position: relative;
+	max-width: 100%;
+	
+	@include breakpoint( tab ){
+		line-height: 0
+	}			
+	
+	&_profile,
+	&_bg,
+	&_bg-back{
+		width: 320px;
+		height: 320px;
+		right: liquidSpace( 200,1400 );
+		bottom: liquidSpace( 126,1400 );		
+	}
+	
+	&_profile{
+		line-height: 1;
+		display: table;
+		position: absolute;
+		z-index: 2;
+		right: liquidSpace( 200,1400 );
+		bottom: liquidSpace( 126,1400 );
+		color: #fff;
+		
+		>div{
+			padding: 10%;
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		@include breakpoint( tab ){
+			width: auto;
+			height: auto;
+			display: block;
+			position: static;
+			background-color: $orange;
+			
+			>div{
+				display: block;
+			}
+		}
+	}
+
+	.profileTop{
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+		border-bottom: solid 2px #fff;
+	}
+
+	&_profile_num,
+	&_profile_content,{
+		position: relative;
+		z-index: 2;
+	}
+	&_profile_num{
+		text-align: right;
+		margin-bottom: 50px;
+		
+		@include breakpoint( tab ){
+			margin-bottom: 10px;
+		}		
+	}
+
+	.join{
+		margin-top: 1em;
+		margin-bottom: 0;
+		font-size: 0.9em;
+	}
+
+	.profileText{
+		line-height: 1.4;
+		z-index: 0.9em;
+	}
+
+	.name{
+		letter-spacing: 0.23em;
+		font-size: 11px;
+		color: #fff;
+		
+		.ja{
+			font-size: 2em;
+		}
+		.en{
+			margin-left: 1em;
+			font-family: $roboto;
+			font-weight: 300;
+		}
+	}
+
+	&_bg,
+	&_bg-back{
+		position: absolute;		
+		opacity: 0.9;
+		background-color: $orange;
+		
+		@include breakpoint( tab ){
+			display: none;
+		}
+	}
+
+	&_bg{
+		transform: translateX(10px) translateY(-10px);
+		mix-blend-mode: multiply;
+		z-index: 1;
+	}
+	&_bg-back{
+		transform: translateX(-10px) translateY(10px);
+		mix-blend-mode: screen;
+		z-index: 0;
+	}
+}
+
+//////////
+
+// section
+
+//////////
+	
+$width: 1024;
+.section
+{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	
+	@include breakpoint( tab ){
+		overflow: hidden;
+
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}		
+
+	.wrap{
+		max-width: #{$width + 40}px;
+		
+		@include breakpoint( tab ){
+			max-width: 90%;
+			padding-left: 0;
+			padding-right: 0;
+			// padding-left: 5%;
+			// padding-right: 5%;
+		}
+	}
+
+	&_text_index,
+	&_index{
+		margin-top: 0;
+		margin-bottom: 1em;
+		letter-spacing: 0.23;
+		text-align: center;
+		font-weight: 100;
+		font-size: 3.15em;
+		line-height: 1.5;
+		
+		@include breakpoint( tab ){
+			font-size: 1.4em;
+		}		
+	}
+
+	&_text{
+		max-width: 560px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.section-fullImg{
+	.wrap{
+		max-width: none;
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.section_img{
+		width: 100%;
+		height: 500px;
+		// height: 0px;
+		// padding-top: liquidSpace( 530, 1400 );
+		overflow: hidden;
+		position: relative;
+		img{
+			display: block;
+			margin: auto;
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+		}
+
+		@include breakpoint( 1900 ){
+			height: 400px;
+				
+			img{
+				max-width: none;
+				width: 130%;
+				top: 0;
+				right: 0;
+				left: -15%;
+			}			
+		}
+		@include breakpoint( 1500 ){
+			height: 300px;
+		}		
+		@include breakpoint( tab ){
+			
+			img{
+				width: auto;
+				max-width: none;
+				height: 180%;
+			}
+		}
+		@include breakpoint( sp ){
+			height: 150px;
+		}
+
+	}
+
+	.section_index{
+		margin-bottom: 45px;
+	}
+
+	.section_text{
+		margin-top: 45px;
+	}
+
+	@include breakpoint( tab ){
+		.wrap{
+			max-width: none;
+		}
+
+		.section_index{
+			margin-bottom: 25px;
+		}
+
+		.section_text{
+			margin-top: 25px;
+		}				
+	}		
+}
+
+
+.section-1
+{
+	.wrap{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	////////// 01の方を基準に写真→テキスト
+	.section_text{
+		margin-left: 50px;
+		flex-grow: 1;
+		@include liquid( 530, $width );
+	}
+
+	////////// 位置反転（01の方を基準にテキスト→写真
+	&.reverseLayout{
+		.section_img{
+			order: 2;
+		}	
+		.section_text{	
+			margin-left: 0;
+			margin-right: 50px;
+			order: 1;
+		}
+	}
+
+	@include breakpoint( tab ){
+
+		.wrap{	
+			align-items: flex-start;
+		}
+		.section_img{
+			max-width: 150px;
+		}
+		.section_text{
+			width: auto;
+			margin-left:20px;
+			flex-grow: 1;
+		}
+
+		&.reverseLayout{
+			.section_text{	
+				margin-right: 20px;
+			}
+		}		
+
+	}	
+}
+
+.section-2{
+	@include background-image( linear-gradient(to right, #fff9d8, #ffe3d5) );
+	
+
+	@include breakpoint( tab ){
+		.section_text{
+			max-width: 90%;
+		}	
+	} 
+
+}
+
+.section-3{
+	.section_img{
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	@include breakpoint( tab ){
+		.section_img{
+			margin-bottom: 25px;
+		}		
+	}	
+}
+
+.section-last
+{
+	position: relative;
+	
+	////////// 位置（01の方を基準に写真の右側
+	.section_text
+	{
+		width: 50%;
+		max-width: none;
+		margin-top: -250px;
+		margin-right: 0;
+		padding-top: 70px;
+		padding-bottom: 70px;
+		padding-left: 80px;
+		// position: absolute;
+		position: relative;
+		right: 0;
+		top: 50%;
+		text-shadow: 0 0 10px #fff, 0 0 1px rgba(#fff,0.3);
+		
+		&_index{
+			text-align: left;
+			position: relative;
+			z-index: 2;
+		}
+		
+		&_content{
+			max-width: 560px;
+			position: relative;
+			z-index: 2;
+		}
+		@include breakpoint( tab ){
+			width: auto;
+			margin-top: 0;
+			padding: 25px 5%;
+			text-shadow: none;
+			position: static;
+			
+			&_index{
+				text-align: center;
+			}
+			&_content{
+				max-width: none;
+
+			}
+		}		
+	}
+
+	////////// 位置反転（01の方を基準に写真の左側
+	&.reverseLayout{
+		.section_text{
+			margin-right: auto;
+			margin-left: 0;
+			padding-right: 80px;		
+		}
+		.section_text_index{
+			max-width: 560px;
+			margin-left: auto;
+			margin-right: 0;
+		}
+		.section_text_content{
+			margin-left: auto;
+			margin-right: 0;
+		}
+
+		@include breakpoint( tab ){
+			.section_text{
+				padding-right: 5%;		
+			}			
+		}					
+	}
+
+
+	.section_bg{
+		width: 100%;
+		height: 100%;
+		opacity: 0.5;
+		
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		
+		@extend %gradation;
+		// mix-blend-mode: screen;		
+	}
+
+
+}
+
+
+///////// nav 
+.otherPerson{
+	padding-top: 100px;
+	padding-bottom: 50px;
+	background-color: #ebebeb;
+	
+	@include breakpoint( tab ){
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}		
+	
+	&_index{
+		line-height: 1;
+		position: relative;
+		font-family: $roboto_cond;
+		font-weight: 100;
+		font-size: 3.15em;
+		letter-spacing: 0.44em;
+		text-align: center;
+		
+		&:after{
+			content: " ";
+			width: 50px;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			margin-right: auto;
+			margin-left: auto;
+			height: 2px;
+			display: block;
+			background-color: $orange;
+		}
+
+		@include breakpoint( tab ){
+			font-size: 1.4em;
+			
+			&:after{
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+		}			
+	}
+
+	&_nav{
+		ul{
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-items: center;
+			
+			li{
+				width: calc( 100% / 6 );
+				list-style: none;
+			}
+			
+			// li{
+			// 	display: table-cell;
+			// }
+			
+			.current a{
+				pointer-events: none;
+				&:before,
+				&:after{
+					opacity: 1;
+				}				
+				&:before{
+					content: "NOW";
+					top: 41%;
+				}
+				&:after{
+					content: "READING";
+					bottom: 41%;
+					transition-delay: 0.15s;
+				}
+				img{
+					opacity: 0.3;
+				}
+			}
+			li a{
+				line-height: 0;
+				position: relative;
+				display: block;
+				background: $orange;
+				&:before,
+				&:after{
+					width: 100%;
+					position: absolute;
+					display: block;
+					color: #fff;
+					text-align: center;
+					font-weight: 500;
+					font-family: $roboto;
+					font-size: 1.5em;
+					opacity: 0;
+					transition: all 0.5s;
+				}
+				&:before{
+					content: "READ";
+					top: 41%;
+				}
+				// &:after{
+				// 	content: "";
+				// 	bottom: 41%;
+				// 	transition-delay: 0.15s;
+				// }
+
+				&:hover,
+				&:focus{
+
+					&:before{
+						top: 42.5%;
+						opacity: 1;
+					}
+					// &:after{
+					// 	bottom: 42.5%;
+					// 	opacity: 1;
+					// }		
+					img{
+						opacity: 0.3;
+					}			
+				}
+			}
+			li img{
+				width: 100%;
+				transition: all 0.3s;
+			}
+
+			@include breakpoint( tab ){
+				flex-wrap: wrap;
+				
+				li{
+					width: 33.33%;
+				}
+
+				li a{
+
+					&:before,
+					&:after{
+						font-size: 1em;
+					}					
+					
+				}
+			}			
+
+
+		}
+	}
+}
+	
+}////

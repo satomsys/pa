@@ -12,13 +12,17 @@ function isActive( $nowActive, $thisDir ){
 /**
 * ナビ中相対パスを返す
 * @param $nowActive {str} アクティブなディレクトリを示す
-* @param $thisDir {str} 各ディレクトリ
-* @param $isChild {bool} 子ページの場合 true  ../を返す
-* @return href=""リンク
+* @param $thisDir {str} 各ディレクトリ。$nowActiveと合致するか？
+* @param $isChild {bool / string } 子ページの場合 true  ../を返す / 第３階層〜の場合'../../'相対パスを指定
+* @return { str } href=""リンク
 */
 function dirPath( $nowActive, $thisDir, $isChild ){
-  $dir = $isChild ? '../' : '';
-  $path = $thisDir == 'index' && $isChild ? '../' : $dir . $thisDir . '/';
+  if( is_string ( $isChild ) ){
+    $dir =  $isChild;
+  } elseif ( is_bool( $isChild ) ){
+    $dir =  $isChild ? '../' : '' ;
+  }
+  $path = $thisDir == 'index' ? $dir : $dir . $thisDir . '/';
   if( $nowActive !== $thisDir ) return 'href="' . $path . '"';
 }
 ?>
@@ -60,10 +64,10 @@ function dirPath( $nowActive, $thisDir, $isChild ){
   <nav class="sitenav">
     <ul class="navList">
       <li class="navList_child <?php echo isActive($nowActive, 'business');?>"><a <?php echo dirPath($nowActive, 'business', $isChild); ?>>BUSINESS</a></li>
-      <li class="navList_child comingsoon"><a>PERSON</a></li>
+      <li class="navList_child <?php echo isActive($nowActive, 'person');?>"><a <?php echo dirPath($nowActive, 'person', $isChild); ?>>PERSON</a></li>
       <li class="navList_child <?php echo isActive($nowActive, 'career');?>"><a <?php echo dirPath($nowActive, 'career', $isChild); ?>>CAREER</a></li>
       <li class="navList_child <?php echo isActive($nowActive, 'culture');?>"><a <?php echo dirPath($nowActive, 'culture', $isChild); ?>>CULTURE</a></li>
-      <li class="navList_child comingsoon"><a>WHY JOIN US</a></li>
+      <li class="navList_child <?php echo isActive($nowActive, 'why_join_us');?>"><a <?php echo dirPath($nowActive, 'why_join_us', $isChild); ?>>WHY JOIN US</a></li>
       <li class="navList_child <?php echo isActive($nowActive, 'recruiting');?>"><a <?php echo dirPath($nowActive, 'recruiting', $isChild); ?>>RECRUITING</a></li>
       <li class="navList_child navList_child-buttons">
          <ul>

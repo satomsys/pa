@@ -1,0 +1,25 @@
+.person-child .personVisual_profile,
+.person-child .personVisual_bg,
+.person-child .personVisual_bg-back
+{
+    top: 0;
+    bottom: 0;
+    left: 16.71429%;
+
+    margin-top: auto;
+    margin-bottom: auto;
+}
+@media screen and (max-width: 780px)
+{
+    .person-child .personVisual_profile_num
+    {
+        width: 25.625%;
+    }
+}
+@media screen and (max-width: 780px)
+{
+    .person-child .section-fullImg .section_img img
+    {
+        left: -55%;
+    }
+}
