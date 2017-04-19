@@ -22,7 +22,7 @@ class Slides {
 
 	public function mainslide(){
 		for( $i=1; $i <= $this->slidenum; $i++ ){
-			$this->mainslide .= '<div><img src="img/_test/gallery' . $i . '.jpg" data-preview="#style' . $i . '" class="cultureVisual_img"></div>';
+			$this->mainslide .= '<div><img src="img/gallery' . $i . '.jpg" data-preview="#style' . $i . '" class="cultureVisual_img"></div>';
 		}
 
 		return $this->mainslide;
@@ -30,7 +30,7 @@ class Slides {
 
 	public function slidenav(){
 		for( $i=1; $i <= $this->slidenum; $i++ ){
-			$this->slidenav .= '<li class="sliderNav_item"><img src="img/_test/nav-gallery' . $i . '.jpg" width="60"></li>';
+			$this->slidenav .= '<li class="sliderNav_item"><img src="img/nav-gallery' . $i . '.jpg" width="85"></li>';
 		}
 
 		return $this->slidenav;		

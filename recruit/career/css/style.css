@@ -20,7 +20,7 @@
     }
 }
 
-.career-index .wrap_index
+.career-index .introductionIndex
 {
     font-size: 1.57em;
     font-weight: 200; 
@@ -32,7 +32,7 @@
 }
 @media screen and (max-width: 780px)
 {
-    .career-index .wrap_index
+    .career-index .introductionIndex
     {
         font-size: 1.15em;
 

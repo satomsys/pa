@@ -34,10 +34,9 @@ $('.cultureVisual_slider').slick({
 
 
  $('.sliderNav').slick({
-	slidesToShow: 18,
+	slidesToShow: 9,
 	slidesToScroll: 1, 
 	asNavFor: '.cultureVisual_slider',
-	dots: true,
-	centerMode: false,
+	dots: false,
 	focusOnSelect: true
  });
