@@ -37,7 +37,7 @@
 {
     line-height: 1;
 
-    position: relative; 
+    overflow: hidden; 
 
     width: 33.3%;
     margin: 0 0 -1px 0;
@@ -46,7 +46,72 @@
 .person-index .person:hover .person_content,
 .person-index .person:focus .person_content
 {
+    -webkit-transform: scale(1);
+            transform: scale(1); 
+
     opacity: 1;
+}
+.person-index .person:hover .article_img,
+.person-index .person:focus .article_img
+{
+    -webkit-transform: scale(1.025);
+            transform: scale(1.025); 
+
+    -webkit-filter: glayscale(100%);
+            filter: glayscale(100%);
+}
+.person-index .person a
+{
+    position: relative;
+
+    display: block;
+
+    color: #fff;
+}
+.person-index .person .arrow
+{
+    position: absolute;
+    top: 0;
+    right: 0; 
+    bottom: 0;
+
+    display: table;
+
+    width: 20%;
+    height: 60px;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    border-radius: 100%;
+}
+.person-index .person .arrow img
+{
+    display: table-cell;
+
+    vertical-align: middle;
+}
+@media screen and (max-width: 1300px)
+{
+    .person-index .person .arrow
+    {
+        top: auto; 
+
+        width: 10%;
+        height: auto;
+    }
+}
+@media screen and (max-width: 780px)
+{
+    .person-index .person .arrow
+    {
+        display: none;
+    }
+}
+.person-index .person .article_img,
+.person-index .person_content
+{
+    -webkit-transition: all .25s cubic-bezier(.785, .135, .15, .86) 0s;
+            transition: all .25s cubic-bezier(.785, .135, .15, .86) 0s;
 }
 .person-index .person_content
 {
@@ -56,17 +121,109 @@
     bottom: 0;
     left: 0;
 
+    display: table;
+
+    width: 100%;
+    height: 100%;
     margin: auto;
     padding-top: 19.43005%;
     padding-right: 10.70664%;
     padding-bottom: 9.32642%;
     padding-left: 10.70664%;
 
-    -webkit-transition: all .5s cubic-bezier(.785, .135, .15, .86) 0s;
-            transition: all .5s cubic-bezier(.785, .135, .15, .86) 0s;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
 
     opacity: 0;
     background-color: rgba(255, 109, 31, .5);
+}
+@media screen and (max-width: 780px)
+{
+    .person-index .person_content
+    {
+        padding-top: 10.36269%;
+        padding-right: 6.42398%;
+        padding-bottom: 5.18135%;
+        padding-left: 6.42398%;
+    }
+}
+.person-index .person_content > div
+{
+    display: table-cell;
+
+    vertical-align: middle;
+}
+.person-index .person .personNum
+{
+    margin-bottom: 25%;
+
+    text-align: center;
+}
+.person-index .person .personNum img
+{
+    width: 50%;
+}
+@media screen and (max-width: 1300px)
+{
+    .person-index .person .personNum
+    {
+        margin-bottom: 15%;
+    }
+}
+@media screen and (max-width: 780px)
+{
+    .person-index .person .personNum
+    {
+        margin-bottom: 5%;
+    }
+}
+.person-index .person .personInfo
+{
+    position: relative;
+}
+.person-index .person .profileTop
+{
+    font-size: 11px; 
+
+    letter-spacing: .22em;
+}
+.person-index .person .profileTop .ja
+{
+    font-size: 2em;
+}
+.person-index .person .profileTop .en
+{
+    font-family: 'Roboto', sans-serif;
+
+    margin-left: 1em;
+}
+@media screen and (max-width: 1300px)
+{
+    .person-index .person .profileTop .ja
+    {
+        font-size: 1.3em;
+    }
+    .person-index .person .profileTop .en
+    {
+        display: block; 
+
+        margin-top: 5px;
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 780px)
+{
+    .person-index .person .profileTop .ja
+    {
+        font-size: 1.1em;
+    }
+}
+@media screen and (max-width: 1300px)
+{
+    .person-index .person .profileText
+    {
+        font-size: 10px;
+    }
 }
 @media screen and (max-width: 780px)
 {
@@ -209,9 +366,6 @@
 .person-child .personVisual .profileTop
 {
     margin-bottom: 10px;
-    padding-bottom: 10px;
-
-    border-bottom: solid 2px #fff;
 }
 .person-child .personVisual_profile_num,
 .person-child .personVisual_profile_content
