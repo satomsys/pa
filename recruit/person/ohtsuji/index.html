@@ -158,21 +158,11 @@
     <!-- /// section 4 -->
 
     <!-- ***** other person -->
-    <aside class="otherPerson">
-        <header class="otherPerson_index">
-            OTHER PERSON
-        </header>
-        <nav class="otherPerson_nav">
-            <ul>
-                <li class="current"><a href=""><img src="../img/nav-img-ohtsuji.jpg" alt=""></a></li>
-                <li><a href="../shiraishi/"><img src="../img/nav-img-shiraishi.jpg" alt=""></a></li>
-                <li><a href="../matsuyama/"><img src="../img/nav-img-matsuyama.jpg" alt=""></a></li>
-                <li><a href="../kitsuda/"><img src="../img/nav-img-kitsuda.jpg" alt=""></a></li>
-                <li><a href="../yano/"><img src="../img/nav-img-yano.jpg" alt=""></a></li>
-                <li><a href="../campbell/"><img src="../img/nav-img-campbell.jpg" alt=""></a></li>
-            </ul>
-        </nav>
-    </aside>
+    <?php
+    $activePerson = 'ohtsuji';
+    $isChild = true;
+     include '../_inc/otherPerson.php';    
+    ?>
     <!-- ///// other person -->
 
     <!-- ///// content -->
