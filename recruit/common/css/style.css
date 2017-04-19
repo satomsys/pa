@@ -1486,8 +1486,8 @@ html.ie8 .icon-facebook:before
 {
     line-height: 1;
 
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 45px;
+    padding-bottom: 45px;
 
     -webkit-animation: gradationAnim 20s ease infinite;
             animation: gradationAnim 20s ease infinite; 
@@ -1499,8 +1499,8 @@ html.ie8 .icon-facebook:before
 {
     .pageIndex
     {
-        padding-top: 70px;
-        padding-bottom: 70px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 }
 
