@@ -72,7 +72,7 @@
 {
     .person-index .person
     {
-        max-width: 50%;
+        width: 50%;
     }
 }
 
@@ -93,28 +93,28 @@
 {
     -webkit-transition-duration: .6s;
             transition-duration: .6s;
-    -webkit-transform: perspective(20px) translateY(-20px) rotateY(-.5deg);
-            transform: perspective(20px) translateY(-20px) rotateY(-.5deg); 
+    -webkit-transform: perspective(20px) translateY(-20px);
+            transform: perspective(20px) translateY(-20px); 
 
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
 }
 .section .fade.fadeIn
 {
-    -webkit-transform: translateY(0px) rotateY(0deg);
-            transform: translateY(0px) rotateY(0deg);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
 }
 @media screen and (max-width: 780px)
 {
-    .section
+    .section .fade
     {
-        -webkit-transform: translateY(-1px) rotateY(-.1deg);
-                transform: translateY(-1px) rotateY(-.1deg);
+        -webkit-transform: translateY(10px);
+                transform: translateY(10px);
     }
-    .section.fadeIn
+    .section .fade.fadeIn
     {
-        -webkit-transform: translateY(0px) rotateY(0deg);
-                transform: translateY(0px) rotateY(0deg);
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
     }
 }
 
@@ -141,8 +141,7 @@
 {
     .person-child .pageIndex .pageIndex_text
     {
-        width: 45.375%; 
-        padding-left: 5%;
+        width: 45.375%;
     }
 }
 .person-child .personVisual
@@ -150,6 +149,13 @@
     position: relative;
 
     max-width: 100%;
+}
+@media screen and (max-width: 780px)
+{
+    .person-child .personVisual
+    {
+        line-height: 0;
+    }
 }
 .person-child .personVisual_profile,
 .person-child .personVisual_bg,
@@ -301,6 +307,8 @@
 {
     .person-child .section
     {
+        overflow: hidden;
+
         padding-top: 30px;
         padding-bottom: 30px;
     }
@@ -375,15 +383,27 @@
 {
     .person-child .section-fullImg .section_img
     {
-        height: 450px;
+        height: 400px;
+    }
+    .person-child .section-fullImg .section_img img
+    {
+        top: 0;
+        right: 0;
+        left: 0; 
+
+        width: 130%;
+        max-width: none;
     }
 }
-@media screen and (max-width: 780px)
+@media screen and (max-width: 1500px)
 {
     .person-child .section-fullImg .section_img
     {
         height: 300px;
     }
+}
+@media screen and (max-width: 780px)
+{
     .person-child .section-fullImg .section_img img
     {
         width: auto;

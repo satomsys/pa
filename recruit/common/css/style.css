@@ -1500,6 +1500,10 @@ html.ie8 .icon-facebook:before
 
     background-size: 400% 400%;
 }
+.pageIndex.pageIndex-tiny
+{
+    padding-left: 5%;
+}
 @media screen and (max-width: 780px)
 {
     .pageIndex
