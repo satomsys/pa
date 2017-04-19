@@ -20,6 +20,12 @@
 {
     display: inline-block;
 }
+.person-child .personVisual .name .ja
+{
+    font-size: 1.9em;
+
+    letter-spacing: .05em;
+}
 .person-child .personVisual .name .en
 {
     margin-top: 10px;
@@ -30,16 +36,5 @@
     .person-child .personVisual .name .ja
     {
         font-size: 2em;
-    }
-    .person-child .personVisual .name .en
-    {
-        margin-left: 1em;
-    }
-}
-@media screen and (max-width: 780px)
-{
-    .person-child .section-last .section_img img
-    {
-        left: -60%;
     }
 }
