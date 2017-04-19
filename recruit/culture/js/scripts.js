@@ -1,4 +1,8 @@
 
+var $slideNum = 9,
+	$initialSlide = Math.round( Math.random() * ( $slideNum - 1 ) );
+
+console.log( $initialSlide );
 /**
 * fancybox
 */
@@ -23,20 +27,15 @@ $('.cultureVisual_slider').slick({
   fade: true,
   swipe: true,
   cssEase: 'linear',
-  asNavFor: '.sliderNav'
-}).on('afterChange', function(){
-	var $activeImg = $(this).find('.slick-active img')
-		$previewStyle = $activeImg.data('preview')
-		$button = $('.cultureVisual_button a');
-
-		$button.attr( 'data-src', $previewStyle );
+  asNavFor: '.sliderNav',
+  initialSlide: $initialSlide
 });
 
-
  $('.sliderNav').slick({
-	slidesToShow: 9,
+	slidesToShow: $slideNum,
 	slidesToScroll: 1, 
 	asNavFor: '.cultureVisual_slider',
 	dots: false,
-	focusOnSelect: true
+	focusOnSelect: true,
+	initialSlide: $initialSlide
  });

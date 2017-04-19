@@ -16,6 +16,10 @@
 
 ////////////////////////
 
+.footer{
+	margin-top: 0;
+}
+
 .pageIndex_text
 {
 	@include breakpoint( tab ){
@@ -309,7 +313,6 @@ cultureVisual
 ********************/
 
 .cultureVisual{
-    margin-bottom: 60px;
     position: relative;
     
     &_slider img{
@@ -336,6 +339,11 @@ cultureVisual
     		max-width: 850px;
     		margin-left: auto;
     		margin-right: auto;
+    		
+    		.slick-track {
+    			width: auto!important;
+    			transform: none!important;
+    		}
 	    	li{
 	    		max-width: 85px;
 	    		margin-right: 10px;
@@ -370,8 +378,8 @@ cultureVisual
     		}
     	}
 		@include breakpoint( tab ){
-			padding-top: 10px;
-			padding-bottom: 10px;
+			padding-top: 5px;
+			padding-bottom: 5px;
 	    	
 	    	.sliderNav{
 		    	li{
@@ -412,35 +420,83 @@ cultureVisual
 instagram
 ********************/
 
+.instaLogo{
+}
+
 .instaBox
 {
-	width: 100%;
-	padding-left: 1%;
-	padding-right: 1%;
-	overflow: hidden;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #fafafa;	
 	
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	align-items:center;
+	@include breakpoint( tab ){
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}		
 	
-	li{
-		width: calc( 33.33% - 4% );
-		margin-left: 2%;
-		margin-right: 2%;
-		list-style: none; 
-		float: left;
+	&_logo
+	{
+		margin-bottom: 40px;
+		text-align: center;
 		
-	}	
+		@include breakpoint( tab ){
+			margin-bottom: 25px;
+			img{
+				max-width: 110px;
+			}
+		}		
+	}
+
+	&_list{
+
+		width: 100%;
+
+		padding-right: 1%;
+
+		padding-left: 1%;
+		overflow: hidden;
+		
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items:center;
+		
+		&_post{
+			width: calc( 33.33% - 4% );
+			margin-right: 2%;
+			margin-bottom: 25px;
+			margin-left: 2%;
+			list-style: none; 
+			float: left;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			border-radius: 20px;				
+			background-color: #fff;
+		}	
+
+		@include breakpoint( tab ){	
+			&_post{
+				margin-bottom: 10px;
+			}			
+		}
+
+
+	}
 
 	&_image{
-		border-radius: 20px;
 		cursor: pointer;
+		display: block;
 		
-		figure{
-			display: table-cell;
-			vertical-align: middle;
+		img{
+			border-radius: 20px;		
 		}
+
+		@include breakpoint( tab ){	
+			img{
+				border-radius: 5px;		
+			}			
+		}			
 	}
 }
 

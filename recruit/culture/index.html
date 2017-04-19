@@ -47,6 +47,9 @@
     $isChild = true;
     $slides = new Slides(9);
 
+
+    $slides->makeRandomArg();
+
     include $_SERVER['DOCUMENT_ROOT'] . '/recruit/common/_inc/_header.php';
   ?>
 
@@ -79,9 +82,12 @@
     <!-- ///// mainvisual slider -->
 
     <!-- ***** content -->
-    <section class="">    
+    <section class="instaBox">    
         <div class="wrap">
-            <?php  echo $instaBox; ?>
+            <h4 class="instaBox_logo">
+                <img src="img/logo-instagram.png" width="221" alt="instagram">
+            </h4>
+            <?php echo $instaBox; ?>
         </div>
     </section>
     <!-- ///// content -->

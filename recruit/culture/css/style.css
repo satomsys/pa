@@ -8,6 +8,11 @@
     background-size: 100%;
 }
 
+.footer
+{
+    margin-top: 0;
+}
+
 @media screen and (max-width: 780px)
 {
     .pageIndex_text
@@ -343,9 +348,7 @@ cultureVisual
 ********************/
 .cultureVisual
 {
-    position: relative; 
-
-    margin-bottom: 60px;
+    position: relative;
 }
 .cultureVisual_slider img
 {
@@ -373,6 +376,13 @@ cultureVisual
     max-width: 850px;
     margin-right: auto; 
     margin-left: auto;
+}
+.cultureVisual_nav .sliderNav .slick-track
+{
+    width: auto !important;
+
+    -webkit-transform: none !important;
+            transform: none !important;
 }
 .cultureVisual_nav .sliderNav li
 {
@@ -421,8 +431,8 @@ cultureVisual
 {
     .cultureVisual_nav
     {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
     .cultureVisual_nav .sliderNav li
     {
@@ -464,6 +474,38 @@ instagram
 ********************/
 .instaBox
 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    background-color: #fafafa;
+}
+@media screen and (max-width: 780px)
+{
+    .instaBox
+    {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}
+.instaBox_logo
+{
+    margin-bottom: 40px;
+
+    text-align: center;
+}
+@media screen and (max-width: 780px)
+{
+    .instaBox_logo
+    {
+        margin-bottom: 25px;
+    }
+    .instaBox_logo img
+    {
+        max-width: 110px;
+    }
+}
+.instaBox_list
+{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -483,25 +525,52 @@ instagram
     -ms-flex-align: center;
     align-items: center;
 }
-.instaBox li
+.instaBox_list_post
 {
-    float: left; 
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    float: left;
+        flex-direction: column;
 
     width: calc( 33.33% - 4% );
     margin-right: 2%;
+    margin-bottom: 25px;
     margin-left: 2%;
 
     list-style: none;
+
+    border-radius: 20px;
+    background-color: #fff; 
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+@media screen and (max-width: 780px)
+{
+    .instaBox_list_post
+    {
+        margin-bottom: 10px;
+    }
 }
 .instaBox_image
 {
-    cursor: pointer; 
+    display: block; 
 
+    cursor: pointer;
+}
+.instaBox_image img
+{
     border-radius: 20px;
 }
-.instaBox_image figure
+@media screen and (max-width: 780px)
 {
-    display: table-cell;
-
-    vertical-align: middle;
+    .instaBox_image img
+    {
+        border-radius: 5px;
+    }
 }

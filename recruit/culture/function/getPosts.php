@@ -87,9 +87,9 @@
 			'link' => $post->link
 		 );
 
-		 $instaBox .= $dataCount == 0 ? '<ul class="instaBox">' : '';
+		 $instaBox .= $dataCount == 0 ? '<ul class="instaBox_list">' : '';
 		 $instaBox .= <<<EOD
-<li class="instaBox_list">
+<li class="instaBox_list_post">
 	<a class="instaBox_image" data-fancybox="group" data-src="#insta{$dataCount}">
 	    <figure>
 	      <img src="{$data_htmlSet[$dataCount]['image']}" alt="">
