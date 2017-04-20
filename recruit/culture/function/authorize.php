@@ -1,12 +1,6 @@
 <?php
 /**
 * 初回アクセス時アカウント認証用。
-* instagram account
-* seveninc.anonymous@gmail / seven0214
-*
-* master userID: 5320366701
-* access token: 5320366701.6c39fc0.5453885bc0ba4fc8bc46a130c1d5b458
-* media userID: 20917341 ( 佐藤 )
 */
 
 		// 設定

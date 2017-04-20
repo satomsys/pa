@@ -30,7 +30,7 @@
 
 	$access_token = '5320366701.6c39fc0.5453885bc0ba4fc8bc46a130c1d5b458';
 	//↓こっちは取得できた。
-	$request_url = 'https://api.instagram.com/v1/users/20917341/media/recent/?access_token=' . $access_token ;		// リクエストURL			
+	$request_url = 'https://api.instagram.com/v1/users/3893313940/media/recent/?access_token=' . $access_token ;		// リクエストURL			
 
 	/**
 	* アイテムデータをJSONで取得
