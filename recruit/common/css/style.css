@@ -433,9 +433,9 @@ a img:hover,
 a img:active,
 a img:focus
 {
-    opacity: .87; 
+    opacity: .75; 
 
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=87);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
 }
 
 .contain,
@@ -1566,14 +1566,26 @@ html.ie8 .icon-facebook:before
 }
 .pageIndex.pageIndex-tiny
 {
-    padding-left: 5%;
+    text-align: left;
+}
+.pageIndex.pageIndex-tiny .pageIndex_text
+{
+    max-width: 940px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 60px;
 }
 @media screen and (max-width: 780px)
 {
     .pageIndex
     {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+    .pageIndex.pageIndex-tiny .pageIndex_text
+    {
+        margin-left: 0;
+        padding-left: 5%;
     }
 }
 

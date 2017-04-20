@@ -618,17 +618,28 @@
 	
 	&.pageIndex-tiny
 	{
-		padding-left: 5%;
+		text-align: left;
+
+		.pageIndex_text{
+			max-width: $innerWidth;
+			margin-left: auto;
+			margin-right: auto;
+			padding-left: 60px;
+		}
 	}		
 	
 	//////// media queries 
 	@include breakpoint( tab ){
 
-		padding-top: 50px;
-		padding-bottom: 50px;
+		padding-top: 35px;
+		padding-bottom: 35px;
 		
 		&.pageIndex-tiny
 		{
+			.pageIndex_text{
+				margin-left: 0;
+				padding-left: 5%;
+			}			
 		}			
 
 	} //max 780

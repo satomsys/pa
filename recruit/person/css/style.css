@@ -287,16 +287,11 @@
         padding-bottom: 10px;
     }
 }
-.person-child .pageIndex .pageIndex_text
-{
-    max-width: 363px;
-    margin-left: 0;
-}
 @media screen and (max-width: 780px)
 {
     .person-child .pageIndex .pageIndex_text
     {
-        width: 45.375%;
+        width: 42.125%;
     }
 }
 .person-child .personVisual

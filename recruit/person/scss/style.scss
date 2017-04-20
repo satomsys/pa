@@ -264,10 +264,8 @@
 
 	.pageIndex_text
 	{
-		max-width: 363px;
-		margin-left: 0;
 		@include breakpoint( tab ){
-			@include liquid(363, 800 );
+			@include liquid(337, 800 );
 		}		
 	}
 
