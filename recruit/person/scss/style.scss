@@ -319,7 +319,7 @@
 			background-color: $orange;
 			
 			>div{
-				padding: 5%;
+				padding: 4% 5%;
 				display: block;
 			}
 		}
@@ -586,7 +586,7 @@ $width: 1024;
 .section-3{
 	.section_img{
 		text-align: center;
-		margin-bottom: 50px;
+		margin-bottom: 30px;
 	}
 
 	@include breakpoint( tab ){
