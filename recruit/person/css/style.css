@@ -51,8 +51,8 @@
 
     opacity: 1;
 }
-.person-index .person:hover .article_img,
-.person-index .person:focus .article_img
+.person-index .person:hover .person_img,
+.person-index .person:focus .person_img
 {
     -webkit-transform: scale(1.025);
             transform: scale(1.025); 
