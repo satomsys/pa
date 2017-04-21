@@ -30,6 +30,35 @@
 }
 
 
+.careerPerson
+{
+	&_num{
+		line-height: 1;
+		margin-bottom: 20px;
+		font-size: 5em;
+		color: #bcb5ab;
+		text-align: center;
+		
+		span,.story{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		span{
+			line-height: 1;
+			font-family: $roboto;
+			font-weight: 300;
+		}
+		.story{
+			position: relative;
+			margin-right: -40px;
+		}
+		@include breakpoint( tab ){
+			margin-bottom: 5px;
+		}			
+	}
+}
+
+
 // /**
 // * fancyBox
 // */
@@ -216,7 +245,9 @@
 
 ////////////////////////
 
-
+/***********
+index
+***********/
 .career-index
 {
 
@@ -307,30 +338,6 @@
 		}			
 	}
 
-	&_num{
-		line-height: 1;
-		margin-bottom: 20px;
-		font-size: 5em;
-		color: #bcb5ab;
-		text-align: center;
-		
-		span,.story{
-			display: inline-block;
-			vertical-align: middle;
-		}
-		span{
-			line-height: 1;
-			font-family: $roboto;
-			font-weight: 300;
-		}
-		.story{
-			position: relative;
-			margin-right: -40px;
-		}
-		@include breakpoint( tab ){
-			margin-bottom: 5px;
-		}			
-	}
 
 	&_img{
 		position: relative;
@@ -418,6 +425,679 @@
 		}
 	}
 }
+}
+
+
+
+/***********
+child
+***********/
+
+$up: 280px;
+
+.career-child{
+
+	.wrap{
+		max-width: 980px;
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	.careerPerson_num{
+		font-size: 8em;
+		margin-bottom: -30px;
+		position: relative;
+	}
+
+	.mainvisual
+	{
+		margin-top: $up;
+		position: relative;
+		top: $up * -1 / 1.2;
+		margin-bottom: $up * -1 / 1.2;
+	
+		&_name{
+			margin-top: -15px;
+			padding: 20px 30px;
+			color: #fff;
+			
+			@extend %gradation;
+			
+			.ja{
+				font-weight: 300;
+				font-size: 2.5em;
+				letter-spacing: 0.1em;
+			}
+			.en{
+				margin-left: 1em;
+				font-family: $roboto;
+				font-size: 1.2em;
+				letter-spacing: 0.17em;
+			}
+		}
+	}
+
+
+
+	////////// timeline 
+
+	.timeline
+	{
+		margin-top: 60px;
+		min-height: 3520px;
+		background: url(../img/timelineBg.png) center top no-repeat;
+		background-size: auto 100%;
+		// background-size: 1116px auto;
+
+
+		&_event{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			position: relative;
+			
+			///// 文字
+			&_num{
+				line-height: 1;
+				position: relative;
+				
+				span{
+					font-size: 12.5em;
+					letter-spacing: -0.05em;
+					color: $orange;
+					font-family: $roboto_cond;
+				}
+
+				span,.yo{
+					display: inline-block;
+					vertical-align: middle;
+					position: relative;
+					z-index: 2;
+				}
+				.yo{
+					margin-left: -15px;
+				}
+				.icon{
+					position: absolute;					
+				}				
+			}
+
+			///// years old　位置
+			&.timeline_event-1 .yo{
+					margin-left: -35px;
+			}
+			&.timeline_event-6 .yo,
+			&.timeline_event-18 .yo,
+			&.timeline_event-19 .yo,
+			&.timeline_event-24 .yo,
+			&.timeline_event-28 .yo{
+					margin-left: -1px;
+			}			
+
+			///// 写真
+			
+			&_img{
+				img{
+					line-height: 0;
+					box-shadow: 5px 5px 0 $orange;
+				}
+			}
+
+			///// テキスト
+			&_text{
+
+				font-weight: 200;
+				font-size: 1.5em;
+				color: #766753;
+				
+				.eventIndex{
+					font-size: 1.42em;
+					margin-bottom: 10px;
+				}
+
+			}
+
+			&.vertical{
+				> .vertical_content{
+					display: flex;
+					flex-direction: column-reverse;
+				}
+
+				.timeline_event_img{
+					margin-bottom: 20px;
+				}
+			}
+			&.vertical-textTop{
+				> .vertical_content{
+					flex-direction: column;
+				}
+				.timeline_event_img{
+					margin-top: 20px;
+				}				
+			}
+		}
+
+		//////////位置クラス
+		&_event{
+			&.alignRight{
+				margin-left: auto;
+			}
+			&.alignLeft{
+				margin-right: auto;
+			}	
+			&.alignCenter{
+				margin-left: auto;
+				margin-right: auto;
+			}	
+		}
+
+		///// flexbox-childの順番
+		&_event{
+
+			///// 横組み
+			
+			//数字センター
+			&.horizontal-numCenter{
+				.timeline_event_num{
+					order: 2;
+				}
+				.timeline_event_text{
+					order: 1
+				}
+				.timeline_event_img{
+					order: 3;
+				}
+			}
+
+			//数字右
+			&.horizontal-numRight{
+				.timeline_event_num{
+					order: 3;
+				}
+				.timeline_event_text{
+					order: 2
+				}
+				.timeline_event_img{
+					order: 1;
+				}
+			}
+
+			//数字左
+			&.horizontal-numLeft{
+				.timeline_event_num{
+					order: 1;
+				}
+				.timeline_event_text{
+					order: 2
+				}
+				.timeline_event_img{
+					order: 3;
+				}
+			}
+
+			/////縦組み
+
+			//数字右
+			&.vertical-numRight{
+				> .vertical_content {
+					order: 1
+				}
+				.timeline_event_num{
+					order: 2;
+				}
+			}
+
+			//数字左
+			&.vertical-numLeft{
+				> .vertical_content {
+					order: 2
+				}
+				.timeline_event_num{
+					order: 1;
+				}
+			}			
+		}
+
+		///// イベントリストフェードイン設定
+		&_event{
+			.eventIndex,
+			.eventInfo,
+			&_img{
+				opacity: 0;
+				transition: transition(0.7s);
+				transform: translateY( 5px ) scale(0.99);
+			}
+			.eventIndex{
+				transition-delay: 0.5s;
+			}
+			.eventInfo{
+				transition-delay: 0.7s;
+			}
+			&_img{
+				transition-delay: 0.9s;
+			}
+			&.fade{
+				opacity: 1;
+				transform: none;
+			}
+
+			&.fadeIn{
+				.eventIndex,
+				.eventInfo,
+				.timeline_event_img{
+					opacity: 1;
+					transform: translateY( 0px ) scale( 1 );
+				}				
+			}
+		}
+
+
+
+		////////// 個別style
+		&_event-1{
+			width: 610px;
+			margin-bottom: 75px;
+			
+			.timeline_event_num .icon{
+				bottom: 0;
+				right: 5px;
+				
+			}
+		}
+
+		&_event-6{
+			width: 792px;
+			margin-bottom: 75px;
+			
+			.timeline_event_num .icon{
+				top: 0;
+				left: -90px;
+			}			
+		}
+
+		&_event-12{
+			width: 797px;
+			margin-bottom: 80px;
+			
+			.timeline_event_num .icon{
+				top: 0;
+				right: -90px;
+			}			
+		}
+
+		&_event-17{
+			width: 980px;
+			margin-bottom: 60px;
+			
+			.timeline_event_img{
+				align-self: flex-end;
+			}
+
+			.timeline_event_num{
+				left: -13%;
+			}
+			.timeline_event_num .icon{
+				top: 0;
+				right: -130px;
+			}			
+		}	
+
+
+		&_event-18{
+			width: 735px;
+			// margin-bottom: 60px;
+
+
+			.timeline_event_num{
+				left: 13%;
+			}
+			.timeline_event_num .icon{
+				top: 0;
+				left: -120px;
+			}			
+		}			
+
+		&_event-19{
+			width: 700px;
+			margin-top: -100px;
+			margin-bottom: 0px;
+			
+			.timeline_event_num{
+			}
+			.timeline_event_num .icon{
+				top: 0;
+				right: -200px;
+			}			
+		}
+
+		&_event-24{
+			width: 700px;
+			margin-top: -50px;
+			margin-bottom: 60px;
+			
+			.timeline_event_num{
+				align-self: center;
+			}
+			.timeline_event_num .icon{
+				top: 0;
+				right: -200px;
+			}			
+		}
+
+
+		&_event-28{
+			width: 890px;
+			
+			.timeline_event_num{
+				align-self: flex-start;
+			}
+			.timeline_event_num .icon{
+				top: 0;
+				left: -140px;
+			}			
+		}
+
+
+		&_now{
+			margin-top: 1em;
+			margin-bottom: 1em;
+			line-height: 1;
+			text-align: center;	
+			font-size: 5em;
+			color: #fff;
+			font-weight: 700;
+			letter-spacing: -0.1em;
+			font-family: $roboto;
+			
+			span{
+				display: inline-block;
+				transition: all 0.4s;
+				
+				&.fade{
+					transform: translateY(10px);
+					&.fadeIn{
+						transform: translateY(0px);
+					}
+				}
+			}
+
+			$delay: 0.1s;
+			@for $i from 1 through 3 {
+			  span:nth-child(#{$i}) {
+			    transition-delay: $delay * $i;
+			  }
+			}
+		}
+
+		&_future{
+			padding-top: 25px;
+			position: relative;
+			
+			&.fade{
+				transform: none;
+				opacity: 1;
+			}
+			
+			img{
+				line-height: 0;
+				margin-right: auto;
+				margin-left: auto;
+				display: block;
+				// position: absolute;
+				// right: 0;
+				// left: 0;
+			}
+
+			&_index,
+			&_content{
+				position: relative;
+				z-index: 1;
+			}			
+
+			&_index{
+				line-height: 1;
+				margin-bottom: -0.5em;
+				text-align: center;
+				font-family: $roboto;
+				font-weight: 700;
+				font-size: 8em;
+				color: darken( $orange, 10% );
+			}
+
+			&_content{
+				margin: auto;
+				display: table;
+				
+				&_img,
+				&_message{
+					display: table-cell;
+					vertical-align: middle;
+				}
+			}
+
+			&_content_message{
+				// max-width: 50%;
+				// height: 100%;
+				// margin-right: auto;
+				// margin-left: auto;
+				position: absolute;
+				top: 25%;
+				right: -130%;
+				text-align: center;
+				// display: flex;
+				// flex-direction: column;
+				p{
+					font-size: 2em;
+					text-align: left;
+					color: $orange;
+				}
+				.button{
+					a{
+						border: none;
+						color: #fff;
+						@extend %gradation;
+					}
+				}
+			}
+
+			&_bg{
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				@extend %gradation;
+				opacity: 0.2;			
+			}
+			
+		}
+
+		//////// futureエリア フェードイン設定
+		&_future
+		{
+			&_content_message{
+				transition: transition();		
+				opacity: 0;
+				transform: translateX( 20px );
+				transition-delay: 1s;
+			}
+
+			&_bg{
+				width: 0;
+				transition: transition();					
+				transition-delay: 0.5s;				
+			}
+
+			&.fadeIn{
+
+				.timeline_future_bg{
+					width: 100%;
+				}
+				.timeline_future_content_message{
+					opacity: 1;
+					transform: translateX( 0px );								
+				}
+
+			}
+		}
+	}
+
+
+
+	///////// nav 
+	.otherStory
+	{
+
+	padding-top: 100px;
+	padding-bottom: 50px;
+	background-color: #ebebeb;
+	
+	@include breakpoint( tab ){
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}		
+	
+	&_index{
+		line-height: 1;
+		position: relative;
+		font-family: $roboto_cond;
+		font-weight: 100;
+		font-size: 3.15em;
+		letter-spacing: 0.44em;
+		text-align: center;
+		
+		&:after{
+			content: " ";
+			width: 50px;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			margin-right: auto;
+			margin-left: auto;
+			height: 2px;
+			display: block;
+			background-color: $orange;
+		}
+
+		@include breakpoint( tab ){
+			font-size: 1.4em;
+			
+			&:after{
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+		}			
+	}
+
+	&_nav{
+		ul{
+			max-width: 730px;
+			margin-right: auto;
+			margin-left: auto;
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-around;
+			align-items: center;
+			
+			li{
+				width: 190px;
+				list-style: none;
+			}
+			
+			// li{
+			// 	display: table-cell;
+			// }
+			
+			.current a{
+				pointer-events: none;
+				&:before,
+				&:after{
+					opacity: 1;
+				}				
+				&:before{
+					content: "NOW";
+					top: 41%;
+				}
+				&:after{
+					content: "READING";
+					bottom: 41%;
+					transition-delay: 0.15s;
+				}
+				img{
+					opacity: 0.3;
+				}
+			}
+			li a{
+				line-height: 0;
+				position: relative;
+				display: block;
+				background: $orange;
+				&:before,
+				&:after{
+					width: 100%;
+					position: absolute;
+					display: block;
+					color: #fff;
+					text-align: center;
+					font-weight: 500;
+					font-family: $roboto;
+					font-size: 1.5em;
+					opacity: 0;
+					transition: all 0.5s;
+				}
+				&:before{
+					content: "READ";
+					top: 41%;
+				}
+				// &:after{
+				// 	content: "";
+				// 	bottom: 41%;
+				// 	transition-delay: 0.15s;
+				// }
+
+				&:hover,
+				&:focus{
+
+					&:before{
+						top: 42.5%;
+						opacity: 1;
+					}
+					// &:after{
+					// 	bottom: 42.5%;
+					// 	opacity: 1;
+					// }		
+					img{
+						opacity: 0.3;
+					}			
+				}
+			}
+			li img{
+				width: 100%;
+				transition: all 0.3s;
+			}
+
+			@include breakpoint( tab ){
+				flex-wrap: wrap;
+				
+				li{
+					width: 33.33%;
+				}
+
+				li a{
+
+					&:before,
+					&:after{
+						font-size: 1em;
+					}					
+					
+				}
+			}			
+
+
+		}
+	}
+}
 
 	
 }
+
