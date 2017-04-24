@@ -16,7 +16,6 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
     <!-- ***** my style -->
     <link rel="stylesheet" type="text/css" href="../../common/css/style.css">
-    <link rel="stylesheet" href="../../common/js/fancybox/jquery.fancybox.min.css">     
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- ///// my style -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -37,25 +36,24 @@
     <script type="text/javascript" src="../../common/js/analytics.js"></script>
 </head>
 
- <body class="wju wju-child wju-child-test">
+ <body class="wju wju-child">
 
   <?php
     $nowActive = 'why_join_us';
-    $isChild = true;
+    $isChild = '../../';
 
     include $_SERVER['DOCUMENT_ROOT'] . '/recruit/common/_inc/_header.php';
   ?>
 
   <main class="main">
-    <header class="pageIndex">
+    <header class="pageIndex pageIndex-tiny">
       <h2 class="pageIndex_text">
-        <span><img src="../img/wju-index.svg" width="530" alt="WHY JOIN US"></span>
+        <span><a href="../"><img src="../img/wju-index.svg" width="363" alt="WHY JOIN US"></a></span>
       </h2>
     </header>
 
     <!-- ***** content -->
     <article class="">    
-        <div class="wrap">
 
             <!-- *** title -->
             <header>
@@ -72,57 +70,56 @@
             <!-- /// title -->
             <div class="wjuContent">
                 <header>
-                    <h4 class="wjuContent_name paleGradation">
+                    <h4 class="wjuContent_name">
                       <span>開発企画部　仕入課</span>
                       <span class="name">松山 佳広</span>
                       <span>2011年 新卒入社</span>
                     </h4>
                 </header>
-                <!-- *** mainvisual -->
-                <div class="wjuContent_mainvisual">
-                    <img src="img/main.jpg" alt="">
-                </div>
-                <!-- /// mainvisual -->
                 <div class="wjuContent_content">
-                    <div class="wjuSectionIntro">
-                        <section class="wjuSection">
-                            <h5 class="wjuSection_index">
-                                全体としては下落の予測。
-                            </h5>
-                            <div class="wjuSection_content">
-                                ダミーコピーです。就職活動をするに当たってまず考えた事。大手や公務員なら安定できるという考え方は、世間の価値観に流されているような気がしていました。まず、自分はどうなりたいのか。軸をはっきり持つことです。言うなれば、会社は箱。自分自身が安定していてこそ、会社と言う箱を活用できるのです。私は、何をすれば自分の成長につながるのかという視点で仕事を探して、営業職を極めることに決めました。
-                            </div>
-                        </section>
-                        <section class="wjuSection wjuSection-float">
-                            <h5 class="wjuSection_index">
-                                全体としては下落の予測。
-                            </h5>
-                            <div class="wjuSection_img">
-                                <figure><img src="img/section1-img.jpg" width="387" alt=""></figure>
-                            </div>
-                            <div class="wjuSection_content">
-                                ダミーコピーです。就職活動をするに当たってまず考えた事。大手や公務員なら安定できるという考え方は、世間の価値観に流されているような気がしていました。まず、自分はどうなりたいのか。軸をはっきり持つことです。言うなれば、会社は箱。自分自身が安定していてこそ、会社と言う箱を活用できるのです。私は、何をすれば自分の成長につながるのかという視点で仕事を探して、営業職を極めることに決めました。
-                            </div>
-                        </section>
+                    <!-- *** mainvisual -->
+                    <div class="wjuContent_mainvisual">
+                        <img src="img/main.jpg" alt="">
                     </div>
-                    <section class="wjuSection wjuSection-onBg">
-                        <h5 class="wjuSection_index">
-                            <span>だからこそ、<br>
-                                私たちが「不動産のプロ」として<br>
-                                お客様から求められる瞬間だと考えます。</span>
-                            <i class="gradation"></i>
-                        </h5>
-                        <div class="wjuSection_content">
-                            ダミーコピーです。就職活動をするに当たってまず考えた事。大手や公務員なら安定できるという考え方は、世間の価値観に流されているような気がしていました。まず、自分はどうなりたいのか。軸をはっきり持つことです。言うなれば、会社は箱。自分自身が安定していてこそ、会社と言う箱を活用できるのです。私は、何をすれば自分の成長につながるのかという視点で仕事を探して、営業職を極めることに決めました。
+                    <!-- /// mainvisual -->
+                    <article class="opinion opinion-l">
+                        <div>
+                            <h5 class="opinion_index">
+                                不動産業界は、無くなる<br>
+                                ことが考えにくい業界です
+                            </h5>
+                            <div class="opinition_content">
+                                <p>高齢化社会により、日本の人口の減少が予測されますが、不動産は生活の基盤となるものなので、業界的に無くなることはないといえます。かつ、人生で一番の買い物と言われているように、不動産業界は10兆円以上※の規模を誇るマーケット。景気の動向に左右されることはありますが、ライフスタイルに合わせて不動産を必要とする人は絶えないので、成長の機会が必ずある業界です。</p>
+                                <p><small>
+                                    ※業界動向SEARCH.COM「不動産業界基本情報（平成25-26年版）」
+                                </small></p>
+                            </div>
                         </div>
-                    </section>                                        
+                        <i class="opinion_bg"></i>
+                    </article>
+
+                    <article class="opinion opinion-r">
+                        <div>
+                            <h5 class="opinion_index">
+                                成長を続けるには、<br>
+                                時代の流れを先読みする<br>
+                                ことが重要です
+                            </h5>
+                            <div class="opinition_content">
+                                <p>現在は都心部で一人で暮らす若者向けのマンションのオーナーになる人が増えていますが、10年後にはそこに住む若者の多くが家族を持ち、都心部でなく郊外のファミリー向けのマンションに住むようになります。それに合わせてオーナーも彼らが住むマンションを購入するので、郊外の不動産にニーズが生まれます。このように時代の流れを先読みして、お客様のニーズに応えることで成長し続けられるのです。</p>
+                            </div>
+                        </div>
+                        <i class="opinion_bg"></i>
+                    </article>
+
+
+                                   
                 </div>
                 <div class="wjuContent_footer">
-                    <div class="button button-wju button-hasArrow-back"><a href="">BACK</a></div>
+                    <div class="button button-wju button-hasArrow-back"><a href="../">BACK</a></div>
                 </div>
             </div>
 
-        </div>
     </article>
     <!-- ///// content -->
 
