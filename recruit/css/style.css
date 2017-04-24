@@ -1131,7 +1131,7 @@ person
 {
     width: 100%;
 }
-.section-person .personImagePanel
+.section-person .persons
 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1140,26 +1140,218 @@ person
 
     width: 100%;
 
+    background-color: #fff;
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
 }
-.section-person .personImagePanel_panel
+.section-person .person
 {
-    line-height: 0;
+    line-height: 1;
 
     overflow: hidden; 
 
     width: 33.28571%;
-    max-width: 35.84615%;
+    margin: 0 0 -1px 0;
 
     list-style: none;
 }
-.section-person .personImagePanel_panel img
+@media screen and (max-width: 780px)
+{
+    .section-person .person
+    {
+        width: 50%;
+    }
+}
+.section-person .person img
 {
     width: 100%;
+}
+.section-person .person:hover .person_content,
+.section-person .person:focus .person_content
+{
+    -webkit-transform: scale(1);
+            transform: scale(1); 
+
+    opacity: 1;
+}
+.section-person .person:hover .person_img,
+.section-person .person:focus .person_img
+{
+    -webkit-transform: scale(1.025);
+            transform: scale(1.025); 
+
+    -webkit-filter: glayscale(100%);
+            filter: glayscale(100%);
+}
+.section-person .person a
+{
+    position: relative;
+
+    display: block;
+
+    color: #fff;
+}
+.section-person .person .arrow
+{
+    position: absolute;
+    top: 0;
+    right: 0; 
+    bottom: 0;
+
+    display: table;
+
+    width: 20%;
+    height: 60px;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    border-radius: 100%;
+}
+.section-person .person .arrow img
+{
+    display: table-cell;
+
+    vertical-align: middle;
+}
+@media screen and (max-width: 1300px)
+{
+    .section-person .person .arrow
+    {
+        top: auto; 
+
+        width: 10%;
+        height: auto;
+    }
+}
+@media screen and (max-width: 780px)
+{
+    .section-person .person .arrow
+    {
+        display: none;
+    }
+}
+.section-person .person .article_img,
+.section-person .person_content
+{
+    -webkit-transition: all .25s cubic-bezier(.785, .135, .15, .86) 0s;
+            transition: all .25s cubic-bezier(.785, .135, .15, .86) 0s;
+}
+.section-person .person_content
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: table;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 20% 10% 20% 10%;
+
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+
+    opacity: 0;
+    background-color: rgba(255, 109, 31, .85);
+}
+@media screen and (max-width: 780px)
+{
+    .section-person .person_content
+    {
+        padding-top: 10.36269%;
+        padding-right: 6.42398%;
+        padding-bottom: 5.18135%;
+        padding-left: 6.42398%;
+    }
+}
+.section-person .person_content > div
+{
+    display: table-cell;
+
+    vertical-align: middle;
+}
+.section-person .person .personNum
+{
+    margin-bottom: 25%;
+
+    text-align: center;
+}
+.section-person .person .personNum img
+{
+    width: 50%;
+}
+@media screen and (max-width: 1300px)
+{
+    .section-person .person .personNum
+    {
+        margin-bottom: 15%;
+    }
+}
+@media screen and (max-width: 780px)
+{
+    .section-person .person .personNum
+    {
+        margin-bottom: 5%;
+    }
+}
+.section-person .person .personInfo
+{
+    position: relative;
+}
+.section-person .person .profileTop
+{
+    font-size: 11px; 
+
+    letter-spacing: .22em;
+}
+.section-person .person .profileTop .ja
+{
+    font-size: 2em;
+}
+.section-person .person .profileTop .en
+{
+    font-family: 'Roboto', sans-serif;
+
+    margin-left: 1em;
+}
+@media screen and (max-width: 1300px)
+{
+    .section-person .person .profileTop .ja
+    {
+        font-size: 1.3em;
+    }
+    .section-person .person .profileTop .en
+    {
+        display: block; 
+
+        margin-top: 5px;
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 780px)
+{
+    .section-person .person .profileTop .ja
+    {
+        font-size: 1.1em;
+    }
+}
+@media screen and (max-width: 1300px)
+{
+    .section-person .person .profileText
+    {
+        font-size: 10px;
+    }
 }
 .no-flexboxlegacy .personImagePanel
 {
@@ -1225,7 +1417,6 @@ culture
 ********************/
 .section-culture
 {
-    margin-top: 100px;
     margin-bottom: 140px;
 }
 .section-culture .heroPanel
@@ -1269,13 +1460,32 @@ culture
 }
 
 /********************
+wki
+********************/
+.section-wju
+{
+    margin-bottom: 180px;
+}
+@media screen and (max-width: 780px)
+{
+    .section-wju
+    {
+        margin-bottom: 70px;
+    }
+    .section-wju .section_index img
+    {
+        width: 55.91667%;
+    }
+}
+
+/********************
 recruiting
 ********************/
 .section-recruiting
 {
     margin-bottom: 0;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-top: 85px;
+    padding-bottom: 85px;
 
     -webkit-animation: gradationAnim 16s ease infinite;
             animation: gradationAnim 16s ease infinite; 
@@ -1318,8 +1528,8 @@ recruiting
 {
     .section-recruiting
     {
-        padding-top: 7rem;
-        padding-bottom: 7rem;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
     .section-recruiting .section_index img
     {

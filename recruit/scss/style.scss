@@ -972,25 +972,175 @@ person
 		}
 	}
 
-	.personImagePanel{
+	.persons{
 		width: 100%;
+		background-color: #fff;
 		display: flex;
+		justify-content: center;
 		flex-direction: row;
-		flex-wrap: wrap;
+		flex-wrap: wrap;	
+	}
+
+	.person
+	{
+		@include liquid( 466, 1400 );
+		margin: 0 0 -1px 0;		
+		line-height: 1;
+		list-style: none;
+		overflow: hidden;
 		
-		&_panel{
-			max-width: percentage(466 / 1300);
-			@include liquid( 466, 1400 );
-			line-height: 0;
-			list-style: none;
-			overflow: hidden;
+		@include breakpoint( tab ){
+			width: 50%;
+		}
+		img{
+			width: 100%;
+		}
+
+
+		/////// mouse over
+		&:hover,
+		&:focus{
+			.person_content{
+				opacity: 1;
+				transform: scale(1);
+			}
+			.person_img{
+				filter: glayscale( 100% );
+				transform: scale(1.025);	
+			}		
+		}
+
+		a{
+			position: relative;
+			display: block;
+			color: #fff;
+		}
+
+		.arrow{
+			width: 20%;
+			height: 60px;
+			margin-top: auto;
+			margin-bottom: auto;
+			display: table;
+			border-radius: 100%;
+			
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+
 			
 			img{
-				// max-width: none;
-				width: 100%;
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			@include breakpoint( 1300 ){
+				width: 10%;
+				height: auto;
+				top: auto;
+			}		
+			@include breakpoint( tab ){
+				display: none;
+			}	
+
+		}
+
+		.article_img,
+		&_content{
+			transition: all 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;		
+		}
+
+		
+		&_content{
+			height: 100%;
+			width: 100%;
+			display: table;
+			margin: 0;
+			box-sizing: border-box;
+			padding: 20% 10% 20% 10%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			opacity: 0;
+			transform: scale(1.1);		
+			background-color: rgba( $orange, 0.85 );
+			
+			@include breakpoint( tab ){
+				padding-top: percentage( 40 / 386 );
+				padding-right: percentage( 30 / 467 );
+				padding-bottom: percentage( 20 / 386 );
+				padding-left: percentage( 30 / 467 );
+			}			
+			
+			&>div{
+				display: table-cell;
+				vertical-align: middle;
+			}
+			
+		}
+
+
+		.personNum
+		{
+			margin-bottom: 25%;
+			text-align: center;
+			img{
+				width: 50%;
+			}
+
+			@include breakpoint( 1300 ){
+				margin-bottom: 15%;
+			}
+
+			@include breakpoint( tab ){
+				margin-bottom: 5%;
 			}
 		}
-	}
+
+		.personInfo{
+			position: relative
+		}
+
+		.profileTop
+		{
+			letter-spacing: 0.22em;
+			font-size: 11px;
+			
+			.ja{
+				font-size: 2em;
+			}
+			.en{
+				font-family: $roboto;
+				margin-left: 1em;
+			}
+
+			@include breakpoint( 1300 ){
+				.ja{
+					font-size: 1.3em;
+				}
+				.en{
+					margin-top: 5px;
+					margin-left: 0;
+					display: block;
+				}
+			}
+			@include breakpoint( tab ){
+				.ja{
+					font-size: 1.1em;
+				}			
+			}
+		}
+
+		.profileText{
+			@include breakpoint( 1300 ){
+				font-size: 10px;
+			}		
+		}
+
+	}		
 
 	@at-root .no-flexboxlegacy{
 
@@ -1065,7 +1215,6 @@ career
 culture
 ********************/
 .section-culture{
-	margin-top: 100px;
 	margin-bottom: 140px;
 	
 	.heroPanel
@@ -1114,12 +1263,32 @@ culture
 
 
 /********************
+wki
+********************/
+.section-wju{
+	margin-bottom: 180px;
+
+	
+	@include breakpoint( tab ){
+		margin-bottom: 70px;
+		
+		.section_index{
+			img{
+				@include liquid( 671, 1200 );
+			}			
+		}
+	}		
+}
+
+
+
+/********************
 recruiting
 ********************/
 .section-recruiting{
 	margin-bottom: 0;
-	padding-top: 10rem;
-	padding-bottom: 10rem;
+	padding-top: 85px;
+	padding-bottom: 85px;
 	@extend %gradation;
 	text-align: center;
 	
@@ -1156,8 +1325,8 @@ recruiting
 	}
 
 	@include breakpoint( tab ){
-		padding-top: 7rem;
-		padding-bottom: 7rem;
+		padding-top: 50px;
+		padding-bottom: 50px;
 		
 		.section_index{
 			img{
