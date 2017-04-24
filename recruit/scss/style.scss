@@ -1215,7 +1215,6 @@ career
 culture
 ********************/
 .section-culture{
-	margin-top: 100px;
 	margin-bottom: 140px;
 	
 	.heroPanel
@@ -1264,12 +1263,32 @@ culture
 
 
 /********************
+wki
+********************/
+.section-wju{
+	margin-bottom: 180px;
+
+	
+	@include breakpoint( tab ){
+		margin-bottom: 70px;
+		
+		.section_index{
+			img{
+				@include liquid( 671, 1200 );
+			}			
+		}
+	}		
+}
+
+
+
+/********************
 recruiting
 ********************/
 .section-recruiting{
 	margin-bottom: 0;
-	padding-top: 10rem;
-	padding-bottom: 10rem;
+	padding-top: 85px;
+	padding-bottom: 85px;
 	@extend %gradation;
 	text-align: center;
 	
@@ -1306,8 +1325,8 @@ recruiting
 	}
 
 	@include breakpoint( tab ){
-		padding-top: 7rem;
-		padding-bottom: 7rem;
+		padding-top: 50px;
+		padding-bottom: 50px;
 		
 		.section_index{
 			img{

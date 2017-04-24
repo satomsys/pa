@@ -1417,7 +1417,6 @@ culture
 ********************/
 .section-culture
 {
-    margin-top: 100px;
     margin-bottom: 140px;
 }
 .section-culture .heroPanel
@@ -1461,13 +1460,32 @@ culture
 }
 
 /********************
+wki
+********************/
+.section-wju
+{
+    margin-bottom: 180px;
+}
+@media screen and (max-width: 780px)
+{
+    .section-wju
+    {
+        margin-bottom: 70px;
+    }
+    .section-wju .section_index img
+    {
+        width: 55.91667%;
+    }
+}
+
+/********************
 recruiting
 ********************/
 .section-recruiting
 {
     margin-bottom: 0;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-top: 85px;
+    padding-bottom: 85px;
 
     -webkit-animation: gradationAnim 16s ease infinite;
             animation: gradationAnim 16s ease infinite; 
@@ -1510,8 +1528,8 @@ recruiting
 {
     .section-recruiting
     {
-        padding-top: 7rem;
-        padding-bottom: 7rem;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
     .section-recruiting .section_index img
     {
