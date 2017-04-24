@@ -4,6 +4,7 @@
 @import "../../common/scss/variables";
 @import "../../common/scss/mixins";
 
+
 ////////////////////////////////////////////////
 
 // CAREER
@@ -57,185 +58,6 @@
 		}			
 	}
 }
-
-
-// /**
-// * fancyBox
-// */
-
-// .fancybox-controls{
-// 	overflow: auto;
-// }
-
-// .fancybox-button{
-// 	margin-top: auto;
-// 	margin-bottom: auto;
-// 	position: fixed;	
-// 	top: 0;
-// 	bottom: 0;
-// 	background-color: rgba( $orange, 0.8 );
-// 	border-radius: 100%;
-// 	transition: all 0.3s;
-	
-// 	&:hover,
-// 	&:active{
-// 		background-color: $orange;
-// 	}
-	
-// 	&--left{
-// 		left: 2%;
-// 	}
-// 	&--right{
-// 		right: 2%;
-// 	}
-
-
-// 	@include breakpoint( tab ){
-// 		&--left, &--right, & button:not(.fancybox-button--close) {
-// 	   		display: block!important;
-// 	   		width: 22px;
-// 	   		height: 22px;
-// 	   	}
-
-// 		&--left,
-// 		&--right{
-// 			&:after{
-// 				top: 8px;			
-// 			}
-// 		}
-// 		&--left{
-// 			&:after{
-// 				left:9px;
-// 			}			
-			
-// 		}
-// 		&--right{
-// 			&:after{
-// 				right:9px;
-// 			}			
-			
-// 		}
-// 	}	
-// }
-
-// .fancybox-close-small{
-// 	// top: -20px;
-// 	// right: -20px;
-	
-// 	&:after{
-// 		transition: all 0.3s;		
-// 		color: #fff;
-// 		background-color: $orange;	
-// 	}
-
-// 	&:hover:after,
-// 	&:active:after{
-// 		color: #fff;
-// 		background-color: rgba( $orange, 0.8 );			
-// 	}	
-
-// }
-
-// .fancybox-slider-wrap .instaBox{
-
-// 	&_content{
-// 		padding: 80px;
-// 		max-width: 920px;
-// 		box-sizing: border-box;
-// 	}
-// 	&_content_img,
-// 	&_content_text{
-// 		display: block;
-// 		@include liquid( 560, 920, true );
-// 	}
-// 	&_content_img{
-// 		margin-bottom: 30px;
-// 	}
-// 	&_content_text{
-// 		position: relative;
-		
-
-// 		.button-linkToInsta{
-// 			width: 100px;
-// 			position: absolute;
-// 			top: 0;
-// 			right: -140px;
-// 			text-align: center;
-// 			a{
-// 				font-size: 1rem;
-// 				color: #fff;
-// 				background-color: #8c8c8c;
-// 				border: none;
-// 				letter-spacing: 0.01em!important;		
-// 			}
-// 		}			
-// 	}
-
-// 	@include breakpoint( tab ){
-		
-// 		&_content{
-// 			max-width: 90%;
-// 			padding: 30px;
-// 		}		
-
-// 		&_content_img,
-// 		&_content_text{
-// 			display: block;
-// 			width: auto;
-// 		}		
-		
-// 		&_content_text{
-// 			position: relative;
-// 			word-wrap: break-word;
-			
-
-// 			.button-linkToInsta{
-// 				display: block;
-// 				position: static;
-// 				margin-top: 20px;
-// 			}			
-// 		}		
-// 	}		
-
-
-// }
-
-
-// .instaBox
-// {
-// 	width: 100%;
-// 	padding-left: 1%;
-// 	padding-right: 1%;
-// 	overflow: hidden;
-	
-// 	display: flex;
-// 	flex-direction: row;
-// 	flex-wrap: wrap;
-// 	align-items:center;
-	
-// 	li{
-// 		width: calc( 33.33% - 4% );
-// 		margin-left: 2%;
-// 		margin-right: 2%;
-// 		list-style: none; 
-// 		float: left;
-		
-// 	}	
-
-// 	&_image{
-// 		border-radius: 20px;
-// 		cursor: pointer;
-		
-// 		figure{
-// 			display: table-cell;
-// 			vertical-align: middle;
-// 		}
-// 	}
-
-// 	&_content{
-// 		display: none;
-// 	}
-// }
 
 
 
@@ -1071,6 +893,7 @@ $up: 280px;
 
 				@include breakpoint( tab ){
 					font-size: 4em;	
+					margin-bottom: 0;
 				}
 			}
 
@@ -1114,6 +937,7 @@ $up: 280px;
 					margin-bottom: 20px; 
 					
 					p{
+						font-size: 1.5em;
 						text-align: center;
 					}		
 				}				
@@ -1324,5 +1148,87 @@ $up: 280px;
 }
 
 	
+}
+
+
+////////////////////////
+
+// モーダル
+
+////////////////////////
+
+/***********
+modal
+***********/
+
+.careerModal
+{
+	
+	&_content,
+	&_footerImg{
+		@include liquid( 600, 980, true );
+		
+		@include breakpoint( tab ){
+			width: auto;
+		}				
+	}
+
+
+	// FUTURE
+	&_header{
+		text-align: center;
+		margin-bottom: 0.5em;
+		font-size: 6em;
+		color: $orange;
+		font-family: $roboto_cond;
+		font-weight: 700;
+		
+		@include breakpoint( tab ){
+			font-size: 4em;
+			margin-bottom: 0;
+		}
+	}
+
+	&_content
+	{
+		margin-bottom: 20px;
+		&_index{
+			margin-bottom: 1em;
+			font-size: 2em;
+			font-weight: 200;
+			
+			@include breakpoint( tab ){
+				font-size: 1.4em;
+			}			
+		}
+		&_text{
+						
+		}
+	}
+
+	&_footerImg{
+		line-height: 1;
+		padding: 10px;
+		position: relative;
+		img{
+			position: relative;
+			z-index: 1
+		}
+
+		&_bg{
+			width: 100%;
+			height: 100%;
+			margin: auto;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			display: block;
+			@extend %gradation;
+			opacity: 0.2;
+			
+		}
+	}
 }
 

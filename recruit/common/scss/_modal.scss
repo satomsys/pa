@@ -1,0 +1,93 @@
+.fancybox-container
+{
+	html{
+		background-color: transparent;
+	}
+}
+
+.modal{
+
+	&_close{
+		font-family: $roboto;
+		text-align: center;
+		i{
+			width: 50px;
+			height: 50px;
+			margin-right: auto;
+			margin-left: auto;
+			display: block;
+			position: relative;
+			&:before,
+			&:after{
+				content: " ";
+				width: 100%;
+				height: 1px;
+				margin: auto;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				border-radius: 0;
+				background-color: #fff;
+			}
+			&:before{
+				transform: rotate( 45deg );
+			}
+			&:after{
+				transform: rotate( -45deg );
+			}
+		}
+	}	
+	
+}
+
+.careerModal
+{
+	// display: none;	
+	
+	color: #fff;
+	
+	&_index{
+		margin-bottom: 1em;
+		text-align: center;
+		font-size: 2em;
+		font-weight: lighter;
+		color: #fff;
+		
+		span{
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		@include breakpoint( tab ){
+			font-size: 1.4em;
+		}
+	}
+
+	.modalNum{
+		margin-right: 20px;
+		width: 110px;
+		
+		@include breakpoint( tab ){
+			width: 50px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+		}		
+	}
+	
+	&_wrap{
+	}
+	
+	&_content{
+		@include liquid( 600, 980, true );
+		
+		@include breakpoint( tab ){
+			width: auto;
+		}				
+	}
+
+	
+	
+}
