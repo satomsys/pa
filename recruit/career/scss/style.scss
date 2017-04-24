@@ -345,52 +345,56 @@ index
 		figure{
 			line-height: 0
 		}
+
+		@include breakpoint( tab, min ){
+			//画像の囲み線
+			&:before,
+			&:after,
+			figure:before,
+			figure:after{
+				content: " ";
+				display: block;
+				position: absolute;
+				background-color: $orange;
+				transition: all 0.3s;
+				z-index: 1;
+				mix-blend-mode: overlay;
+			}
+
+			&:before,
+			figure:before{
+				width: 0%;
+				height: 15px;
+			}
+			&:after,
+			figure:after{
+				width: 15px;
+				height: 0%;
+			}	
+
+			&:before{
+				top: 0;
+				left: 0;
+				// transition-delay: 0.1s;
+			}
+			&:after{
+				top: 0;
+				right: 0;
+				// transition-delay: 0.2s;
+			}
+			figure:before{
+				bottom: 0;
+				right: 0;
+				// transition-delay: 0.3s;
+			}
+			figure:after{
+				left: 0;
+				bottom: 0;
+				// transition-delay: 0.4s;
+			}			
+			
+		}
 		
-		//画像の囲み線
-		&:before,
-		&:after,
-		figure:before,
-		figure:after{
-			content: " ";
-			display: block;
-			position: absolute;
-			background-color: $orange;
-			transition: all 0.3s;
-			z-index: 1;
-			mix-blend-mode: overlay;
-		}
-
-		&:before,
-		figure:before{
-			width: 0%;
-			height: 15px;
-		}
-		&:after,
-		figure:after{
-			width: 15px;
-			height: 0%;
-		}	
-
-		&:before{
-			top: 0;
-			left: 0;
-			// transition-delay: 0.1s;
-		}
-		&:after{
-			top: 0;
-			right: 0;
-			// transition-delay: 0.2s;
-		}
-		figure:before{
-			bottom: 0;
-			right: 0;
-			// transition-delay: 0.3s;
-		}
-		figure:after{
-			left: 0;
-			bottom: 0;
-			// transition-delay: 0.4s;
-		}			
 
 
 	}
@@ -437,6 +441,18 @@ $up: 280px;
 
 .career-child{
 
+	.button{
+		width: 150px;
+		a{
+			border: none;
+			// border-radius: 5px;
+			color: #fff;
+			@extend %gradation;
+		}
+
+
+	}
+
 	.wrap{
 		max-width: 980px;
 		padding-right: 0;
@@ -475,6 +491,19 @@ $up: 280px;
 				letter-spacing: 0.17em;
 			}
 		}
+
+		@include breakpoint( tab ){
+			margin-top: 95px;			
+			top: -90px;
+			margin-bottom: -95px;			
+			
+			&_name{
+				.ja{
+					font-size: 2em;
+				}
+			}
+
+		}
 	}
 
 
@@ -488,13 +517,50 @@ $up: 280px;
 		background: url(../img/timelineBg.png) center top no-repeat;
 		background-size: auto 100%;
 		// background-size: 1116px auto;
+		
+
+		.mobileTimeline{
+			display: none;		
+		}
+
+
+		@include breakpoint( tab ){
+			min-height: 0;
+			margin-top: 0;
+			padding-top: 30px;
+			position: relative;
+			background-image: none;
+			
+			.mobileTimeline{
+				display: block;
+				width: 5%;
+				height: 100%;
+				margin-right: auto;
+				margin-left: auto;
+				position: absolute;
+				z-index: 0;
+				top: 0;
+				right: 0;
+				left: 0;
+					
+				opacity: 0.2;
+				@include background-image(linear-gradient(to bottom, $orange, #ffc61f));
+			}
+		}  
 
 
 		&_event{
 			display: flex;
-			flex-direction: row;
 			justify-content: space-between;
 			position: relative;
+			
+			@include breakpoint( tab ){
+				margin-bottom: 40px;
+				text-align: center;
+				padding-left: 5%;
+				padding-right: 5%;
+				z-index: 1;
+			}  
 			
 			///// 文字
 			&_num{
@@ -519,12 +585,30 @@ $up: 280px;
 				}
 				.icon{
 					position: absolute;					
-				}				
+				}	
+
+				@include breakpoint( tab ){
+					.yo{
+						margin-left: 0;
+					}
+
+					span{
+						font-size: 4em;
+					}					
+					.icon{
+						display: none					
+					}
+				}  
 			}
 
 			///// years old　位置
 			&.timeline_event-1 .yo{
-					margin-left: -35px;
+				margin-left: -35px;
+					
+
+				@include breakpoint( tab ){
+					margin-left: 0;
+				}					
 			}
 			&.timeline_event-6 .yo,
 			&.timeline_event-18 .yo,
@@ -539,8 +623,30 @@ $up: 280px;
 			&_img{
 				img{
 					line-height: 0;
-					box-shadow: 5px 5px 0 $orange;
 				}
+
+				&.hasButton{
+					position: relative;
+				}
+				&.hasButton .button{
+					position: absolute;
+					right:  0%;
+					bottom: 0;
+				}
+
+
+				@include breakpoint( tab, min ){
+					img{
+						box-shadow: 5px 5px 0 $orange;
+					}
+
+					&.hasButton .button{
+						top:  40%;
+						bottom: auto;
+						left: 180px;
+					}
+				}
+
 			}
 
 			///// テキスト
@@ -555,26 +661,37 @@ $up: 280px;
 					margin-bottom: 10px;
 				}
 
-			}
-
-			&.vertical{
-				> .vertical_content{
-					display: flex;
-					flex-direction: column-reverse;
+				@include breakpoint( tab ){
+					font-size: 1.1em;
+					.eventIndex{
+						margin-bottom: 5px;
+					}
+					br{
+						display: none;
+					}
 				}
 
-				.timeline_event_img{
-					margin-bottom: 20px;
+			}
+
+			@include breakpoint( tab,min ){			
+				&.vertical{
+					
+					.timeline_event_num{
+						position: absolute;
+					}
+
+					.timeline_event_img{
+						margin-bottom: 20px;
+					}
+				}
+				&.vertical-textTop{
+
+					.timeline_event_img{
+						margin-top: 20px;
+					}				
 				}
 			}
-			&.vertical-textTop{
-				> .vertical_content{
-					flex-direction: column;
-				}
-				.timeline_event_img{
-					margin-top: 20px;
-				}				
-			}
+
 		}
 
 		//////////位置クラス
@@ -588,72 +705,100 @@ $up: 280px;
 			&.alignCenter{
 				margin-left: auto;
 				margin-right: auto;
-			}	
+			}
 		}
 
 		///// flexbox-childの順番
 		&_event{
+			flex-direction: row;
+
+			@include breakpoint( tab ){
+				flex-direction: column;
+			}				
 
 			///// 横組み
 			
 			//数字センター
 			&.horizontal-numCenter{
-				.timeline_event_num{
-					order: 2;
-				}
-				.timeline_event_text{
-					order: 1
-				}
-				.timeline_event_img{
-					order: 3;
+
+				@include breakpoint( tab, min ){				
+					.timeline_event_num{
+						order: 2;
+					}
+					.timeline_event_text{
+						order: 1
+					}
+					.timeline_event_img{
+						order: 3;
+					}
 				}
 			}
 
 			//数字右
 			&.horizontal-numRight{
-				.timeline_event_num{
-					order: 3;
-				}
-				.timeline_event_text{
-					order: 2
-				}
-				.timeline_event_img{
-					order: 1;
+				@include breakpoint( tab, min ){	
+					.timeline_event_num{
+						order: 3;
+					}
+					.timeline_event_text{
+						order: 2
+					}
+					.timeline_event_img{
+						order: 1;
+					}
 				}
 			}
 
 			//数字左
 			&.horizontal-numLeft{
-				.timeline_event_num{
-					order: 1;
-				}
-				.timeline_event_text{
-					order: 2
-				}
-				.timeline_event_img{
-					order: 3;
+				@include breakpoint( tab, min ){	
+					.timeline_event_num{
+						order: 1;
+					}
+					.timeline_event_text{
+						order: 2
+					}
+					.timeline_event_img{
+						order: 3;
+					}
 				}
 			}
 
 			/////縦組み
+			&.vertical{
+				@include breakpoint( tab, min ){	
+					flex-direction: column;
+				}
+			}
+			&.vertical-textTop{
+				@include breakpoint( tab, min ){	
+					flex-direction: column-reverse;
+					// flex-direction: row-reverse;
+				}
+			}			
 
 			//数字右
 			&.vertical-numRight{
-				> .vertical_content {
-					order: 1
-				}
-				.timeline_event_num{
-					order: 2;
+				@include breakpoint( tab, min ){	
+					.timeline_event_num{
+						order: 2;
+					}
 				}
 			}
 
 			//数字左
 			&.vertical-numLeft{
-				> .vertical_content {
-					order: 2
+				@include breakpoint( tab, min ){	
+					.timeline_event_num{
+						order: 1;
+					}
 				}
-				.timeline_event_num{
-					order: 1;
+			}			
+		
+			//幅が余るため。	
+			&.vertical.alignRight{
+				@include breakpoint( tab, min ){	
+					align-items: flex-end;
 				}
 			}			
 		}
@@ -689,117 +834,152 @@ $up: 280px;
 					transform: translateY( 0px ) scale( 1 );
 				}				
 			}
+
+			@include breakpoint( tab ){
+				.eventIndex{
+					transition-delay: 0.5s;
+				}
+				.eventInfo{
+					transition-delay: 0.7s;
+				}
+				&_img{
+					transition-delay: 0.3s;
+				}
+			} 
 		}
 
 
 
 		////////// 個別style
 		&_event-1{
-			width: 610px;
-			margin-bottom: 75px;
-			
-			.timeline_event_num .icon{
-				bottom: 0;
-				right: 5px;
+
+			@include breakpoint( tab, min ){
+				width: 610px;
+				margin-bottom: 75px;
 				
-			}
+				.timeline_event_num .icon{
+					bottom: 0;
+					right: 5px;
+					
+				}
+			}  
 		}
 
 		&_event-6{
-			width: 792px;
-			margin-bottom: 75px;
+			@include breakpoint( tab, min ){
+				width: 792px;
+				margin-bottom: 75px;
+				.timeline_event_num .icon{
+					top: 0;
+					left: -90px;
+				}			
+			}  
 			
-			.timeline_event_num .icon{
-				top: 0;
-				left: -90px;
-			}			
 		}
 
 		&_event-12{
-			width: 797px;
-			margin-bottom: 80px;
-			
-			.timeline_event_num .icon{
-				top: 0;
-				right: -90px;
-			}			
+			@include breakpoint( tab, min ){
+				width: 797px;
+				margin-bottom: 80px;
+				
+				.timeline_event_num .icon{
+					top: 0;
+					right: -90px;
+				}			
+			}  
 		}
 
 		&_event-17{
-			width: 980px;
-			margin-bottom: 60px;
-			
-			.timeline_event_img{
-				align-self: flex-end;
-			}
+			@include breakpoint( tab, min ){
+				width: 980px;
+				margin-bottom: 60px;
+				
+				.timeline_event_img{
+					align-self: flex-end;
+				}
 
-			.timeline_event_num{
-				left: -13%;
-			}
-			.timeline_event_num .icon{
-				top: 0;
-				right: -130px;
-			}			
+				.timeline_event_num{
+					left: -13%;
+				}
+				.timeline_event_num .icon{
+					top: 0;
+					right: -130px;
+				}			
+			}  
 		}	
 
 
 		&_event-18{
-			width: 735px;
-			// margin-bottom: 60px;
+			@include breakpoint( tab, min ){
+				width: 735px;
+				margin-left: -100px;
+				// margin-bottom: 60px;
 
-
-			.timeline_event_num{
-				left: 13%;
-			}
-			.timeline_event_num .icon{
-				top: 0;
-				left: -120px;
-			}			
+				.timeline_event_num{
+					top: 0;
+					left: 63%;
+				}
+				.timeline_event_num .icon{
+					top: 0;
+					left: -120px;
+				}			
+			}  
 		}			
 
 		&_event-19{
-			width: 700px;
-			margin-top: -100px;
-			margin-bottom: 0px;
-			
-			.timeline_event_num{
-			}
-			.timeline_event_num .icon{
-				top: 0;
-				right: -200px;
-			}			
+			@include breakpoint( tab, min ){
+				width: 552px;
+				margin-top: -120px;
+				margin-bottom: 0px;
+	
+				.timeline_event_num{
+					top: 0;
+					left: -20%;
+				}
+				.timeline_event_num .icon{
+					top: 0;
+					right: -200px;
+				}			
+			}  
 		}
 
 		&_event-24{
-			width: 700px;
-			margin-top: -50px;
-			margin-bottom: 60px;
-			
-			.timeline_event_num{
-				align-self: center;
-			}
-			.timeline_event_num .icon{
-				top: 0;
-				right: -200px;
-			}			
+			@include breakpoint( tab, min ){
+				width: 700px;
+				margin-top: -50px;
+				margin-bottom: 60px;
+				
+				.timeline_event_num{
+					right: 0;
+					top: 25%;
+					align-self: center;
+				}
+				.timeline_event_num .icon{
+					top: 0;
+					right: -200px;
+				}			
+			}  
 		}
 
 
 		&_event-28{
-			width: 890px;
-			
-			.timeline_event_num{
-				align-self: flex-start;
-			}
-			.timeline_event_num .icon{
-				top: 0;
-				left: -140px;
-			}			
+			@include breakpoint( tab, min ){
+				width: 890px;
+	
+				.timeline_event_num{
+					right: 0;
+					top: 10%;
+				}
+				.timeline_event_num .icon{
+					top: 0;
+					left: -140px;
+				}			
+			}  
 		}
 
 
 		&_now{
-			margin-top: 1em;
+			margin-top: 0.5em;
 			margin-bottom: 1em;
 			line-height: 1;
 			text-align: center;	
@@ -821,12 +1001,18 @@ $up: 280px;
 				}
 			}
 
-			$delay: 0.1s;
+			$delay: 0.15s;
 			@for $i from 1 through 3 {
 			  span:nth-child(#{$i}) {
 			    transition-delay: $delay * $i;
 			  }
 			}
+
+			@include breakpoint( tab ){
+				font-size: 3.5em;
+				position: relative;
+				z-index: 1;
+			}  			
 		}
 
 		&_future{
@@ -860,8 +1046,32 @@ $up: 280px;
 				text-align: center;
 				font-family: $roboto;
 				font-weight: 700;
+				letter-spacing: -0.125em;
 				font-size: 8em;
 				color: darken( $orange, 10% );
+				
+				span{
+					display: inline-block;
+					transition: all 0.4s;
+					
+					&.fade{
+						transform: translateY(10px);
+						&.fadeIn{
+							transform: translateY(0px);
+						}
+					}
+				}
+
+				$delay: 0.15s;
+				@for $i from 1 through 6 {
+				  span:nth-child(#{$i}) {
+				    transition-delay: $delay * $i;
+				  }
+				}
+
+				@include breakpoint( tab ){
+					font-size: 4em;	
+				}
 			}
 
 			&_content{
@@ -873,6 +1083,13 @@ $up: 280px;
 					display: table-cell;
 					vertical-align: middle;
 				}
+
+				@include breakpoint( tab ){
+					&_img,
+					&_message{
+						display: block;					
+					}  		
+				}		
 			}
 
 			&_content_message{
@@ -891,13 +1108,21 @@ $up: 280px;
 					text-align: left;
 					color: $orange;
 				}
-				.button{
-					a{
-						border: none;
-						color: #fff;
-						@extend %gradation;
-					}
-				}
+
+				@include breakpoint( tab ){
+					position: static;
+					margin-bottom: 20px; 
+					
+					p{
+						text-align: center;
+					}		
+				}				
+			}
+
+			&_content_img{
+				@include breakpoint( tab ){
+					max-width: 50%;
+				}					
 			}
 
 			&_bg{
@@ -920,13 +1145,13 @@ $up: 280px;
 				transition: transition();		
 				opacity: 0;
 				transform: translateX( 20px );
-				transition-delay: 1s;
+				transition-delay: 1.5s;
 			}
 
 			&_bg{
 				width: 0;
 				transition: transition();					
-				transition-delay: 0.5s;				
+				transition-delay: 1.35s;				
 			}
 
 			&.fadeIn{
@@ -945,14 +1170,14 @@ $up: 280px;
 
 
 
-	///////// nav 
-	.otherStory
-	{
+///////// nav 
+.otherStory
+{
 
 	padding-top: 100px;
 	padding-bottom: 50px;
 	background-color: #ebebeb;
-	
+
 	@include breakpoint( tab ){
 		padding-top: 30px;
 		padding-bottom: 30px;
