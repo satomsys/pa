@@ -312,6 +312,9 @@ $up: 280px;
 				font-size: 1.2em;
 				letter-spacing: 0.17em;
 			}
+			.position{
+				display: block;
+			}
 		}
 
 		@include breakpoint( tab ){
@@ -321,11 +324,20 @@ $up: 280px;
 			
 			&_name{
 				.ja{
-					font-size: 2em;
+					font-size: 1.5em;
+				}
+				.en{
+					margin-left: 0;
+					display: block;
 				}
 			}
 
 		}
+	}
+
+	.careerContent{
+		overflow: hidden;
+		@include background-image(linear-gradient( to bottom, #fff9cc, #ffe2d2) );	
 	}
 
 
@@ -335,10 +347,8 @@ $up: 280px;
 	.timeline
 	{
 		margin-top: 60px;
-		min-height: 3520px;
 		background: url(../img/timelineBg.png) center top no-repeat;
 		background-size: auto 100%;
-		// background-size: 1116px auto;
 		
 
 		.mobileTimeline{
@@ -425,7 +435,7 @@ $up: 280px;
 
 			///// years old　位置
 			&.timeline_event-1 .yo{
-				margin-left: -35px;
+				margin-left: -20px;
 					
 
 				@include breakpoint( tab ){
@@ -616,13 +626,7 @@ $up: 280px;
 					}
 				}
 			}			
-		
-			//幅が余るため。	
-			&.vertical.alignRight{
-				@include breakpoint( tab, min ){	
-					align-items: flex-end;
-				}
-			}			
+			
 		}
 
 		///// イベントリストフェードイン設定
@@ -672,134 +676,6 @@ $up: 280px;
 
 
 
-		////////// 個別style
-		&_event-1{
-
-			@include breakpoint( tab, min ){
-				width: 610px;
-				margin-bottom: 75px;
-				
-				.timeline_event_num .icon{
-					bottom: 0;
-					right: 5px;
-					
-				}
-			}  
-		}
-
-		&_event-6{
-			@include breakpoint( tab, min ){
-				width: 792px;
-				margin-bottom: 75px;
-				.timeline_event_num .icon{
-					top: 0;
-					left: -90px;
-				}			
-			}  
-			
-		}
-
-		&_event-12{
-			@include breakpoint( tab, min ){
-				width: 797px;
-				margin-bottom: 80px;
-				
-				.timeline_event_num .icon{
-					top: 0;
-					right: -90px;
-				}			
-			}  
-		}
-
-		&_event-17{
-			@include breakpoint( tab, min ){
-				width: 980px;
-				margin-bottom: 60px;
-				
-				.timeline_event_img{
-					align-self: flex-end;
-				}
-
-				.timeline_event_num{
-					left: -13%;
-				}
-				.timeline_event_num .icon{
-					top: 0;
-					right: -130px;
-				}			
-			}  
-		}	
-
-
-		&_event-18{
-			@include breakpoint( tab, min ){
-				width: 735px;
-				margin-left: -100px;
-				// margin-bottom: 60px;
-
-				.timeline_event_num{
-					top: 0;
-					left: 63%;
-				}
-				.timeline_event_num .icon{
-					top: 0;
-					left: -120px;
-				}			
-			}  
-		}			
-
-		&_event-19{
-			@include breakpoint( tab, min ){
-				width: 552px;
-				margin-top: -120px;
-				margin-bottom: 0px;
-	
-				.timeline_event_num{
-					top: 0;
-					left: -20%;
-				}
-				.timeline_event_num .icon{
-					top: 0;
-					right: -200px;
-				}			
-			}  
-		}
-
-		&_event-24{
-			@include breakpoint( tab, min ){
-				width: 700px;
-				margin-top: -50px;
-				margin-bottom: 60px;
-				
-				.timeline_event_num{
-					right: 0;
-					top: 25%;
-					align-self: center;
-				}
-				.timeline_event_num .icon{
-					top: 0;
-					right: -200px;
-				}			
-			}  
-		}
-
-
-		&_event-28{
-			@include breakpoint( tab, min ){
-				width: 890px;
-	
-				.timeline_event_num{
-					right: 0;
-					top: 10%;
-				}
-				.timeline_event_num .icon{
-					top: 0;
-					left: -140px;
-				}			
-			}  
-		}
-
-
 		&_now{
 			margin-top: 0.5em;
 			margin-bottom: 1em;
@@ -838,6 +714,7 @@ $up: 280px;
 		}
 
 		&_future{
+			overflow: hidden;
 			padding-top: 25px;
 			position: relative;
 			
@@ -922,7 +799,8 @@ $up: 280px;
 				// margin-left: auto;
 				position: absolute;
 				top: 25%;
-				right: -130%;
+				right: -115%;
+				// right: -130%;
 				text-align: center;
 				// display: flex;
 				// flex-direction: column;
@@ -1076,6 +954,23 @@ $up: 280px;
 					opacity: 0.3;
 				}
 			}
+			li.comingsoon a{
+				pointer-events: none;
+				background-color: transparent;
+				
+				&:after{
+					content: "COMING SOON";
+					bottom: 49%;
+					opacity: 1;
+					color: #333;
+				}	
+
+				img{
+					opacity: 0.3;
+				}
+				
+			}
+
 			li a{
 				line-height: 0;
 				position: relative;
@@ -1173,15 +1068,19 @@ modal
 		}				
 	}
 
-
-	// FUTURE
 	&_header{
+		line-height: 1;
 		text-align: center;
 		margin-bottom: 0.5em;
 		font-size: 6em;
 		color: $orange;
 		font-family: $roboto_cond;
 		font-weight: 700;
+		
+		>span{
+			margin-right: -16px;
+			font-weight: 300;
+		}
 		
 		@include breakpoint( tab ){
 			font-size: 4em;
