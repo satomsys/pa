@@ -6,54 +6,62 @@
 
 ////////////////////////////////////////////////
 
-// CAREER ~ 下層 水谷
+// CAREER ~ 下層 にしがき
 
 ////////////////////////////////////////////////
 
 
 
 	////////// timeline 
-
-.career-child{
+.career-child
+{
+	.mainvisual_name{
+		margin-top: -18px;
+	}
+	
 	.timeline
 	{
-		// min-height: 3520px;
-
-		///// flexbox-childの順番
-		&_event{
-		
-			//幅が余るため。	
-			&.vertical.alignRight{
-				@include breakpoint( tab, min ){	
-					align-items: flex-end;
-				}
-			}				
+		@include breakpoint( tab, min ){
+			background-image: url(../../img/timelineBg-reverse.png);
 		}
-
-
 
 		////////// 個別style
 		&_event-1{
 
 			@include breakpoint( tab, min ){
-				width: 610px;
-				margin-bottom: 75px;
+				width: 830px;
+				margin-bottom: 160px;
 				
 				.timeline_event_num .icon{
-					bottom: 0;
-					right: 5px;
-					
+					bottom: -65px;
+					right: -40px;	
 				}
+
+				//align
+				&.timeline_event{
+					.timeline_event_text{
+						order: 3;
+					}
+					.timeline_event_img{
+						order: 1;
+					}									
+				}
+
 			}  
 		}
 
 		&_event-6{
 			@include breakpoint( tab, min ){
-				width: 792px;
-				margin-bottom: 75px;
+				width: 700px;
+				margin-bottom: 120px;
+				
+				// align
+				.timeline_event_num {
+					align-self: flex-end; 
+				}
 				.timeline_event_num .icon{
-					top: 0;
-					left: -90px;
+					top: 25px;
+					left: 120px;
 				}			
 			}  
 			
@@ -61,105 +69,102 @@
 
 		&_event-12{
 			@include breakpoint( tab, min ){
-				width: 797px;
-				margin-bottom: 80px;
+				width: 817px;
+				margin-bottom: 120px;
 				
+
+				
+				.timeline_event_num {
+					align-self: flex-end; 
+				}				
 				.timeline_event_num .icon{
-					top: 0;
-					right: -90px;
-				}			
+				    top: 20px;
+				    right: -20px;
+				}	
+				.timeline_event_num .yo{
+				    padding-bottom: 20px;
+				    vertical-align: bottom;
+				    margin-left: 10px;
+				}
+				
+				.timeline_event_img.hasButton .button{
+					top: 80%;
+					left: 100px;
+				}
+
+				//order
+				&.timeline_event{
+					.timeline_event_text{
+						order: 0
+					}
+					.timeline_event_img{
+						order: 1;
+					}									
+				}
 			}  
 		}
-
-		&_event-17{
-			@include breakpoint( tab, min ){
-				width: 980px;
-				margin-bottom: 60px;
-				
-				.timeline_event_img{
-					align-self: flex-end;
-				}
-
-				.timeline_event_num{
-					left: -13%;
-				}
-				.timeline_event_num .icon{
-					top: 0;
-					right: -130px;
-				}			
-			}  
-		}	
 
 
 		&_event-18{
 			@include breakpoint( tab, min ){
-				width: 835px;
-				margin-left: -100px;
-				// margin-bottom: 60px;
-
+				width: 890px;
+				margin-bottom: 100px;
+				
+				//align
 				.timeline_event_num{
-					top: 0;
-					left: 65%;
+					align-self: flex-end;
+				}
+				.timeline_event_num{
+					bottom: 0;
+					left: 53%;
 				}
 				.timeline_event_num .icon{
-					top: 0;
 					left: -120px;
-				}			
+					bottom: 0;
+				}
+
 			}  
 		}			
 
-		&_event-19{
+		&_event-23{
 			@include breakpoint( tab, min ){
-				width: 552px;
-				margin-top: -120px;
-				margin-bottom: 0px;
-	
-				.timeline_event_num{
-					top: 0;
-					left: -20%;
-				}
-				.timeline_event_num .icon{
-					top: 0;
-					right: -200px;
-				}			
-			}  
-		}
-
-		&_event-24{
-			@include breakpoint( tab, min ){
-				width: 700px;
-				margin-top: -50px;
+				width: 490px;
 				margin-bottom: 60px;
 				
 				.timeline_event_num{
-					right: 0;
+					left: -100%;
+					// left: -500px;
 					top: 25%;
 					align-self: center;
 				}
 				.timeline_event_num .icon{
 					top: 0;
-					right: -200px;
+					right: -150px;
 				}			
 			}  
 		}
 
 
-		&_event-28{
+		&_event-25{
 			@include breakpoint( tab, min ){
-				width: 890px;
+				width: 780px;
+				margin-bottom:400px;
 	
 				.timeline_event_num{
-					right: 0;
-					top: 10%;
+					position: absolute;
+					top: 140%;
+					right: 40%;
 				}
 				.timeline_event_num .icon{
 					top: 0;
-					left: -140px;
+					left: 60%;
 				}			
 			}  
 		}
 	}
+	
 }
+
 
 
 	////////// timeline 
