@@ -336,6 +336,7 @@ $up: 280px;
 	}
 
 	.careerContent{
+		overflow: hidden;
 		@include background-image(linear-gradient( to bottom, #fff9cc, #ffe2d2) );	
 	}
 
@@ -798,7 +799,8 @@ $up: 280px;
 				// margin-left: auto;
 				position: absolute;
 				top: 25%;
-				right: -130%;
+				right: -115%;
+				// right: -130%;
 				text-align: center;
 				// display: flex;
 				// flex-direction: column;
@@ -952,6 +954,23 @@ $up: 280px;
 					opacity: 0.3;
 				}
 			}
+			li.comingsoon a{
+				pointer-events: none;
+				background-color: transparent;
+				
+				&:after{
+					content: "COMING SOON";
+					bottom: 49%;
+					opacity: 1;
+					color: #333;
+				}	
+
+				img{
+					opacity: 0.3;
+				}
+				
+			}
+
 			li a{
 				line-height: 0;
 				position: relative;

@@ -88,6 +88,12 @@
 					right: -130px;
 				}			
 			}  
+			
+			@include breakpoint( 1024 ){
+				.timeline_event_num{
+					left: 0;
+				}
+			} 
 		}	
 
 
@@ -106,6 +112,10 @@
 					left: -120px;
 				}			
 			}  
+			
+			@include breakpoint( 1024 ){
+				margin-left: 0
+			} 			
 		}			
 
 		&_event-19{
@@ -157,6 +167,14 @@
 					left: -140px;
 				}			
 			}  
+		}
+
+		&_future{
+			@include breakpoint( 1024, min ){
+				&_content_message{
+					right: -130%;
+				}
+			} 			
 		}
 	}
 }

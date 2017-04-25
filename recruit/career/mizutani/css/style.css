@@ -68,6 +68,13 @@
         right: -130px;
     }
 }
+@media screen and (max-width: 1024px)
+{
+    .career-child .timeline_event-17 .timeline_event_num
+    {
+        left: 0;
+    }
+}
 @media screen and (min-width: 780px)
 {
     .career-child .timeline_event-18
@@ -84,6 +91,13 @@
     {
         top: 0;
         left: -120px;
+    }
+}
+@media screen and (max-width: 1024px)
+{
+    .career-child .timeline_event-18
+    {
+        margin-left: 0;
     }
 }
 @media screen and (min-width: 780px)
@@ -143,5 +157,12 @@
     {
         top: 0;
         left: -140px;
+    }
+}
+@media screen and (min-width: 1024px)
+{
+    .career-child .timeline_future_content_message
+    {
+        right: -130%;
     }
 }

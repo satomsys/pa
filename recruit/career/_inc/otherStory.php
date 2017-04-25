@@ -15,7 +15,7 @@
     </header>
     <nav class="otherStory_nav">
 	    <ul>
-	        <li<?php if( isset($hayashiIsActive)) echo ' class="current"' ?>>
+	        <li class="comingsoon" <?php if( isset($hayashiIsActive)) echo ' class="current"' ?>>
 	            <a <?php if( !isset($hayashiIsActive) ) echo 'href="'. $path . 'hayashi/"' ?>><img src="<?php echo $path; ?>img/index-img-hayashi.jpg" alt=""></a>
 	        </li>
 	        <li<?php if( isset($nishigakiIsActive)) echo ' class="current"' ?>>
