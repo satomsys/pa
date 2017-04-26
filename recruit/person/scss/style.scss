@@ -429,10 +429,10 @@ $width: 1024;
 	&_index{
 		margin-top: 0;
 		margin-bottom: 1em;
-		letter-spacing: 0.23;
+		letter-spacing: 0.1em;
 		text-align: center;
 		font-weight: 100;
-		font-size: 3.15em;
+		font-size: 3em;
 		line-height: 1.5;
 		
 		@include breakpoint( tab ){
