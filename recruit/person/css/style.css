@@ -488,7 +488,7 @@
 .person-child .section_text_index,
 .person-child .section_index
 {
-    font-size: 3.15em;
+    font-size: 3em;
     font-weight: 100;
     line-height: 1.5; 
 
@@ -496,7 +496,7 @@
     margin-bottom: 1em;
 
     text-align: center;
-    letter-spacing: .23;
+    letter-spacing: .1em;
 }
 @media screen and (max-width: 780px)
 {
