@@ -413,7 +413,7 @@ $up: 280px;
 					z-index: 2;
 				}
 				.yo{
-					margin-left: -15px;
+					margin-left: -5px;
 				}
 				.icon{
 					position: absolute;					
@@ -485,11 +485,13 @@ $up: 280px;
 			&_text{
 
 				font-weight: 200;
-				font-size: 1.5em;
+				font-size: 1.45em;
+				// font-size: 1.5em;
 				color: #766753;
 				
 				.eventIndex{
-					font-size: 1.42em;
+					font-size: 1.4em;
+					// font-size: 1.42em;
 					margin-bottom: 10px;
 				}
 
@@ -1074,7 +1076,7 @@ modal
 		margin-bottom: 0.5em;
 		font-size: 6em;
 		color: $orange;
-		font-family: $roboto_cond;
+		font-family: $roboto;
 		font-weight: 700;
 		
 		>span{

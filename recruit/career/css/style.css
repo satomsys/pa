@@ -482,7 +482,7 @@ child
 }
 .career-child .timeline_event_num .yo
 {
-    margin-left: -15px;
+    margin-left: -5px;
 }
 .career-child .timeline_event_num .icon
 {
@@ -551,14 +551,14 @@ child
 }
 .career-child .timeline_event_text
 {
-    font-size: 1.5em;
+    font-size: 1.45em;
     font-weight: 200;
 
     color: #766753;
 }
 .career-child .timeline_event_text .eventIndex
 {
-    font-size: 1.42em;
+    font-size: 1.4em;
 
     margin-bottom: 10px;
 }
@@ -1263,7 +1263,7 @@ modal
 }
 .careerModal_header
 {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 6em;
     font-weight: 700; 
     line-height: 1;

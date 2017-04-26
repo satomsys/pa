@@ -15,14 +15,14 @@
     </header>
     <nav class="otherStory_nav">
 	    <ul>
-	        <li class="comingsoon" <?php if( isset($hayashiIsActive)) echo ' class="current"' ?>>
-	            <a <?php if( !isset($hayashiIsActive) ) echo 'href="'. $path . 'hayashi/"' ?>><img src="<?php echo $path; ?>img/index-img-hayashi.jpg" alt=""></a>
+	        <li<?php if( isset($mizutaniIsActive)) echo ' class="current"' ?>>
+	            <a <?php if( !isset($mizutaniIsActive) ) echo 'href="'. $path . 'mizutani/"' ?>><img src="<?php echo $path; ?>img/index-img-mizutani.jpg" alt=""></a>
 	        </li>
 	        <li<?php if( isset($nishigakiIsActive)) echo ' class="current"' ?>>
 	            <a <?php if( !isset($nishigakiIsActive) ) echo 'href="'. $path . 'nishigaki/"' ?>><img src="<?php echo $path; ?>img/index-img-nishigaki.jpg" alt=""></a>
 	        </li>
-	        <li<?php if( isset($mizutaniIsActive)) echo ' class="current"' ?>>
-	            <a <?php if( !isset($mizutaniIsActive) ) echo 'href="'. $path . 'hayashi/"' ?>><img src="<?php echo $path; ?>img/index-img-mizutani.jpg" alt=""></a>
+	        <li class="comingsoon" <?php if( isset($hayashiIsActive)) echo ' class="current"' ?>>
+	            <a <?php if( !isset($hayashiIsActive) ) echo 'href="'. $path . 'hayashi/"' ?>><img src="<?php echo $path; ?>img/index-img-hayashi.jpg" alt=""></a>
 	        </li>
 	    </ul>
     </nav>

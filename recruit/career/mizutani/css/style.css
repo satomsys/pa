@@ -11,7 +11,7 @@
 {
     .career-child .timeline_event-1
     {
-        width: 610px;
+        width: 670px;
         margin-bottom: 75px;
     }
     .career-child .timeline_event-1 .timeline_event_num .icon
@@ -31,6 +31,13 @@
     {
         top: 0;
         left: -90px;
+    }
+    .career-child .timeline_event-6 .timeline_event_img.hasButton .button
+    {
+        top: auto;
+        right: -10px;
+        bottom: 0;
+        left: auto;
     }
 }
 @media screen and (min-width: 780px)
@@ -79,7 +86,7 @@
 {
     .career-child .timeline_event-18
     {
-        width: 835px;
+        width: 850px;
         margin-left: -100px;
     }
     .career-child .timeline_event-18 .timeline_event_num
@@ -104,7 +111,7 @@
 {
     .career-child .timeline_event-19
     {
-        width: 552px;
+        width: 585px;
         margin-top: -120px;
         margin-bottom: 0;
     }
@@ -124,8 +131,8 @@
     .career-child .timeline_event-24
     {
         width: 700px;
-        margin-top: -50px;
-        margin-bottom: 60px;
+        margin-top: -80px;
+        margin-bottom: 50px;
     }
     .career-child .timeline_event-24 .timeline_event_num
     {
@@ -144,16 +151,16 @@
 }
 @media screen and (min-width: 780px)
 {
-    .career-child .timeline_event-28
+    .career-child .timeline_event-25
     {
         width: 890px;
     }
-    .career-child .timeline_event-28 .timeline_event_num
+    .career-child .timeline_event-25 .timeline_event_num
     {
         top: 10%; 
         right: 0;
     }
-    .career-child .timeline_event-28 .timeline_event_num .icon
+    .career-child .timeline_event-25 .timeline_event_num .icon
     {
         top: 0;
         left: -140px;
