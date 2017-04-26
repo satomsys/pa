@@ -36,7 +36,7 @@
 		&_event-1{
 
 			@include breakpoint( tab, min ){
-				width: 610px;
+				width: 670px;
 				margin-bottom: 75px;
 				
 				.timeline_event_num .icon{
@@ -51,9 +51,19 @@
 			@include breakpoint( tab, min ){
 				width: 792px;
 				margin-bottom: 75px;
+				
+
 				.timeline_event_num .icon{
 					top: 0;
 					left: -90px;
+				}
+
+				
+				.timeline_event_img.hasButton .button{
+					top: auto;
+					right: -10px;
+					bottom: 0;
+					left: auto;
 				}			
 			}  
 			
@@ -99,7 +109,7 @@
 
 		&_event-18{
 			@include breakpoint( tab, min ){
-				width: 835px;
+				width: 850px;
 				margin-left: -100px;
 				// margin-bottom: 60px;
 
@@ -120,7 +130,7 @@
 
 		&_event-19{
 			@include breakpoint( tab, min ){
-				width: 552px;
+				width:585px;
 				margin-top: -120px;
 				margin-bottom: 0px;
 	
@@ -138,8 +148,8 @@
 		&_event-24{
 			@include breakpoint( tab, min ){
 				width: 700px;
-				margin-top: -50px;
-				margin-bottom: 60px;
+				margin-top: -80px;
+				margin-bottom: 50px;
 				
 				.timeline_event_num{
 					right: 0;
@@ -154,7 +164,22 @@
 		}
 
 
-		&_event-28{
+		// &_event-28{
+		// 	@include breakpoint( tab, min ){
+		// 		width: 890px;
+	
+		// 		.timeline_event_num{
+		// 			right: 0;
+		// 			top: 10%;
+		// 		}
+		// 		.timeline_event_num .icon{
+		// 			top: 0;
+		// 			left: -140px;
+		// 		}			
+		// 	}  
+		// }
+
+		&_event-25{
 			@include breakpoint( tab, min ){
 				width: 890px;
 	
