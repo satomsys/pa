@@ -1068,6 +1068,11 @@ person
 			transform: scale(1.1);		
 			background-color: rgba( $orange, 0.85 );
 			
+			@include breakpoint( 1300 ){
+				padding-top: 15%;
+				padding-bottom: 15%;
+			}			
+				
 			@include breakpoint( tab ){
 				padding-top: percentage( 40 / 386 );
 				padding-right: percentage( 30 / 467 );
