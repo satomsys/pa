@@ -135,6 +135,14 @@
     opacity: 0;
     background-color: rgba(255, 109, 31, .85);
 }
+@media screen and (max-width: 1300px)
+{
+    .person-index .person_content
+    {
+        padding-top: 15%;
+        padding-bottom: 15%;
+    }
+}
 @media screen and (max-width: 780px)
 {
     .person-index .person_content
