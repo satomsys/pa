@@ -380,6 +380,7 @@ cultureVisual
 		@include breakpoint( tab ){
 			padding-top: 5px;
 			padding-bottom: 5px;
+			position: static;
 	    	
 	    	.sliderNav{
 		    	li{
@@ -412,6 +413,52 @@ cultureVisual
 		width: 150px;
 		bottom: 2.5%;
 	}	
+}
+
+
+/////////text
+
+.slideImg{
+	
+	position: relative;
+
+	&_text
+	{
+		width: 250px;
+		height: 250px;
+		margin: auto;
+		padding: 20px;
+		box-sizing: border-box;
+		display: table;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 10%;
+		color: $orange;
+		background-color: #fff;
+		
+		>span{
+			display: table-cell;
+			vertical-align: middle;
+			line-height: 2;
+		}
+	}
+
+	@include breakpoint( tab ){
+		&_text{
+			width: auto;
+			height: auto;
+			display: block;
+			position: static;
+			
+			>span{
+				text-align: center;
+				display: block;
+				line-height: 1.5;
+			}			
+		}	
+
+	}
 }
 
 

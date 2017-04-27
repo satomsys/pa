@@ -431,6 +431,8 @@ cultureVisual
 {
     .cultureVisual_nav
     {
+        position: static; 
+
         padding-top: 5px;
         padding-bottom: 5px;
     }
@@ -466,6 +468,57 @@ cultureVisual
         bottom: 2.5%; 
 
         width: 150px;
+    }
+}
+
+.slideImg
+{
+    position: relative;
+}
+.slideImg_text
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10%;
+
+    display: table;
+
+    box-sizing: border-box;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    padding: 20px;
+
+    color: #ff6d1f;
+    background-color: #fff;
+}
+.slideImg_text > span
+{
+    line-height: 2; 
+
+    display: table-cell;
+
+    vertical-align: middle;
+}
+@media screen and (max-width: 780px)
+{
+    .slideImg_text
+    {
+        position: static; 
+
+        display: block;
+
+        width: auto;
+        height: auto;
+    }
+    .slideImg_text > span
+    {
+        line-height: 1.5; 
+
+        display: block;
+
+        text-align: center;
     }
 }
 
