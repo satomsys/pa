@@ -323,8 +323,8 @@ cultureVisual
 
     &_nav{
 		width: 100%;
-		padding-top: 25px;
-		padding-bottom: 25px;
+		padding-top:2%;
+		padding-bottom: 2%;
 		display: block;
     	position: absolute;
     	right: 0;
@@ -381,6 +381,7 @@ cultureVisual
 			padding-top: 5px;
 			padding-bottom: 5px;
 			position: static;
+			background-color: #000;
 	    	
 	    	.sliderNav{
 		    	li{
@@ -389,31 +390,131 @@ cultureVisual
 	    	}			
 		}
     }
- 
+}
+
+.slideImg-1
+{
+	.slideImg_text{
+		top: liquidSpace( 313, 650 );
+		left: liquidSpace( 960, 1400 );	
+		
+		@include breakpoint( 1200 ){
+			top: 35%;
+		}				
+
+		@include breakpoint( tab ){
+			left: auto;
+			right: 0;
+		}
+	}
+}
+.slideImg-2
+{
+	.slideImg_text{
+		top: liquidSpace( 335, 650 );
+		left: liquidSpace( 240, 1400 );	
+
+		@include breakpoint( tab ){
+			left: 0
+		}
+	}
+}
+.slideImg-3
+{
+	.slideImg_text{
+		top: liquidSpace( 340, 650 );
+		left: liquidSpace( 244, 1400 );	
+		
+		@include breakpoint( 1200 ){
+			top: 35%;
+		}		
+
+		@include breakpoint( tab ){
+			left: 0
+		}
+	}
+}
+.slideImg-4
+{
+	.slideImg_text{
+		top: liquidSpace( 332, 650 );
+		left: liquidSpace( 264, 1400 );	
+		
+		@include breakpoint( 1200 ){
+			top: 35%;
+		}		
+
+
+		@include breakpoint( tab ){
+			left: 0
+		}
+	}
+}
+.slideImg-5
+{
+	.slideImg_text{
+		top: liquidSpace( 72, 650 );
+		left: liquidSpace( 985, 1400 );		
+
+		@include breakpoint( tab ){
+			left: auto;
+			right: 0;
+		}		
+	}
+}
+.slideImg-6
+{
+	.slideImg_text{
+		top: liquidSpace( 25, 650 );
+		left: liquidSpace( 310, 1400 );	
+		
+		@include breakpoint( 1200 ){
+			top: 2.5%;
+		}		
+
+
+		@include breakpoint( tab ){
+			left: 0
+		}
+	}
+}
+.slideImg-7 
+{
+	.slideImg_text{
+		top: liquidSpace( 92, 650 );
+		left: liquidSpace( 280, 1400 );	
+
+		@include breakpoint( tab ){
+			left: 0
+		}
+	}
+}
+.slideImg-8 
+{
+	.slideImg_text{
+		top: liquidSpace( 340, 650 );
+		left: liquidSpace( 427, 1400 );	
+		
+		@include breakpoint( 1200 ){
+			top: 34%;
+		}		
+		@include breakpoint( tab ){
+			left: 0
+		}
+	}
+}
+.slideImg-9 
+{
+	.slideImg_text{
+		top: liquidSpace( 63, 650 );
+		left: liquidSpace( 233, 1400 );	
+
+		@include breakpoint( tab ){
+			left: 0
+		}
+	}
 }
     
-.button-cultureStyle{
-	width: 270px;
-	margin-right: auto;
-	margin-left: auto;
-	position: absolute;
-	right: 0;
-	bottom: 50px;
-	left: 0;	
-	z-index: 2;
-	
-	a{
-		font-weight: 400;
-		border: none;
-    	color: #fff;
-    	@extend %gradation;
-	}
-
-	@include breakpoint( tab ){
-		width: 150px;
-		bottom: 2.5%;
-	}	
-}
 
 
 /////////text
@@ -424,16 +525,17 @@ cultureVisual
 
 	&_text
 	{
-		width: 250px;
-		height: 250px;
-		margin: auto;
-		padding: 20px;
+		width: 180px;
+		height: 180px;
+		// margin: auto;
+		padding: 20px 5px 20px 15px;
 		box-sizing: border-box;
 		display: table;
 		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 10%;
+		// top: 0;
+		// bottom: 0;
+		// left: 10%;
+		font-size: 0.85em;
 		color: $orange;
 		background-color: #fff;
 		
@@ -446,18 +548,36 @@ cultureVisual
 
 	@include breakpoint( tab ){
 		&_text{
-			width: auto;
-			height: auto;
-			display: block;
-			position: static;
+			width: 25%;
+			height: 80px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			top: auto!important;
+			bottom: 0;
+			background-color: rgba( #fff, 0.95 );
+			font-size: 0.95em;
+			// display: block;
+			// position: static;
 			
 			>span{
-				text-align: center;
-				display: block;
+				// text-align: center;
+				// display: block;
 				line-height: 1.5;
 			}			
 		}	
+	}	
 
+	@include breakpoint( sp ){
+		&_text{
+			width: auto;
+			padding-top: 6px;
+			padding-right: 15px;
+			padding-bottom: 6px;
+			font-size: 0.75em;
+			
+			>span{
+			}			
+		}	
 	}
 }
 
