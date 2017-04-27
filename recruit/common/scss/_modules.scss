@@ -338,7 +338,7 @@
 .sitenav{
 	
 	.navList{
-		max-width: $innerWidth;
+		width: $innerWidth;
 		margin-right: auto;
 		margin-bottom: 25px;
 		margin-left: auto;
@@ -350,8 +350,8 @@
 			line-height: 1;
 			display: table-cell;
 			vertical-align: middle;
-			font-family: $roboto_cond;
-			letter-spacing: 0.5em;
+			font-family: $roboto;
+			letter-spacing: 0.25em;
 			
 			&.active{
 				font-weight: bold;
@@ -417,6 +417,12 @@
 		}
 	}
 
+	///////// navigation 
+	@include breakpoint( $innerWidth ){
+		.navList{
+			width: auto;
+		}		
+	}
 
 	///////// navigation 
 	@include breakpoint( tab ){
