@@ -162,7 +162,7 @@ index
 .career-index .careerPerson_list:not(.comingsoon):focus .careerPerson_img:before,
 .career-index .careerPerson_list:not(.comingsoon):focus .careerPerson_img figure:before
 {
-    width: 100%;
+    width: calc( 100% - 15px );
 }
 .career-index .careerPerson_list:not(.comingsoon):hover .careerPerson_img:after,
 .career-index .careerPerson_list:not(.comingsoon):hover .careerPerson_img figure:after,
@@ -171,7 +171,7 @@ index
 .career-index .careerPerson_list:not(.comingsoon):focus .careerPerson_img:after,
 .career-index .careerPerson_list:not(.comingsoon):focus .careerPerson_img figure:after
 {
-    height: 100%;
+    height: calc( 100% - 15px );
 }
 @media screen and (max-width: 780px)
 {
@@ -212,9 +212,8 @@ index
         -webkit-transition: all .3s;
                 transition: all .3s;
 
+        opacity: .85; 
         background-color: #ff6d1f;
-
-        mix-blend-mode: overlay;
     }
     .career-index .careerPerson_img:before,
     .career-index .careerPerson_img figure:before

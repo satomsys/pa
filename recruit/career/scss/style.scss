@@ -139,11 +139,11 @@ index
 			@include mouseOver{	
 				.careerPerson_img:before,
 				.careerPerson_img figure:before{
-					width: 100%;
+					width: calc( 100% - 15px );
 				}
 				.careerPerson_img:after,
 				.careerPerson_img figure:after{
-					height: 100%;
+					height: calc( 100% - 15px );
 				}				
 			}
 		}
@@ -180,7 +180,8 @@ index
 				background-color: $orange;
 				transition: all 0.3s;
 				z-index: 1;
-				mix-blend-mode: overlay;
+				opacity: 0.85;
+				// mix-blend-mode: overlay;
 			}
 
 			&:before,
