@@ -52,6 +52,7 @@
 .slick-prev{
 	width: 55px;
 	height: 55px;
+	line-height: 1;
 	display: block;
 	background-color: $orange;
 	
@@ -74,11 +75,12 @@
 
 	@include mouseOver(){
 		background-color: lighten( $orange, 10 );
+		outline: none;
 	}
 
 	@include breakpoint( tab ){
-		width: 25px;
-		height: 25px;
+		width: 30px;
+		height: 30px;
 		
 		&:before
 		{
@@ -89,20 +91,28 @@
 
 .slick-next{
 	&:before{
-		transform: rotate(45deg );
+		transform: translate(-3px) rotate(45deg );
 	}
 
 	@include breakpoint( tab ){
 		right: 0px;
+		
+		&:before{
+			transform: translate(-2px) rotate(45deg );
+		}		
 	}		
 }
 .slick-prev{
 	&:before{
-		transform: rotate(-135deg );
+		transform:translate(3px) rotate(-135deg );
 	}
 
 	@include breakpoint( tab ){
 		left: 0px;
+		
+		&:before{
+			transform:translate(2px) rotate(-135deg );
+		}	
 	}		
 }
 
@@ -140,7 +150,9 @@
 
 
 	@include breakpoint( tab ){
-		&--left, &--right, & button:not(.fancybox-button--close) {
+		&--left, 
+		&--right,
+		& button:not(.fancybox-button--close) {
 	   		display: block!important;
 	   		width: 22px;
 	   		height: 22px;
@@ -166,8 +178,6 @@
 		}
 	}	
 }
-
-
 
 .cultureModal{
 	display: none;
@@ -323,8 +333,8 @@ cultureVisual
 
     &_nav{
 		width: 100%;
-		padding-top:2%;
-		padding-bottom: 2%;
+		padding-top:25px;
+		padding-bottom: 25px;
 		display: block;
     	position: absolute;
     	right: 0;
@@ -349,6 +359,8 @@ cultureVisual
 	    		margin-right: 10px;
 	    		cursor: pointer;
 	    		position: relative;
+				outline: none;	    		
+	    		
 	    		&:after{
 	    			content: " ";
 	    			width: 0;
@@ -385,7 +397,8 @@ cultureVisual
 	    	
 	    	.sliderNav{
 		    	li{
-					margin-right: 4px;	    			
+					margin-right: 1%;	    			
+					// margin-right: 4px;	    			
 	    		}
 	    	}			
 		}
@@ -411,7 +424,7 @@ cultureVisual
 .slideImg-2
 {
 	.slideImg_text{
-		top: liquidSpace( 335, 650 );
+		top: liquidSpace( 331, 650 );
 		left: liquidSpace( 240, 1400 );	
 
 		@include breakpoint( tab ){
@@ -422,8 +435,8 @@ cultureVisual
 .slideImg-3
 {
 	.slideImg_text{
-		top: liquidSpace( 340, 650 );
-		left: liquidSpace( 244, 1400 );	
+		top: liquidSpace( 345, 650 );
+		left: liquidSpace( 246, 1400 );	
 		
 		@include breakpoint( 1200 ){
 			top: 35%;
@@ -438,7 +451,7 @@ cultureVisual
 {
 	.slideImg_text{
 		top: liquidSpace( 332, 650 );
-		left: liquidSpace( 264, 1400 );	
+		left: liquidSpace( 260, 1400 );	
 		
 		@include breakpoint( 1200 ){
 			top: 35%;
@@ -453,7 +466,7 @@ cultureVisual
 .slideImg-5
 {
 	.slideImg_text{
-		top: liquidSpace( 72, 650 );
+		top: liquidSpace( 76, 650 );
 		left: liquidSpace( 985, 1400 );		
 
 		@include breakpoint( tab ){
@@ -481,8 +494,8 @@ cultureVisual
 .slideImg-7 
 {
 	.slideImg_text{
-		top: liquidSpace( 92, 650 );
-		left: liquidSpace( 280, 1400 );	
+		top: liquidSpace( 90, 650 );
+		left: liquidSpace( 283, 1400 );	
 
 		@include breakpoint( tab ){
 			left: 0
@@ -493,7 +506,7 @@ cultureVisual
 {
 	.slideImg_text{
 		top: liquidSpace( 340, 650 );
-		left: liquidSpace( 427, 1400 );	
+		left: liquidSpace( 335, 1400 );	
 		
 		@include breakpoint( 1200 ){
 			top: 34%;
@@ -506,8 +519,8 @@ cultureVisual
 .slideImg-9 
 {
 	.slideImg_text{
-		top: liquidSpace( 63, 650 );
-		left: liquidSpace( 233, 1400 );	
+		top: liquidSpace( 60, 650 );
+		left: liquidSpace( 235, 1400 );	
 
 		@include breakpoint( tab ){
 			left: 0
@@ -535,6 +548,7 @@ cultureVisual
 		// top: 0;
 		// bottom: 0;
 		// left: 10%;
+		letter-spacing: 0.1em;
 		font-size: 0.85em;
 		color: $orange;
 		background-color: #fff;
@@ -570,9 +584,10 @@ cultureVisual
 	@include breakpoint( sp ){
 		&_text{
 			width: auto;
-			padding-top: 6px;
+			height: 70px;
+			padding-top: 5px;
 			padding-right: 15px;
-			padding-bottom: 6px;
+			padding-bottom: 5px;
 			font-size: 0.75em;
 			
 			>span{

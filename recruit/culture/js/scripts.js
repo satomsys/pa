@@ -19,16 +19,22 @@ $(".button-cultureStyle").on('click', function(){
 $('.cultureVisual_slider').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,	
-  autoplay: true,
-  autoplaySpeed: 5000,
-  dots: false,
-  infinite: true,
-  speed: 500,
-  fade: true,
-  swipe: true,
-  cssEase: 'linear',
-  asNavFor: '.sliderNav',
-  initialSlide: $initialSlide
+	autoplay: true,
+	autoplaySpeed: 5000,
+	dots: false,
+	infinite: true,
+	speed: 500,
+	fade: true,
+	swipe: true,
+	cssEase: 'linear',
+	asNavFor: '.sliderNav',
+	initialSlide: $initialSlide,
+	// autoplay:trueのとき、マウスフォーカスしたら一時停止させるか [初期値:true]
+	pauseOnFocus: false,
+	// autoplay:trueのとき、マウスホバーしたら一時停止させるか [初期値:true]
+	pauseOnHover: false,
+	// autoplay:trueのとき、ドットナビゲーションをマウスホバーしたら一時停止させるか [初期値:false]
+	pauseOnDotsHover: false
 });
 
  $('.sliderNav').slick({
