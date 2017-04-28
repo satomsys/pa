@@ -426,6 +426,11 @@ cultureVisual
 	.slideImg_text{
 		top: liquidSpace( 331, 650 );
 		left: liquidSpace( 240, 1400 );	
+		
+		@include breakpoint( 1300 ){
+			top: 20%;
+			left: 10%;
+		}		
 
 		@include breakpoint( tab ){
 			left: 0
@@ -438,7 +443,7 @@ cultureVisual
 		top: liquidSpace( 345, 650 );
 		left: liquidSpace( 246, 1400 );	
 		
-		@include breakpoint( 1200 ){
+		@include breakpoint( 1300 ){
 			top: 35%;
 		}		
 
@@ -453,7 +458,7 @@ cultureVisual
 		top: liquidSpace( 332, 650 );
 		left: liquidSpace( 260, 1400 );	
 		
-		@include breakpoint( 1200 ){
+		@include breakpoint( 1300 ){
 			top: 35%;
 		}		
 
@@ -508,7 +513,7 @@ cultureVisual
 		top: liquidSpace( 340, 650 );
 		left: liquidSpace( 335, 1400 );	
 		
-		@include breakpoint( 1200 ){
+		@include breakpoint( 1300 ){
 			top: 34%;
 		}		
 		@include breakpoint( tab ){
@@ -538,10 +543,10 @@ cultureVisual
 
 	&_text
 	{
-		width: 180px;
-		height: 180px;
+		width: 200px;
+		height: 200px;
 		// margin: auto;
-		padding: 20px 5px 20px 15px;
+		padding: 20px 5px 20px 10px;
 		box-sizing: border-box;
 		display: table;
 		position: absolute;
@@ -549,9 +554,11 @@ cultureVisual
 		// bottom: 0;
 		// left: 10%;
 		letter-spacing: 0.1em;
-		font-size: 0.85em;
+		 font-size: 0.95em;
 		color: $orange;
 		background-color: #fff;
+	
+
 		
 		>span{
 			display: table-cell;
@@ -559,6 +566,16 @@ cultureVisual
 			line-height: 2;
 		}
 	}
+
+	@include breakpoint( 1200 ){
+		&_text
+		{			
+			width: 188px;
+			height: 188px;
+			font-size: 0.9em;
+		}
+	}	
+
 
 	@include breakpoint( tab ){
 		&_text{
