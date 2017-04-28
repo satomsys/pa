@@ -332,11 +332,6 @@ mission
     margin-top: auto;
     margin-bottom: auto;
 }
-.section-mission .wrap
-{
-    max-width: none;
-    padding: 0;
-}
 .section-mission .contentArticle
 {
     max-width: 1300px;
