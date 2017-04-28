@@ -460,10 +460,10 @@ cultureVisual
 
 .slideImg-1 .slideImg_text
 {
-    top: 48.15385%;
+    top: 58.46154%;
     left: 68.57143%;
 }
-@media screen and (max-width: 1200px)
+@media screen and (max-width: 1500px)
 {
     .slideImg-1 .slideImg_text
     {
@@ -484,7 +484,7 @@ cultureVisual
     top: 50.92308%;
     left: 17.14286%;
 }
-@media screen and (max-width: 1300px)
+@media screen and (max-width: 1500px)
 {
     .slideImg-2 .slideImg_text
     {
@@ -505,11 +505,12 @@ cultureVisual
     top: 53.07692%;
     left: 17.57143%;
 }
-@media screen and (max-width: 1300px)
+@media screen and (max-width: 1500px)
 {
     .slideImg-3 .slideImg_text
     {
-        top: 35%;
+        top: 30%;
+        left: 10%;
     }
 }
 @media screen and (max-width: 780px)
@@ -525,7 +526,7 @@ cultureVisual
     top: 51.07692%;
     left: 18.57143%;
 }
-@media screen and (max-width: 1300px)
+@media screen and (max-width: 1500px)
 {
     .slideImg-4 .slideImg_text
     {
@@ -544,6 +545,8 @@ cultureVisual
 {
     top: 11.69231%;
     left: 70.35714%;
+
+    letter-spacing: .02em;
 }
 @media screen and (max-width: 780px)
 {
@@ -558,6 +561,13 @@ cultureVisual
 {
     top: 3.84615%;
     left: 22.14286%;
+}
+@media screen and (max-width: 1500px)
+{
+    .slideImg-6 .slideImg_text
+    {
+        top: 0;
+    }
 }
 @media screen and (max-width: 1200px)
 {
@@ -592,7 +602,7 @@ cultureVisual
     top: 52.30769%;
     left: 23.92857%;
 }
-@media screen and (max-width: 1300px)
+@media screen and (max-width: 1400px)
 {
     .slideImg-8 .slideImg_text
     {
@@ -611,6 +621,8 @@ cultureVisual
 {
     top: 9.23077%;
     left: 16.78571%;
+
+    letter-spacing: .02em;
 }
 @media screen and (max-width: 780px)
 {
@@ -626,18 +638,18 @@ cultureVisual
 }
 .slideImg_text
 {
-    font-size: .95em;
+    font-size: 1.25em;
 
     position: absolute;
 
     display: table;
 
     box-sizing: border-box;
-    width: 200px;
-    height: 200px;
+    width: 245px;
+    height: 245px;
     padding: 20px 5px 20px 10px;
 
-    letter-spacing: .1em;
+    letter-spacing: .05em;
 
     color: #ff6d1f;
     background-color: #fff;
@@ -654,7 +666,7 @@ cultureVisual
 {
     .slideImg_text
     {
-        font-size: .9em; 
+        font-size: 1em; 
 
         width: 188px;
         height: 188px;

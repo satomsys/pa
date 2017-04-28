@@ -408,10 +408,11 @@ cultureVisual
 .slideImg-1
 {
 	.slideImg_text{
-		top: liquidSpace( 313, 650 );
+		top: liquidSpace( 380, 650 );
+		// top: liquidSpace( 313, 650 );
 		left: liquidSpace( 960, 1400 );	
 		
-		@include breakpoint( 1200 ){
+		@include breakpoint( 1500 ){
 			top: 35%;
 		}				
 
@@ -427,7 +428,7 @@ cultureVisual
 		top: liquidSpace( 331, 650 );
 		left: liquidSpace( 240, 1400 );	
 		
-		@include breakpoint( 1300 ){
+		@include breakpoint( 1500 ){
 			top: 20%;
 			left: 10%;
 		}		
@@ -443,8 +444,9 @@ cultureVisual
 		top: liquidSpace( 345, 650 );
 		left: liquidSpace( 246, 1400 );	
 		
-		@include breakpoint( 1300 ){
-			top: 35%;
+		@include breakpoint( 1500 ){
+			top: 30%;
+			left: 10%;
 		}		
 
 		@include breakpoint( tab ){
@@ -458,7 +460,7 @@ cultureVisual
 		top: liquidSpace( 332, 650 );
 		left: liquidSpace( 260, 1400 );	
 		
-		@include breakpoint( 1300 ){
+		@include breakpoint( 1500 ){
 			top: 35%;
 		}		
 
@@ -472,7 +474,8 @@ cultureVisual
 {
 	.slideImg_text{
 		top: liquidSpace( 76, 650 );
-		left: liquidSpace( 985, 1400 );		
+		left: liquidSpace( 985, 1400 );	
+		letter-spacing: 0.02em;	
 
 		@include breakpoint( tab ){
 			left: auto;
@@ -486,6 +489,9 @@ cultureVisual
 		top: liquidSpace( 25, 650 );
 		left: liquidSpace( 310, 1400 );	
 		
+		@include breakpoint( 1500 ){
+			top: 0;
+		}	
 		@include breakpoint( 1200 ){
 			top: 2.5%;
 		}		
@@ -502,6 +508,7 @@ cultureVisual
 		top: liquidSpace( 90, 650 );
 		left: liquidSpace( 283, 1400 );	
 
+
 		@include breakpoint( tab ){
 			left: 0
 		}
@@ -513,7 +520,8 @@ cultureVisual
 		top: liquidSpace( 340, 650 );
 		left: liquidSpace( 335, 1400 );	
 		
-		@include breakpoint( 1300 ){
+		
+		@include breakpoint( 1400 ){
 			top: 34%;
 		}		
 		@include breakpoint( tab ){
@@ -526,6 +534,7 @@ cultureVisual
 	.slideImg_text{
 		top: liquidSpace( 60, 650 );
 		left: liquidSpace( 235, 1400 );	
+		letter-spacing: 0.02em;			
 
 		@include breakpoint( tab ){
 			left: 0
@@ -543,8 +552,8 @@ cultureVisual
 
 	&_text
 	{
-		width: 200px;
-		height: 200px;
+		width: 245px;
+		height: 245px;
 		// margin: auto;
 		padding: 20px 5px 20px 10px;
 		box-sizing: border-box;
@@ -553,8 +562,8 @@ cultureVisual
 		// top: 0;
 		// bottom: 0;
 		// left: 10%;
-		letter-spacing: 0.1em;
-		 font-size: 0.95em;
+		letter-spacing: 0.05em;
+		 font-size: 1.25em;
 		color: $orange;
 		background-color: #fff;
 	
@@ -572,7 +581,7 @@ cultureVisual
 		{			
 			width: 188px;
 			height: 188px;
-			font-size: 0.9em;
+			font-size: 1em;
 		}
 	}	
 
