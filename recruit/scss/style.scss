@@ -10,6 +10,10 @@
 
 ////////////////////////
 
+.main{
+	overflow: hidden
+}
+
 .section{
 	margin-top: 150px;
 	margin-bottom: 150px;
@@ -1018,17 +1022,17 @@ person
 
 		.arrow{
 			width: 15%;
-			display: table;
+			display: block;
 			border-radius: 100%;			
 			position: absolute;
 			bottom: 0;
 			right: 0;
 
 			
-			img{
-				display: table-cell;
-				vertical-align: middle;
-			}
+			// img{
+			// 	display: table-cell;
+			// 	vertical-align: middle;
+			// }
 
 			@include breakpoint( 1300 ){
 				width: 10%;

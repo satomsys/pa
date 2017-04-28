@@ -8,6 +8,11 @@
     background-size: 100%;
 }
 
+.main
+{
+    overflow: hidden;
+}
+
 .section
 {
     margin-top: 150px;
@@ -1204,17 +1209,11 @@ person
     right: 0; 
     bottom: 0;
 
-    display: table;
+    display: block;
 
     width: 15%;
 
     border-radius: 100%;
-}
-.section-person .person .arrow img
-{
-    display: table-cell;
-
-    vertical-align: middle;
 }
 @media screen and (max-width: 1300px)
 {

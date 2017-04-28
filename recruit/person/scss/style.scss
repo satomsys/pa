@@ -61,29 +61,30 @@
 		color: #fff;
 	}
 
-	.arrow{
-		width: 15%;
-		display: table;
-		border-radius: 100%;			
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		
-		img{
-			display: table-cell;
-			vertical-align: middle;
+		.arrow{
+			width: 15%;
+			display: block;
+			border-radius: 100%;			
+			position: absolute;
+			bottom: 0;
+			right: 0;
+
+			
+			// img{
+			// 	display: table-cell;
+			// 	vertical-align: middle;
+			// }
+
+			@include breakpoint( 1300 ){
+				width: 10%;
+				height: auto;
+				top: auto;
+			}		
+			@include breakpoint( tab ){
+				display: none;
+			}	
+
 		}
-
-		@include breakpoint( 1300 ){
-			width: 10%;
-			height: auto;
-			top: auto;
-		}		
-		@include breakpoint( tab ){
-			display: none;
-		}	
-
-	}
 
 	.article_img,
 	&_content{

@@ -74,17 +74,11 @@
     right: 0; 
     bottom: 0;
 
-    display: table;
+    display: block;
 
     width: 15%;
 
     border-radius: 100%;
-}
-.person-index .person .arrow img
-{
-    display: table-cell;
-
-    vertical-align: middle;
 }
 @media screen and (max-width: 1300px)
 {
