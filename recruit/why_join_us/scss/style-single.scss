@@ -1,0 +1,363 @@
+@charset "UTF-8";
+@import "compass";
+@import "../../common/scss/colors";
+@import "../../common/scss/variables";
+@import "../../common/scss/mixins";
+
+////////////////////////////////////////////////
+
+// WHY~ 下層
+
+////////////////////////////////////////////////
+
+////////////////////////
+
+// modules
+
+////////////////////////
+.pageIndex{
+	margin-bottom: 80px;
+	
+	@include breakpoint( tab ){
+		margin-bottom: 40px;
+	}		
+}
+.pageIndex_text
+{
+	img {
+	}
+	@include breakpoint( tab ){
+		@include liquid(363, 800 );
+	}		
+}
+
+.paleGradation{
+	@include background-image( linear-gradient( to bottom, #fff9d8, #ffe9d6));
+}
+
+
+/**
+* イントロ
+*/
+.wjuIndex{
+	line-height: 1;
+	position: relative;
+	text-align: center;
+	letter-spacing: 0.07em;
+	font-weight: lighter;
+	color: #999;
+	
+	&_q{
+		font-size: 2.5em;
+		&:before{
+			content: "Q";
+			text-transform: uppercase;
+			font-family: $roboto_cond;
+			font-weight: 500;
+			font-size: 2em;
+		}
+
+		@include breakpoint( tab ){
+			font-size: 1.4em;
+			
+			&:before{
+				font-size: 1.5em;
+				display: inline-block;
+				vertical-align: middle;
+			}			
+		}		
+	}
+
+	&_yes{
+		position: relative;
+		font-weight: bold;
+		color: $orange;
+		font-size: 1.5em;
+		
+		span{
+			padding-right: 1em;
+			margin-left: 1em;
+			padding-bottom: 20px;
+			display: inline-block;
+			border-bottom: solid 1px $orange;
+		}
+		
+		&:after{
+			content: " ";
+			display: block;
+			width: 20px;
+			height: 20px;
+			margin-left: auto;
+			margin-right: auto;
+			transform: rotate(45deg);
+			position: absolute;
+			z-index: 3;
+			right: 0;
+			left: 0;
+			bottom: -10px;
+			border-right: solid 1px $orange;
+			border-bottom: solid 1px $orange;
+			background-color: #fff;
+		}
+
+		@include breakpoint( tab ){
+			font-size: 1.1em;
+				
+			&:after{
+				width: 15px;
+				height: 15px;
+				bottom: -7px;
+			}			
+		}			
+	}
+
+	&_num{
+		position: absolute;
+		top: 0;
+		right: 0;
+		
+		@include breakpoint( tab ){
+			width: 80px;
+			margin-bottom: 20px;
+			position: static;
+		}			
+	}
+}
+
+
+/**
+* 名前
+*/
+.wjuContent_name{
+	margin-top: -5px;
+	padding-top: 20px;
+	padding-bottom: 15px;
+	text-align: center;
+	color: $orange;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba( #fff, 0.8 );
+	
+	span{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	
+	.name{
+		font-size: 2.25em;
+	}
+
+	@include breakpoint( tab ){
+		margin-top: -10px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		
+		color: #fff;
+		position: static;
+		background-color: $orange;
+
+		span{
+			margin-left: 3px;
+			margin-right: 3px;
+		}
+		
+		.name{
+			font-weight: bold;
+			font-size: 1.25em;
+		}		
+	}	
+}
+
+
+/**
+* ヴィジュアル
+*/
+.wjuContent_mainvisual{
+	line-height: 0;
+	text-align: center;
+}
+
+
+/**
+* メインコンテンツ領域
+*/
+.wjuContent{
+
+	margin-top: -15px;
+
+	&,
+	&_content{
+		position: relative;	
+	}
+
+	.wjuSectionIntro{
+		padding-top: 80px;
+	}
+
+	@include breakpoint( tab ){
+		margin-top: -7px;
+
+		.wjuSectionIntro{
+			padding-top: 40px;
+			background: none;
+		}		
+	}		
+}
+
+
+/**
+* コメント
+*/
+.opinion{
+	width: 35%;
+	padding: 50px 40px;
+	position: absolute;
+	// background-color: rgba( #fff, 0.75 );
+
+
+	@include background-image(linear-gradient(to right, rgba( lighten($orange, 30 ), 0.75), rgba(lighten(#ffc61f, 25 ), 0.75)));
+	
+	> div{
+		width: 68%;
+		position: relative;
+		z-index: 1;
+	}
+	&.opinion-l > div{
+		margin-left: auto;
+	}
+	&.opinion-r > div{
+		margin-right: auto;
+	}
+
+	&_index{
+		color: $orange;
+		font-size: 1.5em;
+		font-weight: 200;
+		text-shadow: 0 0 5px rgba(#fff, 0.25);		
+	}
+
+	&_content{
+		text-shadow: 0 0 5px rgba(#fff, 0.5);		
+	}
+	
+	// &_bg{
+	// 	margin: auto;
+	// 	top: 0;
+	// 	right: 0;
+	// 	bottom: 0;
+	// 	left: 0;
+	// 	position: absolute;
+	// 	z-index: 0;
+	// 	opacity: 0.2;
+		
+	// 	@extend %gradation;
+	// }
+
+	&.opinion-l {
+		top: calc( 80px + 5% );
+		left: 0;
+	}
+
+	&.opinion-r {
+		bottom: 0;
+		right: 0;
+	}	
+
+	@include breakpoint( 1300 ){
+
+		padding: 25px 20px;
+
+		> div{
+			width: 80%;
+		}		
+		
+	}
+
+	@include breakpoint( 1000 ){
+
+		> div{
+			width: 95%;
+		}		
+	} 
+	
+	@include breakpoint( tab ){
+		
+		width: auto;
+		margin-top: 5px;
+		padding: 20px 5%;
+		position: static;
+		
+		> div{
+			width: auto;
+		}
+		&.opinion-r {
+			@include background-image(linear-gradient(to left, rgba( lighten($orange, 30 ), 0.75), rgba(lighten(#ffc61f, 25 ), 0.75)));
+		}
+
+		&_index{
+			color: $orange;
+			font-size: 1.5em;
+			font-weight: 200;
+			text-shadow: 0 0 5px rgba(#fff, 0.25);		
+		}
+
+		&_content{
+			text-shadow: 0 0 5px rgba(#fff, 0.5);		
+		}
+		
+		// &_bg{
+		// 	margin: auto;
+		// 	top: 0;
+		// 	right: 0;
+		// 	bottom: 0;
+		// 	left: 0;
+		// 	position: absolute;
+		// 	z-index: 0;
+		// 	opacity: 0.2;
+			
+		// 	@extend %gradation;
+		// }
+
+		&.opinion-l {
+			top: calc( 80px + 5% );
+			left: 0;
+		}
+
+		&.opinion-r {
+			bottom: 0;
+			right: 0;
+		}	
+
+	}
+	
+}
+
+
+/**
+* button
+*/
+
+.wjuContent_footer{
+	text-align: center;
+	.button{
+		width: 500px;
+		margin-top: 50px;
+		border: none;
+		font-size: 2em;
+		a{
+			color: #fff;
+			@extend %gradation;			
+		}
+	}
+
+	@include breakpoint( tab ){
+		.button{
+			width: 150px;
+			font-size: initial;
+		}
+	}
+}
+
