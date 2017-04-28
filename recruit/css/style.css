@@ -1201,16 +1201,12 @@ person
 .section-person .person .arrow
 {
     position: absolute;
-    top: 0;
     right: 0; 
     bottom: 0;
 
     display: table;
 
-    width: 20%;
-    height: 60px;
-    margin-top: auto;
-    margin-bottom: auto;
+    width: 15%;
 
     border-radius: 100%;
 }
@@ -1251,7 +1247,10 @@ person
     bottom: 0;
     left: 0;
 
-    display: table;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row;
 
     box-sizing: border-box;
     width: 100%;
@@ -1263,7 +1262,17 @@ person
             transform: scale(1.1);
 
     opacity: 0;
-    background-color: rgba(255, 109, 31, .85);
+    background-color: rgba(255, 109, 31, .85); 
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 @media screen and (max-width: 1300px)
 {
@@ -1285,9 +1294,7 @@ person
 }
 .section-person .person_content > div
 {
-    display: table-cell;
-
-    vertical-align: middle;
+    width: 100%;
 }
 .section-person .person .personNum
 {
@@ -1311,6 +1318,10 @@ person
     .section-person .person .personNum
     {
         margin-bottom: 5%;
+    }
+    .section-person .person .personNum img
+    {
+        width: 30%;
     }
 }
 .section-person .person .personInfo
@@ -1349,6 +1360,10 @@ person
 }
 @media screen and (max-width: 780px)
 {
+    .section-person .person .profileTop
+    {
+        font-size: 10px;
+    }
     .section-person .person .profileTop .ja
     {
         font-size: 1.1em;

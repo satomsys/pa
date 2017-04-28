@@ -1017,15 +1017,10 @@ person
 		}
 
 		.arrow{
-			width: 20%;
-			height: 60px;
-			margin-top: auto;
-			margin-bottom: auto;
+			width: 15%;
 			display: table;
-			border-radius: 100%;
-			
+			border-radius: 100%;			
 			position: absolute;
-			top: 0;
 			bottom: 0;
 			right: 0;
 
@@ -1055,7 +1050,11 @@ person
 		&_content{
 			height: 100%;
 			width: 100%;
-			display: table;
+			// display: table;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;			
 			margin: 0;
 			box-sizing: border-box;
 			padding: 20% 10% 20% 10%;
@@ -1081,8 +1080,9 @@ person
 			}			
 			
 			&>div{
-				display: table-cell;
-				vertical-align: middle;
+				width: 100%;
+				// display: table-cell;
+				// vertical-align: middle;
 			}
 			
 		}
@@ -1102,6 +1102,10 @@ person
 
 			@include breakpoint( tab ){
 				margin-bottom: 5%;
+				
+				img{
+					width: 30%;
+				}				
 			}
 		}
 
@@ -1133,6 +1137,7 @@ person
 				}
 			}
 			@include breakpoint( tab ){
+				font-size: 10px;
 				.ja{
 					font-size: 1.1em;
 				}			
