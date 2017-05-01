@@ -1,97 +1,69 @@
 .career-child .mainvisual_name
 {
-    margin-top: -18px;
+    margin-top: -6.1%;
 }
-@media screen and (min-width: 780px)
+@media screen and (max-width: 580px)
 {
-    .career-child .timeline
+    .career-child .mainvisual_name
     {
-        background-image: url(../../img/timelineBg-reverse.png);
+        margin-top: -7.2%;
     }
 }
 @media screen and (min-width: 780px)
 {
     .career-child .timeline_event-1
     {
-        width: 830px;
-        margin-bottom: 160px;
+        width: 693px;
+        margin-right: 50px;
+        margin-bottom: 40px;
     }
     .career-child .timeline_event-1 .timeline_event_num .icon
     {
-        right: -40px; 
-        bottom: -65px;
-    }
-    .career-child .timeline_event-1.timeline_event .timeline_event_text
-    {
-        -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-        order: 3;
-    }
-    .career-child .timeline_event-1.timeline_event .timeline_event_img
-    {
-        -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-        order: 1;
+        right: 20px;
+        bottom: 15px;
     }
 }
 @media screen and (min-width: 780px)
 {
     .career-child .timeline_event-6
     {
-        width: 700px;
-        margin-bottom: 120px;
+        width: 710px;
+        margin-bottom: 85px;
+    }
+    .career-child .timeline_event-6 .timeline_event_text
+    {
+        margin-top: 50px;
     }
     .career-child .timeline_event-6 .timeline_event_num
     {
-        -ms-flex-item-align: end;
-        align-self: flex-end;
+        top: 50px; 
+        right: -70px;
     }
     .career-child .timeline_event-6 .timeline_event_num .icon
     {
-        top: 25px;
-        left: 120px;
+        top: 75px;
+        left: -130px;
     }
 }
 @media screen and (min-width: 780px)
 {
     .career-child .timeline_event-12
     {
-        width: 817px;
+        width: 710px;
         margin-bottom: 120px;
     }
     .career-child .timeline_event-12 .timeline_event_num
     {
-        -ms-flex-item-align: end;
-        align-self: flex-end;
+        left: -50px;
+
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     }
     .career-child .timeline_event-12 .timeline_event_num .icon
     {
-        top: 20px;
-        right: -20px;
-    }
-    .career-child .timeline_event-12 .timeline_event_num .yo
-    {
-        margin-left: 10px; 
-        padding-bottom: 20px;
-
-        vertical-align: bottom;
-    }
-    .career-child .timeline_event-12 .timeline_event_img.hasButton .button
-    {
-        top: 80%;
-        left: 100px;
-    }
-    .career-child .timeline_event-12.timeline_event .timeline_event_text
-    {
-        -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-        order: 0;
-    }
-    .career-child .timeline_event-12.timeline_event .timeline_event_img
-    {
-        -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-        order: 1;
+        top: -10px;
+        right: -170px;
     }
 }
 @media screen and (min-width: 780px)
@@ -100,61 +72,89 @@
     {
         width: 890px;
         margin-bottom: 100px;
-    }
-    .career-child .timeline_event-18 .timeline_event_num
-    {
-        -ms-flex-item-align: end;
-        align-self: flex-end;
-    }
-    .career-child .timeline_event-18 .timeline_event_num
-    {
-        bottom: 0;
-        left: 53%;
+
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
     }
     .career-child .timeline_event-18 .timeline_event_num .icon
     {
-        bottom: 0; 
-        left: -120px;
+        top: -50px;
+        left: 150px;
     }
 }
 @media screen and (min-width: 780px)
 {
-    .career-child .timeline_event-23
+    .career-child .timeline_event-20
     {
-        width: 490px;
+        width: 880px;
         margin-bottom: 60px;
     }
-    .career-child .timeline_event-23 .timeline_event_num
+    .career-child .timeline_event-20 .timeline_event_num
     {
-        top: 25%;
-        left: -100%;
-
-        -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+        top: 75px;
+        right: 0;
     }
-    .career-child .timeline_event-23 .timeline_event_num .icon
+    .career-child .timeline_event-20 .timeline_event_num .icon
     {
         top: 0;
-        right: -150px;
+        right: 140px;
     }
 }
 @media screen and (min-width: 780px)
 {
-    .career-child .timeline_event-25
+    .career-child .timeline_event-22
     {
         width: 780px;
-        margin-bottom: 400px;
+        margin-bottom: 76px;
     }
-    .career-child .timeline_event-25 .timeline_event_num
+    .career-child .timeline_event-22 .timeline_event_num
     {
         position: absolute;
-        top: 140%;
-        right: 40%;
+        top: 0;
+        right: 0;
     }
-    .career-child .timeline_event-25 .timeline_event_num .icon
+    .career-child .timeline_event-22 .timeline_event_num .icon
     {
         top: 0;
         left: 60%;
+    }
+}
+@media screen and (min-width: 780px)
+{
+    .career-child .timeline_event-27
+    {
+        margin-bottom: 70px; 
+        margin-left: 30px;
+    }
+    .career-child .timeline_event-27 .timeline_event_num
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .career-child .timeline_event-27 .timeline_event_num .icon
+    {
+        top: 0;
+        left: -100px;
+    }
+}
+@media screen and (min-width: 1024px)
+{
+    .career-child .timeline_future_content_message
+    {
+        right: -180%;
+    }
+}
+@media screen and (max-width: 1024px)
+{
+    .career-child .timeline_future_content_img
+    {
+        -webkit-transform: translateX(-15%);
+                transform: translateX(-15%);
+    }
+    .career-child .timeline_future_content_message
+    {
+        right: -150%;
     }
 }

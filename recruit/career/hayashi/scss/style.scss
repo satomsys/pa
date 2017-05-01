@@ -16,52 +16,50 @@
 .career-child
 {
 	.mainvisual_name{
-		margin-top: -18px;
+		margin-top: -6.1%;
+		
+		@include breakpoint( sp ){
+			margin-top: -7.2%;
+		}
 	}
 	
 	.timeline
 	{
-		@include breakpoint( tab, min ){
-			background-image: url(../../img/timelineBg-reverse.png);
-		}
 
 		////////// 個別style
 		&_event-1{
 
 			@include breakpoint( tab, min ){
-				width: 830px;
-				margin-bottom: 160px;
+				width: 693px;
+				margin-right: 50px;
+				margin-bottom: 40px;
 				
 				.timeline_event_num .icon{
-					bottom: -65px;
-					right: -40px;	
+					right: 20px;
+					bottom: 15px;
 				}
 
-				//align
-				&.timeline_event{
-					.timeline_event_text{
-						order: 3;
-					}
-					.timeline_event_img{
-						order: 1;
-					}									
-				}
+
 
 			}  
 		}
 
 		&_event-6{
 			@include breakpoint( tab, min ){
-				width: 700px;
-				margin-bottom: 120px;
+				width: 710px;
+				margin-bottom: 85px;
 				
 				// align
+				.timeline_event_text {
+					margin-top: 50px;
+				}
 				.timeline_event_num {
-					align-self: flex-end; 
+					right: -70px;
+					top: 50px;
 				}
 				.timeline_event_num .icon{
-					top: 25px;
-					left: 120px;
+				    top: 75px;
+				    left: -130px;
 				}			
 			}  
 			
@@ -69,38 +67,29 @@
 
 		&_event-12{
 			@include breakpoint( tab, min ){
-				width: 817px;
+				width: 710px;
 				margin-bottom: 120px;
 				
 
 				
 				.timeline_event_num {
-					align-self: flex-end; 
+					left: -50px;
+					align-self: center; 
 				}				
 				.timeline_event_num .icon{
-				    top: 20px;
-				    right: -20px;
+					    top: -10px;
+					    right: -170px;
 				}	
-				.timeline_event_num .yo{
-				    padding-bottom: 20px;
-				    vertical-align: bottom;
-				    margin-left: 10px;
-				}
-				
-				.timeline_event_img.hasButton .button{
-					top: 80%;
-					left: 100px;
-				}
 
 				//order
-				&.timeline_event{
-					.timeline_event_text{
-						order: 0
-					}
-					.timeline_event_img{
-						order: 1;
-					}									
-				}
+				// &.timeline_event{
+				// 	.timeline_event_text{
+				// 		order: 0
+				// 	}
+				// 	.timeline_event_img{
+				// 		order: 1;
+				// 	}									
+				// }
 			}  
 		}
 
@@ -109,51 +98,42 @@
 			@include breakpoint( tab, min ){
 				width: 890px;
 				margin-bottom: 100px;
-				
-				//align
-				.timeline_event_num{
-					align-self: flex-end;
-				}
-				.timeline_event_num{
-					bottom: 0;
-					left: 53%;
-				}
+				align-items: center;
+
 				.timeline_event_num .icon{
-					left: -120px;
-					bottom: 0;
+				    top: -50px;
+				    left: 150px;
 				}
 
 			}  
 		}			
 
-		&_event-23{
+		&_event-20{
 			@include breakpoint( tab, min ){
-				width: 490px;
+				width: 880px;
 				margin-bottom: 60px;
 				
 				.timeline_event_num{
-					left: -100%;
-					// left: -500px;
-					top: 25%;
-					align-self: center;
+					top: 75px;
+					right: 0;
 				}
 				.timeline_event_num .icon{
 					top: 0;
-					right: -150px;
+					right: 140px;
 				}			
 			}  
 		}
 
 
-		&_event-25{
+		&_event-22{
 			@include breakpoint( tab, min ){
 				width: 780px;
-				margin-bottom:400px;
+				margin-bottom:76px;
 	
 				.timeline_event_num{
 					position: absolute;
-					top: 140%;
-					right: 40%;
+					top: 0%;
+					right: 0%;
 				}
 				.timeline_event_num .icon{
 					top: 0;
@@ -161,6 +141,43 @@
 				}			
 			}  
 		}
+
+
+
+		&_event-27{
+			@include breakpoint( tab, min ){
+				margin-left: 30px;
+				margin-bottom:70px;
+	
+				.timeline_event_num{
+					position: absolute;
+					top: 0%;
+					right: 0%;
+				}
+				.timeline_event_num .icon{
+					top: 0;
+					left: -100px;
+				}			
+			}  
+		}
+
+
+
+		&_future{
+			@include breakpoint( 1024, min ){
+				&_content_message{
+					right: -180%;
+				}
+			} 
+			@include breakpoint( 1024 ){
+				&_content_img{
+					transform: translateX(-15%);
+				}
+				&_content_message{
+					right: -150%;
+				}
+			} 	
+		}	
 	}
 	
 }
