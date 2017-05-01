@@ -1,0 +1,447 @@
+@charset "UTF-8";
+@import "compass";
+@import "../../../common/scss/colors";
+@import "../../../common/scss/variables";
+@import "../../../common/scss/mixins";
+
+////////////////////////////////////////////////
+
+// CAREER ~ 下層 はやし
+
+////////////////////////////////////////////////
+
+
+
+	////////// timeline 
+.career-child
+{
+	.mainvisual_name{
+		margin-top: -18px;
+	}
+	
+	.timeline
+	{
+		@include breakpoint( tab, min ){
+			background-image: url(../../img/timelineBg-reverse.png);
+		}
+
+		////////// 個別style
+		&_event-1{
+
+			@include breakpoint( tab, min ){
+				width: 830px;
+				margin-bottom: 160px;
+				
+				.timeline_event_num .icon{
+					bottom: -65px;
+					right: -40px;	
+				}
+
+				//align
+				&.timeline_event{
+					.timeline_event_text{
+						order: 3;
+					}
+					.timeline_event_img{
+						order: 1;
+					}									
+				}
+
+			}  
+		}
+
+		&_event-6{
+			@include breakpoint( tab, min ){
+				width: 700px;
+				margin-bottom: 120px;
+				
+				// align
+				.timeline_event_num {
+					align-self: flex-end; 
+				}
+				.timeline_event_num .icon{
+					top: 25px;
+					left: 120px;
+				}			
+			}  
+			
+		}
+
+		&_event-12{
+			@include breakpoint( tab, min ){
+				width: 817px;
+				margin-bottom: 120px;
+				
+
+				
+				.timeline_event_num {
+					align-self: flex-end; 
+				}				
+				.timeline_event_num .icon{
+				    top: 20px;
+				    right: -20px;
+				}	
+				.timeline_event_num .yo{
+				    padding-bottom: 20px;
+				    vertical-align: bottom;
+				    margin-left: 10px;
+				}
+				
+				.timeline_event_img.hasButton .button{
+					top: 80%;
+					left: 100px;
+				}
+
+				//order
+				&.timeline_event{
+					.timeline_event_text{
+						order: 0
+					}
+					.timeline_event_img{
+						order: 1;
+					}									
+				}
+			}  
+		}
+
+
+		&_event-18{
+			@include breakpoint( tab, min ){
+				width: 890px;
+				margin-bottom: 100px;
+				
+				//align
+				.timeline_event_num{
+					align-self: flex-end;
+				}
+				.timeline_event_num{
+					bottom: 0;
+					left: 53%;
+				}
+				.timeline_event_num .icon{
+					left: -120px;
+					bottom: 0;
+				}
+
+			}  
+		}			
+
+		&_event-23{
+			@include breakpoint( tab, min ){
+				width: 490px;
+				margin-bottom: 60px;
+				
+				.timeline_event_num{
+					left: -100%;
+					// left: -500px;
+					top: 25%;
+					align-self: center;
+				}
+				.timeline_event_num .icon{
+					top: 0;
+					right: -150px;
+				}			
+			}  
+		}
+
+
+		&_event-25{
+			@include breakpoint( tab, min ){
+				width: 780px;
+				margin-bottom:400px;
+	
+				.timeline_event_num{
+					position: absolute;
+					top: 140%;
+					right: 40%;
+				}
+				.timeline_event_num .icon{
+					top: 0;
+					left: 60%;
+				}			
+			}  
+		}
+	}
+	
+}
+
+
+
+	////////// timeline 
+// .career-child
+// {
+// 	.mainvisual_name{
+// 	}
+// 	.timeline{
+// 	}
+// 	.timeline
+// 	{
+// 		// min-height: 3520px;
+
+// 		&_event{
+// 			/// years old　位置
+// 			&.timeline_event-1 .yo{
+// 				margin-left: -35px;
+// 				}					
+// 			}
+// 			&.timeline_event-6 .yo,
+// 			&.timeline_event-18 .yo,
+// 			&.timeline_event-19 .yo,
+// 			&.timeline_event-24 .yo,
+// 			&.timeline_event-28 .yo{
+// 					margin-left: -1px;
+// 			}			
+
+// 			/// 写真
+			
+// 			&_img{
+
+// 				@include breakpoint( tab, min ){
+			
+// 					&.hasButton .button{
+// 						top:  40%;
+// 						bottom: auto;
+// 						left: 180px;
+// 					}
+// 				}
+
+// 			}
+
+// 			/// テキスト
+// 			&_text{
+
+// 				.eventIndex{
+// 				}
+
+// 				@include breakpoint( tab ){
+// 					.eventIndex{
+// 					}
+// 					br{
+// 					}
+// 				}
+// 			}
+
+// 			@include breakpoint( tab,min ){			
+// 				&.vertical{
+					
+// 					.timeline_event_num{
+// 					}
+
+// 					.timeline_event_img{
+// 					}
+// 				}
+// 				&.vertical-textTop{
+
+// 					.timeline_event_img{
+// 					}				
+// 				}
+// 			}
+
+// 		}
+
+// 		///// flexbox-childの順番
+// 		&_event{
+
+
+// 			///// 横組み
+			
+// 			//数字センター
+// 			&.horizontal-numCenter{
+// 				@include breakpoint( tab, min ){				
+
+// 				}
+// 			}
+
+// 			//数字右
+// 			&.horizontal-numRight{
+// 				@include breakpoint( tab, min ){	
+
+// 				}
+// 			}
+
+// 			//数字左
+// 			&.horizontal-numLeft{
+// 				@include breakpoint( tab, min ){	
+// 				}
+// 			}
+
+// 			/////縦組み
+// 			&.vertical{
+// 				@include breakpoint( tab, min ){	
+// 				}
+// 			}
+// 			&.vertical-textTop{
+// 				@include breakpoint( tab, min ){	
+// 				}
+// 			}			
+
+// 			//数字右
+// 			&.vertical-numRight{
+// 				@include breakpoint( tab, min ){	
+// 				}
+// 			}
+
+// 			//数字左
+// 			&.vertical-numLeft{
+// 				@include breakpoint( tab, min ){	
+// 				}
+// 			}			
+		
+// 			//幅が余るため。	
+// 			&.vertical.alignRight{
+// 				@include breakpoint( tab, min ){	
+// 				}
+// 			}			
+// 		}
+
+
+
+// 		////////// 個別style
+// 		&_event-1{
+
+// 			@include breakpoint( tab, min ){
+// 				.timeline_event_num .icon{
+// 				}
+
+// 				//align
+// 				&.timeline_event{
+// 					.timeline_event_text{
+// 					}
+// 					.timeline_event_img{
+// 					}									
+// 				}
+
+// 			}  
+// 		}
+
+// 		&_event-6{
+// 			@include breakpoint( tab, min ){
+				
+// 				// align
+// 				.timeline_event_num {
+// 				}
+// 				.timeline_event_num .icon{
+// 				}			
+// 			}  
+			
+// 		}
+
+// 		&_event-12{
+// 			@include breakpoint( tab, min ){
+				
+// 				.timeline_event_num {
+// 				}				
+// 				.timeline_event_num .icon{
+// 				}	
+// 				.timeline_event_num .yo{
+// 				}
+				
+// 				.timeline_event_img.hasButton .button{
+// 				}
+
+// 				//order
+// 				&.timeline_event{
+// 					.timeline_event_text{
+// 					}
+// 					.timeline_event_img{
+// 					}									
+// 				}
+// 			}  
+// 		}
+
+
+// 		&_event-18{
+// 			@include breakpoint( tab, min ){
+				
+// 				//align
+// 				.timeline_event_num{
+// 				}
+// 				.timeline_event_num{
+// 				}
+// 				.timeline_event_num .icon{
+// 				}
+
+// 			}  
+// 		}			
+
+// 		&_event-23{
+// 			@include breakpoint( tab, min ){
+				
+// 				.timeline_event_num{
+// 				}
+// 				.timeline_event_num .icon{
+// 				}			
+// 			}  
+// 		}
+
+
+// 		&_event-25{
+// 			@include breakpoint( tab, min ){
+	
+// 				.timeline_event_num{
+// 				}
+// 				.timeline_event_num .icon{
+// 				}			
+// 			}  
+// 		}
+
+// 		&_now{
+
+// 			@include breakpoint( tab, min ){
+// 				margin-bottom: 300px;
+// 			}  			
+// 		}
+
+// 		&_future{
+
+// 			img{
+// 			}
+
+// 			&_index,
+// 			&_content{
+
+// 			}			
+
+// 			&_index{
+// 				@include breakpoint( tab ){
+// 				}
+// 			}
+
+// 			&_content{
+// 				margin: auto;
+// 				display: table;
+				
+// 				&_img,
+// 				&_message{
+// 					display: table-cell;
+// 					vertical-align: middle;
+// 				}
+
+// 				@include breakpoint( tab ){
+// 					&_img,
+// 					&_message{
+// 						display: block;					
+// 					}  		
+// 				}		
+// 			}
+
+// 			&_content_message{
+// 				p{
+// 				}
+
+// 				@include breakpoint( tab ){
+// 				}				
+// 			}
+
+// 			&_content_img{
+// 				@include breakpoint( tab ){
+// 				}					
+// 			}
+
+// 			&_bg{
+// 			}
+			
+// 		}
+// 	}
+	
+// }
