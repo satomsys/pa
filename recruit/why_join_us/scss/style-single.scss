@@ -31,9 +31,6 @@
 	}		
 }
 
-.paleGradation{
-	@include background-image( linear-gradient( to bottom, #fff9d8, #ffe9d6));
-}
 
 
 /**
@@ -218,7 +215,7 @@
 	// background-color: rgba( #fff, 0.75 );
 
 
-	@include background-image(linear-gradient(to right, rgba( lighten($orange, 30 ), 0.75), rgba(lighten(#ffc61f, 25 ), 0.75)));
+	@include background-image(linear-gradient(to right, lighten(rgba( #ffe200, 0.85),35), lighten(rgba($orange, 0.85),35) ));
 	
 	> div{
 		width: 68%;

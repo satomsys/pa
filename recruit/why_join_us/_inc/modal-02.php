@@ -31,7 +31,7 @@
                         はい！さらに詳しく、私が答えます！
                     </div>
                     <div class="qaSection_footerImg">
-                        <a href=""><img src="img/modal02-q-img.jpg" width="660" alt=""></a>
+                        <a href="matsuo/"><img src="img/modal02-q-img.jpg" width="660" alt=""></a>
                     </div>
                 </div>
             <!-- /// Q -->                            
