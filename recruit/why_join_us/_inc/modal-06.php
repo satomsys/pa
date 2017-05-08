@@ -4,7 +4,7 @@
         <div class="wjuQ_modal_index">
             <span class="modalNum"><img src="img/num-06-sla.svg" alt="01"></span>
             <span class="modalIndex">
-               離職率や男女の比率などの<br>
+               男女の比率などの<br>
                職場事情は？
             </span>
         </div>
