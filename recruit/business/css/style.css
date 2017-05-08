@@ -49,11 +49,15 @@
     padding-top: 70px;
     padding-bottom: 70px;
 }
+.section_content
+{
+    text-align: center;
+}
 .section .contentArticle
 {
-    width: 70%;
-    margin-right: auto; 
-    margin-left: auto;
+    display: inline-block;
+
+    text-align: left;
 }
 .section .contentArticle_index
 {
@@ -75,6 +79,12 @@
 }
 @media screen and (max-width: 1200px)
 {
+    .section .contentArticle
+    {
+        width: 70%;
+        margin-right: auto; 
+        margin-left: auto;
+    }
     .section.hasCoverImg .cover
     {
         width: auto;
@@ -561,7 +571,7 @@ mission
     .section-ceo .ceoName
     {
         right: 18%;
-        bottom: 19%;
+        bottom: 45%;
     }
 }
 @media screen and (max-width: 1200px)
@@ -569,6 +579,7 @@ mission
     .section-ceo .ceoName
     {
         top: 0;
+        right: 5%;
         bottom: 0; 
 
         margin-top: auto;
@@ -594,13 +605,20 @@ mission
         top: 13.5%;
         right: auto;
         bottom: auto;
-        left: 30%;
+        left: 42%;
 
         text-align: left;
     }
     .section-ceo .ceoName span
     {
         display: block;
+    }
+}
+@media screen and (max-width: 1200px)
+{
+    .section-ceo.hasCoverImg .cover
+    {
+        left: auto;
     }
 }
 @media screen and (max-width: 780px)

@@ -418,9 +418,9 @@
 	}
 
 	///////// navigation 
-	@include breakpoint( $innerWidth ){
+	@include breakpoint( 940 ){
 		.navList{
-			width: auto;
+			width: 100%;
 		}		
 	}
 

@@ -1334,11 +1334,11 @@ html.ie8 .icon-facebook:before
 {
     display: none;
 }
-@media screen and (max-width: 940pxpx)
+@media screen and (max-width: 940px)
 {
     .sitenav .navList
     {
-        width: auto;
+        width: 100%;
     }
 }
 @media screen and (max-width: 780px)
