@@ -4,18 +4,17 @@
         <div class="wjuQ_modal_index">
             <span class="modalNum"><img src="img/num-05-sla.svg" alt="01"></span>
             <span class="modalIndex">
-               残業時間や休日などの<br>
-ワークライフバランスは？
+               不動産のことは全く勉強して<br>いないのですが大丈夫ですか？  
             </span>
         </div>
         <div class="wjuQ_modal_content">
             <!-- *** A -->
                 <div class="qaSection qaSection-a">
                     <div class="qaSection_index">
-                        <span>オン・オフの切り替えはしっかり！</span>
+                        <span>全く問題ありません！<br>人物重視の採用です！</span>
                     </div>
                     <div class="qaSection_content">
-                        <p>不動産業界というと、残業や休日出勤が多いイメージかもしれませんが、そんなことはありません。例えば、配偶者や子どもの状況に合わせて出勤時間の調整をしてもらったり、たまには子どもの用事で中抜けをしたり、当社は仕事とプライベートを両立させやすい環境を整備。一人ひとりが目標を持って活躍しながらも、プライベートを大切にしてイキイキと働いています。</p>
+                        <p>不動産の知識をもって入社をされてきた方のほうが少ないくらいです。それよりも重視するのは、学生時代に何か一つでも一生懸命に取り組んで成果を挙げてきたかどうか。採用ではそういった人柄を見させてもらいます。まさに人物重視の採用となっています。</p>
                     </div>
                     <div class="qaSection_footerImg">
                         <img src="img/modal05-a-img.jpg" width="315" alt="">

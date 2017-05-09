@@ -4,17 +4,17 @@
         <div class="wjuQ_modal_index">
             <span class="modalNum"><img src="img/num-04-sla.svg" alt="01"></span>
             <span class="modalIndex">
-               事業や仕事内容は？
+               職場や働いている社員の雰囲気は？ 
             </span>
         </div>
         <div class="wjuQ_modal_content">
             <!-- *** A -->
                 <div class="qaSection qaSection-a">
                     <div class="qaSection_index">
-                       <span> 不動産で、お客様の資産を守る仕事です！</span>
+                       <span>非常に風通しが良く<br>フラットな雰囲気を築いています！</span>
                     </div>
                     <div class="qaSection_content">
-                        <p>当社がメインに扱うのは、買った人が住むためでなく、買った人がオーナーとして賃貸物件を運用する不動産です。オーナーになるお客様のほとんどは、ご自身の資産を不動産で増やすことが目的。そのために、マンション開発・販売、入居者募集から賃貸契約手続きまでの代行、入居後の家賃の集金やメンテナンス手配など、オーナーをサポートする不動産事業を一貫して行っています。</p>
+                        <p>社員全員が「会社全体が良くなるように」と考えているので、上司、先輩、同期、部下など年次、年齢に関わらず、本音で話し合い、対等に意見を交わすことができる風通しの良い環境です。一人ひとりが変化していくために学び合おうとする姿勢を持っているため、士気も高く、成果や成功体験に対して認め合い、お互いに良い影響を生んでいます。また、プライペートでも食事に行ったり誕生日会をしたりと、フラットな雰囲気で仕事ができます。</p>
                     </div>
                     <div class="qaSection_footerImg">
                         <img src="img/modal04-a-img.jpg" width="315" alt="">
