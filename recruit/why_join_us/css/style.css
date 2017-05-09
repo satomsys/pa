@@ -6,7 +6,6 @@
     margin-left: auto;
 }
 
-.qaSection_index,
 .qaSection_yes
 {
     display: inline-block;
@@ -95,19 +94,6 @@
         margin-left: auto;
     }
 }
-.wjuQ_modal_content
-{
-    width: 76.53061%;
-    margin-right: auto; 
-    margin-left: auto;
-}
-@media screen and (max-width: 780px)
-{
-    .wjuQ_modal_content
-    {
-        width: auto;
-    }
-}
 
 /**
 * モーダル QA
@@ -136,8 +122,15 @@
 
     margin-right: 10px;
 
-    vertical-align: bottom;
+    vertical-align: middle;
     text-transform: uppercase;
+}
+.qaSection_index > span
+{
+    display: inline-block;
+
+    text-align: left; 
+    vertical-align: middle;
 }
 @media screen and (max-width: 780px)
 {
@@ -149,6 +142,12 @@
         padding-right: 5px;
         padding-left: 5px;
     }
+    .qaSection_index:before
+    {
+        display: block; 
+
+        margin-right: 0;
+    }
 }
 .qaSection_yes
 {
@@ -159,12 +158,16 @@
 {
     .qaSection_yes
     {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 }
 .qaSection_content
 {
-    padding-right: 10%; 
+    box-sizing: border-box;
+    width: 76.53061%;
+    margin-right: auto; 
+    margin-left: auto;
+    padding-right: 10%;
     padding-left: 10%;
 
     text-align: left;
@@ -173,8 +176,9 @@
 {
     .qaSection_content
     {
-        padding-right: 2.5%;
-        padding-left: 2.5%;
+        width: auto; 
+        padding-right: 0;
+        padding-left: 0;
     }
 }
 .qaSection_footerImg

@@ -95,11 +95,11 @@
 	
 	
 	&_content{
-		@include liquid( 750, 980, true );
+		// @include liquid( 750, 980, true );
 		
-		@include breakpoint( tab ){
-			width: auto;
-		}				
+		// @include breakpoint( tab ){
+		// 	width: auto;
+		// }				
 	}
 }
 
@@ -119,17 +119,22 @@
 		font-size: 2em;
 		font-weight: lighter;
 		
-		@extend %index;
 		
 		&:before{
 			margin-right: 10px;
 			line-height: 1;
 			text-transform: uppercase;
 			display: inline-block;
-			vertical-align: bottom;
+			vertical-align: middle;
 			font-family: $roboto_cond;
 			font-weight: 500;
 			font-size: 2em;
+		}
+
+		> span{
+			display: inline-block;
+			vertical-align: middle;
+			text-align: left;
 		}
 
 		@include breakpoint( tab ){
@@ -137,6 +142,11 @@
 			padding-left: 5px;
 			padding-right: 5px;
 			font-size: 1.2em;
+			
+			&:before{
+				margin-right: 0;
+				display: block;
+			}
 		}				
 	}
 
@@ -146,7 +156,7 @@
 		font-size: 1.5em;
 		
 		@include breakpoint( tab ){
-			font-size: 1.2em;
+			font-size: 1em;
 		}				
 	}
 
@@ -154,10 +164,14 @@
 		text-align: left;
 		padding-left: 10%;
 		padding-right: 10%;
+		box-sizing: border-box;
+		
+		@include liquid( 750, 980, true );		
 		
 		@include breakpoint( tab ){
-			padding-right: 2.5%;
-			padding-left: 2.5%;
+			padding-right: 0;
+			padding-left: 0;
+			width: auto;	
 		} 
 	}
 

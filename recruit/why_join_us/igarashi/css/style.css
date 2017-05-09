@@ -1,0 +1,57 @@
+@charset 'UTF-8';
+/**
+* コメント
+*/
+.opinion.opinion-l
+{
+    top: calc( 80px + 31.5% );
+}
+@media screen and (max-width: 1920px)
+{
+    .opinion.opinion-l
+    {
+        top: calc( 80px + 20% );
+    }
+    .opinion > div
+    {
+        width: 95%;
+    }
+}
+@media screen and (max-width: 1300px)
+{
+    .opinion.opinion-l
+    {
+        top: calc( 80px + 10% );
+    }
+    .opinion > div
+    {
+        width: 95%;
+    }
+}
+@media screen and (max-width: 1000px)
+{
+    .opinion
+    {
+        position: static; 
+
+        width: auto;
+        margin-top: 5px;
+        padding: 20px 5%;
+    }
+    .opinion > div
+    {
+        width: auto;
+    }
+    .opinion_index
+    {
+        font-size: 1.5em;
+        font-weight: 200;
+
+        color: #ff6d1f;
+        text-shadow: 0 0 5px rgba(255, 255, 255, .25);
+    }
+    .opinion_content
+    {
+        text-shadow: 0 0 5px rgba(255, 255, 255, .5);
+    }
+}

@@ -233,11 +233,16 @@
 		color: $orange;
 		font-size: 1.5em;
 		font-weight: 200;
-		text-shadow: 0 0 5px rgba(#fff, 0.25);		
+		text-shadow: 0 0 5px rgba(#fff, 0.35);		
 	}
 
-	&_content{
+	&_content
+	{
 		text-shadow: 0 0 5px rgba(#fff, 0.5);		
+		
+		p{
+			margin-bottom: 0
+		}
 	}
 	
 	// &_bg{
@@ -317,16 +322,6 @@
 			
 		// 	@extend %gradation;
 		// }
-
-		&.opinion-l {
-			top: calc( 80px + 5% );
-			left: 0;
-		}
-
-		&.opinion-r {
-			bottom: 0;
-			right: 0;
-		}	
 
 	}
 	

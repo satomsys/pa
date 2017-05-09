@@ -275,11 +275,15 @@
     font-weight: 200;
 
     color: #ff6d1f;
-    text-shadow: 0 0 5px rgba(255, 255, 255, .25);
+    text-shadow: 0 0 5px rgba(255, 255, 255, .35);
 }
 .opinion_content
 {
     text-shadow: 0 0 5px rgba(255, 255, 255, .5);
+}
+.opinion_content p
+{
+    margin-bottom: 0;
 }
 .opinion.opinion-l
 {
@@ -342,16 +346,6 @@
     .opinion_content
     {
         text-shadow: 0 0 5px rgba(255, 255, 255, .5);
-    }
-    .opinion.opinion-l
-    {
-        top: calc( 80px + 5% );
-        left: 0;
-    }
-    .opinion.opinion-r
-    {
-        right: 0; 
-        bottom: 0;
     }
 }
 

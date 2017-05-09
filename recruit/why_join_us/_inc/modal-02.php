@@ -12,10 +12,10 @@
             <!-- *** A -->
                 <div class="qaSection qaSection-a">
                     <div class="qaSection_index">
-                        東京23区と横浜地区に限定した不動産開発です！
+                        <span>東京23区と横浜地区に限定した不動産開発です！</span>
                     </div>
                     <div class="qaSection_content">
-                        <p>2010年から2015年までの5年間、日本全体で約94万人もの人口が減少しましたが、国勢調査の結果によると、東京都の人口はなんと約35万人増加しています。一方、1世帯あたりの人員は減少していることから、東京都の単独世帯や少人数世帯が増えていると考えられます。そのため、東京23区と近隣の横浜地区に限定して用地を仕入れ、単独世帯・少人数世帯向け不動産の開発をメインに事業を拡大しています。</p>
+                        <p>2010年から2015年までの5年間、日本全体で約94万人もの人口が減少しましたが、国勢調査の結果によると、東京都の人口はなんと約35万人増加しており、その増加の多くが単独世帯や少人数世帯となっています。つまり、東京は当社が提供する商品においてゴールデンマーケットであると考えられます。そのため、当社は東京23区と近隣の横浜地区に限定して用地を仕入れ、単独世帯・少人数世帯向け不動産の開発をメインに事業を拡大しています。</p>
                     </div>
                     <div class="qaSection_footerImg">
                         <img src="img/modal02-a-img.jpg" width="315" alt="">
@@ -25,13 +25,13 @@
             <!-- *** Q -->
                 <div class="qaSection qaSection-q">
                     <div class="qaSection_index">
-                       他にはどんな強みがあるの？
+                       <span>他にはどんな強みがあるの？</span>
                     </div>
                     <div class="qaSection_yes">
                         はい！さらに詳しく、私が答えます！
                     </div>
                     <div class="qaSection_footerImg">
-                        <a href="matsuo/"><img src="img/modal02-q-img.jpg" width="660" alt=""></a>
+                        <a href="matsuo/"><img src="img/modal02-q-img.jpg" width="660" alt="modal-01.php"></a>
                     </div>
                 </div>
             <!-- /// Q -->                            

@@ -9,3 +9,57 @@
 // WHY~ 下層
 
 ////////////////////////////////////////////////
+
+/**
+* コメント
+*/
+.opinion{
+	
+	
+	&.opinion-l {
+		top: calc( 80px + 31.5% );
+	}
+
+	@include breakpoint( 1920 ){
+		&.opinion-l {
+			top: calc( 80px + 20% );
+		}		
+		> div{
+			width: 95%;
+		}		
+	}	
+	@include breakpoint( 1300 ){
+		&.opinion-l {
+			top: calc( 80px + 10% );
+		}			
+		> div{
+			width: 95%;
+		}		
+	}	
+
+	@include breakpoint( 1000 ){
+		
+		width: auto;
+		margin-top: 5px;
+		padding: 20px 5%;
+		position: static;
+		
+		> div{
+			width: auto;
+		}
+
+		&_index{
+			color: $orange;
+			font-size: 1.5em;
+			font-weight: 200;
+			text-shadow: 0 0 5px rgba(#fff, 0.25);		
+		}
+
+		&_content{
+			text-shadow: 0 0 5px rgba(#fff, 0.5);		
+		}
+
+
+	}
+	
+}
