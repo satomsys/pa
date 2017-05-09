@@ -58,9 +58,15 @@
 }
 .wjuQ_modal
 {
+	max-width: 100%;
+	margin-top: 10px;
 	display: none;	
 	
 	color: #fff;
+	
+	a{
+		word-wrap: break-word;
+	}
 	
 	&_index{
 		margin-bottom: 1em;
@@ -232,8 +238,10 @@
 			position: absolute;
 			top: 0;
 			
-			@include mouseOver{
-				opacity: 0.8;
+			image {
+				@include mouseOver{
+					opacity: 0.8;
+				}
 			}
 		}
 

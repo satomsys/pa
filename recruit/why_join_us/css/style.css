@@ -49,7 +49,14 @@
 {
     display: none;
 
+    max-width: 100%;
+    margin-top: 10px;
+
     color: #fff;
+}
+.wjuQ_modal a
+{
+    word-wrap: break-word;
 }
 .wjuQ_modal_index
 {
@@ -234,13 +241,15 @@
 
     position: absolute;
     top: 0;
-
+}
+.wjuQ_row_panel image
+{
     -webkit-transition: all .3s ease 0s;
             transition: all .3s ease 0s;
 }
-.wjuQ_row_panel:hover,
-.wjuQ_row_panel:active,
-.wjuQ_row_panel:focus
+.wjuQ_row_panel image:hover,
+.wjuQ_row_panel image:active,
+.wjuQ_row_panel image:focus
 {
     opacity: .8;
 }
