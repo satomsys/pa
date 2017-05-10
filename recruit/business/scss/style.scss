@@ -1,4 +1,4 @@
-@charset "UTF-8";
+		@charset "UTF-8";
 @import "compass";
 @import "../../common/scss/colors";
 @import "../../common/scss/variables";
@@ -53,9 +53,15 @@
 	padding-top: 70px;
 	padding-bottom: 70px;
 	
+	&_content{
+		text-align: center;
+	}
+	
 
 	.contentArticle{
-		@include liquid(980,1400, true);
+		// @include liquid(980,1400, true);
+		display: inline-block;
+		text-align: left;
 		
 		&_index{
 			font-size: 2em;
@@ -73,7 +79,9 @@
 	}
 
 	@include breakpoint( pc ){
-
+		.contentArticle{		
+			@include liquid(980,1400, true);
+		}
 		&.hasCoverImg {
 			.cover{
 				height: 100%;
@@ -490,6 +498,8 @@ mission
 .section-ceo
 {
 	background-color: #e7f2f2;
+	
+
 
 	.ceoName{
 		height: 1em;
@@ -507,12 +517,13 @@ mission
 
 		@include breakpoint( 1500 ){
 			right: 18%;
-			bottom: 19%;			
+			bottom: 45%;			
 		}
 		@include breakpoint( pc ){
 			margin-top: auto;
 			margin-bottom: auto;
 			top: 0;
+			right: 5%;
 			bottom: 0;
 		}
 
@@ -528,7 +539,7 @@ mission
 			top: 13.5%;
 			bottom: auto;
 			right: auto;
-			left: 30%;
+			left: 42%;
 			text-align: left;
 			
 			span{
@@ -536,6 +547,13 @@ mission
 			}
 		}		
 	}
+
+	@include breakpoint( pc ){
+
+		&.hasCoverImg .cover{
+			left: auto;
+		}
+	}	
 
 	@include breakpoint( tab ){
 
