@@ -156,9 +156,9 @@ Nav = function(){
 	this.menu = $('.sitenav'),
 	this.body = $('html');
 
-	this.body.css({
-		'padding-top': $('.header').height()
-	});
+	// this.body.css({
+	// 	'padding-top': $('.header').height()
+	// });
 }
 /**
 * ナビ開閉のためのクラス差し替え

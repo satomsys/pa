@@ -30,6 +30,10 @@ html,body{
 html{
 	font-size: 10px;
 	background-color: #fff;
+	
+	@include breakpoint( tab ){
+		padding-top: 60px;
+	}		
 }
 
 body{

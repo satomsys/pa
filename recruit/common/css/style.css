@@ -317,6 +317,13 @@ html
 
     background-color: #fff;
 }
+@media screen and (max-width: 780px)
+{
+    html
+    {
+        padding-top: 60px;
+    }
+}
 
 body
 {
