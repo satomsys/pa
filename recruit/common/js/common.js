@@ -197,7 +197,7 @@ Nav.prototype.scrollCansel = function( cansel ){
 * @extends Nav
 */
 Nav.prototype.reset = function( cansel ){
-	this.body.removeClass('menuOpen').css({'padding-top': 0});
+	this.body.removeClass('menuOpen')/*.css({'padding-top': 0})*/;
 	this.button.removeClass('menuOpen');
 	this.body.addClass('menuClosed');
 }
