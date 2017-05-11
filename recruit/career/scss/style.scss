@@ -244,6 +244,10 @@ index
 			color: $orange;
 		}
 
+		.position{
+			font-size: 0.95em;
+		}
+
 		@include breakpoint( tab ){
 			margin: 10px 0;
 			.ja{
@@ -290,7 +294,7 @@ $up: 280px;
 
 	.mainvisual
 	{
-		margin-top: $up;
+		// margin-top: $up;
 		position: relative;
 		top: $up * -1 / 1.2;
 		margin-bottom: $up * -1 / 1.2;
@@ -337,7 +341,8 @@ $up: 280px;
 	}
 
 	.careerContent{
-		overflow: hidden;
+		margin-top: $up;		
+		// overflow-x: hidden;
 		@include background-image(linear-gradient( to bottom, #fff9cc, #ffe2d2) );	
 	}
 
