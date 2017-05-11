@@ -362,7 +362,6 @@ child
     {
         top: -90px;
 
-        margin-top: 95px;
         margin-bottom: -95px;
     }
     .career-child .mainvisual_name .ja
@@ -385,6 +384,13 @@ child
     background-image: -webkit-linear-gradient(top, #fff9cc, #ffe2d2);
     background-image:         linear-gradient(to bottom, #fff9cc, #ffe2d2); 
     background-size: 100%;
+}
+@media screen and (max-width: 780px)
+{
+    .career-child .careerContent
+    {
+        margin-top: 95px;
+    }
 }
 .career-child .timeline
 {

@@ -323,7 +323,7 @@ $up: 280px;
 		}
 
 		@include breakpoint( tab ){
-			margin-top: 95px;			
+			// margin-top: 95px;			
 			top: -90px;
 			margin-bottom: -95px;			
 			
@@ -344,6 +344,10 @@ $up: 280px;
 		margin-top: $up;		
 		// overflow-x: hidden;
 		@include background-image(linear-gradient( to bottom, #fff9cc, #ffe2d2) );	
+		
+		@include breakpoint( tab ){
+			margin-top: 95px;
+		}		
 	}
 
 
