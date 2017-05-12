@@ -34,6 +34,13 @@
     margin-top: 0;
 }
 
+.section-philosophy .section_content,
+.section-mission .section_content,
+.section-ceo .section_content
+{
+    text-align: center;
+}
+
 @media screen and (max-width: 780px)
 {
     .pageIndex_text
@@ -48,10 +55,6 @@
 {
     padding-top: 70px;
     padding-bottom: 70px;
-}
-.section_content
-{
-    text-align: center;
 }
 .section .contentArticle
 {
@@ -142,31 +145,6 @@
         margin-top: 1.2em;
         margin-bottom: 1.2em;
     }
-}
-
-.careerSelectContent
-{
-    display: none; 
-
-    min-height: 300px;
-}
-.careerSelectContent_content
-{
-    -webkit-transition: all .3s ease-in-out 0s;
-            transition: all .3s ease-in-out 0s;
-    -webkit-transform: perspective(500px) scale(1.01) translate3d(0, 0, 2px);
-            transform: perspective(500px) scale(1.01) translate3d(0, 0, 2px); 
-    -webkit-transform-origin: 50%;
-            transform-origin: 50%;
-}
-.careerSelectContent.active
-{
-    display: block;
-}
-.careerSelectContent.active .careerSelectContent_content
-{
-    -webkit-transform: perspective(500px) scale(1) translate3d(0, 0, 0);
-            transform: perspective(500px) scale(1) translate3d(0, 0, 0);
 }
 
 /********************
@@ -725,4 +703,250 @@ mission
     {
         width: 105px;
     }
+}
+
+.businessList .list
+{
+    position: relative;
+
+    overflow: hidden; 
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    list-style: none;
+}
+.businessList .list-horizontal .businessList_inner,
+.businessList .list-horizontal .businessList_img,
+.businessList .list-horizontal .businessList_content
+{
+    display: block;
+}
+.businessList .list-horizontal .businessList_img
+{
+    padding-right: 0;
+
+    text-align: center;
+}
+.businessList .list-horizontal .businessList_content
+{
+    width: auto;
+}
+.businessList .list-horizontal .businessList_content_index
+{
+    margin-top: 30px;
+    margin-bottom: 11px;
+}
+.businessList .list-horizontal .button
+{
+    display: block;
+
+    margin-top: 25px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.businessList .innerList
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row;
+
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+.businessList .innerList_list
+{
+    max-width: 285px;
+
+    list-style: none;
+}
+.businessList .innerList_list:not(:last-child)
+{
+    margin-right: 60px;
+}
+.businessList .button
+{
+    width: 210px;
+    margin-top: 40px;
+
+    color: #ff6d1f; 
+    border-color: #ff6d1f;
+}
+.businessList .button.button-hasArrow a:before
+{
+    background-color: #ff6d1f;
+}
+.businessList .button.button-hasArrow a:after
+{
+    border-color: transparent transparent transparent #ff6d1f;
+}
+.businessList_inner
+{
+    display: table; 
+
+    max-width: 980px;
+}
+.businessList_img,
+.businessList_content
+{
+    display: table-cell;
+
+    vertical-align: top;
+}
+.businessList_img
+{
+    line-height: 1;
+
+    padding-right: 60px;
+}
+.businessList_content
+{
+    width: 355px;
+}
+.businessList_content_index
+{
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 1;
+
+    margin-bottom: 1em;
+
+    letter-spacing: .26em;
+}
+.businessList_content_text
+{
+    font-size: .95em;
+}
+
+/********************
+business flow
+********************/
+.section-businessFlow
+{
+    padding-top: 0;
+}
+.section-businessFlow .list:after
+{
+    position: absolute;
+    top: 0;
+    right: -141px;
+
+    width: 0;
+    height: 0;
+
+    content: ' ';
+
+    border-width: 0 141px 293px 141px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+.section-businessFlow .list.list-horizontal:after
+{
+    border-width: 0 141px 500px 141px;
+}
+.section-businessFlow .list:nth-child(odd)
+{
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZjZiMyIgc3RvcC1vcGFjaXR5PSIwLjg1Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZlMWQyIiBzdG9wLW9wYWNpdHk9IjAuODUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+    background-image: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, rgba(255, 246, 179, .85)), color-stop(100%, rgba(255, 225, 210, .85)));
+    background-image: -webkit-linear-gradient(right, rgba(255, 246, 179, .85), rgba(255, 225, 210, .85));
+    background-image:         linear-gradient(to left, rgba(255, 246, 179, .85), rgba(255, 225, 210, .85)); 
+    background-size: 100%;
+}
+.section-businessFlow .businessFlowPolicy
+{
+    font-size: 1.15em;
+    font-weight: 200;
+
+    margin-bottom: 70px;
+
+    text-align: center;
+    letter-spacing: .26em;
+}
+.section-businessFlow .businessFlowPolicy_index
+{
+    font-size: 1.5em;
+
+    margin-bottom: 1em;
+
+    letter-spacing: .16em; 
+
+    color: #ff6d1f;
+}
+
+/********************
+webit
+********************/
+.section-webIt
+{
+    background-color: #eaeaea;
+}
+.section-webIt .section_index
+{
+    margin-top: 0;
+}
+.section-webIt .businessList_inner
+{
+    margin-right: auto; 
+    margin-left: auto;
+}
+.section-webIt .list
+{
+    padding-top: 0;
+    padding-bottom: 0;
+
+    background-color: transparent;
+}
+.section-webIt .list:after
+{
+    display: none;
+}
+.section-webIt .innerList
+{
+    margin-right: auto; 
+    margin-left: auto;
+}
+.section-webIt .innerList_list:not(:last-child)
+{
+    margin-right: 55px;
+}
+.section-webIt .businessList_content_index
+{
+    position: relative;
+
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+
+    text-align: center;
+
+    border-bottom: solid 1px #aaa;
+}
+.section-webIt .businessList_content_index:after
+{
+    line-height: 0;
+
+    position: absolute;
+    right: 0;
+    bottom: -9px;
+    left: 0;
+
+    display: block;
+
+    width: 15px;
+    height: 15px;
+    margin: auto;
+
+    content: ' ';
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+
+    border-right: solid 1px #aaa;
+    border-bottom: solid 1px #aaa; 
+    background-color: #eaeaea;
 }

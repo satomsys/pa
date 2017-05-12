@@ -38,6 +38,14 @@
 	}
 }
 
+%alignCenter{
+	.section{
+		&_content{
+			text-align: center;
+		}
+	}
+}
+
 
 
 .pageIndex_text
@@ -52,10 +60,6 @@
 .section{
 	padding-top: 70px;
 	padding-bottom: 70px;
-	
-	&_content{
-		text-align: center;
-	}
 	
 
 	.contentArticle{
@@ -143,22 +147,22 @@
 
 }
 
-.careerSelectContent{
-	min-height: 300px;	
-	display: none;
-	&_content{
-		transition: transition();
-		// opacity: 0;
-		transform-origin: 50%;
-		transform: perspective($perspective) scale(1.01) translate3d(0,0,2px);
-	}
-	&.active{
-			display: block;
-		.careerSelectContent_content{
-			transform: perspective($perspective) scale(1) translate3d(0,0,0);			
-		}
-	}
-}
+// .careerSelectContent{
+// 	min-height: 300px;	
+// 	display: none;
+// 	&_content{
+// 		transition: transition();
+// 		// opacity: 0;
+// 		transform-origin: 50%;
+// 		transform: perspective($perspective) scale(1.01) translate3d(0,0,2px);
+// 	}
+// 	&.active{
+// 			display: block;
+// 		.careerSelectContent_content{
+// 			transform: perspective($perspective) scale(1) translate3d(0,0,0);			
+// 		}
+// 	}
+// }
 
 
 
@@ -282,6 +286,8 @@ philosophy
 .section-philosophy
 {
 	background-color: #c6f4fd;
+	
+	@extend %alignCenter;
 
 	&.hasCoverImg .cover{
 		top: auto;
@@ -314,17 +320,14 @@ mission
 ********************/
 .section-mission{
 
+	@extend %alignCenter;	
+
 	&.hasCoverImg .cover{
 		top: 0;
 	    bottom: 0;
 	    margin-top: auto;
 	    margin-bottom: auto;
 	}
-
-	// .wrap{
-	// 	max-width: none;
-	// 	padding: 0;
-	// }
 
 	.contentArticle
 	{
@@ -499,7 +502,7 @@ mission
 {
 	background-color: #e7f2f2;
 	
-
+	@extend %alignCenter;	
 
 	.ceoName{
 		height: 1em;
@@ -668,4 +671,265 @@ mission
 			}	
 		}
 	}		
+}
+
+
+
+////////////////////////
+
+// 個別 about
+
+////////////////////////
+
+
+
+///////// list
+.businessList
+{
+	//// wrapper
+	.list
+	{
+		padding-top: 40px;
+		padding-bottom: 40px;
+		position: relative;
+		list-style: none;		
+		overflow: hidden;
+	}
+
+	//////// 横並び
+	.list-horizontal
+	{
+		
+
+		.businessList_inner,
+		.businessList_img,
+		.businessList_content
+		{
+			display: block
+		}
+
+		.businessList_img{
+			padding-right: 0;
+			text-align: center;	
+		}
+		.businessList_content
+		{
+			width: auto;
+			
+			&_index{
+				margin-top: 30px;
+				margin-bottom: 11px;
+			}
+		}
+			
+
+		.button	
+		{
+			display: block;
+			margin-top: 25px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}	
+
+	.innerList{
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: row;
+		justify-content: flex-start;				
+
+		&_list{
+			max-width: 285px;
+			list-style: none;
+		}
+
+		&_list:not( :last-child ){
+			margin-right: 60px;
+		}
+	}
+
+
+	.button
+	{
+		width: 210px;
+		margin-top: 40px;
+		border-color: $orange;
+		color: $orange;
+		
+		&.button-hasArrow a{
+			&:before{
+				background-color: $orange;
+			}
+			&:after{
+				border-color: transparent transparent transparent $orange;			
+			}
+		}
+	}
+
+
+	&_inner{
+		max-width: 980px;
+		display: table;
+	}
+	&_img,
+	&_content{
+		display: table-cell;
+		vertical-align: top;
+	}
+
+	&_img{
+		line-height: 1;
+		padding-right: 60px;
+	}
+	&_content{
+		width: 355px;
+		
+		&_index{
+			line-height: 1;
+			margin-bottom: 1em;
+			font-size: 1.4em;
+			font-weight: 400;
+			letter-spacing: 0.26em;
+		}
+		&_text{
+			font-size: 0.95em;
+		}
+	}	
+}
+
+
+
+/********************
+business flow
+********************/
+
+.section-businessFlow{
+
+	padding-top: 0;
+	
+	//// wrapper
+	.list
+	{
+		&:after{
+			content: " ";
+			width: 0;
+			height: 0;
+			position: absolute;
+			top: 0;
+			right: -141px;
+			border-style: solid;
+			border-width: 0 141px 293px 141px;
+			border-color: transparent transparent #ffffff transparent;				
+		}
+
+
+		&.list-horizontal:after{
+			border-width: 0 141px 500px 141px;				
+		}
+		
+		&:nth-child( odd ){
+			@include background-image(linear-gradient(to left, lighten(rgba( #ffe200, 0.85),35), lighten(rgba($orange, 0.85),35) ));
+		}
+	}	
+
+
+
+	.section_content{
+	}
+
+	//////// intro
+	.businessFlowPolicy
+	{
+		margin-bottom: 70px;
+		font-weight: 200;
+		text-align: center;
+		font-size: 1.15em;
+		letter-spacing: 0.26em;
+
+		&_index{
+			margin-bottom: 1em;
+			font-size: 1.5em;
+			color: $orange;
+			letter-spacing: 0.16em;
+			
+		}
+	}
+}
+
+
+
+/********************
+webit
+********************/
+
+.section-webIt
+{
+	background-color: #eaeaea;
+
+	.section_index{
+		margin-top: 0
+	}
+	
+	.businessList_inner{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.list{
+		padding-top: 0;
+		padding-bottom: 0;
+		
+		background-color: transparent;
+		
+		&:after{
+			display: none;
+		}
+	}
+
+	.innerList
+	{
+		margin-left: auto;
+		margin-right: auto;
+
+		&_list{
+
+
+		}
+
+		&_list:not( :last-child ){
+			margin-right: 55px;
+		}		
+	}
+
+
+	.businessList_content
+	{
+		
+		&_index{
+			text-align: center;
+			padding-bottom: 15px;
+			margin-bottom: 25px;
+			position: relative;
+			border-bottom:solid 1px #aaa;
+			
+			&:after{
+				content: " ";
+				line-height: 0;
+				width: 15px;
+				height: 15px;
+				margin: auto;
+				position: absolute;
+				right: 0;
+				left: 0;
+				bottom: -9px;
+				transform: rotate( 45deg );
+				display: block;
+				background-color: #eaeaea;
+				border-right: solid 1px #aaa;
+				border-bottom: solid 1px #aaa;
+			}
+		}
+	}
+
+
 }
