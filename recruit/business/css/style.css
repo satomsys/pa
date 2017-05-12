@@ -716,6 +716,16 @@ mission
 
     list-style: none;
 }
+@media screen and (max-width: 780px)
+{
+    .businessList .list
+    {
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        text-align: center;
+    }
+}
 .businessList .list-horizontal .businessList_inner,
 .businessList .list-horizontal .businessList_img,
 .businessList .list-horizontal .businessList_content
@@ -735,7 +745,15 @@ mission
 .businessList .list-horizontal .businessList_content_index
 {
     margin-top: 30px;
-    margin-bottom: 11px;
+    margin-bottom: 13px;
+}
+@media screen and (max-width: 780px)
+{
+    .businessList .list-horizontal .businessList_content_index
+    {
+        margin-top: 1em;
+        margin-bottom: 13px;
+    }
 }
 .businessList .list-horizontal .button
 {
@@ -771,6 +789,30 @@ mission
 {
     margin-right: 60px;
 }
+@media screen and (max-width: 780px)
+{
+    .businessList .innerList
+    {
+            flex-direction: column;
+
+        text-align: center;
+
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        -ms-flex-line-pack: center;
+        align-content: center;
+    }
+    .businessList .innerList_list
+    {
+        max-width: none;
+    }
+    .businessList .innerList_list:not(:last-child)
+    {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+}
 .businessList .button
 {
     width: 210px;
@@ -787,11 +829,25 @@ mission
 {
     border-color: transparent transparent transparent #ff6d1f;
 }
+@media screen and (max-width: 780px)
+{
+    .businessList .button
+    {
+        margin-top: 30px;
+    }
+}
 .businessList_inner
 {
     display: table; 
 
     max-width: 980px;
+}
+@media screen and (max-width: 780px)
+{
+    .businessList_inner
+    {
+        display: block;
+    }
 }
 .businessList_img,
 .businessList_content
@@ -800,11 +856,26 @@ mission
 
     vertical-align: top;
 }
+@media screen and (max-width: 780px)
+{
+    .businessList_img,
+    .businessList_content
+    {
+        display: block;
+    }
+}
 .businessList_img
 {
     line-height: 1;
 
     padding-right: 60px;
+}
+@media screen and (max-width: 780px)
+{
+    .businessList_img
+    {
+        padding-right: 0;
+    }
 }
 .businessList_content
 {
@@ -824,6 +895,20 @@ mission
 {
     font-size: .95em;
 }
+@media screen and (max-width: 780px)
+{
+    .businessList_content
+    {
+        width: auto;
+
+        text-align: center;
+    }
+    .businessList_content_index
+    {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
 
 /********************
 business flow
@@ -831,6 +916,23 @@ business flow
 .section-businessFlow
 {
     padding-top: 0;
+}
+.section-businessFlow .section_index
+{
+    margin-bottom: 40px;
+}
+@media screen and (max-width: 780px)
+{
+    .section-businessFlow .section_index
+    {
+        margin-bottom: 35px;
+    }
+    .section-businessFlow .section_index img
+    {
+        width: 64.0625%;
+        margin-right: auto; 
+        margin-left: auto;
+    }
 }
 .section-businessFlow .list:after
 {
@@ -859,6 +961,30 @@ business flow
     background-image:         linear-gradient(to left, rgba(255, 246, 179, .85), rgba(255, 225, 210, .85)); 
     background-size: 100%;
 }
+@media screen and (max-width: 1366px)
+{
+    .section-businessFlow .list:after
+    {
+        right: -70px;
+
+        border-width: 0 70px 300px 70px;
+    }
+    .section-businessFlow .list.list-horizontal:after
+    {
+        right: -100px;
+
+        border-width: 0 100px 600px 100px;
+    }
+}
+@media screen and (max-width: 1000px)
+{
+    .section-businessFlow .list:after
+    {
+        display: none;
+
+        border-width: 0;
+    }
+}
 .section-businessFlow .businessFlowPolicy
 {
     font-size: 1.15em;
@@ -879,6 +1005,26 @@ business flow
 
     color: #ff6d1f;
 }
+@media screen and (max-width: 780px)
+{
+    .section-businessFlow .businessFlowPolicy
+    {
+        font-size: 1em;
+    }
+    .section-businessFlow .businessFlowPolicy_index
+    {
+        font-size: 1.25em;
+
+        letter-spacing: .06em; 
+
+        color: #ff6d1f;
+    }
+    .section-businessFlow .businessFlowPolicy p
+    {
+        padding-right: 5%; 
+        padding-left: 5%;
+    }
+}
 
 /********************
 webit
@@ -890,6 +1036,20 @@ webit
 .section-webIt .section_index
 {
     margin-top: 0;
+    margin-bottom: 50px;
+}
+@media screen and (max-width: 780px)
+{
+    .section-webIt .section_index
+    {
+        margin-bottom: 35px;
+    }
+    .section-webIt .section_index img
+    {
+        width: 42.96875%;
+        margin-right: auto; 
+        margin-left: auto;
+    }
 }
 .section-webIt .businessList_inner
 {
@@ -915,6 +1075,13 @@ webit
 .section-webIt .innerList_list:not(:last-child)
 {
     margin-right: 55px;
+}
+@media screen and (max-width: 780px)
+{
+    .section-webIt .innerList_list:not(:last-child)
+    {
+        margin-right: 0;
+    }
 }
 .section-webIt .businessList_content_index
 {

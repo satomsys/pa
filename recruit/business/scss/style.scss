@@ -694,13 +694,18 @@ mission
 		position: relative;
 		list-style: none;		
 		overflow: hidden;
+		
+		@include breakpoint( tab ){
+			padding-top: 25px;
+			padding-bottom: 25px;
+			text-align: center;
+		}		
 	}
 
 	//////// 横並び
 	.list-horizontal
 	{
-		
-
+	
 		.businessList_inner,
 		.businessList_img,
 		.businessList_content
@@ -718,8 +723,17 @@ mission
 			
 			&_index{
 				margin-top: 30px;
-				margin-bottom: 11px;
+				margin-bottom: 13px;
 			}
+
+			@include breakpoint( tab ){
+
+				&_index{
+					margin-top: 1em;
+					margin-bottom: 13px;
+				}
+
+			}				
 		}
 			
 
@@ -746,6 +760,24 @@ mission
 		&_list:not( :last-child ){
 			margin-right: 60px;
 		}
+
+
+
+		@include breakpoint( tab ){
+			text-align: center;
+			flex-direction: column;
+			align-content: center;
+
+			&_list{
+				max-width: none;
+			}
+
+			&_list:not( :last-child ){
+				margin-right: 0px;
+				margin-bottom: 40px;
+			}
+
+		}
 	}
 
 
@@ -764,22 +796,40 @@ mission
 				border-color: transparent transparent transparent $orange;			
 			}
 		}
+
+		@include breakpoint( tab ){
+			margin-top: 30px;
+		}
+
 	}
 
 
-	&_inner{
+	&_inner
+	{
 		max-width: 980px;
 		display: table;
+		
+		@include breakpoint( tab ){
+			display: block;
+		}		
 	}
 	&_img,
 	&_content{
 		display: table-cell;
 		vertical-align: top;
+		
+		@include breakpoint( tab ){
+			display: block
+		}		
 	}
 
 	&_img{
 		line-height: 1;
 		padding-right: 60px;
+		
+		@include breakpoint( tab ){
+			padding-right: 0;
+		}		
 	}
 	&_content{
 		width: 355px;
@@ -794,6 +844,16 @@ mission
 		&_text{
 			font-size: 0.95em;
 		}
+
+		@include breakpoint( tab ){
+			width: auto;
+			text-align: center;
+			
+			&_index{
+				margin-top: 1em;
+				margin-bottom: 1em;
+			}			
+		}		
 	}	
 }
 
@@ -806,6 +866,21 @@ business flow
 .section-businessFlow{
 
 	padding-top: 0;
+	
+	.section_index{
+
+		margin-bottom: 40px;
+
+		@include breakpoint( tab ){
+			margin-bottom: 35px;
+
+			img{
+				@include liquid(410, 640, true );	
+			}
+		}			
+	}
+
+
 	
 	//// wrapper
 	.list
@@ -830,12 +905,33 @@ business flow
 		&:nth-child( odd ){
 			@include background-image(linear-gradient(to left, lighten(rgba( #ffe200, 0.85),35), lighten(rgba($orange, 0.85),35) ));
 		}
+
+		@include breakpoint( 1366 ){
+			&:after{
+				right: -70px;
+				border-width: 0 70px 300px 70px;
+			}
+			&.list-horizontal:after{
+				right: -100px;
+				border-width: 0 100px 600px 100px;
+				
+			}
+		}
+		@include breakpoint( 1000 )
+		{
+			&:after{
+				display: none;
+				border-width: 0px;
+			}			
+		}
 	}	
 
 
 
 	.section_content{
 	}
+
+
 
 	//////// intro
 	.businessFlowPolicy
@@ -851,8 +947,24 @@ business flow
 			font-size: 1.5em;
 			color: $orange;
 			letter-spacing: 0.16em;
-			
 		}
+
+		
+		@include breakpoint( tab ){
+			font-size: 1em;
+	
+			&_index{
+				font-size: 1.25em;
+				color: $orange;
+				letter-spacing: 0.06em;
+			}
+
+			p{
+				padding-left: 5%;
+				padding-right: 5%;
+			}
+			
+		}			
 	}
 }
 
@@ -867,7 +979,15 @@ webit
 	background-color: #eaeaea;
 
 	.section_index{
-		margin-top: 0
+		margin-top: 0;
+		margin-bottom: 50px;
+		
+		@include breakpoint( tab ){
+			margin-bottom: 35px;
+			img{
+				@include liquid(275, 640, true );	
+			}
+		}			
 	}
 	
 	.businessList_inner{
@@ -898,7 +1018,16 @@ webit
 
 		&_list:not( :last-child ){
 			margin-right: 55px;
-		}		
+		}	
+
+		@include breakpoint( tab ){
+
+			&_list:not( :last-child ){
+				margin-right: 0px;
+			}	
+		}	
+
+
 	}
 
 
