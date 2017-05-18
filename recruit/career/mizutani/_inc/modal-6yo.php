@@ -1,10 +1,13 @@
 
  <div id="modal-6yo" class="career_modal career_modal-future modal">
     <div class="wrap">
-      <header class="careerModal_header">
+      <header class="careerModal_header careerModal_header-vm">
+        View More
+      </header>
+      <!-- <header class="careerModal_header">
          <span>6</span>
           <img src="../img/yo.svg" width="140" class="yo" alt="Years Old">
-      </header>
+      </header>   -->
       <div class="careerModal_content">
         <div class="careerModal_content_index">
           目立ちたがり屋で力もあるが、<br>

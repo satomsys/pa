@@ -1288,6 +1288,12 @@ modal
 
     margin-right: -16px;
 }
+.careerModal_header-vm
+{
+    font-weight: 600; 
+
+    letter-spacing: .05em;
+}
 @media screen and (max-width: 780px)
 {
     .careerModal_header

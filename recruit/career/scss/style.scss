@@ -1093,6 +1093,11 @@ modal
 			margin-right: -16px;
 			font-weight: 300;
 		}
+
+		&-vm{
+			letter-spacing: 0.05em;
+			font-weight: 600;
+		}
 		
 		@include breakpoint( tab ){
 			font-size: 4em;

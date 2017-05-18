@@ -37,11 +37,11 @@
 
 			@include breakpoint( tab, min ){
 				width: 670px;
-				margin-bottom: 75px;
+				margin-bottom: 60px;
 				
 				.timeline_event_num .icon{
 					bottom: 0;
-					right: 5px;
+					right: 45px;
 					
 				}
 			}  
@@ -54,16 +54,14 @@
 				
 
 				.timeline_event_num .icon{
-					top: 0;
+					top: 30px;
 					left: -90px;
 				}
 
 				
 				.timeline_event_img.hasButton .button{
-					top: auto;
-					right: -10px;
-					bottom: 0;
-					left: auto;
+					top: 60%;
+					left: -10px;
 				}			
 			}  
 			
@@ -71,12 +69,12 @@
 
 		&_event-12{
 			@include breakpoint( tab, min ){
-				width: 797px;
+				width: 796px;
 				margin-bottom: 80px;
 				
 				.timeline_event_num .icon{
 					top: 0;
-					right: -90px;
+					right: -140px;
 				}			
 			}  
 		}
@@ -91,7 +89,7 @@
 				}
 
 				.timeline_event_num{
-					left: -13%;
+					left: -10%;
 				}
 				.timeline_event_num .icon{
 					top: 0;
@@ -110,7 +108,7 @@
 		&_event-18{
 			@include breakpoint( tab, min ){
 				width: 850px;
-				margin-left: -100px;
+				margin-left: -70px;
 				// margin-bottom: 60px;
 
 				.timeline_event_num{
@@ -131,11 +129,11 @@
 		&_event-19{
 			@include breakpoint( tab, min ){
 				width:585px;
-				margin-top: -120px;
-				margin-bottom: 0px;
+				// margin-top: -120px;
+				margin-bottom: 50px;
 	
 				.timeline_event_num{
-					top: 0;
+					top: 30px;
 					left: -20%;
 				}
 				.timeline_event_num .icon{
@@ -148,7 +146,6 @@
 		&_event-24{
 			@include breakpoint( tab, min ){
 				width: 700px;
-				margin-top: -80px;
 				margin-bottom: 50px;
 				
 				.timeline_event_num{
@@ -164,24 +161,9 @@
 		}
 
 
-		// &_event-28{
-		// 	@include breakpoint( tab, min ){
-		// 		width: 890px;
-	
-		// 		.timeline_event_num{
-		// 			right: 0;
-		// 			top: 10%;
-		// 		}
-		// 		.timeline_event_num .icon{
-		// 			top: 0;
-		// 			left: -140px;
-		// 		}			
-		// 	}  
-		// }
-
-		&_event-25{
+		&_event-28{
 			@include breakpoint( tab, min ){
-				width: 890px;
+				width: 100%;
 	
 				.timeline_event_num{
 					right: 0;

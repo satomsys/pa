@@ -1,10 +1,11 @@
 
  <div id="modal-18yo" class="career_modal career_modal-future modal">
     <div class="wrap">
-      <header class="careerModal_header">
-         <span>18</span>
-          <img src="../img/yo.svg" width="140" class="yo" alt="Years Old">
-      </header>
+      <header class="careerModal_header careerModal_header-vm">
+         View More
+         <!-- <span>18</span>
+          <img src="../img/yo.svg" width="140" class="yo" alt="Years Old"> -->
+      </header>      
       <div class="careerModal_content">
         <div class="careerModal_content_index">
           堂々と、ありのままの<br>
