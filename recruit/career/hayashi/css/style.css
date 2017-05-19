@@ -13,9 +13,8 @@
 {
     .career-child .timeline_event-1
     {
-        width: 693px;
-        margin-right: 50px;
-        margin-bottom: 40px;
+        width: 550px;
+        margin-bottom: 80px;
     }
     .career-child .timeline_event-1 .timeline_event_num .icon
     {
@@ -27,16 +26,12 @@
 {
     .career-child .timeline_event-6
     {
-        width: 710px;
+        width: 74              0;
         margin-bottom: 85px;
-    }
-    .career-child .timeline_event-6 .timeline_event_text
-    {
-        margin-top: 50px;
     }
     .career-child .timeline_event-6 .timeline_event_num
     {
-        top: 50px; 
+        top: 0; 
         right: -70px;
     }
     .career-child .timeline_event-6 .timeline_event_num .icon
@@ -49,8 +44,8 @@
 {
     .career-child .timeline_event-12
     {
-        width: 710px;
-        margin-bottom: 120px;
+        width: 770px;
+        margin-bottom: 110px;
     }
     .career-child .timeline_event-12 .timeline_event_num
     {
@@ -65,13 +60,17 @@
         top: -10px;
         right: -170px;
     }
+    .career-child .timeline_event-12 .timeline_event_img.hasButton .button
+    {
+        top: 70%;
+    }
 }
 @media screen and (min-width: 780px)
 {
     .career-child .timeline_event-18
     {
-        width: 890px;
-        margin-bottom: 100px;
+        width: 600px;
+        margin-bottom: 70px;
 
         -webkit-box-align: center;
         -ms-flex-align: center;
@@ -105,7 +104,7 @@
 {
     .career-child .timeline_event-22
     {
-        width: 780px;
+        width: 660px;
         margin-bottom: 76px;
     }
     .career-child .timeline_event-22 .timeline_event_num
@@ -119,11 +118,17 @@
         top: 0;
         left: 60%;
     }
+    .career-child .timeline_event-22 .timeline_event_img.hasButton .button
+    {
+        top: 66%;
+        left: 150px;
+    }
 }
 @media screen and (min-width: 780px)
 {
     .career-child .timeline_event-27
     {
+        width: 870px;
         margin-bottom: 70px; 
         margin-left: 30px;
     }
