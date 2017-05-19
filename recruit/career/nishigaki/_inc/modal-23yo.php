@@ -1,9 +1,10 @@
 
  <div id="modal-23yo" class="career_modal career_modal-future modal">
     <div class="wrap">
-      <header class="careerModal_header">
-        <span>23</span>
-        <img src="../img/yo.svg" width="140" class="yo" alt="Years Old">
+      <header class="careerModal_header careerModal_header-vm">
+         View More
+        <!-- <span>23</span>
+        <img src="../img/yo.svg" width="140" class="yo" alt="Years Old"> -->
       </header>
       <div class="careerModal_content">
         <div class="careerModal_content_index">
@@ -16,7 +17,7 @@
         </div>
       </div>
       <figure class="careerModal_footerImg">
-        <img src="img/modal-future-img.jpg" width="770" alt="">
+        <img src="img/nishigaki-23yo-modal.jpg" width="500" alt="">
         <i class="careerModal_footerImg_bg"></i>
       </figure>
 

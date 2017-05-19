@@ -14,7 +14,8 @@
     .career-child .timeline_event-1
     {
         width: 830px;
-        margin-bottom: 160px;
+        margin-bottom: 175px;
+        padding-top: 40px;
     }
     .career-child .timeline_event-1 .timeline_event_num .icon
     {
@@ -58,6 +59,7 @@
     {
         width: 817px;
         margin-bottom: 120px;
+        margin-left: 30px;
     }
     .career-child .timeline_event-12 .timeline_event_num
     {
@@ -78,7 +80,7 @@
     }
     .career-child .timeline_event-12 .timeline_event_img.hasButton .button
     {
-        top: 80%;
+        top: 57%;
         left: 100px;
     }
     .career-child .timeline_event-12.timeline_event .timeline_event_text
@@ -114,15 +116,15 @@
     .career-child .timeline_event-18 .timeline_event_num .icon
     {
         bottom: 0; 
-        left: -120px;
+        left: -140px;
     }
 }
 @media screen and (min-width: 780px)
 {
     .career-child .timeline_event-23
     {
-        width: 490px;
-        margin-bottom: 60px;
+        width: 500px;
+        margin-bottom: 360px;
     }
     .career-child .timeline_event-23 .timeline_event_num
     {
@@ -144,13 +146,14 @@
     .career-child .timeline_event-25
     {
         width: 780px;
-        margin-bottom: 400px;
+        margin-bottom: 85px;
     }
     .career-child .timeline_event-25 .timeline_event_num
     {
         position: absolute;
-        top: 140%;
-        right: 40%;
+        top: -130%;
+        right: auto;
+        left: 0;
     }
     .career-child .timeline_event-25 .timeline_event_num .icon
     {

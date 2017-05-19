@@ -30,7 +30,8 @@
 
 			@include breakpoint( tab, min ){
 				width: 830px;
-				margin-bottom: 160px;
+				margin-bottom: 175px;
+				padding-top: 40px;
 				
 				.timeline_event_num .icon{
 					bottom: -65px;
@@ -71,6 +72,7 @@
 			@include breakpoint( tab, min ){
 				width: 817px;
 				margin-bottom: 120px;
+				margin-left: 30px;
 				
 
 				
@@ -88,7 +90,7 @@
 				}
 				
 				.timeline_event_img.hasButton .button{
-					top: 80%;
+					top: 57%;
 					left: 100px;
 				}
 
@@ -119,7 +121,7 @@
 					left: 53%;
 				}
 				.timeline_event_num .icon{
-					left: -120px;
+					left: -140px;
 					bottom: 0;
 				}
 
@@ -128,8 +130,8 @@
 
 		&_event-23{
 			@include breakpoint( tab, min ){
-				width: 490px;
-				margin-bottom: 60px;
+				width: 500px;
+				margin-bottom: 360px;
 				
 				.timeline_event_num{
 					left: -100%;
@@ -148,12 +150,13 @@
 		&_event-25{
 			@include breakpoint( tab, min ){
 				width: 780px;
-				margin-bottom:400px;
+				margin-bottom:85px;
 	
 				.timeline_event_num{
 					position: absolute;
-					top: 140%;
-					right: 40%;
+					    top: -130%;
+					    right: auto;
+					    left: 0px;
 				}
 				.timeline_event_num .icon{
 					top: 0;
