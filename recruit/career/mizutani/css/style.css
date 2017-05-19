@@ -34,7 +34,7 @@
     }
     .career-child .timeline_event-6 .timeline_event_img.hasButton .button
     {
-        top: 60%;
+        top: 70%;
         left: -10px;
     }
 }
@@ -96,6 +96,11 @@
     {
         top: 0;
         left: -120px;
+    }
+    .career-child .timeline_event-18 .timeline_event_img.hasButton .button
+    {
+        top: 50%;
+        left: 100px;
     }
 }
 @media screen and (max-width: 1024px)

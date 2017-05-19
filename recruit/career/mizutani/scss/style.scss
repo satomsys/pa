@@ -60,7 +60,7 @@
 
 				
 				.timeline_event_img.hasButton .button{
-					top: 60%;
+					top: 70%;
 					left: -10px;
 				}			
 			}  
@@ -118,7 +118,12 @@
 				.timeline_event_num .icon{
 					top: 0;
 					left: -120px;
-				}			
+				}
+
+				.timeline_event_img.hasButton .button{
+					top: 50%;
+					left: 100px;
+				}								
 			}  
 			
 			@include breakpoint( 1024 ){
