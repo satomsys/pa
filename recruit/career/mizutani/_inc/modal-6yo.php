@@ -19,7 +19,7 @@
         </div>
       </div>
       <figure class="careerModal_footerImg">
-        <img src="img/modal-future-img.jpg" width="770" alt="">
+        <img src="img/mizutani-6yo-modal.jpg" width="500" alt="">
         <i class="careerModal_footerImg_bg"></i>
       </figure>
 
