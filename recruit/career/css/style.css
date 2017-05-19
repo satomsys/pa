@@ -1254,8 +1254,16 @@ child
 /***********
 modal
 ***********/
-.careerModal_content,
-.careerModal_footerImg
+.career_modal
+{
+    text-align: center;
+}
+
+.careerModal
+{
+    text-align: center;
+}
+.careerModal_content
 {
     width: 61.22449%;
     margin-right: auto; 
@@ -1263,8 +1271,7 @@ modal
 }
 @media screen and (max-width: 780px)
 {
-    .careerModal_content,
-    .careerModal_footerImg
+    .careerModal_content
     {
         width: auto;
     }
@@ -1305,7 +1312,9 @@ modal
 }
 .careerModal_content
 {
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
+
+    text-align: left;
 }
 .careerModal_content_index
 {
@@ -1326,6 +1335,8 @@ modal
     line-height: 1;
 
     position: relative; 
+
+    display: inline-block;
 
     padding: 10px;
 }

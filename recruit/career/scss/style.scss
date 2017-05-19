@@ -1068,11 +1068,18 @@ $up: 280px;
 modal
 ***********/
 
+.career_modal{
+	text-align: center;
+}
+
 .careerModal
 {
+	text-align: center;
 	
-	&_content,
-	&_footerImg{
+
+	&_content
+	// ,&_footerImg
+	{
 		@include liquid( 600, 980, true );
 		
 		@include breakpoint( tab ){
@@ -1107,6 +1114,7 @@ modal
 
 	&_content
 	{
+		text-align: left;
 		margin-bottom: 20px;
 		&_index{
 			margin-bottom: 1em;
@@ -1123,6 +1131,7 @@ modal
 	}
 
 	&_footerImg{
+		display: inline-block;
 		line-height: 1;
 		padding: 10px;
 		position: relative;
