@@ -1,9 +1,10 @@
 
  <div id="modal-22yo" class="career_modal career_modal-future modal">
     <div class="wrap">
-      <header class="careerModal_header">
-        <span class="num">22</span>
-        <img src="../img/yo.svg" width="140" class="yo" alt="Years Old">        
+      <header class="careerModal_header careerModal_header-vm">
+         View More
+        <!-- <span class="num">22</span>
+        <img src="../img/yo.svg" width="140" class="yo" alt="Years Old"> -->
       </header>
       <div class="careerModal_content">
         <div class="careerModal_content_index">
