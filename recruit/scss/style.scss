@@ -490,8 +490,13 @@ what we are
 		@include mouseOver(){
 			filter: grayscale(100%);
 			
+			
 			a{
 				color: $basefontColor;
+				
+				img{
+					opacity: 1;
+				}
 			}
 		}
 		

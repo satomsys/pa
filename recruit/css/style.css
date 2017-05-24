@@ -637,6 +637,12 @@ what we are
 {
     color: #000;
 }
+.section-wwa .wwaArticle:hover a img,
+.section-wwa .wwaArticle:active a img,
+.section-wwa .wwaArticle:focus a img
+{
+    opacity: 1;
+}
 .section-wwa .wwaArticle a
 {
     display: block;
