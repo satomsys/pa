@@ -906,7 +906,9 @@ mission
     .businessList_content_index
     {
         margin-top: 1em;
-        margin-bottom: 1em;
+        margin-bottom: 1em; 
+
+        letter-spacing: .05em;
     }
 }
 
