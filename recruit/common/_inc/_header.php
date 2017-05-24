@@ -27,6 +27,18 @@ function dirPath( $nowActive, $thisDir, $isChild ){
 }
 ?>
 
+  <div class="loadingAnim">
+    <!-- ***** loadingAnimation -->
+    <div class="loadingAnim_inner">
+        <i class="border loadingAnim_borderTop"></i>
+        <i class="border loadingAnim_borderRight"></i>
+        <i class="border loadingAnim_borderBottom"></i>
+        <i class="border loadingAnim_borderLeft"></i>
+        <img src="/recruit/common/img/logo.gif" width="218" class="logo" alt="PROPERTY AGENT"><br>
+        <img src="/recruit/common/img/header-text-recruiting.svg" class="recruiting" width="97" alt="RECRUITING 2018">
+    </div>
+    <!-- ///// loadingAnimation -->
+  </div>
 
   <!-- ***** header -->
   <header class="header">

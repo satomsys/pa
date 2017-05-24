@@ -833,20 +833,26 @@ what we are
 
 .fancybox-close-small
 {
-    top: -50px; 
+    top: -50px;
     right: -20px;
+
+    -webkit-transition: all .3s ease 0s;
+            transition: all .3s ease 0s;
 }
 .fancybox-close-small:hover:before,
-.fancybox-close-small:hover:after
+.fancybox-close-small:hover:after,
+.fancybox-close-small:active:before,
+.fancybox-close-small:active:after,
+.fancybox-close-small:focus:before,
+.fancybox-close-small:focus:after
 {
     color: transparent; 
+    outline: none;
     background: #eb5200;
 }
 .fancybox-close-small:before,
 .fancybox-close-small:after
 {
-    font: none;
-
     position: absolute;
     top: 0;
     right: 0;
@@ -865,12 +871,9 @@ what we are
     -webkit-transform-origin: center center;
             transform-origin: center center; 
 
-    color: transparent;
     border: none;
     border-radius: 0;
-    outline: none;
     background: #ff6d1f;
-    box-shadow: none;
 }
 .fancybox-close-small:before
 {

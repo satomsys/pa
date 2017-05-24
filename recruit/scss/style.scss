@@ -684,9 +684,10 @@ what we are
 	right: -20px;
 	top: -50px;
 	
-	&:hover{
+	@include mouseOver(){
 		&:before,
 		&:after{
+			outline: none;
 			background: darken( $orange, 10 );
 			color: transparent;
 		}
@@ -694,8 +695,6 @@ what we are
 
 	&:before,
 	&:after{
-		box-shadow: none;
-		outline: none;
 		content:  "";
 		display: block;
 		height: 1px;
@@ -707,9 +706,7 @@ what we are
 		bottom: 0;
 		left: 0;
 		border-radius: 0;
-		color: transparent;
 		transition: none;
-		font: none;
 		border: none;
 		background: $orange;
 		transform-origin: center center;
