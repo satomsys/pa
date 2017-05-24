@@ -1,10 +1,11 @@
 $(function(){
 	var $section = $('.section'),
 		$timer = null,
-		$move = $ua == 'desktop' ? 0.125 : 0.085,
-		$WwaModal = null,
-		$wwaArticles = $('.wwaArticles'),
-		$wwaArticle = $wwaArticles.find('.wwaArticles_article');
+		$move = $ua == 'desktop' ? 0.125 : 0.085;
+		
+		// $WwaModal = null,
+		// $wwaArticles = $('.wwaArticles'),
+		// $wwaArticle = $wwaArticles.find('.wwaArticles_article');
 
 
 
@@ -16,7 +17,7 @@ $(function(){
 			$scrollBottom = $scrollVal + $wHeight,
 			$pallaraxVal = $scrollVal * $move * -1; // うごき
 
-		if( $ua == 'desktop' && $WwaModal ) $WwaModal.reset();
+		// if( $ua == 'desktop' && $WwaModal ) $WwaModal.reset();
 
 		/**
 		* section add class
@@ -39,19 +40,19 @@ $(function(){
 	/**
 	* what we are
 	*/
-	$wwaArticle.on( 'click', function( e ){
-		e.stopPropagation();
+	// $wwaArticle.on( 'click', function( e ){
+	// 	e.stopPropagation();
 
-		var $WwaModal = new WwaModal( $(this) ),
-			$overlay = $('.overlay');
+	// 	var $WwaModal = new WwaModal( $(this) ),
+	// 		$overlay = $('.overlay');
 
-		$WwaModal.switchClass();
+	// 	$WwaModal.switchClass();
 
-		$overlay.on('click', function(){
-			e.stopPropagation();
-			$WwaModal.closeModal(200);
-		} );	
-	});
+	// 	$overlay.on('click', function(){
+	// 		e.stopPropagation();
+	// 		$WwaModal.closeModal(200);
+	// 	} );	
+	// });
 
 
  });

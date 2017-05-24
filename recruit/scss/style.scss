@@ -403,408 +403,245 @@ what we are
 		}		
 
 	}
-	
-	$boxWrap : 1160;
-	$boxHeight : 514;
-	
-	/////ポリゴン
-	.poly{
-		fill: url(#gradient);
+
+
+	///////// wrapper
+	.wwaArticles{
+		max-width: 980px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 100px;
+		
+		&_row{
+			display: flex;
+			flex-wrap: nowrap;
+			flex-direction: row;
+			justify-content: center;
+			border-bottom: solid 1px #ccc;
+			&:first-child{
+				border-top: solid 1px #ccc;
+			}
+
+			@include breakpoint( sp ){
+				align-items: center;
+				position: relative;
+			}
+		}
+
+		&_row .wwaArticle:first-child{
+			border-right: solid 1px #ccc;
+		}
+
 	}
 
-	/////閉じるボタン
-	.closeWwaModalButton{
-		width: 25px;
-		height: 25px;
-		position: absolute;
-
-		&:before,
+	///////// panel
+	.wwaArticle
+	{
+		width: 100%;
+		line-height: 1;
+		transition: easeInOutCirc(0.15s);	
+		position: relative;	
+		margin: {
+			top: 25px;
+			bottom: 25px;
+		}		
+		padding: {
+			top: 25px;
+			right: 25px;
+			bottom: 25px;
+			left: 25px;
+		};
+		
+		@include breakpoint( sp ){
+			position: static;
+			
+			margin: {
+				top: 10px;
+				bottom: 10px;
+			}		
+			padding: {
+				top: 10px;
+				right: 10px;
+				bottom: 10px;
+				left: 10px;
+			};			
+		}			
+		
 		&:after{
 			content: " ";
-			width: 100%;
-			height: 1px;
-			margin: auto;
+			width: 20px;
+			height: 20px;
 			display: block;
 			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			background-color: #fff;
-		}
-		&:before{
-			transform: rotate(45deg)
-		}		
-		&:after{
-			transform: rotate(-45deg)
-		}
-
-		@include breakpoint( tab ){
-			margin: auto;
-			top: auto!important;
-			right: 0 !important;
-			left: 0 !important;
-			bottom: 5px!important;
-			&:before,
-			&:after{
-				background-color: #000;
-			}			
-		}			
-	}
-	.notesRight .closeWwaModalButton,
-	.notesTop .closeWwaModalButton{	
-
-		top: 5px;
-		right: 20px;	
-	}
-	.notesLeft .closeWwaModalButton{
-		bottom: 5px;
-		left: -5px;			
-	}		
-	
-	/////ラッパー
-	.wwaArticles
-	{
-		height: 0;
-		padding-top: liquidSpace( 514, 1240 );
-		@include liquid($boxWrap, 1360, true );
-		position: relative;
-		
-		@include breakpoint( tab ){
-			width: auto;
-			padding-top: 103%;
-		}		
-		
-		&_article:not(.active){
-			cursor: pointer;
-			@include mouseOver(){
-				opacity: 0.7;
-			}
-		}
-
-		&_article{
-			// position: absolute; ※1
+			right: 10px;
+			bottom: -15px;
+			background: url( ../img/icon-zoom.svg ) center center no-repeat;
+			background-size: 20px 20px;
 			
-		}
-		&_article_img,
-		&_article_content{
-			position: absolute;			
-		}
-
-
-		&_article_img{
-			transform:scale(0);
-			opacity: 0;
-			transition: easeOutBack($s:0.2s);
-		}
-
-		&_article_content{
-			width: 50%;
-			min-width: 300px;
-			padding: 40px;			
-			top: 0;
-			z-index: -1;
-			opacity: 0;
-			box-sizing: border-box;
-			font-size: 1.14em;
-			font-weight: bold;
-			color: #fff;
-			transition: opacity 0.25s ease 0s;
-			
-			@at-root{
-				//記事右側表示
-				.notesRight .wwaArticles_article_content{
-					left: 100%;
-				}
-				//記事左側表示
-				.notesLeft .wwaArticles_article_content{
-					right: 100%;
-				}		
-			}
-
-			svg{
-				height: 100%;
-				margin: auto;
-				position: absolute;
-				z-index: -1;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: -5%;
-			}
-
-			@include breakpoint( tab ){
-				width: 80%;
-				padding-right: 5%;
-				padding-left: 5%;
-				font-size: 0.9em;
-			}				
-
-		}
-
-		.wwaArticleText{
-			font-size: 1.5em;
-			line-height: 1.2;
-			&_large{
-				font-size: 1.25em;
-			}
-		}
-		.wwaArticleInfo{
-			margin-top: 1em;
-			margin-bottom: 1em;
-		}
-		.wwaArticleNote{
-			font-size: 0.75em;
-			
-			@include breakpoint( tab ){
-				margin-top: 2em;
-			}		
-		}		
-	}
-
-	//////トランジション設定
-	.wwaArticles
-	{
-		.wwa6 .wwaArticles_article_img{
-			transition-delay: 0.45s;
-		}
-		.wwa16407 .wwaArticles_article_img{
-			transition-delay: 0.35s;
-		}
-
-		.wwa1 .wwaArticles_article_img{
-			transition-delay: 0.3s;
-		}
-		.wwa100 .wwaArticles_article_img{
-			transition-delay: 0.5s;
-		}
-		.wwa5 .wwaArticles_article_img{
-			transition-delay: 0.52s;	
-		}
-	}
-
-
-	//////////////////
-	//位置設定
-	//////////////////
-	&.inview{
-		.wwaArticles_article_img{
-			transform:scale(1) ;
-			opacity: 1;
-		}
-		.wwa6{
-				// top: 0;
-				// left: liquidSpace(180, $boxWrap);※1
-			.wwaArticles_article_img{
-				top: 0;
-				left: liquidSpace(180, $boxWrap);
-			}
-			@include breakpoint( tab ){
-				.wwaArticles_article_img{
-					top: liquidSpace(121,640);					
-					left: liquidSpace(128,640);					
-				}
+			@include breakpoint( sp ){
+				width: 14px;
+				height: 14px;
+				right: auto;
+				bottom: 5px;
+				background-size: 14px 14px;				
 			}				
 		}
-		.wwa16407{
-				// top: liquidSpace(262,$boxHeight);
-				// left: 0;※1
-			.wwaArticles_article_img{
-				top: liquidSpace(262,$boxHeight);
-				left: 0;
+
+		@include mouseOver(){
+			filter: grayscale(100%);
+			
+			a{
+				color: $basefontColor;
 			}
-			@include breakpoint( tab ){
-				.wwaArticles_article_img{
-					top: liquidSpace(315,640);					
-					left: liquidSpace(43,640);					
-				}
+		}
+		
+		a{
+			display: block;
+		}
+
+		&_content{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: nowrap;
+			
+			@include breakpoint( sp ){
+				flex-direction: column;
 			}				
 		}
-		.wwa1{
-				// top: liquidSpace(70, $boxHeight);
-				// left: liquidSpace(420, $boxWrap);※1
-			.wwaArticles_article_img{
-				top: liquidSpace(70, $boxHeight);
-				left: liquidSpace(420, $boxWrap);
-			}
 
-			@include breakpoint( tab ){
-				.wwaArticles_article_img{
-					top: 0;
-					left: liquidSpace(252, 640);
-				}				
-			}			
+
+		&_img{
+			transition: easeInOutCirc(0.3s);		
+
+			padding-right: 30px;
+			order: 1;
 			
-		}
-		.wwa100{
-				// top: 0;
-				// left: liquidSpace(722, $boxWrap);※1
-			.wwaArticles_article_img{
-				top: 0;
-				left: liquidSpace(722, $boxWrap);
-			}
-
 			@include breakpoint( tab ){
-				.wwaArticles_article_img{
-					top: liquidSpace(226, 640);
-					left: liquidSpace(370, 640);					
-				}
-			}	
-		}
-		.wwa5{
-				// top: liquidSpace(220, $boxHeight);
-				// left: liquidSpace(764, $boxWrap);※1
-			.wwaArticles_article_img{
-				top: liquidSpace(220, $boxHeight);
-				left: liquidSpace(764, $boxWrap);
-			}	
-			@include breakpoint( tab ){
-				.wwaArticles_article_img{
-					top: liquidSpace(401,640);					
-					left: liquidSpace(342,640);					
-				}
-			}	
-		}
-
-	}
-
-	//////////////////
-	//幅設定
-	//////////////////
-
-	.wwa6{
-			// @include liquid( 94, $boxWrap );※1
-		.wwaArticles_article_img{
-			@include liquid( 94, $boxWrap );
-		}
-		@include breakpoint( tab ){
-			.wwaArticles_article_img{
-				@include liquid( 83, 640 );
-			}	
-		}	
-		
-	}
-	.wwa16407{
-		
-			// @include liquid( 346, $boxWrap );※1
-		.wwaArticles_article_img{
-			@include liquid( 346, $boxWrap );
-		}
-		@include breakpoint( tab ){
-			.wwaArticles_article_img{
-				@include liquid( 254, 640 );
-			}	
-			.wwaArticles_article_content{
-				transform: none;
+				padding-right: 15px;
 			}			
-		}			
-	}
-	.wwa1{
-			// @include liquid( 310, $boxWrap );※1
-		.wwaArticles_article_img{
-			@include liquid( 310, $boxWrap );
-		}
-		@include breakpoint( tab ){
-			.wwaArticles_article_img{
-				@include liquid( 174, 640 );
-			}	
-		}		
-		
-	}
-	.wwa100{
-			// @include liquid( 256, $boxWrap );※1
-		.wwaArticles_article_img{
-			@include liquid( 256, $boxWrap );
-		}	
-		@include breakpoint( tab ){
-			.wwaArticles_article_img{
-				@include liquid(200, 640 );
-			}	
-		}	
-	}
-	.wwa5{
-			// @include liquid( 398, $boxWrap );※1
-		.wwaArticles_article_img{
-			@include liquid( 398, $boxWrap );
-		}	
-
-		@include breakpoint( tab ){
-			.wwaArticles_article_img{
-				@include liquid( 270, 640 );
-			}	
-		}	
-	}
-
-	////////////////
-	//アクティブ時
-	////////////////
-	.wwaArticles
-	{
-		&_article.active{
-			.wwaArticles_article_img{
-				transform:scale(1.25);
-				z-index: 3;
-			}		
-			.wwaArticles_article_content{
-				z-index: 2;
-				opacity: 1;
-				transition-duration: 0.3s;
-				transition-delay: 1s;
-			}		
-
-			&.wwa1{
-				@include breakpoint( tab,min ){
-					.wwaArticles_article_img{
-						left: liquidSpace(420, $boxWrap)/1.25;
-					}
-					.wwaArticles_article_content{
-						transform: translateX(-5%);
-					}
-				}
-					
+			@include breakpoint( sp ){
+				max-width: 80px;
+				padding-right: 0;
+				margin-bottom: 5px;
 			}
 		}
-	}
 
-	@at-root .viewWhatWeAre{
-		.wwaArticles{
+		&_text
+		{
+			order: 2;
+			
+			span{
+				letter-spacing: 0.1em;
+				line-height: 1.4;
+				margin-bottom: 1em;
+				display: block;
+				color: $basefontColor;
+				font-size: 1.2em
+			}
 
-			@include breakpoint( tab ){
-				position: static;
-			}		
-
-			&_article.active{
-				@include breakpoint( tab ){
-					width: 100%;
-					height: 100%;
-					margin: auto;
-					position: fixed;
-					z-index: 9;
-					top: 0;
-					right: 0;
-					bottom: 0;
-					left: 0;
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
-					align-items: center;
-				}				
+			@include breakpoint( sp ){
+				text-align: center;
 				
-			}
-			&_article_img,
-			&_article_content{
-				@include breakpoint( tab ){
-					position: static;
-				}	
-			}
-			&_article_content{
-				@include breakpoint( tab ){
-					@include background-image(linear-gradient(to right, #ff3d1f, #ff991f));
+				span{
+					margin-bottom: 5px;
+					font-size: 0.9em;
+					letter-spacing: 0.05em;
 				}
 			}
 		}
+	}
+
+
+	//////////////////
+
+	// 個別
+
+	//////////////////
+
+	.article-no1
+	{
+		border-right: none!important;
+		
+		.wwaArticle
+		{
+			&_content{
+				@include breakpoint( sp ){
+					flex-direction: row;
+				}							
+			}
+
+			&_img{
+				padding-left: 30px;
+				padding-right: 30px;
+				order: 2;
+				@include breakpoint( sp ){
+					max-width: none;
+				}				
+			}
+
+			&_text{
+				order: 1;
+				@include breakpoint( sp ){
+					text-align: left
+				}						
+			}			
+
+			&_no{
+				order: 3;
+			}		
+
+			@include breakpoint( tab ){
+
+			}				
+		}
+	}
+
+	.article-no100{
+
+		.wwaArticle
+		{
+
+			&_img{
+				@include breakpoint( sp ){
+					max-width: 30px;
+				}				
+			}
+
+			&_text{
+				img{
+					width: 70%;
+				}
+			}			
+
+			&_no{
+			}		
+
+			@include breakpoint( tab ){
+
+			}				
+		}	
 		
 	}
+
+	.article-no5{
+
+		.wwaArticle
+		{
+
+			&_text{
+				img{
+					width: 56%;
+				}
+			}				
+
+			@include breakpoint( tab ){
+
+			}				
+		}	
+		
+	}	
 
 
 	.section_footer.cityView{
@@ -826,10 +663,194 @@ what we are
 				max-width: none;
 			}			
 		}		
-		
+	}
+}
+
+
+
+///////// modal
+
+.fancybox-bg{
+	background-color: #fff;
+}
+
+.fancybox-close-small{
+
+	right: -20px;
+	top: -50px;
+	
+	&:hover{
+		&:before,
+		&:after{
+			background: darken( $orange, 10 );
+			color: transparent;
+		}
 	}
 
+	&:before,
+	&:after{
+		box-shadow: none;
+		outline: none;
+		content:  "";
+		display: block;
+		height: 1px;
+		width: 100%;
+		margin: auto;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		border-radius: 0;
+		color: transparent;
+		transition: none;
+		font: none;
+		border: none;
+		background: $orange;
+		transform-origin: center center;
+	}
+
+	&:before{
+		transform: translate3d(0,0,0) rotate(45deg);
+	}
+	&:after{
+		transform: translate3d(0,0,0) rotate(-45deg);
+	}
 }
+
+.fancybox-slide>.wwaModal{
+	overflow: visible;
+}
+
+.wwaModal
+{
+	max-width: 800px;
+	padding:  0;
+	background-color: #fff;
+	
+	display: none;
+	
+		@include breakpoint( sp ){
+			max-width: 90%;
+		}	
+	
+	&_content{
+		padding: 50px;		
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		font-weight: 200;
+		position: relative;
+		
+		@include breakpoint( sp ){
+			padding: 35px 20px;
+			flex-direction: column;
+			
+			&:before,
+			&:after{
+				height: 4px;
+			}			
+		}
+		
+		&:before,
+		&:after{
+			content: " ";
+			width: 0%;
+			height: 8px;
+			display: block;
+			position: absolute;
+			transition: easeInOutCirc( 0.3s);
+			transition-delay: 0.1s;
+			@extend %gradation;
+		}
+
+		&:before{
+			top: 0;
+			left: 0;
+		}
+		&:after{
+			right: 0;
+			bottom: 0;
+		}
+
+		@at-root .fancybox-container--ready{
+			 .wwaModal_content{
+				&:before{
+					width: 100%
+				}
+				&:after{
+					width: 100%;
+				}			 	
+			 }
+		}
+	}
+
+	&_img{
+		margin-right: 40px;
+		
+		@include breakpoint( sp ){
+			max-width: 30%;
+			margin-right: auto;
+			margin-left: auto;
+		}		
+	}
+
+	&_text_content{
+		font-size: 1.15em;
+		
+		@include breakpoint( sp ){
+			br{
+				display: none;
+			}
+		}		
+	}
+
+	@include breakpoint( sp )
+	{
+		&_text_index{
+			max-width: 70%;
+			margin-left: auto;
+			margin-right: auto;		
+			text-align: center;
+		}
+	}			
+
+	&_attention{
+		font-size: 0.6em;
+		color: #717171;
+	}	
+}
+
+#wwa100 .wwaModal{
+	&_img{
+		@include breakpoint( sp ){
+			max-width: 15%;
+		}			
+	}
+
+	&_text_index
+	{
+		img{
+			@include breakpoint( sp ){
+				max-width: 60%;
+			}				
+		}
+	}
+}
+
+#wwa6 .wwaModal{
+	&_text_index
+	{
+		img{
+			@include breakpoint( sp ){
+				max-width: 90%;
+			}	
+			
+		}
+	}
+}
+
 
 
 /********************
