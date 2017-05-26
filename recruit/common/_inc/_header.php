@@ -53,7 +53,7 @@ function dirPath( $nowActive, $thisDir, $isChild ){
         <ul>
           <li class="button button-nav button-companyinfo"><a href="http://www.propertyagent.co.jp/" target="_blank">COMPANY INFO.</a></li>
           <!-- <li class="button button-nav button-mypage"><a href="https://job.rikunabi.com/2018/company/r914110010/" target="_blank">MY PAGE</a></li> -->
-          <li class="button button-nav button-entry"><a href="https://job.rikunabi.com/2018/company/entry/confirm" target="_blank">ENTRY</a></li>
+          <li class="button button-nav button-entry"><a href="https://job.rikunabi.com/2018/company/r914110010/" target="_blank">ENTRY</a></li>
         </ul>
       </nav>
       <span class="menuButton"><i class="menuButton_bars"><i></i></i></span>
@@ -74,7 +74,7 @@ function dirPath( $nowActive, $thisDir, $isChild ){
          <ul>
           <li class="button button-nav button-companyinfo"><a href="http://www.propertyagent.co.jp/" target="_blank">COMPANY INFO.</a></li>
           <!-- <li class="button button-nav button-mypage"><a href="https://job.rikunabi.com/2018/company/r914110010/" target="_blank">MY PAGE</a></li> -->
-          <li class="button button-nav button-entry"><a href="https://job.rikunabi.com/2018/company/entry/confirm" target="_blank">ENTRY</a></li>
+          <li class="button button-nav button-entry"><a href="https://job.rikunabi.com/2018/company/r914110010/" target="_blank">ENTRY</a></li>
         </ul>
       </li>
     </ul>
