@@ -35,7 +35,7 @@ function dirPath( $nowActive, $thisDir, $isChild ){
         <i class="border loadingAnim_borderBottom"></i>
         <i class="border loadingAnim_borderLeft"></i>
         <img src="/recruit/common/img/logo.gif" width="218" class="logo" alt="PROPERTY AGENT"><br>
-        <img src="/recruit/common/img/header-text-recruiting.svg" class="recruiting" width="97" alt="RECRUITING 2018">
+        <img src="/recruit/common/img/header-text-recruiting.svg" class="recruiting" width="93" alt="RECRUITING SITE">
     </div>
     <!-- ///// loadingAnimation -->
   </div>
@@ -46,7 +46,7 @@ function dirPath( $nowActive, $thisDir, $isChild ){
       <h1 class="header_logo">
         <a <?php echo dirPath($nowActive, 'index', $isChild); ?> >
           <img src="/recruit/common/img/logo.gif" width="218" class="logo" alt="PROPERTY AGENT">
-          <img src="/recruit/common/img/header-text-recruiting.svg" class="recruiting" width="97" alt="RECRUITING 2019"></a>
+          <img src="/recruit/common/img/header-text-recruiting.svg" class="recruiting" width="93" alt="RECRUITING SITE"></a>
       </h1>
 
       <nav class="header_buttons">
