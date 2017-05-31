@@ -742,6 +742,7 @@ entry
 	// 	@include liquid( 1130, 1300, true );
 	// }
 	.walfarePanel{
+		line-height: 1;
 		min-height: 250px;
 		margin-bottom: 20px;
 		padding-right: liquidSpace( 300, 1130 );
@@ -768,6 +769,7 @@ entry
 		
 		&_index,
 		&_content{	
+				min-height: 250px;
 				padding-top: 70px;
 				padding-right: 50px;
 				padding-bottom: 70px;
@@ -779,6 +781,7 @@ entry
 				flex-direction: row;
 				
 			@include breakpoint( tab ){
+				min-height: auto;
 				padding:{
 					top: 15px;
 					right: 2.5%;
@@ -837,6 +840,7 @@ entry
 			background-color: #fff;
 			
 			div{
+				line-height: 1.75;
 				transform: skew( 15deg );
 			}
 			@include breakpoint( tab ){
