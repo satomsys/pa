@@ -668,8 +668,10 @@ instagram
 		flex-direction: row;
 		flex-wrap: wrap;
 		align-items:center;
+		justify-content: center;
 		
 		&_post{
+			max-width: 100%;
 			width: calc( 33.33% - 4% );
 			margin-right: 2%;
 			margin-bottom: 25px;
@@ -677,7 +679,7 @@ instagram
 			list-style: none; 
 			float: left;
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			justify-content: center;
 			border-radius: 20px;				
 			background-color: #fff;
@@ -693,8 +695,10 @@ instagram
 	}
 
 	&_image{
+		max-width: 100%;
+		width: 100%;
 		cursor: pointer;
-		display: block;
+		// display: block;
 		
 		img{
 			border-radius: 20px;		

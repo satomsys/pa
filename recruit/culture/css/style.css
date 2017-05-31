@@ -762,6 +762,9 @@ instagram
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 .instaBox_list_post
 {
@@ -769,9 +772,10 @@ instagram
     display: -ms-flexbox;
     display: flex;
     float: left;
-        flex-direction: column;
+        flex-direction: row;
 
     width: calc( 33.33% - 4% );
+    max-width: 100%;
     margin-right: 2%;
     margin-bottom: 25px;
     margin-left: 2%;
@@ -781,9 +785,9 @@ instagram
     border-radius: 20px;
     background-color: #fff; 
 
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
+    -ms-flex-direction: row;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -797,7 +801,8 @@ instagram
 }
 .instaBox_image
 {
-    display: block; 
+    width: 100%;
+    max-width: 100%;
 
     cursor: pointer;
 }
