@@ -233,6 +233,21 @@
 		
 		@extend %wrap;		
 		
+		@include breakpoint( 1368 ){
+			padding-top: liquidSpace( 360, 980 );			
+		}
+		@include breakpoint( 1000 ){
+			margin-bottom: 2%;
+		
+		} 
+		@include breakpoint( tab ){
+			max-width: 90%;
+			line-height: 1;
+			height: auto;
+			margin-bottom: 0;
+			padding-top: 0;
+		}		
+		
 		&_panel{
 			line-height: 1;
 			position: absolute;
@@ -243,14 +258,27 @@
 					opacity: 0.8;
 				}
 			}
+			@include breakpoint( tab ){
+				position: relative;
+				margin-bottom: 10px;
+				text-align: center;
+				
+				a,
+				img{
+					display: block;
+					margin: auto;
+				}
+			}
+
+			@include breakpoint( sp ){
+
+				a{
+					max-width: 290px;
+				}
+			}			
+
 		}
 
-		@include breakpoint( 1368 ){
-			padding-top: liquidSpace( 360, 980 );			
-		}
-		@include breakpoint( 1000 ){
-			margin-bottom: 2%;
-		} 
 	}
 }
 
@@ -301,92 +329,109 @@
 }
 
 
+
 /**
 * Q01
 */
 .wjuQ_row_panel-01{
-	width: percentage( 524 / 980 );
-	height: auto;
-	
-	left: 0;
+	@include breakpoint( tab, min ){
+		width: percentage( 524 / 980 );
+		height: auto;
+		
+		left: 0;
+	}
 }
 
 /**
 * Q02
 */
 .wjuQ_row_panel-02{
-	width: percentage( 543 / 980 );
-	height: auto;
-	
-	right: 0;
+	@include breakpoint( tab, min ){	
+		width: percentage( 543 / 980 );
+		height: auto;
+
+		right: 0;
+	}
 }
 
 /**
 * Q03
 */
 .wjuQ_row_panel-03{
-	width: percentage( 374 / 980 );
-	height: auto;
-	
-	left: 0;
+	@include breakpoint( tab, min ){	
+		width: percentage( 374 / 980 );
+		height: auto;
+		
+		left: 0;
+	}
 }
 
 /**
 * Q04
 */
 .wjuQ_row_panel-04{
-	width: percentage( 417 / 980 );
-	height: auto;
-	margin-right: auto;
-	margin-left: auto;
-	
-	left: 0;
-	right: 0;
-	
+	@include breakpoint( tab, min ){	
+		width: percentage( 417 / 980 );
+		height: auto;
+		margin-right: auto;
+		margin-left: auto;
+		
+		left: 0;
+		right: 0;
+	}	
 }
 
 /**
 * Q05
 */
 .wjuQ_row_panel-05{
-	width: percentage( 370 / 980 );
-	height: auto;
-	right: 0;
+	@include breakpoint( tab, min ){	
+		width: percentage( 370 / 980 );
+		height: auto;
+		right: 0;
+	}
 }
 
 /**
 * Q06
 */
 .wjuQ_row_panel-06{
-	width: percentage( 370 / 980 );
-	height: auto;
-	
-	left: 0;
+	@include breakpoint( tab, min ){	
+		width: percentage( 370 / 980 );
+		height: auto;
+		
+		left: 0;
+	}
 }
 
 /**
 * Q07
 */
 .wjuQ_row_panel-07{
-	width: percentage( 389 / 980 );
-	height: auto;
-	
-	margin-right: auto;
-	margin-left: auto;
-	
-	transform: translateX(-4%);
-	
-	left: 0;
-	right: 0;
+	@include breakpoint( tab, min ){	
+		width: percentage( 389 / 980 );
+		height: auto;
+		
+		margin-right: auto;
+		margin-left: auto;
+		
+		transform: translateX(-4%);
+		
+		left: 0;
+		right: 0;
+	}
 }
 
 /**
 * Q08
 */
 .wjuQ_row_panel-08{
-	width: percentage( 318 / 980 );
-	height: auto;
-	
-	right: 0;
+
+	@include breakpoint( tab, min ){	
+		width: percentage( 318 / 980 );
+		height: auto;
+		
+		right: 0;
+	}
 }
 
