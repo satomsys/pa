@@ -233,19 +233,28 @@
 		
 		@extend %wrap;		
 		
-		@include breakpoint( 1368 ){
+		@include breakpoint( 1366 ){
+			padding-top: liquidSpace( 320, 980 );			
+		}
+
+		@include breakpoint( 1024 ){
 			padding-top: liquidSpace( 360, 980 );			
 		}
+
 		@include breakpoint( 1000 ){
 			margin-bottom: 2%;
 		
 		} 
 		@include breakpoint( tab ){
-			max-width: 90%;
+			max-width: 98%;
 			line-height: 1;
 			height: auto;
 			margin-bottom: 0;
 			padding-top: 0;
+		}
+
+		a{
+			display: block
 		}		
 		
 		&_panel{
@@ -253,10 +262,18 @@
 			position: absolute;
 			top: 0;
 			
+
+			
 			image {
 				@include mouseOver{
 					opacity: 0.8;
 				}
+			}
+			@include breakpoint( pc,min ){
+				svg{
+					height: 359px;
+					display: block;
+				}				
 			}
 			@include breakpoint( tab ){
 				position: relative;
@@ -267,6 +284,11 @@
 				img{
 					display: block;
 					margin: auto;
+				}
+
+				a{
+					border: solid 1px #f0f0f0;
+					box-sizing: border-box;
 				}
 			}
 
@@ -336,7 +358,7 @@
 .wjuQ_row_panel-01{
 	@include breakpoint( tab, min ){
 		width: percentage( 524 / 980 );
-		height: auto;
+		// height: auto;
 		
 		left: 0;
 	}
@@ -348,7 +370,7 @@
 .wjuQ_row_panel-02{
 	@include breakpoint( tab, min ){	
 		width: percentage( 543 / 980 );
-		height: auto;
+		// height: auto;
 
 		right: 0;
 	}
@@ -360,7 +382,7 @@
 .wjuQ_row_panel-03{
 	@include breakpoint( tab, min ){	
 		width: percentage( 374 / 980 );
-		height: auto;
+		// height: auto;
 		
 		left: 0;
 	}
@@ -372,7 +394,7 @@
 .wjuQ_row_panel-04{
 	@include breakpoint( tab, min ){	
 		width: percentage( 417 / 980 );
-		height: auto;
+		// height: auto;
 		margin-right: auto;
 		margin-left: auto;
 		
@@ -387,7 +409,7 @@
 .wjuQ_row_panel-05{
 	@include breakpoint( tab, min ){	
 		width: percentage( 370 / 980 );
-		height: auto;
+		// height: auto;
 		right: 0;
 	}
 }
@@ -398,7 +420,7 @@
 .wjuQ_row_panel-06{
 	@include breakpoint( tab, min ){	
 		width: percentage( 370 / 980 );
-		height: auto;
+		// height: auto;
 		
 		left: 0;
 	}
@@ -410,7 +432,7 @@
 .wjuQ_row_panel-07{
 	@include breakpoint( tab, min ){	
 		width: percentage( 389 / 980 );
-		height: auto;
+		// height: auto;
 		
 		margin-right: auto;
 		margin-left: auto;
@@ -429,7 +451,7 @@
 
 	@include breakpoint( tab, min ){	
 		width: percentage( 318 / 980 );
-		height: auto;
+		// height: auto;
 		
 		right: 0;
 	}
